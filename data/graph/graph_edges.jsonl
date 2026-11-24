@@ -1112,8 +1112,10 @@
 {"src": "notice:chinese:467", "dst": "caution:chinese_467:1", "type": "DEFINES"}
 {"src": "notice:chinese:501", "dst": "dept:chinese", "type": "POSTED_BY"}
 {"src": "notice:chinese:501", "dst": "stage:2026-1:양식·규정:chinese", "type": "DESCRIBES", "pending": true}
+{"src": "notice:electro:118815", "dst": "dept:electro", "type": "POSTED_BY"}
 {"src": "notice:electro:120115", "dst": "dept:electro", "type": "POSTED_BY"}
 {"src": "notice:electro:120115", "dst": "stage:2026-1:논문제제출:electro", "type": "DESCRIBES", "pending": true}
+{"src": "notice:electro:145467", "dst": "dept:electro", "type": "POSTED_BY"}
 {"src": "notice:electro:154041", "dst": "dept:electro", "type": "POSTED_BY"}
 {"src": "notice:electro:154041", "dst": "dept:electro", "type": "ISSUED_BY"}
 {"src": "notice:electro:154041", "dst": "stage:2026-2:논문제결과물제출:electro", "type": "DESCRIBES", "evidence": ["졸업논문 제출기간(12/1~12/30 09:00)", "2026년 12월 30일 오전 9시까지"], "verified": true, "date": {"lo": "2026-12-01", "hi": "2026-12-30T09:00", "precision": "minute"}}
