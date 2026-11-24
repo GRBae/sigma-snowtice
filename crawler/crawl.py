@@ -146,12 +146,25 @@ class Collector:
         self.s = requests.Session()
         self.s.headers["User-Agent"] = self.d["user_agent"]
         self._last = 0.0
+        self.ca_bundle: dict[str, str] = {}
 
     def get(self, url: str) -> str:
         wait = self.d["delay_sec"] - (time.time() - self._last)
         if wait > 0:
             time.sleep(wait)
-        r = self.s.get(url, timeout=20)
+        import requests
+        from urllib.parse import urlparse
+        host = urlparse(url).hostname or ""
+        try:
+            r = self.s.get(url, timeout=20, verify=self.ca_bundle.get(host, True))
+        except requests.exceptions.SSLError:
+            # 중간 인증서를 안 보내는 서버: 브라우저처럼 AIA로 중간 인증서를 받아 '검증을 켠 채' 다시 접속
+            from tlsfix import bundle_for
+            if host in self.ca_bundle:
+                raise
+            self.ca_bundle[host] = bundle_for(host)
+            print(f"  ℹ {host}: 중간 인증서를 AIA로 보완해 검증 접속")
+            r = self.s.get(url, timeout=20, verify=self.ca_bundle[host])
         self._last = time.time()
         r.raise_for_status()
         r.encoding = r.apparent_encoding or "utf-8"

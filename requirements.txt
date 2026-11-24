@@ -1,4 +1,5 @@
 requests>=2.31
+cryptography>=42      # 중간 인증서 보완(crawler/tlsfix.py)
 beautifulsoup4>=4.12
 pyyaml>=6.0
 networkx>=3.2
