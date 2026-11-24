@@ -1,5 +1,5 @@
 """
-시그마 그래프 API — 웹사이트와 SNOWCHAT Agent B가 같이 부르는 서버.
+snowtice 그래프 API — 웹사이트와 SNOWCHAT Agent B가 같이 부르는 서버.
 
   실행:  uvicorn api.main:app --port 8000        (sigma 폴더에서)
   문서:  http://localhost:8000/docs   (Swagger, 프론트 담당이 여기서 바로 눌러 보면 됨)
@@ -29,7 +29,7 @@ ROOT = Path(__file__).resolve().parent.parent
 GR = S.Graph()
 
 app = FastAPI(
-    title="시그마 공지 그래프 API",
+    title="snowtice 공지 그래프 API",
     version="0.1.0",
     description="숙명여대 공지를 모아 만든 그래프에서 '내 학과 졸업 일정', '마감 임박', '연관 공지'를 계산해 돌려준다. "
                 "날짜 비교와 자격 판정은 서버 코드가 하고, 응답의 period/status를 그대로 보여주면 된다. "

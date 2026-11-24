@@ -3,10 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>시그마 · 숙명 공지 비서</title>
+<title>snowtice · 숙명 공지 비서</title>
+<link rel="icon" type="image/png" href="/web/favicon.png">
 <style>
-:root{--navy:#14307a;--navy2:#1e3f9a;--ink:#111827;--sub:#5b6577;--mute:#9aa3b2;--line:#e5e8ef;--bg:#f5f7fb;--card:#fff;
-  --blue-bg:#e8eefc;--blue:#2453c7;--org-bg:#fff1df;--org:#b85c00;--gray-bg:#eef0f4;--pur-bg:#efe9fd;--pur:#6b3fd1;--yel-bg:#fff7dc;--yel:#e8b400;--red:#b42318;--green:#1f8a5b}
+:root{--navy:#003087;--navy2:#0072ce;--ink:#111827;--sub:#5b6577;--mute:#9aa3b2;--line:#e5e8ef;--bg:#f5f7fb;--card:#fff;
+  --blue-bg:#e6f0fb;--blue:#0062b8;--org-bg:#fff1df;--org:#b85c00;--gray-bg:#eef0f4;--pur-bg:#efe9fd;--pur:#6b3fd1;--yel-bg:#fff7dc;--yel:#e8b400;--red:#b42318;--green:#1f8a5b}
 *{box-sizing:border-box}
 body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Noto Sans KR",sans-serif;color:var(--ink);background:var(--bg);font-size:14px}
 a{color:inherit}
@@ -15,7 +16,7 @@ button{font:inherit;cursor:pointer}
 .top{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid var(--line)}
 .top-in{max-width:1180px;margin:0 auto;height:60px;display:flex;align-items:center;gap:22px;padding:0 20px}
 .logo{display:flex;align-items:center;gap:8px;font-weight:800;font-size:18px;color:var(--navy);text-decoration:none}
-.logo i{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:8px;background:var(--navy);color:#fff;font-style:normal;font-size:17px}
+.logo img{display:block}
 .menu{display:flex;gap:4px;flex:1}
 .menu a{padding:8px 12px;border-radius:8px;text-decoration:none;color:var(--sub);font-weight:500}
 .menu a.on{background:var(--blue-bg);color:var(--navy);font-weight:700}
@@ -49,7 +50,7 @@ h1.pg{font-size:26px;margin:4px 0 4px} .pg-sub{color:var(--sub);margin:0 0 18px}
 .hero .big{display:flex;align-items:center;gap:14px;font-size:46px;font-weight:900;color:var(--navy)}
 .hero .big i{display:grid;place-items:center;width:64px;height:64px;border-radius:16px;background:var(--navy);color:#fff;font-style:normal;font-size:36px}
 .hero p{color:var(--sub);font-size:16px;margin:14px 0 26px}
-.cta{display:inline-flex;align-items:center;gap:10px;background:var(--navy);color:#fff;border-radius:999px;padding:15px 28px;font-weight:800;font-size:16px;text-decoration:none;box-shadow:0 10px 24px rgba(20,48,122,.22)}
+.cta{display:inline-flex;align-items:center;gap:10px;background:var(--navy);color:#fff;border-radius:999px;padding:15px 28px;font-weight:800;font-size:16px;text-decoration:none;box-shadow:0 10px 24px rgba(0,48,135,.22)}
 .pill{display:inline-flex;align-items:center;gap:6px;margin-top:16px;border:1px solid var(--line);border-radius:999px;padding:7px 14px;color:var(--sub);background:#fff}
 .quick{display:flex;gap:10px;margin-top:22px;flex-wrap:wrap;justify-content:center}
 .quick a{text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 14px;font-weight:600;color:var(--ink)}
@@ -65,7 +66,7 @@ h1.pg{font-size:26px;margin:4px 0 4px} .pg-sub{color:var(--sub);margin:0 0 18px}
 .form select,.form input{width:100%;font:inherit;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:#fff}
 .seg{display:flex;gap:6px}
 .preview{background:#1b2130;color:#fff;border-radius:14px;padding:14px;display:flex;gap:10px}
-.preview i{display:grid;place-items:center;flex:none;width:30px;height:30px;border-radius:8px;background:var(--navy2);font-style:normal}
+.preview i{display:grid;place-items:center;flex:none;width:30px;height:30px;border-radius:8px;background:#fff;font-style:normal}
 .notebox{background:var(--blue-bg);color:var(--navy);border-radius:10px;padding:10px 12px;font-size:13px;font-weight:600;margin-top:12px}
 .saved-toast{color:var(--green);font-weight:700;font-size:13px}
 /* 공지함 */
@@ -140,7 +141,7 @@ h1.pg{font-size:26px;margin:4px 0 4px} .pg-sub{color:var(--sub);margin:0 0 18px}
 </head>
 <body>
 <header class="top"><div class="top-in">
-  <a class="logo" href="#/"><i>Σ</i>시그마</a>
+  <a class="logo" href="#/"><img src="/web/logo.png" alt="snowtice" height="26"></a>
   <nav class="menu">
     <a href="#/notice" data-r="notice">공지함</a><a href="#/graph" data-r="graph">관심사 그래프</a>
     <a href="#/top" data-r="top">인기 게시글</a><a href="#/lib" data-r="lib">내 라이브러리</a>
@@ -196,9 +197,10 @@ window.addEventListener("hashchange", route);
 // ── 01 홈 ───────────────────────────────────────────
 async function home(){
   const p = prof();
-  const flakes = Array.from({length: 14}, (_, i) => `<span class="flake" style="left:${(i*37+11)%96}%;top:${(i*53+7)%88}%;opacity:${.35+(i%4)*.15}">✻</span>`).join("");
+  const flakes = Array.from({length: 22}, (_, i) => [(i*37+11)%96, (i*53+7)%88, i]).filter(([x, y]) => !(x > 22 && x < 78 && y > 28 && y < 74)).slice(0, 14)
+    .map(([x, y, i]) => `<span class="flake" style="left:${x}%;top:${y}%;opacity:${.35+(i%4)*.15}">✻</span>`).join("");
   $("#app").innerHTML = `<section class="hero">${flakes}
-    <div class="big"><i>Σ</i>시그마</div>
+    <h1 class="big" style="margin:0"><img src="/web/logo.png" alt="snowtice" style="height:84px;width:auto"></h1>
     <p>흩어진 교내 공지를 하나로 모아, 나에게 필요한 소식을 먼저 알려 드려요</p>
     <a class="cta" href="${SNOWCHAT_URL}" target="_blank" rel="noopener">💬 SNOWCHAT 공지비서에게 물어보기 ↗</a>
     <div class="pill">🕛 다음 알림: 내일 12:00</div>
@@ -234,7 +236,7 @@ async function settings(){
       </div>
     </div></div>
     <div><div class="card pad sec"><h3>③ 알림 미리보기</h3>
-      <div class="preview"><i>Σ</i><div><div style="font-size:12px;opacity:.7">시그마 · 12:00</div><div id="pv" style="font-weight:700;margin-top:3px">학과를 고르면 미리보기가 나와요</div></div></div>
+      <div class="preview"><i><img src="/web/favicon.png" alt="" style="width:18px;height:18px"></i><div><div style="font-size:12px;opacity:.7">snowtice · 12:00</div><div id="pv" style="font-weight:700;margin-top:3px">학과를 고르면 미리보기가 나와요</div></div></div>
       <div style="font-size:12px;color:var(--sub);margin-top:10px">다음 알림: 내일 12:00 · 새 소식이 있을 때만 보내요</div>
       <div class="notebox">매일 정오(12:00)에 새 관심 공지가 있을 때만 알림이 전송돼요.</div>
       <div style="font-size:12px;color:var(--mute);margin-top:10px">브라우저 푸시 알림은 다음 단계에서 연결돼요.</div></div>
@@ -317,7 +319,7 @@ async function graph(){
       <h4>표시 필터</h4>
       <label><input type="checkbox" id="g-closed"> 마감된 단계</label><label><input type="checkbox" id="g-dept"> 주관 부서</label><label><input type="checkbox" id="g-notes" checked> 유의사항·출처 공지</label>
       <h4>범례</h4>
-      <div class="lg"><span class="dot" style="background:var(--navy)"></span>관심사·절차</div><div class="lg"><span class="dot" style="background:#3f73e0"></span>진행·예정 단계</div>
+      <div class="lg"><span class="dot" style="background:var(--navy)"></span>관심사·절차</div><div class="lg"><span class="dot" style="background:#0072ce"></span>진행·예정 단계</div>
       <div class="lg"><span class="dot" style="background:#e08a1e"></span>출처 공지</div><div class="lg"><span class="dot" style="background:var(--red)"></span>유의사항</div>
       <div class="lg"><span class="dot" style="background:#c3c9d4"></span>마감된 단계</div><div class="lg"><span class="ring"></span>주관 부서</div>
       <div class="lg" style="margin-top:10px">크기 = 내 관심사와 연관도<br>보라 선 = 학과 마감이 본부를 덮어씀<br>굵은 선 = 선택한 노드의 추천 경로</div>
@@ -335,7 +337,7 @@ async function graph(){
     r.nodes = r.nodes.filter(n => n.type !== "Procedure" || keepProc.has(n.id));
     const ids = new Set(r.nodes.map(n => n.id)); r.edges = r.edges.filter(e => ids.has(e.src) && ids.has(e.dst));
     $("#gc").textContent = `${st.view === "focus" ? "관심사 중심 보기" : "주제 묶음 보기"} · 연관도 상위 ${r.nodes.length - 1}개 표시`;
-    const col = n => n.type === "Stage" ? ((n.status || "").startsWith("마감") ? "#c3c9d4" : "#3f73e0") : n.type === "Notice" ? "#e08a1e" : n.type === "Caution" ? "#b42318" : (n.type === "Dept" || n.type === "Office") ? "#ffffff" : "#14307a";
+    const col = n => n.type === "Stage" ? ((n.status || "").startsWith("마감") ? "#c3c9d4" : "#0072ce") : n.type === "Notice" ? "#e08a1e" : n.type === "Caution" ? "#b42318" : (n.type === "Dept" || n.type === "Office") ? "#ffffff" : "#003087";
     const els = [];
     if (st.view === "group") new Set(r.nodes.map(n => n.group).filter(Boolean)).forEach(gid => els.push({data: {id: "grp:" + gid, label: (r.nodes.find(n => n.group === gid).group_label || "").replace("학부 정기졸업 — ", ""), isGroup: 1}}));
     r.nodes.forEach(n => els.push({data: {...n, id: n.id, label: (n.label || "").slice(0, 16), color: col(n), border: (n.type === "Dept" || n.type === "Office") ? 2 : 0,
@@ -345,12 +347,12 @@ async function graph(){
     cy = cytoscape({container: $("#cy"), elements: els, wheelSensitivity: .2, style: [
       {selector: "node", style: {"background-color": "data(color)", width: "data(size)", height: "data(size)", label: "data(label)", "font-size": 10, color: "#1f2937",
         "text-valign": "bottom", "text-margin-y": 4, "border-width": "data(border)", "border-color": "#8a93a3", "text-wrap": "wrap", "text-max-width": 90}},
-      {selector: "node[?isGroup]", style: {"background-color": "#f2f5ff", "background-opacity": .7, "border-width": 1, "border-color": "#c9d4f2", shape: "round-rectangle", "text-valign": "top", "font-size": 12, "font-weight": 700, color: "#14307a", padding: 18}},
+      {selector: "node[?isGroup]", style: {"background-color": "#f2f5ff", "background-opacity": .7, "border-width": 1, "border-color": "#c9d4f2", shape: "round-rectangle", "text-valign": "top", "font-size": 12, "font-weight": 700, color: "#003087", padding: 18}},
       {selector: "edge", style: {width: 1.1, "line-color": "#d3d9e4", "curve-style": "bezier", "target-arrow-shape": "triangle", "target-arrow-color": "#d3d9e4", "arrow-scale": .6}},
       {selector: 'edge[type="OVERRIDES"]', style: {"line-color": "#6b3fd1", "target-arrow-color": "#6b3fd1", width: 2.5}},
       {selector: 'edge[type="PRECEDES"]', style: {"line-style": "dashed"}},
-      {selector: ".hl", style: {"line-color": "#14307a", "target-arrow-color": "#14307a", width: 3.5, "z-index": 9}},
-      {selector: "node.hl", style: {"border-width": 3, "border-color": "#14307a"}}],
+      {selector: ".hl", style: {"line-color": "#003087", "target-arrow-color": "#003087", width: 3.5, "z-index": 9}},
+      {selector: "node.hl", style: {"border-width": 3, "border-color": "#003087"}}],
       layout: st.view === "group" ? {name: "preset", positions: groupPositions(r.nodes), padding: 30}
                                   : {name: "concentric", concentric: n => n.data("score") || 1, levelWidth: () => .02, minNodeSpacing: 18, animate: false, padding: 20}});
     $("#zi").onclick = () => cy.zoom(cy.zoom() * 1.2); $("#zo").onclick = () => cy.zoom(cy.zoom() / 1.2); $("#zf").onclick = () => cy.fit(undefined, 20);
