@@ -6,3 +6,4 @@ data/raw/**/files/
 data/raw/list_today.jsonl
 data/graph/graph_load.sql
 .pytest_cache/
+_publish_all/

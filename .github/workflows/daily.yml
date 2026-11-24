@@ -82,6 +82,22 @@ jobs:
           force_orphan: true
           commit_message: "agent-b: ${{ github.run_id }}"
 
+      - name: SNOWCHAT 통합 브랜치 갱신 (A+B 파일을 한 곳에, 브랜치를 하나만 고를 수 있을 때)
+        run: |
+          rm -rf _publish_all && mkdir _publish_all
+          cp wiki/pages/*.md _publish_all/
+          cp wiki/agent_b/*.md _publish_all/
+          cp snowchat/README.md _publish_all/_에이전트_지시문.md
+
+      - uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_publish_all
+          publish_branch: snowchat-all
+          keep_files: false
+          force_orphan: true
+          commit_message: "all: ${{ github.run_id }}"
+
       - name: API 서버에 그래프 새로 읽으라고 알림 (POST /admin/reload)
         if: env.BACKEND_RELOAD_URL != ''
         env:

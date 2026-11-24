@@ -584,8 +584,8 @@
  },
  "servers": [
   {
-   "url": "https://YOUR-API-HOST",
-   "description": "배포한 API 주소로 바꾸기 (예: https://sigma-api.onrender.com)"
+   "url": "https://sigma-graph-api.onrender.com",
+   "description": "Render 무료 인스턴스 (15분 무요청 시 잠듦 → 첫 요청 최대 50초)"
   }
  ]
 }

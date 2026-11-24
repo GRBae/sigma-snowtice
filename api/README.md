@@ -1,6 +1,6 @@
 # 웹 프론트 연결 안내 (시그마 그래프 API)
 
-배포 주소를 `API`라고 하면, 웹 화면은 아래만 부르면 된다. 전체 명세는 `{API}/docs` (눌러서 바로 시험 가능).
+배포 주소 `API` = **https://sigma-graph-api.onrender.com** (문서: https://sigma-graph-api.onrender.com/docs). 이 주소를 `API`라고 하면, 웹 화면은 아래만 부르면 된다. 전체 명세는 `{API}/docs` (눌러서 바로 시험 가능).
 모든 응답의 날짜는 이미 계산된 표시용 문자열(`period`, `status`)이 같이 오므로 **프론트에서 날짜 계산을 하지 않는다.**
 
 | 화면 (기능명세) | 호출 | 쓸 필드 |
@@ -15,7 +15,7 @@
 | 학과 선택 드롭다운 | `GET /depts` | `code · name · has_dept_schedule` |
 
 ```js
-const API = "https://sigma-graph-api.onrender.com";   // 배포 주소로 바꾸기
+const API = "https://sigma-graph-api.onrender.com";   // Render 배포 주소 (2026-11-25 가동)
 
 // 공지함: 내 졸업 할 일
 const r = await fetch(`${API}/todo?` + new URLSearchParams({dept: "korean", enroll_status: "재학", admission_year: 2022}));
