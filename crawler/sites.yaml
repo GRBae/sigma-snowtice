@@ -9,7 +9,7 @@
 defaults:
   engine: sm_cms
   delay_sec: 1.5
-  user_agent: "snowtice-collector/0.1 (SNOWCHAT 경진대회 팀 시그마; 문의: 팀 대표 메일)"
+  user_agent: "snowtice-collector/0.1 (+https://github.com/GRBae/sigma-snowtice; Sookmyung SNOWCHAT contest team Sigma)"  # HTTP 헤더는 영문(ASCII)만 가능
   since: "2026-01-01"          # 졸업은 학기마다 반복되므로 직전 학기(2026-1)까지 함께 수집
 
 boards:
