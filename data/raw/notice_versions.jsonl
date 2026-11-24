@@ -115,3 +115,10 @@
 {"site_id": "politics", "article_no": "91718", "sha256": "1b68e6c336acd19e0efcd84aacd0c129d9ac84a81d256f02ce2f863967f60f73", "dir": "politics_91718", "fetched_at": "2026-11-24T15:43:53+00:00"}
 {"site_id": "static", "article_no": "graduate01", "sha256": "1946cbb3e76b69654076c8d52a20029464b5d2e972b12a22a6d7f7e10cc5668c", "dir": "static_graduate01", "fetched_at": "2026-11-24T15:43:56+00:00"}
 {"site_id": "static", "article_no": "graduate03", "sha256": "e281c43ba479de1e7e231abe88d3de1f7179880e91995e9ffa781376505e7430", "dir": "static_graduate03", "fetched_at": "2026-11-24T15:43:57+00:00"}
+{"site_id": "english", "article_no": "153962", "sha256": "a27f3560311c21574c4f27aee397ea09723c1f7791ed8cd8a788e33eb1664dc1", "dir": "english_153962/v2", "fetched_at": "2026-11-24T16:01:06+00:00"}
+{"site_id": "english", "article_no": "147308", "sha256": "bafaf6bf120f4de0b1528baa16e6035cbf0c961423ffecedc5d5c0f50e2d87b7", "dir": "english_147308/v2", "fetched_at": "2026-11-24T16:01:07+00:00"}
+{"site_id": "english", "article_no": "122336", "sha256": "79e98dcee732ef4726bf8c7edc60092f951702a75151292620156397b5ffc593", "dir": "english_122336", "fetched_at": "2026-11-24T16:01:09+00:00"}
+{"site_id": "english", "article_no": "120022", "sha256": "4b130552dbb1d6edea01588034f2d8fae3d02c184b8607191bc93c7923c12177", "dir": "english_120022", "fetched_at": "2026-11-24T16:01:11+00:00"}
+{"site_id": "english", "article_no": "119716", "sha256": "27c1a6346968829e955fdb2ec3943280802e980cffd8f9430947a60b7d9aaf96", "dir": "english_119716", "fetched_at": "2026-11-24T16:01:12+00:00"}
+{"site_id": "english", "article_no": "118549", "sha256": "5efbad061165dc7dab8ceb78fd092bba8774108657945e2b17893317e5026b62", "dir": "english_118549", "fetched_at": "2026-11-24T16:01:14+00:00"}
+{"site_id": "english", "article_no": "115806", "sha256": "ed3b85ad2a324ad69c3b4003ed7d85c51b14938c7bb631ec3c555f839fab19b0", "dir": "english_115806", "fetched_at": "2026-11-24T16:01:16+00:00"}
