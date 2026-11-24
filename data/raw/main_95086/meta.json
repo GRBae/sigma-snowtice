@@ -1,0 +1,28 @@
+{
+ "site_id": "main_notice",
+ "article_no": "95086",
+ "url": "https://www.sookmyung.ac.kr/kr/news/important-notice.do?mode=view&articleNo=95086",
+ "title": "[졸업] 2026-2 재학생 졸업학점 이수현황 확인 및 과목 정리 실시",
+ "category": null,
+ "writer": "커뮤니케이션팀",
+ "posted": "2026-09-16",
+ "hits": 3108,
+ "attachments": [
+  {
+   "name": "붙임1. 졸업학점 이수현황 확인방법 및 관련 정보(2026-2).hwp",
+   "attach_no": "46024"
+  },
+  {
+   "name": "붙임2. 연계 및 자율설계 전공 중복 과목 변경 요청 안내.hwpx",
+   "attach_no": "46025"
+  },
+  {
+   "name": "붙임3. (양식)과목이동신청서.hwp",
+   "attach_no": "46026"
+  }
+ ],
+ "sha256": "365ed62ae2e9eed7c309e66d8ef2586585204f4180e7e28aadc3ae5a257cd262",
+ "fetched_at": "2026-11-24T15:40:33+00:00",
+ "kind": "notice",
+ "source": "main"
+}

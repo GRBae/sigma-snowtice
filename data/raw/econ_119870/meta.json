@@ -1,0 +1,24 @@
+{
+ "site_id": "econ",
+ "article_no": "119870",
+ "url": "https://econ.sookmyung.ac.kr/econ/community/notice.do?mode=view&articleNo=119870",
+ "title": "[교직] 2026년 8월 졸업신청자 교원자격무시험검정원서 제출 안내",
+ "category": null,
+ "writer": "경제학부",
+ "posted": "2026-05-14",
+ "hits": 325,
+ "attachments": [
+  {
+   "name": "[붙임1]교원자격무시험검정원서.hwp",
+   "attach_no": "85877"
+  },
+  {
+   "name": "[붙임2]중독여부 검사결과 제출 안내 공지.pdf",
+   "attach_no": "85878"
+  }
+ ],
+ "sha256": "510ecb0a78a65be96da84793f7052b2a72602be6cc81a5ff2586769907aa21a8",
+ "fetched_at": "2026-11-24T15:42:30+00:00",
+ "kind": "notice",
+ "source": "econ"
+}

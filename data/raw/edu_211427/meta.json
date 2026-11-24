@@ -1,0 +1,28 @@
+{
+ "site_id": "edu",
+ "article_no": "211427",
+ "url": "https://edu.sookmyung.ac.kr/bbs/edu/1668/211427/artclView.do",
+ "title": "[졸업] \n\t\t\t\n\t\t\t2025-2 졸업예정자 확인 사항",
+ "category": null,
+ "writer": null,
+ "posted": "2026-01-28",
+ "hits": null,
+ "attachments": [
+  {
+   "name": "붙임1. 2025-2 졸업심사기준.hwp",
+   "href": "/bbs/edu/1668/98115/download.do"
+  },
+  {
+   "name": "붙임2. 2025-2 졸업심사결과조회 학생대상공지문.hwp",
+   "href": "/bbs/edu/1668/98116/download.do"
+  },
+  {
+   "name": "붙임3. 2025-2 졸업심사결과별 통지문.hwp",
+   "href": "/bbs/edu/1668/98117/download.do"
+  }
+ ],
+ "sha256": "1b08bcefd15222beac3ade7d599646ec6e8fd7ac9abfbb30b6d4bb744aab14a7",
+ "fetched_at": "2026-11-24T15:42:41+00:00",
+ "kind": "notice",
+ "source": "edu"
+}

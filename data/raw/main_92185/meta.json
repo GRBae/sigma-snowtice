@@ -1,0 +1,20 @@
+{
+ "site_id": "main_notice",
+ "article_no": "92185",
+ "url": "https://www.sookmyung.ac.kr/kr/news/important-notice.do?mode=view&articleNo=92185",
+ "title": "[졸업] 2026-1학기 조기졸업 신청 실시",
+ "category": null,
+ "writer": "관리자",
+ "posted": "2026-02-26",
+ "hits": 3359,
+ "attachments": [
+  {
+   "name": "(서식) 조기졸업신청서(2026-1학기).hwp",
+   "attach_no": "44403"
+  }
+ ],
+ "sha256": "235bb78d68d9b0c228c0eb22d5ec9bae98b5ca6978927d2f9e691bd0336b8045",
+ "fetched_at": "2026-11-24T15:40:57+00:00",
+ "kind": "notice",
+ "source": "main"
+}

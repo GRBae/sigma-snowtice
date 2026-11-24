@@ -1,0 +1,20 @@
+{
+ "site_id": "math_notice",
+ "article_no": "120800",
+ "url": "https://math.sookmyung.ac.kr/math/notice/notice.do?mode=view&articleNo=120800",
+ "title": "콜로키움 통합 2026-1학기 결과 공지",
+ "category": null,
+ "writer": "수학과",
+ "posted": "2026-06-19",
+ "hits": 902,
+ "attachments": [
+  {
+   "name": "★콜로키움통합_2026_1학기(06.19기준).pdf",
+   "attach_no": "86762"
+  }
+ ],
+ "sha256": "b50090aabfb12e106ffb41a62350cd6e192b128ccd2a1eb44e8efb4d8172523a",
+ "fetched_at": "2026-11-24T15:41:14+00:00",
+ "kind": "notice",
+ "source": "math"
+}

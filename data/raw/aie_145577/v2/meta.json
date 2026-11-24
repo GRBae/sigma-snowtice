@@ -1,0 +1,24 @@
+{
+ "site_id": "aie",
+ "article_no": "145577",
+ "url": "https://aie.sookmyung.ac.kr/it/department/notice.do?mode=view&articleNo=145577",
+ "title": "졸업프로젝트 졸업논문 양식",
+ "category": null,
+ "writer": "인공지능공학부",
+ "posted": "2026-10-07",
+ "hits": 426,
+ "attachments": [
+  {
+   "name": "졸업프로젝트논문 양식.hwp",
+   "attach_no": "111214"
+  },
+  {
+   "name": "졸업프로젝트 논문 양식2.hwp",
+   "attach_no": "111215"
+  }
+ ],
+ "sha256": "02c2d30c1e278a15425adca0ab660e898eb6940384838ba974b1fe11db9a7ed3",
+ "fetched_at": "2026-11-24T15:41:23+00:00",
+ "kind": "notice",
+ "source": "aie"
+}

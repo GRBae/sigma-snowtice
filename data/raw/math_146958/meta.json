@@ -1,0 +1,36 @@
+{
+ "site_id": "math_notice",
+ "article_no": "146958",
+ "url": "https://math.sookmyung.ac.kr/math/notice/notice.do?mode=view&articleNo=146958",
+ "title": "[공지] ★[2026학년도 전기(2027년 2월) 졸업] 졸업시험(2차) 신청 공지(2월 졸업 예정자는 반드시 신청)★",
+ "category": null,
+ "writer": "수학과",
+ "posted": "2026-10-12",
+ "hits": 2602,
+ "attachments": [
+  {
+   "name": "수학과 졸업요건 및 졸업 시험 범위.pdf",
+   "attach_no": "112263"
+  },
+  {
+   "name": "Abstract Algebra 50  problems (1).pdf",
+   "attach_no": "112264"
+  },
+  {
+   "name": "Advanced Calculus1 (1).pdf",
+   "attach_no": "112265"
+  },
+  {
+   "name": "Advanced Calculus2 (1).pdf",
+   "attach_no": "112266"
+  },
+  {
+   "name": "Linear Algebra (1).pdf",
+   "attach_no": "112267"
+  }
+ ],
+ "sha256": "b4173a3a12f534e8d88a997a579ea82525957bef7e8077b0653d4c4d75d781d1",
+ "fetched_at": "2026-11-24T15:41:04+00:00",
+ "kind": "notice",
+ "source": "math"
+}

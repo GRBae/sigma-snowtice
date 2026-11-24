@@ -1,0 +1,24 @@
+{
+ "site_id": "aie",
+ "article_no": "118344",
+ "url": "https://aie.sookmyung.ac.kr/it/department/notice.do?mode=view&articleNo=118344",
+ "title": "2026 졸업프로젝트 지원비 안내",
+ "category": null,
+ "writer": "인공지능공학부",
+ "posted": "2026-03-10",
+ "hits": 1029,
+ "attachments": [
+  {
+   "name": "졸업프로젝트 물품 구매신청서.hwp",
+   "attach_no": "83856"
+  },
+  {
+   "name": "학생연구활동계획서.hwp",
+   "attach_no": "83857"
+  }
+ ],
+ "sha256": "a023db0ece00b1e2f420efea28d0ad4f7d40195af5557829dbdc3f0e8be5081c",
+ "fetched_at": "2026-11-24T15:41:33+00:00",
+ "kind": "notice",
+ "source": "aie"
+}

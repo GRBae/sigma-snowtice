@@ -1,0 +1,24 @@
+{
+ "site_id": "main_notice",
+ "article_no": "94972",
+ "url": "https://www.sookmyung.ac.kr/kr/news/important-notice.do?mode=view&articleNo=94972",
+ "title": "[졸업] 2026-2 재학생 졸업예정자 졸업 계획 제출(졸업 신청) 및 전공선택 실시 (9. 15.~9. 28.)",
+ "category": null,
+ "writer": "관리자",
+ "posted": "2026-09-07",
+ "hits": 5776,
+ "attachments": [
+  {
+   "name": "붙임1-1. [Step1] 졸업계획입력 매뉴얼.pdf",
+   "attach_no": "45942"
+  },
+  {
+   "name": "붙임1-2. [Step2] 전공선택매뉴얼(재학생졸업예정자용).pdf",
+   "attach_no": "45943"
+  }
+ ],
+ "sha256": "b217c130c7e0a09f259d72048a2d4b6d73931eba0153e6bc4e5b17f413c47548",
+ "fetched_at": "2026-11-24T15:40:35+00:00",
+ "kind": "notice",
+ "source": "main"
+}

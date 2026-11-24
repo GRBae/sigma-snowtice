@@ -299,7 +299,7 @@
    "조기졸업신청": true
   },
   "problems": [],
-  "basis": "이전 대조 기록(원문 폴더 없음)"
+  "basis": "raw/text.txt 대조"
  },
  "notice:main:94905": {
   "ok": true,
@@ -309,7 +309,7 @@
    "최종사정결과조회": true
   },
   "problems": [],
-  "basis": "이전 대조 기록(원문 폴더 없음)"
+  "basis": "raw/text.txt 대조"
  },
  "notice:main:94972": {
   "ok": true,
@@ -319,7 +319,7 @@
    "정보인증제등록": true
   },
   "problems": [],
-  "basis": "이전 대조 기록(원문 폴더 없음)"
+  "basis": "raw/text.txt 대조"
  },
  "notice:main:95086": {
   "ok": true,
@@ -327,7 +327,7 @@
    "이수현황정리": true
   },
   "problems": [],
-  "basis": "이전 대조 기록(원문 폴더 없음)"
+  "basis": "raw/text.txt 대조"
  },
  "notice:main:95274": {
   "ok": true,
@@ -335,7 +335,7 @@
    "논문제신청": true
   },
   "problems": [],
-  "basis": "이전 대조 기록(원문 폴더 없음)"
+  "basis": "raw/text.txt 대조"
  },
  "notice:main:96120": {
   "ok": true,
@@ -345,7 +345,7 @@
    "인증제결과확인": true
   },
   "problems": [],
-  "basis": "이전 대조 기록(원문 폴더 없음)"
+  "basis": "raw/text.txt 대조"
  },
  "notice:main:96121": {
   "ok": true,
@@ -353,7 +353,7 @@
    "수료생졸업신청": true
   },
   "problems": [],
-  "basis": "이전 대조 기록(원문 폴더 없음)"
+  "basis": "raw/text.txt 대조"
  },
  "notice:math:121057": {
   "ok": true,
@@ -362,7 +362,7 @@
    "졸업시험1차응시": true
   },
   "problems": [],
-  "basis": "이전 대조 기록(원문 폴더 없음)"
+  "basis": "raw/text.txt 대조"
  },
  "notice:math:122650": {
   "ok": true,
@@ -370,7 +370,7 @@
    "콜로키움참석": true
   },
   "problems": [],
-  "basis": "이전 대조 기록(원문 폴더 없음)"
+  "basis": "raw/text.txt 대조"
  },
  "notice:math:122826": {
   "ok": true,
@@ -386,7 +386,7 @@
    "졸업시험결과": true
   },
   "problems": [],
-  "basis": "이전 대조 기록(원문 폴더 없음)"
+  "basis": "raw/text.txt 대조"
  },
  "notice:math:154016": {
   "ok": true,
@@ -400,7 +400,7 @@
    "논문제결과물제출": true
   },
   "problems": [],
-  "basis": "이전 대조 기록(원문 폴더 없음)"
+  "basis": "raw/text.txt 대조"
  },
  "notice:stat:slug06": {
   "ok": true,
@@ -417,7 +417,7 @@
    "졸업계획제출": true
   },
   "problems": [],
-  "basis": "이전 대조 기록(원문 폴더 없음)"
+  "basis": "raw/text.txt 대조"
  },
  "notice:static:graduate03": {
   "ok": true,
@@ -425,6 +425,6 @@
    "콜로키움참석": true
   },
   "problems": [],
-  "basis": "이전 대조 기록(원문 폴더 없음)"
+  "basis": "raw/text.txt 대조"
  }
 }

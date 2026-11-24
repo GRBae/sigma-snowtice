@@ -1,0 +1,24 @@
+{
+ "site_id": "csweb",
+ "article_no": "130406",
+ "url": "https://csweb.sookmyung.ac.kr/cs/community/notice.do?mode=view&articleNo=130406",
+ "title": "26-2 학생연구활동비 지원안내 (졸업작품 준비 예산지원) : ~6.12.(금) 17:00시까지(기한엄수) - 공지 수정 참고",
+ "category": null,
+ "writer": "컴퓨터과학전공",
+ "posted": "2026-06-08",
+ "hits": 297,
+ "attachments": [
+  {
+   "name": "[26-2] 학생연구활동계획서.hwp",
+   "attach_no": "95210"
+  },
+  {
+   "name": "[26-2] 학생연구활동 지출 결과보고(지출증빙양식).hwp",
+   "attach_no": "95211"
+  }
+ ],
+ "sha256": "a4193822b2a6b2ff84e73b49b4a2f5fa00bdbc4e9b8c8a76a47b10ebbd4403f0",
+ "fetched_at": "2026-11-24T15:42:03+00:00",
+ "kind": "notice",
+ "source": "csweb"
+}

@@ -1,0 +1,24 @@
+{
+ "site_id": "ds",
+ "article_no": "137627",
+ "url": "https://ds.sookmyung.ac.kr/ds/community/department-notice.do?mode=view&articleNo=137627",
+ "title": "SW중심대학 2026학년도 1학기 2차 산학협력 졸업프로젝트",
+ "category": null,
+ "writer": "데이터사이언스전공",
+ "posted": "2026-06-22",
+ "hits": 543,
+ "attachments": [
+  {
+   "name": "(양식)산학협력 졸업프로젝트 계획서.hwp",
+   "attach_no": "102117"
+  },
+  {
+   "name": "(양식)2026학년도 1학기 산학협력 졸업프로젝트 결과보고서.hwp",
+   "attach_no": "102118"
+  }
+ ],
+ "sha256": "53a66ce580b25680594e2fda1cb08ed624a74921af4b8a42bcf73fbab3a5a744",
+ "fetched_at": "2026-11-24T15:42:18+00:00",
+ "kind": "notice",
+ "source": "ds"
+}

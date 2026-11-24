@@ -1,0 +1,24 @@
+{
+ "site_id": "main_notice",
+ "article_no": "91686",
+ "url": "https://www.sookmyung.ac.kr/kr/news/important-notice.do?mode=view&articleNo=91686",
+ "title": "[졸업] 학부 재학생 졸업예정자 계속수학 신청 안내",
+ "category": null,
+ "writer": "관리자",
+ "posted": "2026-01-08",
+ "hits": 5042,
+ "attachments": [
+  {
+   "name": "붙임1. 계속수학신청 대상자 요건 및 안내사항(2025-2).hwp",
+   "attach_no": "44053"
+  },
+  {
+   "name": "붙임2. 계속수학신청매뉴얼(2025-2).pdf",
+   "attach_no": "44054"
+  }
+ ],
+ "sha256": "e3674404b29c3e36ca0bf4217628805ded4dd904f613de9d19d4325ff41cc62e",
+ "fetched_at": "2026-11-24T15:41:02+00:00",
+ "kind": "notice",
+ "source": "main"
+}

@@ -1,0 +1,24 @@
+{
+ "site_id": "main_notice",
+ "article_no": "96120",
+ "url": "https://www.sookmyung.ac.kr/kr/news/important-notice.do?mode=view&articleNo=96120",
+ "title": "[졸업] 2026-2 졸업 인증제(졸업논문제/정보인증제) 제출 안내 (12. 1.~12. 30.)",
+ "category": null,
+ "writer": "커뮤니케이션팀",
+ "posted": "2026-11-23",
+ "hits": 193,
+ "attachments": [
+  {
+   "name": "붙임2. 학생자율설계전공 졸업논문심사결과보고서.hwp",
+   "attach_no": "46599"
+  },
+  {
+   "name": "붙임1. 정보인증제 제출 안내자료.pdf",
+   "attach_no": "46600"
+  }
+ ],
+ "sha256": "eb58d861e678f59830f07ab87b1e870b52c815444134574971a287695115c4fb",
+ "fetched_at": "2026-11-24T15:40:30+00:00",
+ "kind": "notice",
+ "source": "main"
+}

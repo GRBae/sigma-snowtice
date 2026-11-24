@@ -1,0 +1,20 @@
+{
+ "site_id": "aie",
+ "article_no": "122343",
+ "url": "https://aie.sookmyung.ac.kr/it/department/notice.do?mode=view&articleNo=122343",
+ "title": "2026 졸업 작품 신청서 양식",
+ "category": null,
+ "writer": "인공지능공학부",
+ "posted": "2026-08-12",
+ "hits": 369,
+ "attachments": [
+  {
+   "name": "2026 졸업작품신청서(제1전공).hwp",
+   "attach_no": "88284"
+  }
+ ],
+ "sha256": "2bd41a99766953623a3eecbff349c273250269befdff0ac24e1d0af4193e33f4",
+ "fetched_at": "2026-11-24T15:41:26+00:00",
+ "kind": "notice",
+ "source": "aie"
+}

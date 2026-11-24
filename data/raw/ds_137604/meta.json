@@ -1,0 +1,20 @@
+{
+ "site_id": "ds",
+ "article_no": "137604",
+ "url": "https://ds.sookmyung.ac.kr/ds/community/department-notice.do?mode=view&articleNo=137604",
+ "title": "[졸업] [공지] 2026-1 졸업작품 발표 일정 공지",
+ "category": null,
+ "writer": "데이터사이언스전공",
+ "posted": "2026-03-26",
+ "hits": 211,
+ "attachments": [
+  {
+   "name": "졸업작품발표회 공지.pdf",
+   "attach_no": "102087"
+  }
+ ],
+ "sha256": "581db068191bf32d637cdad83d465972214d6ac403941aba8e32b1860d38576c",
+ "fetched_at": "2026-11-24T15:42:23+00:00",
+ "kind": "notice",
+ "source": "ds"
+}
