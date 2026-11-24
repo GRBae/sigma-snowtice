@@ -3,229 +3,489 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>눈송 공지비서 · 졸업 일정 그래프</title>
+<title>시그마 · 숙명 공지 비서</title>
 <style>
-  :root{--ink:#1b2433;--sub:#5b6577;--line:#e4e7ee;--bg:#f6f7fb;--card:#fff;--brand:#1f3f8f;--brand2:#e8eefc;
-        --ok:#1f8a5b;--warn:#c26a00;--mute:#8a93a3;--bad:#b42318;--ovr:#6b3fd1}
-  *{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Noto Sans KR",sans-serif;color:var(--ink);background:var(--bg)}
-  header{background:var(--card);border-bottom:1px solid var(--line);padding:14px 24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;position:sticky;top:0;z-index:5}
-  header h1{font-size:18px;margin:0 12px 0 0;color:var(--brand)} header h1 small{color:var(--sub);font-weight:500;font-size:12px;margin-left:6px}
-  .ctl{display:flex;gap:8px;align-items:center;flex-wrap:wrap} label{font-size:12px;color:var(--sub)}
-  select,input{font:inherit;font-size:14px;padding:6px 8px;border:1px solid var(--line);border-radius:8px;background:#fff}
-  input[type=number]{width:86px}
-  nav{display:flex;gap:4px;padding:0 24px;background:var(--card);border-bottom:1px solid var(--line)}
-  nav button{font:inherit;font-size:14px;border:0;background:none;padding:12px 14px;color:var(--sub);cursor:pointer;border-bottom:2px solid transparent}
-  nav button.on{color:var(--brand);border-color:var(--brand);font-weight:600}
-  main{max-width:1180px;margin:20px auto;padding:0 20px}
-  .panel{display:none}.panel.on{display:block}
-  .meta{font-size:13px;color:var(--sub);margin:0 0 12px}
-  .grid{display:grid;grid-template-columns:2fr 1fr;gap:16px} @media(max-width:880px){.grid{grid-template-columns:1fr}}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
-  .card h3{margin:0 0 10px;font-size:15px}
-  .item{display:grid;grid-template-columns:96px 1fr;gap:12px;padding:12px 0;border-top:1px solid var(--line)}
-  .item:first-of-type{border-top:0}
-  .badge{display:inline-block;font-size:12px;font-weight:600;padding:3px 8px;border-radius:999px;background:#eef0f4;color:var(--mute);text-align:center}
-  .b-soon{background:#fff1e0;color:var(--warn)} .b-now{background:#e3f5ec;color:var(--ok)} .b-later{background:var(--brand2);color:var(--brand)}
-  .lbl{font-weight:600;font-size:15px} .per{font-size:14px;margin-top:2px} .per .chk{color:var(--bad);font-weight:600}
-  .tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px} .tag{font-size:12px;padding:2px 7px;border-radius:6px;background:#f1f3f7;color:var(--sub)}
-  .tag.ovr{background:#efe9fd;color:var(--ovr)}
-  .src{font-size:12px;margin-top:6px} .src a{color:var(--brand);text-decoration:none} .src a:hover{text-decoration:underline}
-  ul.plain{margin:0;padding-left:18px;font-size:14px;line-height:1.6}
-  .hint{background:#fff8e6;border:1px solid #f3dca5;border-radius:10px;padding:10px 12px;font-size:13px;margin-bottom:12px}
-  table{width:100%;border-collapse:collapse;font-size:14px} td,th{text-align:left;padding:8px 6px;border-top:1px solid var(--line)} th{color:var(--sub);font-weight:500;font-size:12px}
-  #cy{height:620px;background:#fbfcff;border:1px solid var(--line);border-radius:12px}
-  .gwrap{display:grid;grid-template-columns:1fr 300px;gap:16px} @media(max-width:880px){.gwrap{grid-template-columns:1fr}}
-  .legend{display:flex;gap:12px;flex-wrap:wrap;font-size:12px;color:var(--sub);margin:8px 0}
-  .dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:4px;vertical-align:-1px}
-  .empty{color:var(--mute);font-size:14px;padding:12px 0}
-  .loading{color:var(--sub);font-size:13px}
-  footer{max-width:1180px;margin:24px auto 40px;padding:0 20px;font-size:12px;color:var(--mute)}
+:root{--navy:#14307a;--navy2:#1e3f9a;--ink:#111827;--sub:#5b6577;--mute:#9aa3b2;--line:#e5e8ef;--bg:#f5f7fb;--card:#fff;
+  --blue-bg:#e8eefc;--blue:#2453c7;--org-bg:#fff1df;--org:#b85c00;--gray-bg:#eef0f4;--pur-bg:#efe9fd;--pur:#6b3fd1;--yel-bg:#fff7dc;--yel:#e8b400;--red:#b42318;--green:#1f8a5b}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Noto Sans KR",sans-serif;color:var(--ink);background:var(--bg);font-size:14px}
+a{color:inherit}
+button{font:inherit;cursor:pointer}
+/* 상단 */
+.top{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid var(--line)}
+.top-in{max-width:1180px;margin:0 auto;height:60px;display:flex;align-items:center;gap:22px;padding:0 20px}
+.logo{display:flex;align-items:center;gap:8px;font-weight:800;font-size:18px;color:var(--navy);text-decoration:none}
+.logo i{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:8px;background:var(--navy);color:#fff;font-style:normal;font-size:17px}
+.menu{display:flex;gap:4px;flex:1}
+.menu a{padding:8px 12px;border-radius:8px;text-decoration:none;color:var(--sub);font-weight:500}
+.menu a.on{background:var(--blue-bg);color:var(--navy);font-weight:700}
+.avatar{width:34px;height:34px;border-radius:50%;background:var(--blue-bg);color:var(--navy);font-weight:800;border:0;display:grid;place-items:center}
+.home .top{background:transparent;border-color:transparent}
+.home .logo,.home .menu{visibility:hidden}
+main{max-width:1180px;margin:0 auto;padding:26px 20px 60px}
+h1.pg{font-size:26px;margin:4px 0 4px} .pg-sub{color:var(--sub);margin:0 0 18px}
+.row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.space{flex:1}
+.link{color:var(--navy);font-weight:600;text-decoration:none;font-size:13px}
+/* 칩·배지 */
+.chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 14px;font-weight:600;color:var(--sub)}
+.chip.on{background:var(--navy);border-color:var(--navy);color:#fff}
+.chip[disabled]{opacity:.45;cursor:not-allowed}
+.chip small{font-weight:500;opacity:.8;margin-left:3px}
+.bd{display:inline-block;font-size:11.5px;font-weight:700;padding:2px 8px;border-radius:999px;white-space:nowrap}
+.bd-new{background:var(--blue-bg);color:var(--blue)} .bd-open{background:var(--org-bg);color:var(--org)} .bd-past{background:var(--gray-bg);color:var(--mute)}
+.bd-wait{background:var(--gray-bg);color:var(--sub)} .bd-fit{background:var(--blue-bg);color:var(--blue)} .bd-chk{background:var(--pur-bg);color:var(--pur)} .bd-no{background:var(--gray-bg);color:var(--mute)}
+.bd-ovr{background:var(--pur-bg);color:var(--pur)}
+/* 카드 */
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px}
+.pad{padding:18px 20px}
+.btn{border:1px solid var(--line);background:#fff;border-radius:10px;padding:8px 14px;font-weight:600}
+.btn-p{background:var(--navy);border-color:var(--navy);color:#fff}
+.btn-y{background:var(--yel-bg);border-color:#f0d27a;color:#6b4e00}
+.empty{color:var(--mute);padding:20px 0;text-align:center}
+.loading{color:var(--sub);padding:20px 0;text-align:center}
+/* 홈 */
+.hero{min-height:calc(100vh - 60px - 46px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden}
+.hero .big{display:flex;align-items:center;gap:14px;font-size:46px;font-weight:900;color:var(--navy)}
+.hero .big i{display:grid;place-items:center;width:64px;height:64px;border-radius:16px;background:var(--navy);color:#fff;font-style:normal;font-size:36px}
+.hero p{color:var(--sub);font-size:16px;margin:14px 0 26px}
+.cta{display:inline-flex;align-items:center;gap:10px;background:var(--navy);color:#fff;border-radius:999px;padding:15px 28px;font-weight:800;font-size:16px;text-decoration:none;box-shadow:0 10px 24px rgba(20,48,122,.22)}
+.pill{display:inline-flex;align-items:center;gap:6px;margin-top:16px;border:1px solid var(--line);border-radius:999px;padding:7px 14px;color:var(--sub);background:#fff}
+.quick{display:flex;gap:10px;margin-top:22px;flex-wrap:wrap;justify-content:center}
+.quick a{text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 14px;font-weight:600;color:var(--ink)}
+.quick b{color:var(--navy)}
+.flake{position:absolute;color:#9fb5ea;font-size:18px;user-select:none}
+.foot{border-top:1px solid var(--line);background:#eef2fa;color:var(--sub);text-align:center;font-size:12px;padding:14px}
+/* 설정 */
+.set{display:grid;grid-template-columns:1fr 360px;gap:18px} @media(max-width:900px){.set{grid-template-columns:1fr}}
+.sec h3{margin:0 0 12px;font-size:16px} .sec h3 small{color:var(--mute);font-weight:500;margin-left:6px}
+.grp{margin:10px 0 4px;font-size:12px;color:var(--sub);font-weight:700}
+.form{display:grid;grid-template-columns:1fr 1fr;gap:14px 18px} @media(max-width:700px){.form{grid-template-columns:1fr}}
+.form label{display:block;font-size:12px;color:var(--sub);margin-bottom:6px;font-weight:600}
+.form select,.form input{width:100%;font:inherit;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:#fff}
+.seg{display:flex;gap:6px}
+.preview{background:#1b2130;color:#fff;border-radius:14px;padding:14px;display:flex;gap:10px}
+.preview i{display:grid;place-items:center;flex:none;width:30px;height:30px;border-radius:8px;background:var(--navy2);font-style:normal}
+.notebox{background:var(--blue-bg);color:var(--navy);border-radius:10px;padding:10px 12px;font-size:13px;font-weight:600;margin-top:12px}
+.saved-toast{color:var(--green);font-weight:700;font-size:13px}
+/* 공지함 */
+.tabs{display:flex;gap:6px;margin:6px 0 14px}
+.list{overflow:hidden}
+.nrow{padding:14px 18px;border-top:1px solid var(--line);cursor:pointer}
+.nrow:first-child{border-top:0} .nrow:hover{background:#fafbff} .nrow.sel{background:#f2f5ff;box-shadow:inset 3px 0 0 var(--navy)}
+.nrow .meta{font-size:12px;color:var(--sub);display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.nrow .t{font-weight:700;font-size:15px;margin:5px 0 3px}
+.nrow.past .t{color:var(--mute)}
+.nrow .f{font-size:12.5px;color:var(--sub)}
+.more{text-align:center;padding:12px}
+.detail{margin-top:16px}
+.dl{display:grid;grid-template-columns:96px 1fr;gap:9px 12px;margin:14px 0;font-size:13.5px}
+.dl dt{color:var(--sub)} .dl dd{margin:0}
+.stg{padding:9px 0;border-top:1px dashed var(--line)} .stg:first-child{border-top:0}
+/* 그래프 */
+.gtop{display:flex;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.vtabs{display:flex;background:#fff;border:1px solid var(--line);border-radius:12px;padding:4px}
+.vtabs button{border:0;background:none;padding:8px 14px;border-radius:9px;font-weight:600;color:var(--sub)}
+.vtabs button.on{background:var(--navy);color:#fff}
+.gl{display:grid;grid-template-columns:250px 1fr;gap:16px;margin-top:14px;align-items:start} @media(max-width:900px){.gl{grid-template-columns:1fr}}
+.side h4{font-size:12px;color:var(--sub);margin:14px 0 8px} .side h4:first-child{margin-top:0}
+.side label{display:flex;gap:8px;align-items:center;margin:6px 0}
+.lg{display:flex;align-items:center;gap:8px;margin:5px 0;font-size:12.5px;color:var(--sub)}
+.dot{width:11px;height:11px;border-radius:50%;display:inline-block;flex:none}
+.ring{width:11px;height:11px;border-radius:50%;border:2px solid #8a93a3;display:inline-block}
+#cy{height:560px}
+.gcap{display:flex;justify-content:space-between;font-size:12px;color:var(--sub);padding:10px 14px;border-bottom:1px solid var(--line)}
+.gnote{font-size:12px;color:var(--sub);padding:10px 14px;border-top:1px solid var(--line)}
+.zoom{position:absolute;right:12px;bottom:12px;display:flex;gap:6px}
+.zoom button{border:1px solid var(--line);background:#fff;border-radius:8px;width:32px;height:32px}
+.selcard{margin-top:16px;max-width:420px}
+.selcard .dl{grid-template-columns:52px 1fr}
+.path{background:var(--blue-bg);border-radius:10px;padding:10px 12px;font-size:13px;margin:12px 0}
+.path b{display:block;color:var(--navy);font-size:12px;margin-bottom:4px}
+.tl{padding:18px}
+.tl-axis{position:relative;height:28px;border-bottom:1px solid var(--line);margin-left:150px}
+.tl-axis span{position:absolute;font-size:11px;color:var(--sub);transform:translateX(-50%)}
+.tl-row{display:flex;align-items:center;min-height:34px;border-bottom:1px dashed #eef0f4}
+.tl-row .nm{width:150px;flex:none;font-size:12px;color:var(--sub);padding-right:8px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.tl-row .lane{position:relative;flex:1;height:34px}
+.tl-bar{position:absolute;top:9px;height:16px;border-radius:6px;background:var(--navy2);opacity:.9;min-width:6px;cursor:pointer}
+.tl-bar.closed{background:#c3c9d4} .tl-bar.dept{background:var(--green)} .tl-bar.tent{background:repeating-linear-gradient(45deg,var(--navy2),var(--navy2) 5px,#5d7ad0 5px,#5d7ad0 10px)}
+.tl-today{position:absolute;top:0;bottom:0;width:2px;background:var(--red);z-index:2}
+/* 인기 */
+.top2{display:grid;grid-template-columns:1fr 320px;gap:16px} @media(max-width:900px){.top2{grid-template-columns:1fr}}
+.rk{display:grid;grid-template-columns:30px 1fr auto;gap:14px;align-items:center;padding:14px 18px;border-top:1px solid var(--line)}
+.rk:first-child{border-top:0}
+.rk .n{width:28px;height:28px;border-radius:8px;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:800}
+.rk .n.lo{background:var(--gray-bg);color:var(--sub)}
+.bar{height:6px;border-radius:3px;background:var(--gray-bg);margin-top:8px;overflow:hidden} .bar i{display:block;height:100%;background:var(--navy2)}
+.how li{margin:6px 0;color:var(--sub);font-size:13px}
+/* 라이브러리 */
+.lib{display:grid;grid-template-columns:1fr 340px;gap:16px} @media(max-width:900px){.lib{grid-template-columns:1fr}}
+.lcard{display:grid;grid-template-columns:84px 1fr auto;gap:16px;padding:16px 18px;margin-bottom:12px}
+.dbox{background:var(--org-bg);border-radius:12px;text-align:center;padding:10px 4px;height:max-content}
+.dbox small{display:block;font-size:11px;color:var(--org)} .dbox b{font-size:20px;color:var(--org)}
+.dbox.later{background:var(--blue-bg)} .dbox.later small,.dbox.later b{color:var(--navy)}
+.dbox.done{background:var(--gray-bg)} .dbox.done small,.dbox.done b{color:var(--mute)}
+.cal{padding:16px}
+.cal-h{display:flex;align-items:center;justify-content:space-between;font-weight:800;margin-bottom:10px}
+.cal-h button{border:1px solid var(--line);background:#fff;border-radius:8px;width:30px;height:30px}
+.cal-g{display:grid;grid-template-columns:repeat(7,1fr);text-align:center;gap:4px;font-size:13px}
+.cal-g .w{color:var(--sub);font-size:12px;padding:4px 0}
+.cal-g .d{padding:6px 0 10px;border-radius:9px;position:relative}
+.cal-g .d.today{outline:2px solid var(--navy);font-weight:800}
+.cal-g .d .ds{position:absolute;left:0;right:0;bottom:3px;display:flex;justify-content:center;gap:2px}
+.cal-g .d .ds i{width:5px;height:5px;border-radius:50%;background:var(--org)} .cal-g .d .ds i.m{background:var(--navy2)}
+.ev{display:grid;grid-template-columns:12px 52px 1fr;gap:6px;font-size:12.5px;padding:6px 0;border-top:1px solid var(--line)}
 </style>
 </head>
 <body>
-<header>
-  <h1>눈송 공지비서 <small>졸업 · 2026-2 (2027년 2월)</small></h1>
-  <div class="ctl">
-    <label>학과</label><select id="dept"></select>
-    <label>학적</label><select id="st"><option value="">선택 안 함</option><option>재학</option><option>휴학</option><option>수료</option></select>
-    <label>입학 연도</label><input id="yr" type="number" min="2000" max="2030" placeholder="예: 2022">
-    <span id="advWrap" style="display:none"><label>지도교수</label> <select id="adv"><option value="">선택</option></select></span>
-  </div>
-</header>
-<nav>
-  <button data-t="todo" class="on">내 졸업 할 일</button>
-  <button data-t="dl">마감 임박</button>
-  <button data-t="graph">관심사 그래프</button>
-  <button data-t="notice">공지함 · 인기</button>
-</nav>
-<main>
-  <section id="p-todo" class="panel on">
-    <p class="meta" id="todoMeta"></p>
-    <div class="grid">
-      <div class="card"><h3>남은 단계</h3><div id="todoList" class="loading">불러오는 중… (서버가 잠들어 있으면 최대 50초)</div></div>
-      <div>
-        <div class="card" id="advCard" style="display:none;margin-bottom:16px"></div>
-        <div class="card" style="margin-bottom:16px"><h3>꼭 확인할 것</h3><ul class="plain" id="cautions"></ul></div>
-        <div class="card" style="margin-bottom:16px"><h3>문의처</h3><ul class="plain" id="contacts"></ul></div>
-        <div class="card" id="hiddenCard" style="display:none"><h3>내 학적엔 해당 없음</h3><ul class="plain" id="hidden"></ul></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="p-dl" class="panel">
-    <div class="ctl" style="margin-bottom:12px"><label>기간</label>
-      <select id="days"><option value="7">7일</option><option value="14" selected>14일</option><option value="30">30일</option></select>
-      <label><input type="checkbox" id="dlAll"> 전체 학과</label></div>
-    <div class="card"><div id="dlList" class="loading">불러오는 중…</div></div>
-  </section>
-
-  <section id="p-graph" class="panel">
-    <div class="ctl" style="margin-bottom:8px"><label>시작점</label>
-      <select id="seed"></select><label>노드 수</label>
-      <select id="k"><option>20</option><option selected>35</option><option>60</option></select></div>
-    <div class="legend">
-      <span><span class="dot" style="background:#1f3f8f"></span>절차</span>
-      <span><span class="dot" style="background:#1f8a5b"></span>단계(진행·예정)</span>
-      <span><span class="dot" style="background:#b9c0cc"></span>단계(마감)</span>
-      <span><span class="dot" style="background:#e08a1e"></span>공지</span>
-      <span><span class="dot" style="background:#b42318"></span>유의사항</span>
-      <span>보라 선 = 학과 마감이 본부를 덮어씀</span>
-    </div>
-    <div class="gwrap">
-      <div id="cy"></div>
-      <div class="card"><h3>노드 정보</h3><div id="nodeInfo" class="empty">노드를 누르면 연관도와 '왜 연결됐는지' 경로가 나와요.</div></div>
-    </div>
-  </section>
-
-  <section id="p-notice" class="panel">
-    <div class="grid">
-      <div class="card"><h3>공지함 (재게시는 하나로 묶음)</h3>
-        <div class="ctl" style="margin-bottom:8px"><input id="q" placeholder="제목 검색" style="flex:1"></div>
-        <table><thead><tr><th>게시일</th><th>게시판</th><th>제목</th><th>묶음</th></tr></thead><tbody id="noticeRows"></tbody></table></div>
-      <div class="card"><h3>인기 공지 (누적 조회수)</h3><table><tbody id="popRows"></tbody></table></div>
-    </div>
-  </section>
-</main>
-<footer>데이터: 숙명여대 대표 홈페이지·학과 게시판 공개 공지(매일 03:00 갱신) · 날짜 계산과 대상 판정은 서버 코드가 함 · 학번·이름은 받지 않음 · <a href="/docs">API 문서</a></footer>
+<header class="top"><div class="top-in">
+  <a class="logo" href="#/"><i>Σ</i>시그마</a>
+  <nav class="menu">
+    <a href="#/notice" data-r="notice">공지함</a><a href="#/graph" data-r="graph">관심사 그래프</a>
+    <a href="#/top" data-r="top">인기 게시글</a><a href="#/lib" data-r="lib">내 라이브러리</a>
+  </nav>
+  <button class="avatar" id="avatar" title="관심사·학적 설정" onclick="location.hash='#/settings'">설</button>
+</div></header>
+<div id="app"></div>
 
 <script src="/web/vendor/cytoscape.min.js"></script>
 <script>
-const $ = s => document.querySelector(s);
+// ── 설정 ─────────────────────────────────────────────
+const SNOWCHAT_URL = "https://sookmyung.factchat.bot/";   // SNOWCHAT 공지비서 챗봇 공개 주소로 바꾸기
+const TERM = "2026-2";                                    // 2027년 2월 졸업
+const $ = (s, r = document) => r.querySelector(s);
 const esc = s => (s ?? "").toString().replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-const api = (p, q={}) => fetch(p + "?" + new URLSearchParams(Object.entries(q).filter(([,v]) => v !== "" && v != null))).then(r => r.ok ? r.json() : Promise.reject(r.status));
-const store = {get:k=>{try{return localStorage.getItem(k)}catch{return null}}, set:(k,v)=>{try{localStorage.setItem(k,v)}catch{}}};
-let tab = "todo", cy = null;
+const ls = {get(k, d){try{const v = localStorage.getItem(k); return v == null ? d : JSON.parse(v)}catch{return d}}, set(k, v){try{localStorage.setItem(k, JSON.stringify(v))}catch{}}};
+const api = (p, q = {}) => fetch(p + "?" + new URLSearchParams(Object.entries(q).filter(([, v]) => v !== "" && v != null && v !== false)))
+  .then(r => r.ok ? r.json() : Promise.reject("HTTP " + r.status));
+let DEPTS = [];
+const prof = () => ls.get("sigma.profile", {dept: "", st: "재학", yr: "", sem: "7~8학기", advisor: "", interests: ["grad"]});
+const saved = () => ls.get("sigma.saved", []);
+const toggleSave = id => { const s = new Set(saved()); s.has(id) ? s.delete(id) : s.add(id); ls.set("sigma.saved", [...s]); return s.has(id); };
+const pq = () => { const p = prof(); return {dept: p.dept, enroll_status: p.st, admission_year: p.yr, advisor: p.advisor}; };
+const today = () => new Date(new Date().toLocaleString("en-US", {timeZone: "Asia/Seoul"}));
+const ymd = d => `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
+const deptName = c => (DEPTS.find(d => d.code === c) || {}).name || c;
 
-function badge(c){
-  const s = c.status || "";
-  let cls = "";
-  if (s.startsWith("진행")) cls = "b-now"; else if (s.startsWith("예정")) cls = (c.d_day != null && c.d_day <= 7) ? "b-soon" : "b-later";
-  return `<span class="badge ${cls}">${esc(s.replace("일정 미정","미정"))}</span>`;
+const BADGE = {"새소식":"bd-new","신청 가능":"bd-open","지난 일정":"bd-past","정리 대기":"bd-wait"};
+const badges = n => n.badges.map(b => `<span class="bd ${BADGE[b]}">${b === "신청 가능" ? "진행·예정" : b}</span>`).join(" ");
+const fitBd = f => f ? `<span class="bd ${f === "해당" ? "bd-fit" : f === "확인 필요" ? "bd-chk" : "bd-no"}">${f}</span>` : "";
+const per = s => esc(s).replace("[확인 필요]", '<span class="bd bd-chk">확인 필요</span>');
+function facts(n){
+  if (!n.stages.length) return n.body === "pending" ? "본문 정리 대기 중 — 원문에서 확인하세요" : "";
+  return n.stages.slice(0, 3).map(s => `${esc(s.label)} · ${per(s.period)}${s.place ? " · " + esc(s.place) : ""}`).join("<br>");
 }
-function itemHTML(c, showDept){
-  const per = esc(c.period).replace("[확인 필요]", '<span class="chk">[확인 필요]</span>');
-  const tags = [];
-  if (showDept) tags.push(`<span class="tag">${esc(c.dept_name)}</span>`);
-  if (c.overrides_central) tags.push(`<span class="tag ovr">학과 마감 우선 · 본부 ${esc(c.overrides_central.period)}</span>`);
-  if (c.required === false) tags.push(`<span class="tag">해당자만</span>`);
-  if (c.place) tags.push(`<span class="tag">📍 ${esc(c.place)}</span>`);
-  if (c.route) tags.push(`<span class="tag">${esc(c.route.label)}</span>`);
-  if (c.target) tags.push(`<span class="tag">대상: ${esc(c.target)}</span>`);
-  const src = c.sources && c.sources[0];
-  return `<div class="item"><div>${badge(c)}</div><div><div class="lbl">${esc(c.label)}</div><div class="per">${per}</div>
-    ${tags.length ? `<div class="tags">${tags.join("")}</div>` : ""}
-    ${src ? `<div class="src">근거: <a href="${esc(src.url)}" target="_blank" rel="noopener">${esc(src.title)}</a>${src.evidence && src.evidence[0] ? ` — “${esc(src.evidence[0])}”` : ""}</div>` : ""}</div></div>`;
-}
-function params(){ return {dept:$("#dept").value, enroll_status:$("#st").value, admission_year:$("#yr").value, advisor:$("#adv").value}; }
+const loadingBox = t => `<div class="loading">${t || "불러오는 중… (서버가 쉬고 있으면 첫 화면이 50초까지 걸려요)"}</div>`;
+const fail = e => `<div class="empty">불러오지 못했어요 (${esc(e)}). 잠시 후 새로고침해 주세요.</div>`;
 
-async function loadTodo(){
-  $("#todoList").innerHTML = '<span class="loading">불러오는 중…</span>';
-  const r = await api("/todo", params());
-  $("#todoMeta").textContent = `${r.dept.name} · 기준일 ${r.today} · 남은 단계 ${r.items.length}개` + (r.note ? ` · ${r.note}` : "");
-  $("#todoList").innerHTML = r.items.length ? r.items.map(c => itemHTML(c)).join("") : '<div class="empty">남은 단계가 없어요.</div>';
-  $("#cautions").innerHTML = r.cautions.map(c => `<li>${esc(c.text)}</li>`).join("") || '<li class="empty">없음</li>';
-  $("#contacts").innerHTML = r.contacts.map(c => `<li>${esc(c.topic)} — ${esc(c.office)} ${esc(c.phone)}</li>`).join("") || '<li class="empty">없음</li>';
-  $("#hiddenCard").style.display = r.hidden_for_profile.length ? "" : "none";
-  $("#hidden").innerHTML = r.hidden_for_profile.map(h => `<li>${esc(h.label)} <span style="color:var(--mute)">(${esc(h.why)})</span></li>`).join("");
-  const a = r.advisor_specific;
-  if (a) {
-    $("#advWrap").style.display = "";
-    const cur = $("#adv").value;
-    $("#adv").innerHTML = '<option value="">선택</option>' + a.advisors_in_notices.map(n => `<option ${n===cur?"selected":""}>${esc(n)}</option>`).join("");
-    $("#advCard").style.display = "";
-    $("#advCard").innerHTML = `<h3>지도교수별 일정 ${a.count}건</h3><div style="font-size:14px">위에서 지도교수를 고르면 그 교수님 일정만 목록에 넣어 드려요.</div>`;
-  } else {
-    $("#advCard").style.display = "none";
-    if (!$("#adv").value) $("#advWrap").style.display = "none";
-  }
+// ── 라우터 ───────────────────────────────────────────
+const ROUTES = {"": home, settings, notice, graph, top: popularPage, lib};
+async function route(){
+  const r = (location.hash.replace(/^#\/?/, "").split("?")[0]) || "";
+  document.body.classList.toggle("home", r === "");
+  document.querySelectorAll(".menu a").forEach(a => a.classList.toggle("on", a.dataset.r === r));
+  const p = prof();
+  $("#avatar").textContent = p.dept ? deptName(p.dept).slice(0, 1) : "설";
+  if (!p.dept && r !== "" && r !== "settings") { location.hash = "#/settings"; return; }
+  window.scrollTo(0, 0);
+  try { await (ROUTES[r] || home)(); } catch (e) { $("#app").innerHTML = `<main>${fail(e)}</main>`; }
+}
+window.addEventListener("hashchange", route);
+
+// ── 01 홈 ───────────────────────────────────────────
+async function home(){
+  const p = prof();
+  const flakes = Array.from({length: 14}, (_, i) => `<span class="flake" style="left:${(i*37+11)%96}%;top:${(i*53+7)%88}%;opacity:${.35+(i%4)*.15}">✻</span>`).join("");
+  $("#app").innerHTML = `<section class="hero">${flakes}
+    <div class="big"><i>Σ</i>시그마</div>
+    <p>흩어진 교내 공지를 하나로 모아, 나에게 필요한 소식을 먼저 알려 드려요</p>
+    <a class="cta" href="${SNOWCHAT_URL}" target="_blank" rel="noopener">💬 SNOWCHAT 공지비서에게 물어보기 ↗</a>
+    <div class="pill">🕛 다음 알림: 내일 12:00</div>
+    <div class="quick" id="quick">${p.dept ? "" : '<a href="#/settings">👉 먼저 <b>관심사·학적</b>을 설정하면 내 일정이 보여요</a>'}</div>
+  </section><div class="foot">공지 원문은 각 게시판에 있어요 · 날짜·대상은 원문 근거 문장과 대조해 보여 드려요 · 확실하지 않은 값은 '확인 필요'로 표시해요</div>`;
+  if (!p.dept) return;
+  const [t, d] = await Promise.all([api("/todo", {...pq(), term: TERM}), api("/deadlines", {days: 7, dept: p.dept})]);
+  $("#quick").innerHTML = `<a href="#/notice">${esc(t.dept.name)} 졸업 · 남은 단계 <b>${t.items.length}개</b></a>
+    <a href="#/lib">7일 안 마감 <b>${d.items.length}개</b></a><a href="#/graph">관심사 그래프 보기 →</a>`;
 }
 
-async function loadDl(){
-  $("#dlList").innerHTML = '<span class="loading">불러오는 중…</span>';
-  const r = await api("/deadlines", {days:$("#days").value, dept: $("#dlAll").checked ? "" : $("#dept").value});
-  $("#dlList").innerHTML = r.items.length ? r.items.map(c => itemHTML(c, true)).join("") : `<div class="empty">${r.days}일 안에 끝나는 일정이 없어요.</div>`;
+// ── 03 관심사·알림 설정 ─────────────────────────────
+async function settings(){
+  const p = prof();
+  const opts = DEPTS.map(d => `<option value="${d.code}" ${d.code === p.dept ? "selected" : ""}>${esc(d.name)}${d.has_dept_schedule ? "" : " (본부 일정만)"}</option>`).join("");
+  const chip = (on, t, dis) => `<button class="chip ${on ? "on" : ""}" ${dis ? "disabled title='다음 단계에서 수집 예정'" : ""}>${on ? "✓ " : ""}${t}${dis ? "<small>준비 중</small>" : ""}</button>`;
+  $("#app").innerHTML = `<main><h1 class="pg">관심사·알림 설정</h1><p class="pg-sub">학번·이름은 받지 않아요. 이 브라우저에만 저장돼요.</p>
+  <div class="set"><div>
+    <div class="card pad sec"><h3>① 관심 분야 <small>지금은 졸업 분야만 수집 중이에요</small></h3>
+      <div class="grp">취업·프로그램</div><div class="row">${chip(0,"진로·취업",1)}${chip(0,"비교과·특강",1)}${chip(0,"공모전·대외활동",1)}</div>
+      <div class="grp">졸업</div><div class="row">${chip(1,"졸업 요건·심사")}${chip(0,"졸업시험·논문",1)}</div>
+      <div class="grp">학사·교무</div><div class="row">${chip(0,"수강신청",1)}${chip(0,"휴학·복학",1)}${chip(0,"성적·학적",1)}</div>
+      <div class="grp">장학·등록</div><div class="row">${chip(0,"교내 장학",1)}${chip(0,"교외 장학",1)}${chip(0,"등록금",1)}</div>
+    </div>
+    <div class="card pad sec" style="margin-top:16px"><h3>② 내 학적 정보</h3>
+      <div class="form">
+        <div><label>학과(전공)</label><select id="f-dept"><option value="">선택</option>${opts}</select></div>
+        <div><label>학적 상태</label><div class="seg" id="f-st">${["재학","휴학","수료"].map(s => `<button class="chip ${s === p.st ? "on" : ""}" data-v="${s}">${s}</button>`).join("")}</div></div>
+        <div><label>현재 학기</label><select id="f-sem">${["1~2학기","3~4학기","5~6학기","7~8학기","9학기 이상"].map(s => `<option ${s === p.sem ? "selected" : ""}>${s}</option>`).join("")}</select></div>
+        <div><label>입학 연도 (학번 앞 4자리만)</label><input id="f-yr" type="number" min="2000" max="2030" placeholder="예: 2022" value="${esc(p.yr)}"></div>
+        <div><label>졸업 예정</label><select id="f-grad"><option>2027년 2월 (2026-2)</option></select></div>
+        <div><label>지도교수 (학과에 교수별 일정이 있을 때)</label><select id="f-adv"><option value="">선택 안 함</option></select></div>
+      </div>
+    </div></div>
+    <div><div class="card pad sec"><h3>③ 알림 미리보기</h3>
+      <div class="preview"><i>Σ</i><div><div style="font-size:12px;opacity:.7">시그마 · 12:00</div><div id="pv" style="font-weight:700;margin-top:3px">학과를 고르면 미리보기가 나와요</div></div></div>
+      <div style="font-size:12px;color:var(--sub);margin-top:10px">다음 알림: 내일 12:00 · 새 소식이 있을 때만 보내요</div>
+      <div class="notebox">매일 정오(12:00)에 새 관심 공지가 있을 때만 알림이 전송돼요.</div>
+      <div style="font-size:12px;color:var(--mute);margin-top:10px">브라우저 푸시 알림은 다음 단계에서 연결돼요.</div></div>
+      <div class="row" style="margin-top:14px"><button class="btn btn-p" id="f-save" style="flex:1;padding:12px">설정 저장</button><button class="btn" onclick="history.back()">취소</button></div>
+      <div id="f-msg" class="saved-toast" style="margin-top:8px"></div></div>
+  </div></main>`;
+  let st = p.st;
+  $("#f-st").onclick = e => { const b = e.target.closest("button"); if (!b) return; st = b.dataset.v; $("#f-st").querySelectorAll("button").forEach(x => x.classList.toggle("on", x === b)); };
+  const fillAdv = async () => {
+    const d = $("#f-dept").value; $("#f-adv").innerHTML = '<option value="">선택 안 함</option>';
+    if (!d) return;
+    const t = await api("/todo", {dept: d, term: TERM});
+    (t.advisor_specific?.advisors_in_notices || []).forEach(n => $("#f-adv").insertAdjacentHTML("beforeend", `<option ${n === p.advisor ? "selected" : ""}>${esc(n)}</option>`));
+    const dl = await api("/deadlines", {days: 7, dept: d});
+    $("#pv").textContent = dl.items.length ? `이번 주 ${t.dept.name} 졸업 일정 ${dl.items.length}건 — ${dl.items[0].label}` : `${t.dept.name}: 이번 주 마감 없음 · 남은 단계 ${t.items.length}개`;
+  };
+  $("#f-dept").onchange = fillAdv; fillAdv();
+  $("#f-save").onclick = () => {
+    if (!$("#f-dept").value) { $("#f-msg").textContent = "학과를 골라 주세요"; $("#f-msg").style.color = "var(--red)"; return; }
+    ls.set("sigma.profile", {dept: $("#f-dept").value, st, sem: $("#f-sem").value, yr: $("#f-yr").value, advisor: $("#f-adv").value, interests: ["grad"]});
+    $("#f-msg").style.color = ""; $("#f-msg").textContent = "저장했어요 → 공지함으로 이동해요"; setTimeout(() => location.hash = "#/notice", 600);
+  };
 }
 
-const COLORS = {Procedure:"#1f3f8f", Notice:"#e08a1e", Caution:"#b42318", Interest:"#6b3fd1"};
-async function loadGraph(){
-  const r = await api("/graph", {seed:$("#seed").value, k:$("#k").value});
-  const els = r.nodes.map(n => ({data:{id:n.id, label:(n.label||"").slice(0,22), full:n.label, type:n.type, score:n.score, why:n.why, url:n.url, status:n.status,
-      color: n.type==="Stage" ? ((n.status||"").startsWith("마감") ? "#b9c0cc" : "#1f8a5b") : (COLORS[n.type]||"#8a93a3"),
-      size: n.id===r.seed.id ? 46 : 14 + Math.min(30, Math.sqrt(n.score)*120)}}));
-  r.edges.forEach((e,i) => els.push({data:{id:"e"+i, source:e.src, target:e.dst, type:e.type}}));
-  if (cy) cy.destroy();
-  cy = cytoscape({container:$("#cy"), elements:els, wheelSensitivity:0.2,
-    style:[
-      {selector:"node", style:{"background-color":"data(color)", width:"data(size)", height:"data(size)", label:"data(label)", "font-size":10, color:"#2a3342",
-        "text-valign":"bottom", "text-margin-y":4, "text-wrap":"ellipsis", "text-max-width":120}},
-      {selector:"edge", style:{width:1.2, "line-color":"#cfd5e1", "curve-style":"bezier", "target-arrow-shape":"triangle", "target-arrow-color":"#cfd5e1", "arrow-scale":0.7}},
-      {selector:'edge[type="OVERRIDES"]', style:{"line-color":"#6b3fd1", "target-arrow-color":"#6b3fd1", width:2.4}},
-      {selector:'edge[type="PRECEDES"]', style:{"line-style":"dashed"}},
-      {selector:":selected", style:{"border-width":3, "border-color":"#111"}}],
-    layout:{name:"cose", animate:false, nodeRepulsion:9000, idealEdgeLength:90, padding:24}});
-  cy.on("tap", "node", ev => {
-    const d = ev.target.data();
-    $("#nodeInfo").innerHTML = `<div class="lbl">${esc(d.full)}</div><div style="font-size:12px;color:var(--sub);margin:4px 0 8px">${esc(d.type)}${d.status ? " · " + esc(d.status) : ""} · 연관도 ${d.score}</div>
-      <div style="font-size:13px"><b>왜 연결됐나</b><br>${esc(d.why).replaceAll(" → ", "<br>→ ")}</div>
-      ${d.url ? `<div class="src" style="margin-top:8px"><a href="${esc(d.url)}" target="_blank" rel="noopener">원문 공지 열기</a></div>` : ""}`;
+// ── 04 공지함 ───────────────────────────────────────
+async function notice(){
+  const p = prof();
+  $("#app").innerHTML = `<main><div class="row"><div><h1 class="pg">공지함</h1><p class="pg-sub">관심사: 졸업 요건·심사 · ${esc(deptName(p.dept))} · ${esc(p.st || "")}</p></div><span class="space"></span><a class="link" href="#/settings">알림설정 바꾸기</a></div>
+    <div class="tabs" id="tabs"></div><div class="card list" id="list">${loadingBox()}</div><div id="detail"></div></main>`;
+  const rows = await api("/feed", {...pq(), terms: "2026-2,2027-1"});
+  const sets = {"전체": rows, "새소식": rows.filter(n => n.badges.includes("새소식")), "신청 가능": rows.filter(n => n.badges.includes("신청 가능"))};
+  let tab = "전체", shown = 8, sel = (rows.find(n => n.badges.includes("신청 가능") && n.fit === "해당") || rows.find(n => n.badges.includes("신청 가능")) || rows[0] || {}).notice_id;
+  const draw = () => {
+    $("#tabs").innerHTML = Object.entries(sets).map(([k, v]) => `<button class="chip ${k === tab ? "on" : ""}" data-k="${k}">${k}${k === "전체" ? "" : ` <small>${v.length}</small>`}</button>`).join("");
+    const L = sets[tab];
+    $("#list").innerHTML = L.length ? L.slice(0, shown).map(n => `<div class="nrow ${n.notice_id === sel ? "sel" : ""} ${n.badges.includes("지난 일정") ? "past" : ""}" data-id="${esc(n.notice_id)}">
+        <div class="meta">${badges(n)} ${fitBd(n.fit)} <span>${esc(n.board)}${n.reposts ? ` · 같은 공지 ${n.reposts}곳 재게시` : ""}</span></div>
+        <div class="t">${esc(n.title)}</div><div class="f">${facts(n)}</div></div>`).join("")
+      + (L.length > shown ? `<div class="more"><button class="btn" id="more">더 보기 (${L.length - shown}개 더)</button></div>` : "")
+      : '<div class="empty">해당하는 공지가 없어요.</div>';
+    $("#tabs").onclick = e => { const b = e.target.closest("button"); if (b) { tab = b.dataset.k; shown = 8; draw(); } };
+    $("#list").onclick = e => { if (e.target.id === "more") { shown += 10; draw(); return; } const r = e.target.closest(".nrow"); if (r) { sel = r.dataset.id; draw(); $("#detail").scrollIntoView({behavior: "smooth", block: "nearest"}); } };
+    const n = rows.find(x => x.notice_id === sel);
+    $("#detail").innerHTML = n ? noticeDetail(n) : "";
+    bindSave($("#detail"));
+  };
+  draw();
+}
+function noticeDetail(n){
+  const isSaved = saved().includes(n.notice_id);
+  const stg = n.stages.map(s => `<div class="stg"><div style="font-weight:700">${esc(s.label)} ${fitBd(s.fit)} ${s.status === "마감" ? '<span class="bd bd-past">마감</span>' : ""}</div>
+      <div>${per(s.period)}${s.place ? " · 📍" + esc(s.place) : ""}${s.route ? " · " + esc(s.route) : ""}</div>
+      ${s.target ? `<div style="color:var(--sub);font-size:12.5px">대상: ${esc(s.target)}</div>` : ""}
+      ${s.documents.length ? `<div style="color:var(--sub);font-size:12.5px">제출: ${s.documents.map(esc).join(", ")}</div>` : ""}
+      ${s.dept_override ? `<div style="margin-top:4px"><span class="bd bd-ovr">내 학과는 ${esc(s.dept_override.period)} 마감 (학과 우선)</span></div>` : ""}</div>`).join("");
+  return `<div class="card pad detail"><div class="meta row" style="font-size:12px;color:var(--sub)">${badges(n)} ${fitBd(n.fit)} ${esc(n.board)} · ${esc(n.posted)} 게시</div>
+    <h2 style="margin:8px 0 2px;font-size:20px">${esc(n.title)}</h2>
+    <dl class="dl"><dt>일정</dt><dd>${stg || (n.body === "pending" ? "본문 정리 대기 중 — 원문에서 확인" : '<span class="bd bd-chk">원문에 없음</span>')}</dd>
+      ${n.cautions.length ? `<dt>유의</dt><dd style="color:var(--red)">${n.cautions.map(esc).join("<br>")}</dd>` : ""}
+      <dt>문의처</dt><dd>${n.contacts.length ? n.contacts.map(c => `${esc(c.office)}${c.phone ? " " + esc(c.phone) : ""} (${esc(c.topic)})`).join("<br>") : esc(n.board)}</dd></dl>
+    <div class="row"><a class="btn btn-p" href="${esc(n.url)}" target="_blank" rel="noopener" style="text-decoration:none">원문 보기 ↗</a>
+      <a class="btn" href="#/graph?seed=${encodeURIComponent(n.notice_id)}" style="text-decoration:none">그래프에서 보기</a>
+      <button class="btn ${isSaved ? "btn-y" : ""}" data-save="${esc(n.notice_id)}">${isSaved ? "★ 저장됨" : "☆ 저장"}</button></div></div>`;
+}
+function bindSave(root){
+  root.querySelectorAll("[data-save]").forEach(b => b.onclick = e => { e.stopPropagation(); const on = toggleSave(b.dataset.save); b.classList.toggle("btn-y", on); b.textContent = on ? "★ 저장됨" : "☆ 저장"; });
+}
+
+// ── 05 관심사 그래프 ─────────────────────────────────
+let cy = null;
+async function graph(){
+  const p = prof(), d = DEPTS.find(x => x.code === p.dept) || {};
+  const qs = new URLSearchParams(location.hash.split("?")[1] || "");
+  const seeds = [["interest:grad-req", "졸업 요건·심사"], ...(d.has_dept_schedule ? [[`proc:grad:${TERM}:${p.dept}`, `${d.name} 졸업 절차`]] : []), [`proc:grad:${TERM}`, "본부 졸업 절차"]];
+  const st = {view: "focus", seed: qs.get("seed") || seeds[d.has_dept_schedule ? 1 : 0][0], closed: false, dept: false, notes: true};
+  $("#app").innerHTML = `<main><div class="gtop"><div><h1 class="pg">관심사 그래프</h1><p class="pg-sub">내 관심사와 연결된 공지·단계·유의사항을 한 화면에서 봐요. 노드를 누르면 요약이 열려요.</p></div><span class="space"></span>
+    <div class="vtabs" id="vt"><button data-v="focus" class="on">관심사 중심</button><button data-v="group">주제 묶음</button><button data-v="flow">학기 흐름</button></div></div>
+    <div class="gl"><div><div class="card pad side">
+      <h4>중심 관심사</h4><div class="row" id="seeds">${seeds.map(([v, t]) => `<button class="chip ${v === st.seed ? "on" : ""}" data-v="${esc(v)}">${esc(t)}</button>`).join("")}<button class="chip" disabled>진로·취업<small>준비 중</small></button></div>
+      <h4>표시 필터</h4>
+      <label><input type="checkbox" id="g-closed"> 마감된 단계</label><label><input type="checkbox" id="g-dept"> 주관 부서</label><label><input type="checkbox" id="g-notes" checked> 유의사항·출처 공지</label>
+      <h4>범례</h4>
+      <div class="lg"><span class="dot" style="background:var(--navy)"></span>관심사·절차</div><div class="lg"><span class="dot" style="background:#3f73e0"></span>진행·예정 단계</div>
+      <div class="lg"><span class="dot" style="background:#e08a1e"></span>출처 공지</div><div class="lg"><span class="dot" style="background:var(--red)"></span>유의사항</div>
+      <div class="lg"><span class="dot" style="background:#c3c9d4"></span>마감된 단계</div><div class="lg"><span class="ring"></span>주관 부서</div>
+      <div class="lg" style="margin-top:10px">크기 = 내 관심사와 연관도<br>보라 선 = 학과 마감이 본부를 덮어씀<br>굵은 선 = 선택한 노드의 추천 경로</div>
+    </div><div id="sel"></div></div>
+    <div class="card" style="position:relative;overflow:hidden" id="gbox"></div></div></main>`;
+  const draw = async () => {
+    if (st.view === "flow") return flow();
+    $("#gbox").innerHTML = `<div class="gcap"><span id="gc">${st.view === "focus" ? "관심사 중심 보기" : "주제 묶음 보기"}</span><span>기준일 ${ymd(today())}</span></div><div id="cy"></div>
+      <div class="zoom"><button id="zi">＋</button><button id="zo">－</button><button id="zf" style="width:auto;padding:0 10px">화면 맞추기</button></div>
+      <div class="gnote">연관도 상위 노드만 보여요. 전체 공지는 <a class="link" href="#/notice">공지함으로 이동</a></div>`;
+    const types = ["Stage", "Procedure", ...(st.notes ? ["Notice", "Caution"] : []), ...(st.dept ? ["Dept", "Office"] : [])].join(",");
+    const r = await api("/graph", {seed: st.seed, k: 36, types, show_closed: st.closed ? "true" : "false"});
+    // 다른 학과·지난 학기 절차 노드는 빼서 내 절차만 보이게
+    const keepProc = new Set([st.seed, `proc:grad:${TERM}`, `proc:grad:${TERM}:${p.dept}`, "interest:grad-req"]);
+    r.nodes = r.nodes.filter(n => n.type !== "Procedure" || keepProc.has(n.id));
+    const ids = new Set(r.nodes.map(n => n.id)); r.edges = r.edges.filter(e => ids.has(e.src) && ids.has(e.dst));
+    $("#gc").textContent = `${st.view === "focus" ? "관심사 중심 보기" : "주제 묶음 보기"} · 연관도 상위 ${r.nodes.length - 1}개 표시`;
+    const col = n => n.type === "Stage" ? ((n.status || "").startsWith("마감") ? "#c3c9d4" : "#3f73e0") : n.type === "Notice" ? "#e08a1e" : n.type === "Caution" ? "#b42318" : (n.type === "Dept" || n.type === "Office") ? "#ffffff" : "#14307a";
+    const els = [];
+    if (st.view === "group") new Set(r.nodes.map(n => n.group).filter(Boolean)).forEach(gid => els.push({data: {id: "grp:" + gid, label: (r.nodes.find(n => n.group === gid).group_label || "").replace("학부 정기졸업 — ", ""), isGroup: 1}}));
+    r.nodes.forEach(n => els.push({data: {...n, id: n.id, label: (n.label || "").slice(0, 16), color: col(n), border: (n.type === "Dept" || n.type === "Office") ? 2 : 0,
+      size: n.id === r.seed.id ? 54 : 16 + Math.min(34, Math.sqrt(n.score) * 130), parent: st.view === "group" && n.group && n.id !== n.group ? "grp:" + n.group : undefined}}));
+    r.edges.forEach((e, i) => els.push({data: {id: "e" + i, source: e.src, target: e.dst, type: e.type}}));
+    if (cy) cy.destroy();
+    cy = cytoscape({container: $("#cy"), elements: els, wheelSensitivity: .2, style: [
+      {selector: "node", style: {"background-color": "data(color)", width: "data(size)", height: "data(size)", label: "data(label)", "font-size": 10, color: "#1f2937",
+        "text-valign": "bottom", "text-margin-y": 4, "border-width": "data(border)", "border-color": "#8a93a3", "text-wrap": "wrap", "text-max-width": 90}},
+      {selector: "node[?isGroup]", style: {"background-color": "#f2f5ff", "background-opacity": .7, "border-width": 1, "border-color": "#c9d4f2", shape: "round-rectangle", "text-valign": "top", "font-size": 12, "font-weight": 700, color: "#14307a", padding: 18}},
+      {selector: "edge", style: {width: 1.1, "line-color": "#d3d9e4", "curve-style": "bezier", "target-arrow-shape": "triangle", "target-arrow-color": "#d3d9e4", "arrow-scale": .6}},
+      {selector: 'edge[type="OVERRIDES"]', style: {"line-color": "#6b3fd1", "target-arrow-color": "#6b3fd1", width: 2.5}},
+      {selector: 'edge[type="PRECEDES"]', style: {"line-style": "dashed"}},
+      {selector: ".hl", style: {"line-color": "#14307a", "target-arrow-color": "#14307a", width: 3.5, "z-index": 9}},
+      {selector: "node.hl", style: {"border-width": 3, "border-color": "#14307a"}}],
+      layout: st.view === "group" ? {name: "preset", positions: groupPositions(r.nodes), padding: 30}
+                                  : {name: "concentric", concentric: n => n.data("score") || 1, levelWidth: () => .02, minNodeSpacing: 18, animate: false, padding: 20}});
+    $("#zi").onclick = () => cy.zoom(cy.zoom() * 1.2); $("#zo").onclick = () => cy.zoom(cy.zoom() / 1.2); $("#zf").onclick = () => cy.fit(undefined, 20);
+    cy.on("tap", "node", ev => { const dd = ev.target.data(); if (dd.isGroup) return; selectNode(dd, r.seed.id); });
+    const first = r.nodes.find(n => n.type === "Stage" && !(n.status || "").startsWith("마감"));
+    if (first) selectNode(first, r.seed.id);
+  };
+  const flow = async () => {
+    $("#gbox").innerHTML = `<div class="gcap"><span>학기 흐름 · ${esc(d.name || "")} 2026-2 졸업 (본부+학과)</span><span>빨간 선 = 오늘</span></div><div class="tl" id="tl">${loadingBox()}</div>`;
+    const t = await api("/todo", {...pq(), term: TERM, include_closed: true});
+    const it = t.items.filter(c => c.lo || c.hi);
+    const ds = it.flatMap(c => [c.lo, c.hi].filter(Boolean).map(x => new Date(x.slice(0, 10))));
+    const t0 = new Date(Math.min(...ds, today())), t1 = new Date(Math.max(...ds, today()));
+    t0.setDate(1); t1.setMonth(t1.getMonth() + 1, 0);
+    const X = d => ((d - t0) / (t1 - t0) * 100).toFixed(2) + "%";
+    const months = []; for (let m = new Date(t0); m <= t1; m.setMonth(m.getMonth() + 1)) months.push(new Date(m));
+    $("#tl").innerHTML = `<div class="tl-axis">${months.map(m => `<span style="left:${X(m)}">${m.getMonth() + 1}월</span>`).join("")}</div>` +
+      it.map(c => { const a = new Date((c.lo || c.hi).slice(0, 10)), b = new Date((c.hi || c.lo).slice(0, 10)); b.setDate(b.getDate() + 1);
+        const cls = c.status === "마감" ? "closed" : c.tentative ? "tent" : c.scope !== "본부" ? "dept" : "";
+        return `<div class="tl-row"><div class="nm" title="${esc(c.label)}">${esc(c.label)}</div><div class="lane"><div class="tl-today" style="left:${X(today())}"></div>
+          <div class="tl-bar ${cls}" style="left:${X(a)};width:calc(${X(b)} - ${X(a)})" title="${esc(c.label)} · ${esc(c.period)}" data-id="${esc(c.stage_id)}"></div></div></div>`; }).join("") +
+      `<div class="lg" style="margin-top:12px;gap:14px"><span><span class="dot" style="background:var(--navy2)"></span> 본부</span><span><span class="dot" style="background:var(--green)"></span> 학과</span><span><span class="dot" style="background:#c3c9d4"></span> 마감</span><span>빗금 = 예정·변동 가능</span></div>`;
+    $("#tl").onclick = async e => { const b = e.target.closest(".tl-bar"); if (!b) return; const s = await api("/stage/" + b.dataset.id); selectNode({...s, id: s.stage_id, type: "Stage", why: s.scope === "본부" ? "본부 졸업 절차 → " + s.label : (d.name || "") + " 졸업 절차 → " + s.label}, null); };
+  };
+  $("#vt").onclick = e => { const b = e.target.closest("button"); if (!b) return; st.view = b.dataset.v; $("#vt").querySelectorAll("button").forEach(x => x.classList.toggle("on", x === b)); draw(); };
+  $("#seeds").onclick = e => { const b = e.target.closest("button"); if (!b || b.disabled) return; st.seed = b.dataset.v; $("#seeds").querySelectorAll("button").forEach(x => x.classList.toggle("on", x === b)); draw(); };
+  $("#g-closed").onchange = e => { st.closed = e.target.checked; draw(); };
+  $("#g-dept").onchange = e => { st.dept = e.target.checked; draw(); };
+  $("#g-notes").onchange = e => { st.notes = e.target.checked; draw(); };
+  await draw();
+}
+// 주제 묶음: 절차(그룹)마다 원형으로 모으고, 그룹들은 격자로 배치 (겹치지 않게 고정 배치)
+function groupPositions(nodes){
+  const groups = {};
+  nodes.forEach(n => { const g = (n.group && n.id !== n.group) ? n.group : "_etc"; (groups[g] = groups[g] || []).push(n); });
+  const keys = Object.keys(groups).sort((a, b) => groups[b].length - groups[a].length);
+  const cols = Math.ceil(Math.sqrt(keys.length)), pos = {}, cell = 380;
+  keys.forEach((k, gi) => {
+    const L = groups[k].sort((a, b) => b.score - a.score), cx = (gi % cols) * cell, cy0 = Math.floor(gi / cols) * cell;
+    L.forEach((n, i) => {
+      if (i === 0) { pos[n.id] = {x: cx, y: cy0}; return; }
+      const ring = i <= 8 ? 1 : 2, idx = ring === 1 ? i - 1 : i - 9, cnt = ring === 1 ? Math.min(8, L.length - 1) : L.length - 9;
+      const ang = (2 * Math.PI * idx) / Math.max(cnt, 1), rad = ring * 95;
+      pos[n.id] = {x: cx + rad * Math.cos(ang), y: cy0 + rad * Math.sin(ang)};
+    });
   });
+  return pos;
+}
+async function selectNode(n, seedId){
+  if (cy && seedId) { cy.elements().removeClass("hl"); try { const path = cy.elements().aStar({root: "#" + CSS.escape(seedId), goal: "#" + CSS.escape(n.id), directed: false}).path; path && path.addClass("hl"); } catch {} }
+  const T = {Stage: "단계", Notice: "공지", Caution: "유의사항", Procedure: "절차", Dept: "학과", Office: "부서", Interest: "관심사"}[n.type] || n.type;
+  let url = n.url, noticeId = n.type === "Notice" ? n.id : null;
+  if (n.type === "Stage") { try { const s = await api("/stage/" + n.id); const src = s.sources[0]; if (src) { url = src.url; noticeId = src.notice_id; } } catch {} }
+  const isSaved = noticeId && saved().includes(noticeId);
+  $("#sel").innerHTML = `<div class="card pad selcard"><div style="font-size:12px;color:var(--sub)">선택한 노드 · ${T}${n.status ? " · " + esc(n.status) : ""}</div>
+    <h3 style="margin:6px 0 4px;font-size:17px">${esc(n.label)}</h3>
+    <dl class="dl">${n.period ? `<dt>일시</dt><dd>${per(n.period)}</dd>` : ""}${n.place ? `<dt>장소</dt><dd>${esc(n.place)}</dd>` : ""}
+      ${n.target ? `<dt>대상</dt><dd>${esc(n.target)}</dd>` : ""}${n.posted ? `<dt>게시일</dt><dd>${esc(n.posted)}</dd>` : ""}${n.group_label ? `<dt>절차</dt><dd>${esc(n.group_label)}</dd>` : ""}</dl>
+    ${n.why ? `<div class="path"><b>추천 경로</b>${esc(n.why)}</div>` : ""}
+    ${url ? `<a class="btn btn-p" style="display:block;text-align:center;text-decoration:none" href="${esc(url)}" target="_blank" rel="noopener">원문 보기 ↗</a>` : ""}
+    ${noticeId ? `<button class="btn ${isSaved ? "btn-y" : ""}" style="width:100%;margin-top:8px" data-save="${esc(noticeId)}">${isSaved ? "★ 저장됨" : "☆ 저장"}</button>` : ""}</div>`;
+  bindSave($("#sel"));
 }
 
-async function loadNotice(){
-  const [ns, pop] = await Promise.all([api("/notices", {dept:$("#dept").value, q:$("#q").value, limit:80}), api("/popular", {limit:10})]);
-  $("#noticeRows").innerHTML = ns.map(n => `<tr><td>${esc(n.posted)}</td><td>${esc(n.board)}</td><td><a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.title)}</a></td><td>${n.reposts ? "+" + n.reposts : ""}</td></tr>`).join("") || '<tr><td colspan="4" class="empty">없음</td></tr>';
-  $("#popRows").innerHTML = pop.map(n => `<tr><td style="white-space:nowrap">${n.hits.toLocaleString()}</td><td><a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.title)}</a><div style="font-size:12px;color:var(--mute)">${esc(n.board)}</div></td></tr>`).join("");
+// ── 06 인기 게시글 ──────────────────────────────────
+async function popularPage(){
+  const p = prof();
+  $("#app").innerHTML = `<main><h1 class="pg">인기 게시글</h1><p class="pg-sub">학교 게시판에서 조회수가 높은 공지를 순서대로 보여줘요. 조회수는 중요도가 아닌 참고 지표예요.</p>
+    <div class="row" style="margin-bottom:14px"><button class="chip" disabled>행사·프로그램<small>준비 중</small></button><button class="chip on">졸업</button><button class="chip" disabled>학사·교무<small>준비 중</small></button><button class="chip" disabled>장학·등록<small>준비 중</small></button></div>
+    <div class="top2"><div class="card" id="rk">${loadingBox()}</div>
+    <div class="card pad"><h3 style="margin:0 0 6px;font-size:15px">이렇게 계산합니다</h3><ul class="how">
+      <li>2026-2 졸업 공지 중 수집 시점의 누적 조회수로 줄을 세워요.</li><li>여러 학과에 다시 올라온 같은 공지는 하나로 묶어요(대표 공지 기준).</li>
+      <li>내 학과·학적에 맞으면 '해당', 판단할 정보가 없으면 '확인 필요'예요.</li><li>조회수는 매일 새벽 공지를 다시 수집할 때 갱신돼요.</li></ul></div></div></main>`;
+  const r = await api("/popular", {limit: 15, term: TERM, dept: p.dept});
+  const mx = Math.max(...r.map(x => x.hits), 1);
+  $("#rk").innerHTML = r.map((n, i) => { const sv = saved().includes(n.notice_id);
+    return `<div class="rk"><div class="n ${i > 2 ? "lo" : ""}">${i + 1}</div><div><div class="row"><a href="${esc(n.url)}" target="_blank" rel="noopener" style="font-weight:700;text-decoration:none">${esc(n.title)}</a> ${badges(n)}</div>
+      <div style="font-size:12px;color:var(--sub);margin-top:3px">${esc(n.board)} · ${esc(n.posted)}${n.next ? " · 다음: " + esc(n.next.label) + " " + esc(n.next.period) : ""}</div>
+      <div class="bar"><i style="width:${(n.hits / mx * 100).toFixed(1)}%"></i></div></div>
+      <div class="row" style="flex-wrap:nowrap"><span style="font-weight:700">조회 ${n.hits.toLocaleString()}</span> ${fitBd(n.fit)} <button class="btn ${sv ? "btn-y" : ""}" data-save="${esc(n.notice_id)}">${sv ? "★ 저장됨" : "☆ 저장"}</button></div></div>`; }).join("")
+    + `<div style="padding:12px 18px;font-size:12px;color:var(--mute)">${ymd(today())} 수집 시점 누적 조회수</div>`;
+  bindSave($("#rk"));
 }
 
-function seedOptions(){
-  const d = $("#dept"), name = d.options[d.selectedIndex]?.text || "";
-  const hasDept = d.options[d.selectedIndex]?.dataset.has === "1";
-  const opts = [["interest:grad-req","관심사: 졸업 요건·심사"], ["proc:grad:2026-2","2026-2 본부 졸업 절차"]];
-  if (hasDept) opts.unshift([`proc:grad:2026-2:${d.value}`, `${name} 졸업 절차`]);
-  $("#seed").innerHTML = opts.map(([v,t]) => `<option value="${v}">${t}</option>`).join("");
+// ── 07 내 라이브러리 ────────────────────────────────
+async function lib(){
+  const ids = saved();
+  $("#app").innerHTML = `<main><h1 class="pg">내 라이브러리</h1><p class="pg-sub">저장한 공지와 다가오는 일정을 모아 봐요. 달력에는 내 학과 졸업 일정도 함께 표시돼요.</p>
+    <div class="lib"><div><div class="tabs" id="lt"></div><div class="row" style="margin-bottom:12px"><button class="chip on">전체</button><button class="chip" disabled>행사·프로그램<small>준비 중</small></button><button class="chip on" style="pointer-events:none">졸업</button></div><div id="lcards">${loadingBox()}</div></div>
+    <div><div class="card cal" id="cal"></div></div></div></main>`;
+  const [cards, todo] = await Promise.all([ids.length ? api("/feed", {...pq(), ids: ids.join(",")}) : Promise.resolve([]), api("/todo", {...pq(), term: TERM, include_closed: true})]);
+  const live = cards.filter(n => n.next), past = cards.filter(n => !n.next);
+  let tab = "진행 중";
+  const drawCards = () => {
+    $("#lt").innerHTML = [["진행 중", live], ["지난 공지", past]].map(([k, v]) => `<button class="chip ${k === tab ? "on" : ""}" data-k="${k}">${k} <small>${v.length}</small></button>`).join("");
+    const L = tab === "진행 중" ? live.sort((a, b) => (a.next.hi || a.next.lo).localeCompare(b.next.hi || b.next.lo)) : past;
+    $("#lcards").innerHTML = !ids.length ? `<div class="card pad empty">아직 저장한 공지가 없어요. <a class="link" href="#/notice">공지함</a>이나 <a class="link" href="#/top">인기 게시글</a>에서 ☆를 눌러 저장해 보세요.</div>`
+      : L.length ? L.map(n => { const x = n.next, dd = x ? x.d_day : null, lo = x && x.lo && x.lo.slice(0, 10) <= ymd(today());
+        return `<div class="card lcard"><div class="dbox ${!x ? "done" : dd > 7 ? "later" : ""}"><small>${!x ? "종료" : x.hi ? "마감까지" : "시작까지"}</small><b>${!x ? "—" : dd === 0 ? "D-DAY" : "D-" + dd}</b></div>
+          <div><div class="meta row" style="font-size:12px;color:var(--sub)">${badges(n)} ${fitBd(n.fit)} ${esc(n.board)}</div><div style="font-weight:800;font-size:15px;margin:5px 0">${esc(n.title)}</div>
+          <div style="font-size:12.5px;color:var(--sub)">${facts(n)}</div>
+          <div class="row" style="margin-top:10px"><a class="btn" href="${esc(n.url)}" target="_blank" rel="noopener" style="text-decoration:none">원문 보기</a><button class="btn" data-unsave="${esc(n.notice_id)}">저장 해제</button></div></div></div>`; }).join("")
+      : '<div class="card pad empty">이 목록에 공지가 없어요.</div>';
+    $("#lt").onclick = e => { const b = e.target.closest("button"); if (b) { tab = b.dataset.k; drawCards(); } };
+    $("#lcards").querySelectorAll("[data-unsave]").forEach(b => b.onclick = () => { toggleSave(b.dataset.unsave); lib(); });
+  };
+  drawCards();
+  // 달력: 저장한 공지의 일정(주황) + 내 학과 졸업 단계(남색)
+  const evs = [];
+  cards.forEach(n => n.stages.forEach(s => { const d = (s.hi || s.lo || "").slice(0, 10); if (d) evs.push({d, t: s.label, k: "s", time: (s.hi || s.lo).slice(11, 16)}); }));
+  todo.items.forEach(s => { const d = (s.hi || s.lo || "").slice(0, 10); if (d && !evs.some(e => e.d === d && e.t === s.label)) evs.push({d, t: s.label, k: "m", time: (s.hi || s.lo).slice(11, 16)}); });
+  let cur = today(); cur = new Date(cur.getFullYear(), cur.getMonth(), 1);
+  const drawCal = () => {
+    const y = cur.getFullYear(), m = cur.getMonth(), first = (new Date(y, m, 1).getDay() + 6) % 7, days = new Date(y, m + 1, 0).getDate(), td = ymd(today());
+    const cells = Array(first).fill('<div></div>').concat(Array.from({length: days}, (_, i) => { const d = ymd(new Date(y, m, i + 1)), es = evs.filter(e => e.d === d);
+      return `<div class="d ${d === td ? "today" : ""}" title="${esc(es.map(e => e.t).join(" / "))}">${i + 1}<span class="ds">${es.slice(0, 3).map(e => `<i class="${e.k}"></i>`).join("")}</span></div>`; }));
+    const mon = evs.filter(e => e.d.startsWith(`${y}-${String(m + 1).padStart(2, "0")}`)).sort((a, b) => a.d.localeCompare(b.d));
+    $("#cal").innerHTML = `<div class="cal-h"><button id="pm">‹</button>${y}년 ${m + 1}월<button id="nm">›</button></div>
+      <div class="cal-g">${["월","화","수","목","금","토","일"].map(w => `<div class="w">${w}</div>`).join("")}${cells.join("")}</div>
+      <div class="lg" style="gap:12px;margin:10px 0"><span><span class="dot" style="background:var(--org)"></span> 저장한 공지</span><span><span class="dot" style="background:var(--navy2)"></span> 내 졸업 일정</span></div>
+      <div style="font-size:12px;color:var(--sub);font-weight:700;margin:6px 0">이번 달 일정</div>
+      ${mon.length ? mon.map(e => `<div class="ev"><span class="dot" style="background:${e.k === "s" ? "var(--org)" : "var(--navy2)"};margin-top:4px"></span><span>${+e.d.slice(5, 7)}/${+e.d.slice(8)}${e.time ? " " + e.time : ""}</span><span>${esc(e.t)}</span></div>`).join("") : '<div class="empty" style="padding:8px 0">이 달 일정 없음</div>'}`;
+    $("#pm").onclick = () => { cur.setMonth(cur.getMonth() - 1); drawCal(); }; $("#nm").onclick = () => { cur.setMonth(cur.getMonth() + 1); drawCal(); };
+  };
+  drawCal();
 }
 
-function refresh(){
-  const f = {todo:loadTodo, dl:loadDl, graph:loadGraph, notice:loadNotice}[tab];
-  f().catch(e => { const box = {todo:"#todoList", dl:"#dlList", graph:"#nodeInfo", notice:"#noticeRows"}[tab];
-    $(box).innerHTML = `<div class="empty">불러오지 못했어요 (${esc(e)}). 잠시 후 새로고침해 주세요.</div>`; });
-}
-
-document.querySelectorAll("nav button").forEach(b => b.onclick = () => {
-  document.querySelectorAll("nav button").forEach(x => x.classList.toggle("on", x === b));
-  tab = b.dataset.t; document.querySelectorAll(".panel").forEach(p => p.classList.toggle("on", p.id === "p-" + tab)); refresh();
-});
-$("#dept").onchange = () => { store.set("dept", $("#dept").value); $("#adv").value = ""; seedOptions(); refresh(); };
-["#st", "#yr", "#adv", "#days", "#dlAll", "#seed", "#k"].forEach(s => $(s).onchange = refresh);
-let qt; $("#q").oninput = () => { clearTimeout(qt); qt = setTimeout(refresh, 300); };
-
+// ── 시작 ────────────────────────────────────────────
 (async () => {
-  const ds = await api("/depts");
-  ds.sort((a, b) => (b.has_dept_schedule - a.has_dept_schedule) || a.name.localeCompare(b.name, "ko"));
-  $("#dept").innerHTML = ds.map(d => `<option value="${d.code}" data-has="${d.has_dept_schedule ? 1 : 0}">${esc(d.name)}${d.has_dept_schedule ? "" : " (본부 일정만)"}</option>`).join("");
-  $("#dept").value = new URLSearchParams(location.search).get("dept") || store.get("dept") || "math";
-  seedOptions(); refresh();
-})().catch(e => { $("#todoList").innerHTML = `<div class="empty">서버에 연결하지 못했어요 (${esc(e)}).</div>`; });
+  try { DEPTS = (await api("/depts")).sort((a, b) => (b.has_dept_schedule - a.has_dept_schedule) || a.name.localeCompare(b.name, "ko")); }
+  catch (e) { $("#app").innerHTML = `<main>${fail(e)}</main>`; return; }
+  const q = new URLSearchParams(location.search).get("dept");
+  if (q && DEPTS.some(d => d.code === q)) ls.set("sigma.profile", {...prof(), dept: q});
+  route();
+})();
 </script>
 </body>
 </html>

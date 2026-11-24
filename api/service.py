@@ -178,14 +178,15 @@ def _undirected(g):
     return H
 
 
-def graph_view(g, seed, today, k=25, types=("Stage", "Notice", "Caution", "Procedure")):
+def graph_view(g, seed, today, k=25, types=("Stage", "Notice", "Caution", "Procedure"), show_closed=True):
     if seed not in g:
         raise KeyError(seed)
     H = _undirected(g)
     if seed not in H:
         return {"seed": seed, "nodes": [], "edges": []}
     pr = nx.pagerank(H, alpha=0.75, personalization={seed: 1.0}, weight="weight")
-    ranked = [n for n, _ in sorted(pr.items(), key=lambda x: -x[1]) if g.nodes[n].get("type") in types and n != seed]
+    ranked = [n for n, _ in sorted(pr.items(), key=lambda x: -x[1]) if g.nodes[n].get("type") in types and n != seed
+              and (show_closed or g.nodes[n].get("type") != "Stage" or G.status(g.nodes[n], today) != "마감")]
     keep = [seed] + ranked[:k]
     nodes = []
     for n in keep:
@@ -194,7 +195,18 @@ def graph_view(g, seed, today, k=25, types=("Stage", "Notice", "Caution", "Proce
             path = nx.shortest_path(H, seed, n, weight=lambda u, v, d: 1 / d["weight"])
         except nx.NetworkXNoPath:
             path = [n]
+        group = None
+        if a.get("type") == "Stage":
+            group = (G.inn(g, n, "HAS_STAGE") or [None])[0]
+        elif a.get("type") == "Notice":
+            st = [s for s in G.out(g, n, "DESCRIBES") if g.nodes[s].get("type") == "Stage"]
+            group = (G.inn(g, st[0], "HAS_STAGE") or [None])[0] if st else None
+        elif a.get("type") == "Caution":
+            group = (G.inn(g, n, "HAS_CAUTION") or [None])[0]
         nodes.append({"id": n, "type": a.get("type"), "label": label(g, n), "score": round(pr.get(n, 0), 5),
+                      "group": group, "group_label": label(g, group) if group else None,
+                      "period": G.period(a) if a.get("type") == "Stage" else None, "lo": a.get("lo"), "hi": a.get("hi"),
+                      "place": a.get("place"), "target": a.get("target"), "posted": a.get("posted"),
                       "status": G.status(a, today) if a.get("type") == "Stage" else None,
                       "url": a.get("url"), "why": " → ".join(label(g, p) for p in path)})
     ks = set(keep)
@@ -258,3 +270,89 @@ def todo_card_text(res) -> str:
     for c in res["contacts"]:
         L.append(f"- 문의({c['topic']}): {c['office']} {c['phone']}")
     return "\n".join(L)
+
+
+# ---------- 6) 공지 카드 (웹 공지함·인기·내 라이브러리) ----------
+def fit(g, stage_attrs, dept, enroll_status=None, admission_year=None, advisor=None):
+    """이 단계가 나에게 해당하는가: '해당' / '해당 없음' / '확인 필요' (모르는 값은 판정하지 않음)"""
+    a = stage_attrs
+    if a.get("scope") not in ("본부", dept, None):
+        return "해당 없음"
+    tgt = a.get("target") or ""
+    if "수료생" in tgt and enroll_status == "재학" and not any(w in tgt for w in ("재학", "졸업예정자")):
+        return "해당 없음"
+    if "2001~2019학번" in tgt:
+        if admission_year is None:
+            return "확인 필요"
+        return "해당" if 2001 <= admission_year <= 2019 else "해당 없음"
+    if tgt.endswith("교수 지도 학생"):
+        if not advisor:
+            return "확인 필요"
+        return "해당" if advisor in tgt else "해당 없음"
+    if a.get("required") is False:
+        return "확인 필요"
+    return "해당"
+
+
+def notice_card(g, n, today, dept=None, enroll_status=None, admission_year=None, advisor=None):
+    a = g.nodes[n]
+    src = n.split(":")[1]
+    stages = [s for s in G.out(g, n, "DESCRIBES") + G.out(g, n, "MENTIONS") if g.nodes[s].get("type") == "Stage"]
+    st_cards = []
+    for s in stages:
+        sa = g.nodes[s]
+        st_cards.append({"stage_id": s, "label": sa.get("label"), "period": G.period(sa), "status": G.status(sa, today),
+                         "d_day": d_day(sa, today), "lo": sa.get("lo"), "hi": sa.get("hi"), "place": sa.get("place"),
+                         "target": sa.get("target"), "route": label(g, sa["route"]) if sa.get("route") else None,
+                         "documents": sa.get("documents", []), "required": sa.get("required"),
+                         "overrides_central": bool(G.out(g, s, "OVERRIDES")),
+                         "dept_override": next(({"label": g.nodes[u].get("label"), "period": G.period(g.nodes[u]), "stage_id": u}
+                                                for u, _, k in g.in_edges(s, keys=True)
+                                                if k == "OVERRIDES" and dept and g.nodes[u].get("scope") == dept), None),
+                         "fit": fit(g, sa, dept, enroll_status, admission_year, advisor) if dept else None})
+    st_cards.sort(key=lambda c: (c["hi"] or c["lo"] or "9999"))
+    upcoming = [c for c in st_cards if c["status"] != "마감" and (c["hi"] or c["lo"])]
+    posted = G.as_date(a.get("posted")) if a.get("posted") else None
+    badges = []
+    if posted and (today - posted).days <= 7:
+        badges.append("새소식")
+    if upcoming:
+        badges.append("신청 가능")
+    elif st_cards and all(c["status"] == "마감" for c in st_cards if c["hi"] or c["lo"]) and any(c["hi"] or c["lo"] for c in st_cards):
+        badges.append("지난 일정")
+    if a.get("body") == "pending":
+        badges.append("정리 대기")
+    nxt = min(upcoming, key=lambda c: (c["hi"] or c["lo"])) if upcoming else None
+    fits = [c["fit"] for c in st_cards if c["fit"]]
+    return {
+        "notice_id": n, "title": a.get("title"), "posted": a.get("posted"), "term": a.get("term"), "url": a.get("url"),
+        "board": "대표 홈페이지" if src == "main" else label(g, f"dept:{src}"),
+        "issued_by": [label(g, x) for x in G.out(g, n, "ISSUED_BY")],
+        "hits": int(a["hits"]) if str(a.get("hits") or "").isdigit() else None,
+        "reposts": len(G.inn(g, n, "DUPLICATE_OF")), "body": a.get("body"), "badges": badges,
+        "stages": st_cards, "next": nxt,
+        "fit": ("해당" if "해당" in fits else "확인 필요" if "확인 필요" in fits else "해당 없음" if fits else None),
+        "cautions": [label(g, c) for c in G.out(g, n, "DEFINES") if g.nodes[c].get("type") == "Caution"],
+        "contacts": [{"topic": g.nodes[c].get("topic"), "office": label(g, g.nodes[c]["office"]) if g.nodes[c].get("office") in g else g.nodes[c].get("office"),
+                      "phone": g.nodes[c].get("phone")} for c in G.out(g, n, "DEFINES") if g.nodes[c].get("type") == "Contact"],
+    }
+
+
+def feed(g, today, dept=None, terms=("2026-2", "2027-1"), enroll_status=None, admission_year=None, advisor=None, ids=None):
+    out = []
+    for n, a in g.nodes(data=True):
+        if a.get("type") != "Notice" or G.out(g, n, "DUPLICATE_OF"):
+            continue
+        if ids is not None:
+            if n not in ids:
+                continue
+        else:
+            src = n.split(":")[1]
+            if dept and src not in (dept, "main"):
+                continue
+            if terms and a.get("term") not in terms:
+                continue
+            if a.get("stage_type") == "대학원":
+                continue
+        out.append(notice_card(g, n, today, dept, enroll_status, admission_year, advisor))
+    return sorted(out, key=lambda c: c["posted"] or "", reverse=True)

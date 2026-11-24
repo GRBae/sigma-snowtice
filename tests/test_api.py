@@ -56,3 +56,15 @@ def test_graph_and_errors():
     assert g["nodes"] and all("why" in n for n in g["nodes"])
     assert c.get("/todo", params={"dept": "zzz"}).status_code == 404
     assert c.post("/admin/reload").status_code == 401
+
+
+def test_feed_cards():
+    r = c.get("/feed", params={"dept": "korean", "enroll_status": "재학", "today": T}).json()
+    assert r and all(set(x["badges"]) <= {"새소식", "신청 가능", "지난 일정", "정리 대기"} for x in r)
+    m = c.get("/feed", params={"dept": "korean", "ids": "notice:main:96120", "today": T}).json()[0]
+    sub = next(s for s in m["stages"] if s["label"] == "졸업논문제 결과물 제출")
+    assert sub["dept_override"] and "12-23" in sub["dept_override"]["period"]   # 본부 공지에도 내 학과 마감을 같이 보여줌
+
+
+def test_web_page():
+    assert c.get("/").status_code == 200 and "시그마" in c.get("/").text

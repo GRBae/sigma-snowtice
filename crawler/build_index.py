@@ -58,6 +58,19 @@ def main():
             live.append({"source": "대표 홈페이지" if d["source"] == "main" else "학과", "dept": d.get("dept") or d["source"], "host": d["host"],
                          "board": d["board"], "id": d["article_no"], "posted": (d.get("posted") or "").replace(".", "-"), "hits": "", "title": d["title"]})
     rows = live + [r for r in scan if r["host"] not in live_hosts]
+    # 목록 화면에서 조회수를 못 읽은 글은 본문 수집 때 저장한 meta.json의 조회수로 채운다 (수집 시점 값)
+    for r in rows:
+        if r.get("hits"):
+            continue
+        sid = "main" if r["host"].startswith("www.") else r["host"].split(".")[0]
+        mf = RAW / f"{sid}_{r['id']}" / "meta.json"
+        if mf.exists():
+            try:
+                h = json.loads(mf.read_text(encoding="utf-8")).get("hits")
+                if h is not None:
+                    r["hits"] = str(h)
+            except (ValueError, OSError):
+                pass
     seen, out = set(), []
     for r in rows:
         key = (r["host"], r["id"])

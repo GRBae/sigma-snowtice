@@ -107,9 +107,11 @@ def deadlines(days: int = Query(14, ge=1, le=120), dept: Optional[str] = None, t
 @app.get("/graph", operation_id="get_related_graph", summary="관심사 그래프 (PPR 연관도 + 추천 경로)",
          description="seed 노드에서 Personalized PageRank로 가까운 단계·공지·유의사항을 뽑고, 각 노드에 seed에서 오는 경로(why)를 붙인다. "
                      "seed 예: interest:grad-req, proc:grad:2026-2:korean, stage:2026-2:논문제결과물제출")
-def graph(seed: str = "interest:grad-req", k: int = Query(25, ge=5, le=80), today: date = Depends(today_param)):
+def graph(seed: str = "interest:grad-req", k: int = Query(25, ge=5, le=80),
+          types: str = Query("Stage,Notice,Caution,Procedure", description="보일 노드 종류(쉼표). Dept,Office 추가 가능"),
+          show_closed: bool = Query(True, description="마감된 단계도 보일지"), today: date = Depends(today_param)):
     try:
-        return S.graph_view(GR.g, seed, today, k)
+        return S.graph_view(GR.g, seed, today, k, tuple(t.strip() for t in types.split(",") if t.strip()), show_closed)
     except KeyError:
         raise HTTPException(404, f"그래프에 없는 노드: {seed}")
 
@@ -121,9 +123,23 @@ def notices(dept: Optional[str] = None, term: Optional[str] = None, q: Optional[
     return S.notices(GR.g, dept, term, q, True, limit)
 
 
+@app.get("/feed", operation_id="list_notice_cards", summary="공지 카드 (공지함·내 라이브러리)",
+         description="대표 공지마다 배지(새소식·신청 가능·지난 일정·정리 대기), 단계별 날짜·장소·대상, 나에게 해당 여부(fit), 유의사항·문의처. "
+                     "dept를 주면 그 학과+대표 홈페이지 공지, ids를 주면 그 공지들만(저장한 공지).")
+def feed(dept: Optional[str] = None, terms: str = "2026-2,2027-1", ids: Optional[str] = Query(None, description="notice_id 쉼표 목록"),
+         enroll_status: Optional[Literal["재학", "휴학", "수료"]] = None, admission_year: Optional[int] = None,
+         advisor: Optional[str] = None, today: date = Depends(today_param)):
+    if dept:
+        dept_check(dept)
+    idset = set(x for x in ids.split(",") if x) if ids else None
+    return S.feed(GR.g, today, dept, tuple(t for t in terms.split(",") if t), enroll_status, admission_year, advisor, idset)
+
+
 @app.get("/popular", operation_id="list_popular_notices", summary="인기 공지 (수집 시점 누적 조회수)")
-def popular(limit: int = Query(10, ge=1, le=50), term: Optional[str] = None):
-    return S.popular(GR.g, limit, term)
+def popular(limit: int = Query(10, ge=1, le=50), term: Optional[str] = None, dept: Optional[str] = None,
+            today: date = Depends(today_param)):
+    rows = S.popular(GR.g, limit, term)
+    return [{**r, **{k: v for k, v in S.notice_card(GR.g, r["notice_id"], today, dept).items() if k in ("badges", "fit", "next")}} for r in rows]
 
 
 @app.get("/stage/{stage_id:path}", summary="단계 하나의 상세 + 근거 문장")

@@ -115,7 +115,7 @@ sigma/
                                                                                    └▶ SNOWCHAT 에이전트 B (A안: 도구 호출)
 ```
 
-- `web/index.html` — 웹 화면 (내 졸업 할 일 · 마감 임박 · 관심사 그래프 · 공지함). API 서버가 `/`에서 같이 띄움 → **https://sigma-graph-api.onrender.com/**
+- `web/index.html` — 웹 화면 (시그마 웹 페이지 구성 v2 기준, 졸업 분야: 홈 · 관심사·학적 설정 · 공지함 · 관심사 그래프(관심사 중심/주제 묶음/학기 흐름) · 인기 게시글 · 내 라이브러리(달력)). 프로필·저장 공지는 브라우저(localStorage)에만 저장. API 서버가 `/`에서 같이 띄움 → **https://sigma-graph-api.onrender.com/**
 - `api/main.py` — FastAPI. `/todo`, `/todo/card`, `/deadlines`, `/graph`, `/notices`, `/popular`, `/stage/{id}`, `/depts`, `/admin/reload`
 - `api/README.md` — 웹 화면별로 어떤 주소를 부르는지
 - `snowchat/workflow.md` — SNOWCHAT 스튜디오 워크플로우 노드별 설정, `snowchat/test_questions.md` — 답변 시험지(정답 포함)
