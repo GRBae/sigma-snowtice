@@ -1,0 +1,35 @@
+{
+ "notice": {
+  "id": "notice:math:122826",
+  "source": "math",
+  "article_no": "122826",
+  "url": "https://math.sookmyung.ac.kr/math/notice/notice.do?mode=view&articleNo=122826",
+  "title": "[졸업] 2026-2 주요 졸업일정 안내 (졸업예정자 필독)",
+  "posted": "2026-09-02",
+  "posted_by": "dept:math",
+  "hits": 2841
+ },
+ "skip": false,
+ "role": "repost",
+ "topic": "졸업",
+ "procedure": {
+  "template": "tmpl:grad",
+  "term": "2026-2",
+  "scope": "본부"
+ },
+ "issued_by": "office:haksa",
+ "stages": [],
+ "rules": [],
+ "cautions": [],
+ "outcomes": [],
+ "contacts": [],
+ "refers_to": [],
+ "duplicate_of": "notice:main:94905",
+ "attachments_pending": [],
+ "verification": {
+  "method": "브라우저 원문 대조",
+  "date": "2026-11-24",
+  "result": "근거 문장 전부 원문에 있음"
+ },
+ "extracted_by": "gold(수작업)"
+}

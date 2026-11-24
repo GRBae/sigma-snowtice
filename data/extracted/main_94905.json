@@ -1,0 +1,121 @@
+{
+ "notice": {
+  "id": "notice:main:94905",
+  "source": "main",
+  "article_no": "94905",
+  "url": "https://www.sookmyung.ac.kr/kr/news/important-notice.do?mode=view&articleNo=94905",
+  "title": "[졸업] 2026-2 (2027년 2월) 주요 졸업 일정 안내(8학기 이상 재학생 필독)",
+  "posted": "2026-09-03",
+  "posted_by": "office:comm",
+  "hits": 16774
+ },
+ "skip": false,
+ "role": "overview",
+ "topic": "졸업",
+ "procedure": {
+  "template": "tmpl:grad",
+  "term": "2026-2",
+  "scope": "본부"
+ },
+ "issued_by": "office:haksa",
+ "stages": [
+  {
+   "key": "영문성명확인",
+   "name": "졸업예정자 영문성명 확인",
+   "scope": "본부",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": "2027-01-13",
+    "hi": "2027-01-31",
+    "precision": "day",
+    "year_inferred": true,
+    "tentative": true
+   },
+   "route": "route:portal",
+   "place": null,
+   "target": "졸업예정자",
+   "required": true,
+   "documents": [],
+   "requires": [],
+   "evidence": [
+    "1/13(수)~1/31(일)"
+   ]
+  },
+  {
+   "key": "계속수학신청",
+   "name": "계속수학 신청",
+   "scope": "본부",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": "2027-01-15",
+    "hi": "2027-01-18",
+    "precision": "day",
+    "year_inferred": true,
+    "tentative": true
+   },
+   "route": "route:portal",
+   "place": null,
+   "target": "졸업학점은 채웠지만 복수·부·연계전공 또는 교직 학점이 부족해 학기를 늘리려는 재학생",
+   "required": false,
+   "documents": [],
+   "requires": [],
+   "evidence": [
+    "1/15(금)~1/18(월)"
+   ]
+  },
+  {
+   "key": "최종사정결과조회",
+   "name": "최종 졸업심사결과 조회",
+   "scope": "본부",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": "2027-01-28",
+    "hi": "2027-01-29",
+    "precision": "day",
+    "year_inferred": true,
+    "tentative": true
+   },
+   "route": "route:portal",
+   "place": null,
+   "target": "졸업예정자",
+   "required": true,
+   "documents": [],
+   "requires": [],
+   "evidence": [
+    "1/28(목)~1/29(금)"
+   ]
+  }
+ ],
+ "rules": [],
+ "cautions": [],
+ "outcomes": [],
+ "contacts": [
+  {
+   "topic": "졸업심사",
+   "college": "college:science",
+   "office": "office:haksa",
+   "phone": "02-710-9019",
+   "evidence": [
+    "이과대학, 사회과학대학, 법과대학 | (02)710-9019"
+   ]
+  },
+  {
+   "topic": "교직",
+   "college": "*",
+   "office": "office:teacher",
+   "phone": "02-2077-7352",
+   "evidence": [
+    "교직 이수중인 학생(교원양성센터) | (02)2077-7352"
+   ]
+  }
+ ],
+ "refers_to": [],
+ "duplicate_of": null,
+ "attachments_pending": [],
+ "verification": {
+  "method": "브라우저 원문 대조",
+  "date": "2026-11-24",
+  "result": "근거 문장 전부 원문에 있음"
+ },
+ "extracted_by": "gold(수작업)"
+}

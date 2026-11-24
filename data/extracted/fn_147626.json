@@ -1,0 +1,61 @@
+{
+ "notice": {
+  "id": "notice:fn:147626",
+  "source": "fn",
+  "article_no": "147626",
+  "url": "https://fn.sookmyung.ac.kr/fn/community/notice.do?mode=view&articleNo=147626",
+  "title": "[졸업시험] 2026-2학기 졸업시험 본시험 결과 및 1차 재시험 안내",
+  "posted": "2026-11-10",
+  "posted_by": "dept:fn",
+  "hits": 1182
+ },
+ "skip": false,
+ "role": "result",
+ "topic": "졸업",
+ "procedure": {
+  "template": "tmpl:grad",
+  "term": "2026-2",
+  "scope": "fn"
+ },
+ "issued_by": "dept:fn",
+ "stages": [
+  {
+   "key": "졸업시험1차재시험",
+   "name": "졸업시험 1차 재시험(해당자)",
+   "scope": "fn",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": "2026-11-27T12:00",
+    "hi": "2026-11-27T18:50",
+    "precision": "minute"
+   },
+   "route": null,
+   "place": "진리관306호",
+   "target": null,
+   "required": false,
+   "documents": [],
+   "requires": [],
+   "evidence": [
+    "2026. 11. 27(금)",
+    "12:00 ~ 18:50"
+   ]
+  }
+ ],
+ "rules": [],
+ "cautions": [
+  {
+   "id": "caution:fn_147626:0",
+   "text": "2차 재시험까지 불합격하면 최종 불합격",
+   "evidence": [
+    "2차 재시험까지 불합격 시, 최종 불합격 처리됨"
+   ]
+  }
+ ],
+ "outcomes": [],
+ "contacts": [],
+ "refers_to": [],
+ "verification": {
+  "result": "근거 문장 전부 원문에 있음 (2026-11-24 브라우저 수집본과 대조)",
+  "extractor": "Claude 직접 추출 (LLM API 확정 전)"
+ }
+}

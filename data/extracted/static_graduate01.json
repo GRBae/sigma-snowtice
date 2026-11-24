@@ -1,0 +1,209 @@
+{
+ "notice": {
+  "id": "notice:static:graduate01",
+  "source": "static",
+  "article_no": "graduate01",
+  "url": "https://www.sookmyung.ac.kr/kr/university-life/graduate01.do",
+  "title": "학사정보 > 졸업 > 졸업심사",
+  "posted": null,
+  "posted_by": null,
+  "hits": null
+ },
+ "skip": false,
+ "role": "rule_guide",
+ "topic": "졸업",
+ "procedure": {
+  "template": "tmpl:grad",
+  "term": null,
+  "scope": "본부"
+ },
+ "issued_by": null,
+ "stages": [
+  {
+   "key": "학위수여식",
+   "name": "학위수여식",
+   "scope": "본부",
+   "procedure_template": "tmpl:grad",
+   "date": null,
+   "route": null,
+   "place": null,
+   "target": "졸업 판정자",
+   "required": false,
+   "documents": [],
+   "requires": [],
+   "evidence": [
+    "해당학기 학위수여식 이후 학생의 학적이 ‘졸업’으로 변경됨"
+   ]
+  },
+  {
+   "key": "졸업계획제출",
+   "name": "재학생 졸업신청(졸업계획 제출)",
+   "scope": "본부",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": null,
+    "hi": null,
+    "precision": "rule",
+    "rule": "1학기 4월 중순 / 2학기 10월 중순"
+   },
+   "route": "route:portal",
+   "evidence": [
+    "숙명포털 (4월(1학기) /10월 (2학기) 중순)"
+   ]
+  }
+ ],
+ "rules": [
+  {
+   "id": "rule:grad:basic",
+   "applies_to": "tmpl:grad",
+   "tree": {
+    "AND": [
+     {
+      "attr": "semesters_registered",
+      "op": ">=",
+      "value": 8,
+      "note": "약대는 12학기"
+     },
+     {
+      "attr": "enroll_status",
+      "op": "in",
+      "value": [
+       "재학",
+       "수료"
+      ],
+      "evidence": "휴학생 불가"
+     },
+     {
+      "attr": "other",
+      "text": "학번 및 전공별 졸업학점 이수 (졸업학점배정표 첨부)",
+      "evidence": "학번 및 전공별 졸업학점"
+     },
+     {
+      "OR": [
+       {
+        "AND": [
+         {
+          "attr": "admission_year",
+          "op": ">=",
+          "value": 2011
+         },
+         {
+          "attr": "gpa_total",
+          "op": ">=",
+          "value": 1.7
+         }
+        ]
+       },
+       {
+        "AND": [
+         {
+          "attr": "admission_year",
+          "op": "<=",
+          "value": 2010
+         },
+         {
+          "attr": "gpa_total",
+          "op": ">=",
+          "value": 1.5
+         }
+        ]
+       }
+      ],
+      "evidence": "총 평점평균 1.7/4.3 이상"
+     },
+     {
+      "OR": [
+       {
+        "AND": [
+         {
+          "attr": "admission_year",
+          "op": "between",
+          "value": [
+           2001,
+           2019
+          ]
+         },
+         {
+          "attr": "cert_thesis_passed",
+          "op": "==",
+          "value": true
+         },
+         {
+          "attr": "cert_info_passed",
+          "op": "==",
+          "value": true
+         }
+        ]
+       },
+       {
+        "AND": [
+         {
+          "OR": [
+           {
+            "attr": "admission_year",
+            "op": ">=",
+            "value": 2020
+           },
+           {
+            "attr": "admission_year",
+            "op": "<=",
+            "value": 2000
+           }
+          ]
+         },
+         {
+          "attr": "cert_thesis_passed",
+          "op": "==",
+          "value": true
+         }
+        ]
+       }
+      ],
+      "evidence": "졸업논문제 + 정보인증제 통과"
+     }
+    ]
+   }
+  }
+ ],
+ "cautions": [
+  {
+   "id": "cau:no-graduation-on-leave",
+   "text": "휴학 상태에서는 졸업 불가 (휴학 중 계절학기만으로 졸업 불가)",
+   "evidence": [
+    "휴학상태에서는 졸업이 불가능함"
+   ]
+  }
+ ],
+ "outcomes": [
+  {
+   "id": "out:graduate",
+   "name": "졸업",
+   "rule_text": "졸업기준학점 이수완료 + 졸업인증제 모두 통과"
+  },
+  {
+   "id": "out:complete",
+   "name": "수료",
+   "rule_text": "졸업기준학점 이수완료 + 졸업인증제 1개 이상 불합격"
+  },
+  {
+   "id": "out:fail",
+   "name": "졸업불가",
+   "rule_text": "졸업기준학점 이수 미완료 → 자동으로 다음 학기 연장"
+  },
+  {
+   "id": "out:continue",
+   "name": "계속수학",
+   "rule_text": "졸업학점은 채웠지만 복수·부·연계전공/교직 학점 이수를 위해 신청해 연장"
+  }
+ ],
+ "contacts": [],
+ "refers_to": [],
+ "duplicate_of": null,
+ "attachments_pending": [],
+ "verification": {
+  "method": "브라우저 원문 대조",
+  "date": "2026-11-24",
+  "result": "근거 문장 전부 원문에 있음"
+ },
+ "extracted_by": "gold(수작업)"
+}

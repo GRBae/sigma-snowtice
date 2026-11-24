@@ -1,0 +1,3 @@
+#site pharmacy.sookmyung.ac.kr|약학대학
+#board 공지사항|/pharmacy/information/notice.do|sm_cms|50|2025-09-15
+#note 2026년 졸업 관련 글 없음 (최근 50건 기준)

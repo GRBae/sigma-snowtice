@@ -1,0 +1,15 @@
+# Render(render.com) 무료 웹 서비스로 API 배포: 대시보드 → New → Blueprint → 이 저장소 선택
+# main에 push될 때마다(=매일 새벽 데이터 커밋) 자동 재배포되므로 새 그래프가 저절로 반영된다.
+services:
+  - type: web
+    name: sigma-graph-api
+    runtime: docker
+    plan: free
+    region: singapore
+    autoDeploy: true
+    healthCheckPath: /health
+    envVars:
+      - key: RELOAD_TOKEN
+        generateValue: true
+      - key: CORS_ORIGINS
+        value: "*"          # 웹 주소가 정해지면 https://우리웹주소 로 좁히기

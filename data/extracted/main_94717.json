@@ -1,0 +1,148 @@
+{
+ "notice": {
+  "id": "notice:main:94717",
+  "source": "main",
+  "article_no": "94717",
+  "url": "https://www.sookmyung.ac.kr/kr/news/important-notice.do?mode=view&articleNo=94717",
+  "title": "[졸업] 2026-2학기 조기졸업 신청 실시",
+  "posted": "2026-08-26",
+  "posted_by": "office:comm",
+  "hits": 1671
+ },
+ "skip": false,
+ "role": "stage_detail",
+ "topic": "졸업",
+ "procedure": {
+  "template": "tmpl:early-grad",
+  "term": "2026-2",
+  "scope": "본부"
+ },
+ "issued_by": "office:haksa",
+ "stages": [
+  {
+   "key": "조기졸업신청",
+   "name": "조기졸업 신청(방문 제출)",
+   "scope": "본부",
+   "procedure_template": "tmpl:early-grad",
+   "date": {
+    "lo": "2026-09-02T10:00",
+    "hi": "2026-09-08T17:30",
+    "precision": "minute",
+    "year_inferred": true
+   },
+   "route": "route:haksa-visit",
+   "place": null,
+   "target": "조기졸업 희망 학부 재학생",
+   "required": true,
+   "documents": [
+    "조기졸업신청서(붙임 서식)",
+    "성적증명서"
+   ],
+   "requires": [],
+   "evidence": [
+    "1. 신청기간: 09.02(수) 10:00 ~ 09.08(화) 17:30",
+    "가. 제출서류: 조기졸업신청서(붙임파일) 1부, 성적증명서 1부"
+   ]
+  }
+ ],
+ "rules": [
+  {
+   "id": "rule:early:honors",
+   "applies_to": "proc:early-grad:2026-2",
+   "tree": {
+    "AND": [
+     {
+      "attr": "semesters_registered",
+      "op": "in",
+      "value": [
+       6,
+       7
+      ]
+     },
+     {
+      "attr": "gpa_each_term",
+      "op": ">=",
+      "value": 3.9
+     },
+     {
+      "attr": "gpa_total",
+      "op": ">=",
+      "value": 3.9
+     },
+     {
+      "attr": "other",
+      "text": "졸업기준학점 취득 완료 예정(2026-2 및 겨울계절 신청학점 포함)"
+     },
+     {
+      "attr": "other",
+      "text": "졸업인증제 전체 합격 예정"
+     },
+     {
+      "attr": "transfer_type",
+      "op": "==",
+      "value": "없음"
+     }
+    ]
+   },
+   "evidence": [
+    {
+     "src": "main:94717",
+     "quote": "가) 2026-2학기 기준 6~7학기 재학생"
+    }
+   ]
+  },
+  {
+   "id": "rule:early:bsms",
+   "applies_to": "proc:early-grad:2026-2",
+   "tree": {
+    "AND": [
+     {
+      "attr": "semesters_registered",
+      "op": "==",
+      "value": 7
+     },
+     {
+      "attr": "bs_ms_track",
+      "op": "==",
+      "value": true
+     },
+     {
+      "attr": "gpa_total",
+      "op": ">=",
+      "value": 3.3
+     },
+     {
+      "attr": "other",
+      "text": "대학원 교과목 6~9학점 이수(2026-2 신청학점 포함)"
+     },
+     {
+      "attr": "other",
+      "text": "학부 졸업기준학점 취득 완료 예정"
+     },
+     {
+      "attr": "other",
+      "text": "졸업인증제 전체 합격 예정 (대학원 지원전공 논문제는 면제)"
+     }
+    ]
+   },
+   "evidence": [
+    {
+     "src": "main:94717",
+     "quote": "가) 2026-2학기 기준 7학기 재학생"
+    }
+   ]
+  }
+ ],
+ "cautions": [],
+ "outcomes": [],
+ "contacts": [],
+ "refers_to": [],
+ "duplicate_of": null,
+ "attachments_pending": [],
+ "verification": {
+  "method": "브라우저 원문 대조",
+  "date": "2026-11-24",
+  "result": "근거 문장 전부 원문에 있음"
+ },
+ "extracted_by": "gold(수작업)"
+}

@@ -1,0 +1,59 @@
+{
+ "notice": {
+  "id": "notice:physics:217463",
+  "source": "physics",
+  "article_no": "217463",
+  "url": "https://physics.sookmyung.ac.kr/bbs/physics/701/217463/artclView.do",
+  "title": "[학사] [졸업] 2026-2 졸업논문제 제출마감 및 세부사항(~12.20.일요일 자정까지)",
+  "posted": "2026-11-23",
+  "posted_by": "dept:physics",
+  "hits": null
+ },
+ "skip": false,
+ "role": "stage_detail",
+ "topic": "졸업",
+ "procedure": {
+  "template": "tmpl:grad",
+  "term": "2026-2",
+  "scope": "physics"
+ },
+ "issued_by": "dept:physics",
+ "stages": [
+  {
+   "key": "논문제결과물제출",
+   "name": "졸업논문제 결과물 제출(캡스톤디자인 결과보고서)",
+   "scope": "physics",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": "2026-12-01",
+    "hi": "2026-12-20T23:59",
+    "precision": "minute"
+   },
+   "route": "route:dept-mail",
+   "target": "신소재물리학부 2026-2 졸업논문제 신청자",
+   "required": true,
+   "documents": [
+    "캡스톤디자인 결과보고서(필수)",
+    "발표자료·부가자료(선택)"
+   ],
+   "requires": [],
+   "evidence": [
+    "1. 제출기한: 2026.12.01.(화)~2026.12.20.(일) 자정까지"
+   ],
+   "overrides": "본부"
+  }
+ ],
+ "rules": [],
+ "cautions": [],
+ "outcomes": [],
+ "contacts": [],
+ "refers_to": [],
+ "duplicate_of": null,
+ "attachments_pending": [],
+ "extracted_by": "gold(수작업)",
+ "verification": {
+  "method": "브라우저 원문 대조",
+  "date": "2026-11-24",
+  "result": "근거 문장 원문에 있음"
+ }
+}

@@ -1,0 +1,46 @@
+{
+ "notice": {
+  "id": "notice:chinese:467",
+  "source": "chinese",
+  "article_no": "467",
+  "url": "http://chinese.sookmyung.ac.kr/bbs/board.php?bo_table=notice&wr_id=467",
+  "title": "[필독] 졸업논문제 관련 중요 공지사항",
+  "posted": "2025-09-08",
+  "posted_by": "dept:chinese",
+  "hits": null
+ },
+ "skip": false,
+ "role": "rule_guide",
+ "topic": "졸업",
+ "procedure": {
+  "template": "tmpl:grad",
+  "term": "2026-2",
+  "scope": "chinese"
+ },
+ "issued_by": "dept:chinese",
+ "stages": [],
+ "rules": [],
+ "cautions": [
+  {
+   "id": "caution:chinese_467:0",
+   "text": "졸업논문제: 졸업논문 또는 신HSK 5급(180점) 이상 중 택1 — HSK는 학위수여일까지 유효한 원본, 이메일 제출 불가",
+   "evidence": [
+    "졸업논문, 신HSK 5급 이상(180점 이상) 중 택 1"
+   ]
+  },
+  {
+   "id": "caution:chinese_467:1",
+   "text": "정보인증제는 20학번부터 폐지, 01~19학번은 합격해야 졸업 가능",
+   "evidence": [
+    "01~19학번에게는 폐지되지 않음."
+   ]
+  }
+ ],
+ "outcomes": [],
+ "contacts": [],
+ "refers_to": [],
+ "verification": {
+  "result": "근거 문장 전부 원문에 있음 (2026-11-24 브라우저 수집본과 대조)",
+  "extractor": "Claude 직접 추출 (LLM API 확정 전)"
+ }
+}

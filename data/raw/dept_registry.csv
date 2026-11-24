@@ -1,0 +1,49 @@
+﻿학과,호스트,게시판(이름|경로|엔진|읽은 글 수|가장 오래된 날짜),고정 안내 페이지,메모
+인공지능공학부,aie.sookmyung.ac.kr,학과공지사항|/it/department/notice.do|sm_cms|100|2025-11-10,졸업요건 시행규칙|/it/projects/implementation.do / 졸업작품 진행개요|/it/projects/progress.do / 졸업작품 유의사항|/it/projects/notes.do,
+시각·영상디자인과,smvd.sookmyung.ac.kr,,,공지 게시판 없음(작품 포트폴리오 사이트). 졸업전시는 외부 도메인 smvdgradshow.com → 수집 제외
+환경디자인과,design.sookmyung.ac.kr,공지사항|/smed/community/notice.do|sm_cms|7|2025-07-31,,2026년 졸업 관련 글 없음
+공예과,craft.sookmyung.ac.kr,공지사항|/craft/community/notice.do|sm_cms|1|2026-10-16,,2026년 졸업 관련 글 없음
+회화과,fineart.sookmyung.ac.kr,,,공지 게시판 못 찾음(자체 구조). 6개월 공지 0건이었던 학과
+무용과,dance-smu.co.kr,,,숙명 도메인 밖 → 수집 범위 제외
+산업디자인과,smid.ac.kr,,,숙명 도메인 밖 → 수집 범위 제외
+생명시스템학부,bio.sookmyung.ac.kr,공지사항|/bio/community/notice.do|sm_cms|50|2025-01-06,,
+경영학부,biz.sookmyung.ac.kr,졸업|/swubusiness/community/graduate.do|sm_cms|50|2023-03-09 / 공지사항|/swubusiness/community/notice.do|sm_cms|50|2024-12-17,,
+화학과,chem.sookmyung.ac.kr,공지사항|/chem/community/notice.do|sm_cms|50|2025-02-20,,조회수 칸 값이 비정상(오래된 글일수록 수만)이라 비움 — 목록 열 구조 확인 필요
+화공생명공학부,chembioe.sookmyung.ac.kr,졸업안내|/chembioe/board/Notice-on-Graduation.do|sm_cms|3|2026-04-29 / 공지사항|/chembioe/board/notice.do|sm_cms|58|2024-11-27,,
+아동복지학부,childwelfare.sookmyung.ac.kr,학부 공지사항|/childwelfare/community/notice.do|sm_cms|104|2025-10-10 / 대학원 공지사항|/childwelfare/community/data-room.do|sm_cms|102|2025-11-17 (대학원: 수집 보류 범위),,
+"중어중문학부 (http만 접속됨, https 인증서 오류)",chinese.sookmyung.ac.kr,공지사항|/bbs/board.php?bo_table=notice|gnuboard|60|2025-03,수강및졸업요건|/bbs/content.php?co_id=requirement,
+의류학과,cloth.sookmyung.ac.kr,공지사항|/cloth/community/notice.do|sm_cms|52|2025-06-04,,
+소비자경제학과,conecon.sookmyung.ac.kr,"졸업|/board/171|자체 CMS(JS 렌더링, 목록 fetch 불가 → 브라우저 렌더 필요)|1쪽|-",,게시일과 제목의 학기가 안 맞는 글이 있음(예: 3/25 게시글 제목이 '2027년 2월 졸업') → 글 수정 후 제목만 바뀐 것으로 보임. 수정일 추적 필요 / 작성자 칸에 학과 이메일이 노출됨 → 저장 시 가림
+컴퓨터과학전공,csweb.sookmyung.ac.kr,학부공지|/cs/community/notice.do|sm_cms|100|2025-10-29,졸업요건|/cs/curriculum/requirements.do / 졸업작품|/cs/activities/graduation-project.do,
+문화관광학전공,cultureandtourism.sookmyung.ac.kr,공지사항|/smct/community/notice.do|sm_cms|145|2020-10-12,,
+데이터사이언스전공,ds.sookmyung.ac.kr,학부공지|/ds/community/department-notice.do|sm_cms|100|2025-09-24,졸업요건|/ds/curriculum/graduation-requirements.do / 졸업작품|/ds/activities/graduation-project.do,컴퓨터과학전공과 같은 소프트웨어학부라 졸업작품·보고서 공지가 거의 같음(학과 간 중복)
+경제학부,econ.sookmyung.ac.kr,공지사항|/econ/community/notice.do|sm_cms|44|2025-05-09,,
+교육학부,edu.sookmyung.ac.kr,학사공지|/bbs/edu/1668/artclList.do|k2web-rss|63|2026-02-11,,
+지능형전자시스템학부,electro.sookmyung.ac.kr,공지사항|/ee/community/notice.do|sm_cms|50|2024-10-02,졸업요건|/ee/curriculum/graduation.do,
+첨단공학부,engine.sookmyung.ac.kr,공지사항|/bbs/engine/1986/artclList.do|k2web|12|2025-06-02,,2026년 졸업 관련 글 없음
+영어영문학부,english.sookmyung.ac.kr,공지사항|/smpr/board/notice.do|sm_cms|100|2025-06-04,졸업안내|/smpr/undergraduate/graduation-guide.do,
+가족자원경영학과,family.sookmyung.ac.kr,교내소식|/family/community/notice.do|sm_cms|53|2025-10-22,졸업요건|/family/department/requirements.do,/family/announcement.do(공지사항)는 목록 형식이 달라 못 읽음 → 확인 필요
+식품영양학과,fn.sookmyung.ac.kr,공지사항|/fn/community/notice.do|sm_cms|54|2025-08-19,,
+프랑스언어·문화학과,french.sookmyung.ac.kr,공지사항|/layout/pc/home.php?go=pds.list&pds_type=1&mid=30|php_pds|5(2026)|2026-06-05,,
+독일언어·문화학과,german.sookmyung.ac.kr,공지사항|/sub0301.php?code=notice|php_custom|75|2025-05-02,,
+글로벌서비스학부(글로벌협력·앙트러프러너십전공),global.sookmyung.ac.kr,공지|/notice/|WordPress KBoard|6쪽|2025-11-25,,
+한류국제대학(융합국제학부·한류국제학부),hallyu.sookmyung.ac.kr,공지사항|/hallyu/community/notice.do|sm_cms|26|2024-01-02,졸업학점(융합국제)|/hallyu/convergence-international/graduation-credits.do / 졸업학점(한류국제)|/hallyu/korean-wave-international/graduation-credits.do,2026년 졸업 관련 글 없음 (신설 대학이라 졸업생이 아직 없을 수 있음)
+역사문화학과,history.sookmyung.ac.kr,공지사항|/history/community/notice.do|sm_cms|52|2023-04-03,,
+일본학과,japan.sookmyung.ac.kr,공지사항|/japan/community/notice.do|sm_cms|59|2025-08-18,,
+한국어문학부,korean.sookmyung.ac.kr,공지사항|/korean/community/notice.do|sm_cms|54|2025-12-17,,
+법학부(법과대학),law.sookmyung.ac.kr,공지사항|/law/board/notice.do|sm_cms|108|2025-11-07,,
+르꼬르동블루외식경영전공,lcb.sookmyung.ac.kr,학사규정|/bbs/lcb/1796/artclList.do|k2web-rss|167|2015-03-03,,
+문헌정보학과,lis.sookmyung.ac.kr,학과공지사항|/bbs/lis/887/artclList.do|k2web-rss|122|2025-06-17,,
+체육교육과,movement.sookmyung.ac.kr,공지사항|/movement/community/notice.do|sm_cms|50|2016-12-12,,2026년 졸업 관련 글 없음 (게시판 활동 적음)
+기계시스템학부,mse.sookmyung.ac.kr,공지사항|/bbs/mse/727/artclList.do|k2web|30|2025-09-10,졸업요건|/mse/13234/subview.do,
+행정학과,pa.sookmyung.ac.kr,공지사항|/smpa/community/notice.do|sm_cms|50|2023-10-12,,
+약학대학,pharmacy.sookmyung.ac.kr,공지사항|/pharmacy/information/notice.do|sm_cms|50|2025-09-15,,2026년 졸업 관련 글 없음 (최근 50건 기준)
+신소재물리학부,physics.sookmyung.ac.kr,학사공지|/bbs/physics/701/artclList.do|k2web(POST page)|6쪽|2026-03-20 (1~3월 일부 누락 가능),졸업요건|/physics/5963/subview.do,
+정치외교학과,politics.sookmyung.ac.kr,학과공지|/politics/intro/department-notice.do|sm_cms|31|2024-05-30,졸업논문제|/politics/curriculum/graduation-thesis-question.do,
+홍보광고학과,prad.sookmyung.ac.kr,공지사항|/커뮤니티/공지사항/|WordPress KBoard|5쪽|2025-08-18,,
+사회심리학과,socpsy.sookmyung.ac.kr,공지사항|/blog|Wix 블로그(JS 렌더링)|72|-,,2026년 졸업 관련 글 없음. 오래된 '2015 여름학기 졸업논문 사례' 글만 있음
+미디어학부,(미확인),,,학과 홈페이지 주소를 대표 홈페이지에서 찾지 못함 → 주소 확인 후 수집 필요
+통계학과,stat.sookmyung.ac.kr,공지사항|/bbs/board.php?bo_table=notice|gnuboard(slug URL)|75|2025-12-29,,글 번호 대신 제목 슬러그 URL (https://stat.sookmyung.ac.kr/notice/<슬러그>/)
+순헌칼리지(자유전공학부·기초교양학부·융합/연계전공),sunheon.sookmyung.ac.kr,공지사항|/sunheon/college/notice.do|sm_cms|25|2025-07-23 / 공지사항/자료실|/sunheon/notice/notice-data.do|sm_cms|40|2025-06-26,,"자체 졸업 공지 없음. 메인에 대표 홈페이지 졸업 공지(96121, 96120)를 링크로 보여 줌"
+음악대학(피아노·관현악·성악·작곡),music.sookmyung.ac.kr,주요공지|/45|자체 CMS|5|2024-04-11,,2026년 졸업 관련 글 없음 (게시판 활동 거의 없음)
+수학과,math.sookmyung.ac.kr,공지사항|/math/notice/notice.do|sm_cms,,

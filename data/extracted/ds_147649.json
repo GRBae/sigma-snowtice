@@ -1,0 +1,83 @@
+{
+ "notice": {
+  "id": "notice:ds:147649",
+  "source": "ds",
+  "article_no": "147649",
+  "url": "https://ds.sookmyung.ac.kr/ds/community/department-notice.do?mode=view&articleNo=147649",
+  "title": "[졸업] 26-2 졸업보고서 제출 안내(12/7 ~ 12/23)",
+  "posted": "2026-11-11",
+  "posted_by": "dept:ds",
+  "hits": 98
+ },
+ "skip": false,
+ "role": "stage_detail",
+ "topic": "졸업",
+ "procedure": {
+  "template": "tmpl:grad",
+  "term": "2026-2",
+  "scope": "ds"
+ },
+ "issued_by": "dept:ds",
+ "stages": [
+  {
+   "key": "논문제결과물제출",
+   "name": "졸업작품 결과보고서(개인) 제출",
+   "scope": "ds",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": "2026-12-07",
+    "hi": "2026-12-23",
+    "precision": "day"
+   },
+   "route": null,
+   "place": "소프트웨어학부 공동기기실(명신관 406A), 평일 9~17시(12~13시 제외)",
+   "target": "2027년 2월 졸업예정 재학생(복수전공 포함)·수료생",
+   "required": true,
+   "documents": [
+    "개인 결과보고서(PDF·제본)",
+    "발표자료 PDF",
+    "시연 동영상 MP4",
+    "소스코드(USB)"
+   ],
+   "requires": [],
+   "evidence": [
+    "12/7(월) ~ 12/23(수) 기한 엄수!"
+   ],
+   "overrides": "본부"
+  }
+ ],
+ "rules": [],
+ "cautions": [
+  {
+   "id": "caution:ds_147649:0",
+   "text": "결과보고서를 내면 무조건 2027년 2월 졸업으로 진행(수료 불가)",
+   "evidence": [
+    "제출시에는 무조건 2027년 2월 졸업으로 진행됩니다. (수료불가)"
+   ]
+  },
+  {
+   "id": "caution:ds_147649:1",
+   "text": "졸업작품 발표를 한 뒤에는 학술논문으로 대체 불가 — 개인 보고서 제출 필수",
+   "evidence": [
+    "졸업작품 발표를 한 이후 학술논문으로 대체하는 것은 불가합니다."
+   ]
+  }
+ ],
+ "outcomes": [],
+ "contacts": [
+  {
+   "topic": "졸업작품 결과보고서",
+   "college": "dept:ds",
+   "office": "컴퓨터과학전공",
+   "phone": "02-710-9431",
+   "evidence": [
+    "컴퓨터과학전공 ( 02-710-9431"
+   ]
+  }
+ ],
+ "refers_to": [],
+ "verification": {
+  "result": "근거 문장 전부 원문에 있음 (2026-11-24 브라우저 수집본과 대조)",
+  "extractor": "Claude 직접 추출 (LLM API 확정 전)"
+ }
+}

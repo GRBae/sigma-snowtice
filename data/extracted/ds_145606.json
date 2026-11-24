@@ -1,0 +1,92 @@
+{
+ "notice": {
+  "id": "notice:ds:145606",
+  "source": "ds",
+  "article_no": "145606",
+  "url": "https://ds.sookmyung.ac.kr/ds/community/department-notice.do?mode=view&articleNo=145606",
+  "title": "[졸업] [공지] 2026-2 졸업작품 발표 일정 공지",
+  "posted": "2026-09-22",
+  "posted_by": "dept:ds",
+  "hits": 359
+ },
+ "skip": false,
+ "role": "stage_detail",
+ "topic": "졸업",
+ "procedure": {
+  "template": "tmpl:grad",
+  "term": "2026-2",
+  "scope": "ds"
+ },
+ "issued_by": "dept:ds",
+ "stages": [
+  {
+   "key": "졸업작품발표",
+   "name": "졸업작품 발표",
+   "scope": "ds",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": "2026-10-02T10:30",
+    "hi": "2026-10-02T12:00",
+    "precision": "minute"
+   },
+   "route": null,
+   "place": "명신관 305호, 409호",
+   "target": null,
+   "required": true,
+   "documents": [],
+   "requires": [],
+   "evidence": [
+    "2026년 10월 2일 금요일 10:30~12:00"
+   ]
+  },
+  {
+   "key": "발표자료포스터제출",
+   "name": "발표자료(PDF)·포스터 제출",
+   "scope": "ds",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": null,
+    "hi": "2026-10-16T17:00",
+    "precision": "minute"
+   },
+   "route": null,
+   "place": null,
+   "target": null,
+   "required": true,
+   "documents": [],
+   "requires": [],
+   "evidence": [
+    "2026년 10월 16일 금요일 17:00까지"
+   ]
+  },
+  {
+   "key": "포스터전시회",
+   "name": "포스터 전시회",
+   "scope": "ds",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": "2026-11-05T14:00",
+    "hi": "2026-11-05T17:00",
+    "precision": "minute"
+   },
+   "route": null,
+   "place": "명신관 406호 삼성소프트웨어실습실",
+   "target": null,
+   "required": true,
+   "documents": [],
+   "requires": [],
+   "evidence": [
+    "2026년 11월 5일 목요일 14:00-17:00"
+   ]
+  }
+ ],
+ "rules": [],
+ "cautions": [],
+ "outcomes": [],
+ "contacts": [],
+ "refers_to": [],
+ "verification": {
+  "result": "근거 문장 전부 원문에 있음 (2026-11-24 브라우저 수집본과 대조)",
+  "extractor": "Claude 직접 추출 (LLM API 확정 전)"
+ }
+}

@@ -1,0 +1,5 @@
+# API 서버만 돌릴 때 (배포용). 수집·그래프 생성은 requirements.txt
+fastapi>=0.110
+uvicorn[standard]>=0.29
+networkx>=3.2
+pyyaml>=6.0

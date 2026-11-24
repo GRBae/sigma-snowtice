@@ -1,0 +1,3 @@
+#site movement.sookmyung.ac.kr|체육교육과
+#board 공지사항|/movement/community/notice.do|sm_cms|50|2016-12-12
+#note 2026년 졸업 관련 글 없음 (게시판 활동 적음)

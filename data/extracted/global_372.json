@@ -1,0 +1,102 @@
+{
+ "notice": {
+  "id": "notice:global:372",
+  "source": "global",
+  "article_no": "372",
+  "url": "https://global.sookmyung.ac.kr/notice/?uid=372&mod=document",
+  "title": "★★★ 글로벌서비스학부 졸업논문제(어학능력인증제 및 졸업시험) 관련 FAQ ★★★",
+  "posted": "2026-11-10",
+  "posted_by": "dept:global",
+  "hits": null
+ },
+ "skip": false,
+ "role": "rule_guide",
+ "topic": "졸업",
+ "procedure": {
+  "template": "tmpl:grad",
+  "term": "2026-2",
+  "scope": "global"
+ },
+ "issued_by": "dept:global",
+ "stages": [
+  {
+   "key": "졸업시험",
+   "name": "대체 졸업시험(어학 탈락 증빙 제출자, 신청 불필요)",
+   "scope": "global",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": "2026-12-21",
+    "hi": "2026-12-31",
+    "precision": "month",
+    "tentative": true,
+    "year_inferred": true
+   },
+   "route": null,
+   "place": null,
+   "target": null,
+   "required": false,
+   "documents": [],
+   "requires": [],
+   "evidence": [
+    "[전기 졸업(2월)] 12월 말"
+   ]
+  }
+ ],
+ "rules": [],
+ "cautions": [
+  {
+   "id": "caution:global_372:0",
+   "text": "졸업논문제 서류는 영어+제2외국어(+~19학번 정보인증제) 모두 제출, 원본 대면 제출 원칙",
+   "evidence": [
+    "글로벌서비스학부는 원본 서류의 대면 제출을 원칙으로 합니다."
+   ]
+  },
+  {
+   "id": "caution:global_372:1",
+   "text": "대체 졸업시험 요건: 영어 동일시험 3회 탈락 또는 제2외국어 동일시험 2회 탈락 — 다른 과목 증빙도 반드시 함께",
+   "evidence": [
+    "[영어 3회 탈락] \"또는\" [제2외국어 2회 탈락]"
+   ]
+  },
+  {
+   "id": "caution:global_372:2",
+   "text": "OPIc 등 독해 평가가 없는 시험은 인정 안 됨",
+   "evidence": [
+    "'독해 평가'가 포함되지 않은 시험(ex. OPIc 등)은 절대 인정되지 않습니다."
+   ]
+  },
+  {
+   "id": "caution:global_372:3",
+   "text": "외국인 유학생은 어학 자격증 대신 졸업시험",
+   "evidence": [
+    "외국인 유학생은 별도의 영어 및 제2외국어 자격증 제출이 필요 없으며"
+   ]
+  }
+ ],
+ "outcomes": [],
+ "contacts": [
+  {
+   "topic": "졸업논문제(글로벌협력전공)",
+   "college": "dept:global",
+   "office": "글로벌협력전공",
+   "phone": "02-2077-7496",
+   "evidence": [
+    "글로벌협력전공: 02-2077-7496"
+   ]
+  },
+  {
+   "topic": "졸업논문제(앙트러프러너십전공)",
+   "college": "dept:global",
+   "office": "앙트러프러너십전공",
+   "phone": "02-2077-7578",
+   "evidence": [
+    "앙트러프러너십전공: 02-2077-7578"
+   ]
+  }
+ ],
+ "refers_to": [],
+ "verification": {
+  "result": "근거 문장 전부 원문에 있음 (2026-11-24 브라우저 수집본과 대조)",
+  "extractor": "Claude 직접 추출 (LLM API 확정 전)"
+ }
+}

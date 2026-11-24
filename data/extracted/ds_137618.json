@@ -1,0 +1,80 @@
+{
+ "notice": {
+  "id": "notice:ds:137618",
+  "source": "ds",
+  "article_no": "137618",
+  "url": "https://ds.sookmyung.ac.kr/ds/community/department-notice.do?mode=view&articleNo=137618",
+  "title": "[졸업] 2026-2학기 졸업작품 제안서 제출 안내 : 6월 9일 (화) 16:00까지(기한엄수)",
+  "posted": "2026-05-19",
+  "posted_by": "dept:ds",
+  "hits": 340
+ },
+ "skip": false,
+ "role": "stage_detail",
+ "topic": "졸업",
+ "procedure": {
+  "template": "tmpl:grad",
+  "term": "2026-2",
+  "scope": "ds"
+ },
+ "issued_by": "dept:ds",
+ "stages": [
+  {
+   "key": "졸업작품제안서제출",
+   "name": "졸업작품 제안서 제출",
+   "scope": "ds",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": "2026-05-19",
+    "hi": "2026-06-12T17:00",
+    "precision": "minute"
+   },
+   "route": "route:dept-mail",
+   "place": null,
+   "target": "재학생 2026-1 기준 5학기 재학 이상 / 휴학생 5학기 수료 이상",
+   "required": true,
+   "documents": [
+    "졸업작품 제안서(양식)"
+   ],
+   "requires": [],
+   "evidence": [
+    "6월 9일(화) 오후 4시까지",
+    "6월 12일(금) 오후 5시로 연장합니다."
+   ]
+  }
+ ],
+ "rules": [],
+ "cautions": [
+  {
+   "id": "caution:ds_137618:0",
+   "text": "25학번까지는 TOPCIT으로 졸업작품 요건을 대체할 수 있으나 제1전공자는 졸업작품 발표를 권고",
+   "evidence": [
+    "25학번까지는 SW중심대학사업단 요청에 따라 한시적으로 TOPCIT으로 졸업요건을 대체할 수 있으나"
+   ]
+  },
+  {
+   "id": "caution:ds_137618:1",
+   "text": "KCI 등재 학술논문(학부생 1~3인+지도교수 저자)을 게재·게재예정이면 졸업작품으로 인정",
+   "evidence": [
+    "연구논문을 게재했거나 게재예정인 학생들은 논문을 졸업 작품으로 인증함"
+   ]
+  }
+ ],
+ "outcomes": [],
+ "contacts": [
+  {
+   "topic": "졸업작품",
+   "college": "dept:ds",
+   "office": "공동기기실",
+   "phone": "02-710-9295",
+   "evidence": [
+    "공동기기실 02-710-9295"
+   ]
+  }
+ ],
+ "refers_to": [],
+ "verification": {
+  "result": "근거 문장 전부 원문에 있음 (2026-11-24 브라우저 수집본과 대조)",
+  "extractor": "Claude 직접 추출 (LLM API 확정 전)"
+ }
+}

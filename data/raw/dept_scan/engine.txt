@@ -1,0 +1,3 @@
+#site engine.sookmyung.ac.kr|첨단공학부
+#board 공지사항|/bbs/engine/1986/artclList.do|k2web|12|2025-06-02
+#note 2026년 졸업 관련 글 없음

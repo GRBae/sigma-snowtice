@@ -1,0 +1,39 @@
+{
+ "notice": {
+  "id": "notice:ds:147026",
+  "source": "ds",
+  "article_no": "147026",
+  "url": "https://ds.sookmyung.ac.kr/ds/community/department-notice.do?mode=view&articleNo=147026",
+  "title": "[졸업] ★ 졸업논문제 증빙 제출용 TOPCIT 유효기간 조항 삭제",
+  "posted": "2026-10-14",
+  "posted_by": "dept:ds",
+  "hits": 147
+ },
+ "skip": false,
+ "role": "rule_guide",
+ "topic": "졸업",
+ "procedure": {
+  "template": "tmpl:grad",
+  "term": "2026-2",
+  "scope": "ds"
+ },
+ "issued_by": "dept:ds",
+ "stages": [],
+ "rules": [],
+ "cautions": [
+  {
+   "id": "caution:ds_147026:0",
+   "text": "졸업논문제 증빙용 TOPCIT: 2021년 이후 응시분은 유효기간 없음(2020년 이전은 2년), 성적표는 2개월 이내 발급분만 인정",
+   "evidence": [
+    "2021년 이후 응시 내역은 유효기간 없이 증빙 제출 가능"
+   ]
+  }
+ ],
+ "outcomes": [],
+ "contacts": [],
+ "refers_to": [],
+ "verification": {
+  "result": "근거 문장 전부 원문에 있음 (2026-11-24 브라우저 수집본과 대조)",
+  "extractor": "Claude 직접 추출 (LLM API 확정 전)"
+ }
+}

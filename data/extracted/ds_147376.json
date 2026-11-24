@@ -1,0 +1,72 @@
+{
+ "notice": {
+  "id": "notice:ds:147376",
+  "source": "ds",
+  "article_no": "147376",
+  "url": "https://ds.sookmyung.ac.kr/ds/community/department-notice.do?mode=view&articleNo=147376",
+  "title": "[학사] 2026학년도 2학기 산학협력 졸업프로젝트 시행 계획",
+  "posted": "2026-10-29",
+  "posted_by": "dept:ds",
+  "hits": 103
+ },
+ "skip": false,
+ "role": "stage_detail",
+ "topic": "졸업",
+ "procedure": {
+  "template": "tmpl:grad",
+  "term": "2026-2",
+  "scope": "ds"
+ },
+ "issued_by": "office:swcu",
+ "stages": [
+  {
+   "key": "산학협력졸업프로젝트계획서",
+   "name": "산학협력 졸업프로젝트 계획서 접수(선택)",
+   "scope": "ds",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": null,
+    "hi": "2026-10-30",
+    "precision": "day"
+   },
+   "route": "route:dept-mail",
+   "place": null,
+   "target": null,
+   "required": false,
+   "documents": [],
+   "requires": [],
+   "evidence": [
+    "2026. 10. 30.(금)까지"
+   ]
+  },
+  {
+   "key": "산학협력졸업프로젝트결과보고서",
+   "name": "산학협력 졸업프로젝트 결과보고서 제출(선택)",
+   "scope": "ds",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": null,
+    "hi": "2026-12-31",
+    "precision": "day"
+   },
+   "route": "route:dept-mail",
+   "place": null,
+   "target": null,
+   "required": false,
+   "documents": [],
+   "requires": [],
+   "evidence": [
+    "2026. 12. 31.(목)까지"
+   ]
+  }
+ ],
+ "rules": [],
+ "cautions": [],
+ "outcomes": [],
+ "contacts": [],
+ "refers_to": [],
+ "verification": {
+  "result": "근거 문장 전부 원문에 있음 (2026-11-24 브라우저 수집본과 대조)",
+  "extractor": "Claude 직접 추출 (LLM API 확정 전)"
+ }
+}

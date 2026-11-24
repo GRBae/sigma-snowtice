@@ -1,0 +1,591 @@
+{
+ "openapi": "3.1.0",
+ "info": {
+  "title": "시그마 공지 그래프 API",
+  "description": "숙명여대 공지를 모아 만든 그래프에서 '내 학과 졸업 일정', '마감 임박', '연관 공지'를 계산해 돌려준다. 날짜 비교와 자격 판정은 서버 코드가 하고, 응답의 period/status를 그대로 보여주면 된다. 개인정보(학번·이름)는 받지도 저장하지도 않는다.",
+  "version": "0.1.0"
+ },
+ "paths": {
+  "/depts": {
+   "get": {
+    "summary": "학과 코드 목록",
+    "description": "todo·deadlines의 dept 값으로 쓰는 코드와 이름. has_dept_schedule=false면 학과 자체 일정은 아직 없음.",
+    "operationId": "depts_depts_get",
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      }
+     }
+    }
+   }
+  },
+  "/todo": {
+   "get": {
+    "summary": "내 학과 졸업 할 일 (본부+학과 합침, 학과 마감 우선)",
+    "description": "학생의 학과와 학적 상태로 이번 학기 졸업 절차에서 아직 안 끝난 단계를 날짜순으로 돌려준다. 학과가 본부와 다른 마감을 정했으면 학과 것만 남기고 overrides_central에 본부 기간을 적는다. 지도교수별 일정이 있으면 advisor를 넘겨야 그 교수 일정만 나온다.",
+    "operationId": "get_my_graduation_todo",
+    "parameters": [
+     {
+      "name": "dept",
+      "in": "query",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "description": "학과 코드 (예: korean, math, ds). /depts 참고",
+       "title": "Dept"
+      },
+      "description": "학과 코드 (예: korean, math, ds). /depts 참고"
+     },
+     {
+      "name": "term",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string",
+       "description": "학기 (2026-2 = 2027년 2월 졸업)",
+       "default": "2026-2",
+       "title": "Term"
+      },
+      "description": "학기 (2026-2 = 2027년 2월 졸업)"
+     },
+     {
+      "name": "enroll_status",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "enum": [
+          "재학",
+          "휴학",
+          "수료"
+         ],
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "description": "학적 상태",
+       "title": "Enroll Status"
+      },
+      "description": "학적 상태"
+     },
+     {
+      "name": "admission_year",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "integer",
+         "maximum": 2030,
+         "minimum": 2000
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "description": "입학 연도(학번 앞 4자리)만. 학번 전체는 받지 않음",
+       "title": "Admission Year"
+      },
+      "description": "입학 연도(학번 앞 4자리)만. 학번 전체는 받지 않음"
+     },
+     {
+      "name": "advisor",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "description": "지도교수 이름 (지도교수별 일정이 있는 학과만)",
+       "title": "Advisor"
+      },
+      "description": "지도교수 이름 (지도교수별 일정이 있는 학과만)"
+     },
+     {
+      "name": "include_closed",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "boolean",
+       "default": false,
+       "title": "Include Closed"
+      }
+     },
+     {
+      "name": "today",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string",
+         "format": "date"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "description": "기준일(테스트용). 비우면 서버 오늘 날짜(Asia/Seoul)",
+       "title": "Today"
+      },
+      "description": "기준일(테스트용). 비우면 서버 오늘 날짜(Asia/Seoul)"
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/todo/card": {
+   "get": {
+    "summary": "내 할 일 — 챗봇용 근거 카드(텍스트)",
+    "description": "/todo와 같은 계산을 LLM이 옮겨 쓰기 좋은 한국어 텍스트로 돌려준다. 카드에 없는 날짜·조건은 답하지 말 것.",
+    "operationId": "get_my_graduation_todo_card",
+    "parameters": [
+     {
+      "name": "dept",
+      "in": "query",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "title": "Dept"
+      }
+     },
+     {
+      "name": "term",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string",
+       "default": "2026-2",
+       "title": "Term"
+      }
+     },
+     {
+      "name": "enroll_status",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "enum": [
+          "재학",
+          "휴학",
+          "수료"
+         ],
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Enroll Status"
+      }
+     },
+     {
+      "name": "admission_year",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "integer"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Admission Year"
+      }
+     },
+     {
+      "name": "advisor",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Advisor"
+      }
+     },
+     {
+      "name": "today",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string",
+         "format": "date"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "description": "기준일(테스트용). 비우면 서버 오늘 날짜(Asia/Seoul)",
+       "title": "Today"
+      },
+      "description": "기준일(테스트용). 비우면 서버 오늘 날짜(Asia/Seoul)"
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "text/plain": {
+        "schema": {
+         "type": "string"
+        }
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/deadlines": {
+   "get": {
+    "summary": "곧 마감되는 일정",
+    "description": "오늘부터 days일 안에 끝나는 졸업 단계. dept를 주면 본부+그 학과, 안 주면 전체 학과.",
+    "operationId": "get_upcoming_deadlines",
+    "parameters": [
+     {
+      "name": "days",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "integer",
+       "maximum": 120,
+       "minimum": 1,
+       "default": 14,
+       "title": "Days"
+      }
+     },
+     {
+      "name": "dept",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Dept"
+      }
+     },
+     {
+      "name": "today",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string",
+         "format": "date"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "description": "기준일(테스트용). 비우면 서버 오늘 날짜(Asia/Seoul)",
+       "title": "Today"
+      },
+      "description": "기준일(테스트용). 비우면 서버 오늘 날짜(Asia/Seoul)"
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/graph": {
+   "get": {
+    "summary": "관심사 그래프 (PPR 연관도 + 추천 경로)",
+    "description": "seed 노드에서 Personalized PageRank로 가까운 단계·공지·유의사항을 뽑고, 각 노드에 seed에서 오는 경로(why)를 붙인다. seed 예: interest:grad-req, proc:grad:2026-2:korean, stage:2026-2:논문제결과물제출",
+    "operationId": "get_related_graph",
+    "parameters": [
+     {
+      "name": "seed",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string",
+       "default": "interest:grad-req",
+       "title": "Seed"
+      }
+     },
+     {
+      "name": "k",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "integer",
+       "maximum": 80,
+       "minimum": 5,
+       "default": 25,
+       "title": "K"
+      }
+     },
+     {
+      "name": "today",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string",
+         "format": "date"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "description": "기준일(테스트용). 비우면 서버 오늘 날짜(Asia/Seoul)",
+       "title": "Today"
+      },
+      "description": "기준일(테스트용). 비우면 서버 오늘 날짜(Asia/Seoul)"
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/notices": {
+   "get": {
+    "summary": "공지 목록 (공지함)",
+    "description": "재게시는 대표 공지 하나로 묶어서 돌려준다(reposts=묶인 개수). dept를 주면 그 학과+대표 홈페이지 공지.",
+    "operationId": "list_notices",
+    "parameters": [
+     {
+      "name": "dept",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Dept"
+      }
+     },
+     {
+      "name": "term",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "title": "Term"
+      }
+     },
+     {
+      "name": "q",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "null"
+        }
+       ],
+       "description": "제목 검색어",
+       "title": "Q"
+      },
+      "description": "제목 검색어"
+     },
+     {
+      "name": "limit",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "integer",
+       "maximum": 500,
+       "minimum": 1,
+       "default": 50,
+       "title": "Limit"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful Response",
+      "content": {
+       "application/json": {
+        "schema": {}
+       }
+      }
+     },
+     "422": {
+      "description": "Validation Error",
+      "content": {
+       "application/json": {
+        "schema": {
+         "$ref": "#/components/schemas/HTTPValidationError"
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ },
+ "components": {
+  "schemas": {
+   "HTTPValidationError": {
+    "properties": {
+     "detail": {
+      "items": {
+       "$ref": "#/components/schemas/ValidationError"
+      },
+      "type": "array",
+      "title": "Detail"
+     }
+    },
+    "type": "object",
+    "title": "HTTPValidationError"
+   },
+   "ValidationError": {
+    "properties": {
+     "loc": {
+      "items": {
+       "anyOf": [
+        {
+         "type": "string"
+        },
+        {
+         "type": "integer"
+        }
+       ]
+      },
+      "type": "array",
+      "title": "Location"
+     },
+     "msg": {
+      "type": "string",
+      "title": "Message"
+     },
+     "type": {
+      "type": "string",
+      "title": "Error Type"
+     },
+     "input": {
+      "title": "Input"
+     },
+     "ctx": {
+      "type": "object",
+      "title": "Context"
+     }
+    },
+    "type": "object",
+    "required": [
+     "loc",
+     "msg",
+     "type"
+    ],
+    "title": "ValidationError"
+   }
+  }
+ },
+ "servers": [
+  {
+   "url": "https://YOUR-API-HOST",
+   "description": "배포한 API 주소로 바꾸기 (예: https://sigma-api.onrender.com)"
+  }
+ ]
+}

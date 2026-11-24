@@ -1,0 +1,152 @@
+{
+ "notice": {
+  "id": "notice:math:146958",
+  "source": "math",
+  "article_no": "146958",
+  "url": "https://math.sookmyung.ac.kr/math/notice/notice.do?mode=view&articleNo=146958",
+  "title": "★[2026학년도 전기(2027년 2월) 졸업] 졸업시험(2차) 신청 공지",
+  "posted": "2026-10-12",
+  "posted_by": "dept:math",
+  "hits": 2576
+ },
+ "skip": false,
+ "role": "stage_detail",
+ "topic": "졸업",
+ "procedure": {
+  "template": "tmpl:grad",
+  "term": "2026-2",
+  "scope": "math"
+ },
+ "issued_by": "dept:math",
+ "stages": [
+  {
+   "key": "졸업시험2차신청",
+   "name": "졸업시험(2차) 신청",
+   "scope": "math",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": "2026-10-12",
+    "hi": "2026-11-13",
+    "precision": "day"
+   },
+   "route": "route:dept-mail",
+   "place": null,
+   "target": "수학전공·수학복수전공 7학기 이상 수료 학생(휴학생 포함)",
+   "required": true,
+   "documents": [],
+   "requires": [],
+   "evidence": [
+    "2026년 10월 12일(월) ~ 2026년 11월 13일(금)",
+    "모든 과목이 면제되어 졸업시험을 응시하지 않는 경우에도 졸업시험 신청은 하셔야 합니다."
+   ]
+  },
+  {
+   "key": "졸업시험2차응시",
+   "name": "졸업시험(2차) 응시",
+   "scope": "math",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": "2026-11-27T11:00",
+    "hi": "2026-11-27T14:00",
+    "precision": "minute"
+   },
+   "route": null,
+   "place": "사회교육관 417호",
+   "target": null,
+   "required": true,
+   "documents": [],
+   "requires": [],
+   "evidence": [
+    "날짜: 2026년 11월 27일(금)"
+   ]
+  },
+  {
+   "key": "졸업시험결과",
+   "name": "졸업시험 결과 발송",
+   "scope": "math",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": null,
+    "hi": "2026-12-13",
+    "precision": "week",
+    "tentative": true
+   },
+   "route": "route:dept-mail",
+   "place": null,
+   "target": null,
+   "required": false,
+   "documents": [],
+   "requires": [],
+   "evidence": [
+    "졸업시험 결과는 12월 둘째 주 이내 발송될 예정입니다."
+   ]
+  }
+ ],
+ "rules": [
+  {
+   "id": "rule:math-exam",
+   "applies_to": "proc:math-thesis:2026-2",
+   "tree": {
+    "AND": [
+     {
+      "OR": [
+       {
+        "attr": "dept",
+        "op": "==",
+        "value": "dept:math"
+       },
+       {
+        "attr": "second_major",
+        "op": "==",
+        "value": "dept:math"
+       }
+      ]
+     },
+     {
+      "attr": "semesters_registered",
+      "op": ">=",
+      "value": 7,
+      "note": "7학기 이상 수료, 휴학생·휴학예정자 포함"
+     }
+    ]
+   },
+   "subjects": [
+    "복소수함수론",
+    "추상대수학",
+    "미분기하학"
+   ],
+   "exemption": {
+    "status": "U",
+    "reason": "면제 조건이 첨부 PDF '수학과 졸업요건 및 졸업시험 범위'에만 있음 → 첨부 추출 후 채움"
+   },
+   "evidence": [
+    {
+     "src": "math:146958",
+     "quote": "대상자: 수학전공, 수학복수전공 학생 중 7학기 이상 수료한 학생(휴학생, 휴학예정자 포함)"
+    }
+   ]
+  }
+ ],
+ "cautions": [
+  {
+   "id": "cau:math-exam-apply-even-exempt",
+   "text": "모든 과목이 면제돼도 졸업시험 신청을 안 하면 졸업논문제 합격 처리가 안 됨",
+   "evidence": [
+    "졸업논문제 합격처리가 되지 않으니 반드시 신청"
+   ]
+  }
+ ],
+ "outcomes": [],
+ "contacts": [],
+ "refers_to": [],
+ "duplicate_of": null,
+ "attachments_pending": [
+  "수학과 졸업요건 및 졸업 시험 범위.pdf"
+ ],
+ "verification": {
+  "method": "브라우저 원문 대조",
+  "date": "2026-11-24",
+  "result": "근거 문장 전부 원문에 있음"
+ },
+ "extracted_by": "gold(수작업)"
+}

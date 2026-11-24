@@ -1,0 +1,8 @@
+__pycache__/
+.env
+# 원문 HTML은 저장소에 올리지 않음 (용량·저작권). text.txt·meta.json만 올림
+data/raw/**/page.html
+data/raw/**/files/
+data/raw/list_today.jsonl
+data/graph/graph_load.sql
+.pytest_cache/

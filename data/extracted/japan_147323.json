@@ -1,0 +1,97 @@
+{
+ "notice": {
+  "id": "notice:japan:147323",
+  "source": "japan",
+  "article_no": "147323",
+  "url": "https://japan.sookmyung.ac.kr/japan/community/notice.do?mode=view&articleNo=147323",
+  "title": "[졸업] 2027년 2월 졸업예정자 졸업논문 지도교수님 확정 및 졸업논문제(어학 포함) 증빙 제출 마감일 안내",
+  "posted": "2026-10-27",
+  "posted_by": "dept:japan",
+  "hits": 1395
+ },
+ "skip": false,
+ "role": "stage_detail",
+ "topic": "졸업",
+ "procedure": {
+  "template": "tmpl:grad",
+  "term": "2026-2",
+  "scope": "japan"
+ },
+ "issued_by": "dept:japan",
+ "stages": [
+  {
+   "key": "졸업논문지도",
+   "name": "졸업논문 지도(2회 이상 필수, 학생이 직접 연락)",
+   "scope": "japan",
+   "procedure_template": "tmpl:grad",
+   "date": null,
+   "route": null,
+   "place": null,
+   "target": null,
+   "required": true,
+   "documents": [],
+   "requires": [],
+   "evidence": [
+    "총 2회 이상 지도 필수 이수"
+   ]
+  },
+  {
+   "key": "논문제결과물제출",
+   "name": "졸업논문·어학성적(JPT/JLPT) 대면 제출",
+   "scope": "japan",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": "2026-12-01",
+    "hi": "2026-12-28T17:00",
+    "precision": "minute"
+   },
+   "route": null,
+   "place": "일본학과 사무실(순헌관 310A)",
+   "target": null,
+   "required": true,
+   "documents": [
+    "졸업논문 출력본(A4 30매 이상, 해당자)",
+    "어학 성적 원본+사본(학번 기입)"
+   ],
+   "requires": [],
+   "evidence": [
+    "2026년 12월 1일(화)~ 28(월) 17:00까지"
+   ],
+   "overrides": "본부"
+  }
+ ],
+ "rules": [],
+ "cautions": [
+  {
+   "id": "caution:japan_147323:0",
+   "text": "지도 2회 미이수 시 논문 제출이 인정되지 않을 수 있음",
+   "evidence": [
+    "지도 미이수 시 논문 제출이 인정되지 않을 수 있음"
+   ]
+  },
+  {
+   "id": "caution:japan_147323:1",
+   "text": "복수전공자는 복수전공 졸업논문제를 복수전공 사무실에 제출",
+   "evidence": [
+    "복수전공자의 경우 복수전공 졸업논문제를 복수전공 사무실에 제출합니다."
+   ]
+  }
+ ],
+ "outcomes": [],
+ "contacts": [
+  {
+   "topic": "졸업논문제",
+   "college": "dept:japan",
+   "office": "일본학과 사무실",
+   "phone": "02-710-9885",
+   "evidence": [
+    "☎ 02-710-9885"
+   ]
+  }
+ ],
+ "refers_to": [],
+ "verification": {
+  "result": "근거 문장 전부 원문에 있음 (2026-11-24 브라우저 수집본과 대조)",
+  "extractor": "Claude 직접 추출 (LLM API 확정 전)"
+ }
+}

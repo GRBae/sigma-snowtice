@@ -1,0 +1,92 @@
+{
+ "notice": {
+  "id": "notice:csweb:130406",
+  "source": "csweb",
+  "article_no": "130406",
+  "url": "https://csweb.sookmyung.ac.kr/cs/community/notice.do?mode=view&articleNo=130406",
+  "title": "26-2 학생연구활동비 지원안내 (졸업작품 준비 예산지원) : ~6.12.(금) 17:00",
+  "posted": "2026-06-08",
+  "posted_by": "dept:csweb",
+  "hits": 294
+ },
+ "skip": false,
+ "role": "stage_detail",
+ "topic": "졸업",
+ "procedure": {
+  "template": "tmpl:grad",
+  "term": "2026-2",
+  "scope": "csweb"
+ },
+ "issued_by": "dept:csweb",
+ "stages": [
+  {
+   "key": "학생연구활동비신청",
+   "name": "학생연구활동비(졸업작품 예산) 지원 신청(선택)",
+   "scope": "csweb",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": null,
+    "hi": "2026-06-12T17:00",
+    "precision": "minute"
+   },
+   "route": null,
+   "place": "명신관 424호(학부사무실 방문)",
+   "target": "2026-2 졸업작품 진행 학생",
+   "required": false,
+   "documents": [
+    "학생연구활동계획서(지도교수 서명)"
+   ],
+   "requires": [],
+   "evidence": [
+    "2026. 6.12.(금) 17:00 까지"
+   ]
+  },
+  {
+   "key": "학생연구활동비증빙제출",
+   "name": "학생연구활동비 지출증빙 제출(선택)",
+   "scope": "csweb",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": null,
+    "hi": "2026-10-02T16:00",
+    "precision": "minute"
+   },
+   "route": null,
+   "place": "학부사무실 방문",
+   "target": null,
+   "required": false,
+   "documents": [],
+   "requires": [],
+   "evidence": [
+    "26. 10. 2.(금) 16:00까지"
+   ]
+  }
+ ],
+ "rules": [],
+ "cautions": [
+  {
+   "id": "caution:csweb_130406:0",
+   "text": "졸업작품 지원금은 1팀(3명) 최대 30만원, 9/26까지 학교 사업자번호 현금영수증으로만 지출 인정",
+   "evidence": [
+    "지원한도 : 1팀(3명기준) 최대 30만원"
+   ]
+  }
+ ],
+ "outcomes": [],
+ "contacts": [
+  {
+   "topic": "졸업작품 지원금",
+   "college": "dept:csweb",
+   "office": "소프트웨어학부 사무실",
+   "phone": "02-2077-7729",
+   "evidence": [
+    "소프트웨어학부 사무실 (02-2077-7729)"
+   ]
+  }
+ ],
+ "refers_to": [],
+ "verification": {
+  "result": "근거 문장 전부 원문에 있음 (2026-11-24 브라우저 수집본과 대조)",
+  "extractor": "Claude 직접 추출 (LLM API 확정 전)"
+ }
+}

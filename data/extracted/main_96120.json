@@ -1,0 +1,132 @@
+{
+ "notice": {
+  "id": "notice:main:96120",
+  "source": "main",
+  "article_no": "96120",
+  "url": "https://www.sookmyung.ac.kr/kr/news/important-notice.do?mode=view&articleNo=96120",
+  "title": "[졸업] 2026-2 졸업 인증제(졸업논문제/정보인증제) 제출 안내 (12. 1.~12. 30.)",
+  "posted": "2026-11-23",
+  "posted_by": "office:comm",
+  "hits": null
+ },
+ "skip": false,
+ "role": "stage_detail",
+ "topic": "졸업",
+ "procedure": {
+  "template": "tmpl:grad",
+  "term": "2026-2",
+  "scope": "본부"
+ },
+ "issued_by": "office:haksa",
+ "stages": [
+  {
+   "key": "논문제결과물제출",
+   "name": "졸업논문제 결과물 제출",
+   "scope": "본부",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": "2026-12-01",
+    "hi": "2026-12-30",
+    "precision": "day"
+   },
+   "route": "route:dept-office",
+   "place": null,
+   "target": "3학년 수료학점 이상 재학생, 졸업논문제 미통과 수료생",
+   "required": true,
+   "documents": [],
+   "requires": [],
+   "evidence": [
+    "1. 제출기간 : 2026. 12. 1.(화) ~ 12. 30.(수)"
+   ]
+  },
+  {
+   "key": "정보인증제등록",
+   "name": "정보인증제 등록",
+   "scope": "본부",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": "2026-12-01",
+    "hi": "2026-12-30",
+    "precision": "day"
+   },
+   "route": "route:portal",
+   "place": null,
+   "target": "2001~2019학번 졸업예정자·수료생",
+   "required": true,
+   "documents": [],
+   "requires": [],
+   "evidence": [
+    "1. 제출기간 : 2026. 12. 1.(화) ~ 12. 30.(수)"
+   ]
+  },
+  {
+   "key": "인증제결과확인",
+   "name": "졸업인증제 합격여부 확인",
+   "scope": "본부",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": "2027-01-07",
+    "hi": "2027-01-08",
+    "precision": "day"
+   },
+   "route": "route:portal",
+   "place": null,
+   "target": "졸업예정자",
+   "required": true,
+   "documents": [],
+   "requires": [],
+   "evidence": [
+    "2027. 1. 7.(목) ~ 1. 8.(금)"
+   ]
+  }
+ ],
+ "rules": [],
+ "cautions": [
+  {
+   "id": "cau:cert-irreversible",
+   "text": "졸업인증제는 한 번 합격하면 본인이 원해도 불합격으로 바꿀 수 없음",
+   "evidence": [
+    "한번 제출하여 합격 된 이후에는 본인이 희망하여도 불합격으로 바꿀 수 없음"
+   ]
+  },
+  {
+   "id": "cau:check-result",
+   "text": "졸업인증제 결과를 확인하지 않아 생긴 문제는 학생 책임",
+   "evidence": [
+    "처리결과를 확인하지 않아 발생하는 문제는 학생 본인에게 책임이 있습니다."
+   ]
+  }
+ ],
+ "outcomes": [],
+ "contacts": [
+  {
+   "topic": "졸업논문제",
+   "college": "*",
+   "office": "각 전공 사무실(제1전공/복수전공)",
+   "phone": null,
+   "evidence": [
+    "※ 졸업논문제 관련 문의는 각 학과사무실로 요망"
+   ]
+  },
+  {
+   "topic": "졸업심사",
+   "college": "college:liberal-arts",
+   "office": "office:haksa",
+   "phone": "02-710-9994",
+   "evidence": [
+    "문과대학, 약학대학, 미디어학부, 영어영문학부(02)710-9994"
+   ]
+  }
+ ],
+ "refers_to": [
+  "notice:static:graduate03"
+ ],
+ "duplicate_of": null,
+ "attachments_pending": [],
+ "verification": {
+  "method": "브라우저 원문 대조",
+  "date": "2026-11-24",
+  "result": "근거 문장 전부 원문에 있음"
+ },
+ "extracted_by": "gold(수작업)"
+}

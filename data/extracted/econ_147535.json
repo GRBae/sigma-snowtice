@@ -1,0 +1,93 @@
+{
+ "notice": {
+  "id": "notice:econ:147535",
+  "source": "econ",
+  "article_no": "147535",
+  "url": "https://econ.sookmyung.ac.kr/econ/community/notice.do?mode=view&articleNo=147535",
+  "title": "[교직] 2027년 2월 졸업신청자 교원자격무시험검정원서 제출 안내",
+  "posted": "2026-11-05",
+  "posted_by": "dept:econ",
+  "hits": 86
+ },
+ "skip": false,
+ "role": "stage_detail",
+ "topic": "졸업",
+ "procedure": {
+  "template": "tmpl:grad",
+  "term": "2026-2",
+  "scope": "econ"
+ },
+ "issued_by": "office:teacher",
+ "stages": [
+  {
+   "key": "교원자격검정",
+   "name": "교원자격무시험검정원서 제출(교직 이수자)",
+   "scope": "본부",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": "2026-12-01",
+    "hi": "2026-12-30",
+    "precision": "day"
+   },
+   "route": null,
+   "place": "진리관 504호 교원양성센터 방문 또는 우편(원본만)",
+   "target": "교직과정 이수 예정자 중 졸업신청자",
+   "required": false,
+   "documents": [
+    "교원자격무시험검정원서",
+    "마약류 중독 여부 검사결과통보서 또는 진단서"
+   ],
+   "requires": [],
+   "evidence": [
+    "2026년 12월 1일(화) ~ 2026년 12월 30일(수)"
+   ]
+  },
+  {
+   "key": "영양사합격확인서제출",
+   "name": "영양사 국가시험 합격확인서 제출(영양교사만)",
+   "scope": "fn",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": null,
+    "hi": "2027-01-15",
+    "precision": "day"
+   },
+   "route": null,
+   "place": null,
+   "target": "영양교사 자격 취득 예정자",
+   "required": false,
+   "documents": [],
+   "requires": [],
+   "evidence": [
+    "2027년 1월 15일(금)까지"
+   ]
+  }
+ ],
+ "rules": [],
+ "cautions": [
+  {
+   "id": "caution:econ_147535:0",
+   "text": "교원자격증은 졸업이 확정된 경우에만 발급(수료생·계속수학생 불가)",
+   "evidence": [
+    "졸업불가자, 수료생, 계속수학생은 발급받을 수 없음"
+   ]
+  }
+ ],
+ "outcomes": [],
+ "contacts": [
+  {
+   "topic": "교원자격검정",
+   "college": "dept:econ",
+   "office": "교원양성센터",
+   "phone": "02-2077-7352",
+   "evidence": [
+    "교원양성센터 02-2077-7352"
+   ]
+  }
+ ],
+ "refers_to": [],
+ "verification": {
+  "result": "근거 문장 전부 원문에 있음 (2026-11-24 브라우저 수집본과 대조)",
+  "extractor": "Claude 직접 추출 (LLM API 확정 전)"
+ }
+}

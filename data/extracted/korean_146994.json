@@ -1,0 +1,70 @@
+{
+ "notice": {
+  "id": "notice:korean:146994",
+  "source": "korean",
+  "article_no": "146994",
+  "url": "https://korean.sookmyung.ac.kr/korean/community/notice.do?mode=view&articleNo=146994",
+  "title": "2026 졸업논문제 신청 안내(수료생)",
+  "posted": "2026-10-13",
+  "posted_by": "dept:korean",
+  "hits": 2160
+ },
+ "skip": false,
+ "role": "stage_detail",
+ "topic": "졸업",
+ "procedure": {
+  "template": "tmpl:grad",
+  "term": "2026-2",
+  "scope": "korean"
+ },
+ "issued_by": "dept:korean",
+ "stages": [
+  {
+   "key": "수료생논문신청",
+   "name": "졸업논문 신청 메일(수료생·8학기 이후 복수전공 변경자)",
+   "scope": "korean",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": null,
+    "hi": "2026-10-19",
+    "precision": "day"
+   },
+   "route": "route:dept-mail",
+   "place": null,
+   "target": "수료생, 8학기 이후 한국어문학부 복수전공 선택자",
+   "required": true,
+   "documents": [],
+   "requires": [],
+   "evidence": [
+    "10월 19일(월)까지 논문 신청 메일"
+   ]
+  }
+ ],
+ "rules": [],
+ "cautions": [
+  {
+   "id": "caution:korean_146994:0",
+   "text": "한국어문학부 졸업 요건은 졸업논문만 시행",
+   "evidence": [
+    "졸업 요건으로 '졸업논문'만을 시행하고 있습니다."
+   ]
+  }
+ ],
+ "outcomes": [],
+ "contacts": [
+  {
+   "topic": "졸업논문",
+   "college": "dept:korean",
+   "office": "한국어문학부 사무실",
+   "phone": "02-710-9310",
+   "evidence": [
+    "02-710-9310으로 연락 바랍니다."
+   ]
+  }
+ ],
+ "refers_to": [],
+ "verification": {
+  "result": "근거 문장 전부 원문에 있음 (2026-11-24 브라우저 수집본과 대조)",
+  "extractor": "Claude 직접 추출 (LLM API 확정 전)"
+ }
+}

@@ -1,0 +1,282 @@
+{
+  "meta": {
+    "topic": "graduation",
+    "extracted_at": "2026-11-24",
+    "extractor": "Claude (수작업 시범 추출, prompt.md 규칙 적용)",
+    "note": "본문을 읽은 공지는 2026-2 졸업 주기 + 고정 안내 페이지. 2026-1 이전 공지는 목록 메타데이터만 있음(body_pending)."
+  },
+
+  "terms": [
+    {"id": "term:2026-2", "label": "2026-2학기 졸업", "aliases": ["2026학년도 전기 졸업", "2027년 2월 졸업"]},
+    {"id": "term:2026-1", "label": "2026-1학기 졸업", "aliases": ["2025학년도 후기 졸업", "2026년 8월 졸업"]},
+    {"id": "term:2025-2", "label": "2025-2학기 졸업", "aliases": ["2025학년도 전기 졸업", "2026년 2월 졸업"]}
+  ],
+
+  "templates": [
+    {"id": "tmpl:grad", "name": "학부 정기졸업"},
+    {"id": "tmpl:early-grad", "name": "학부 조기졸업"},
+    {"id": "tmpl:math-thesis", "name": "수학과 졸업논문제(졸업시험·콜로키움)"}
+  ],
+
+  "procedures": [
+    {"id": "proc:grad:2026-2", "template": "tmpl:grad", "term": "term:2026-2", "name": "2026-2 학부 졸업(2027년 2월)", "issued_by": "office:haksa", "target_text": "현 8학기 이상 재학생(약대 12학기 이상), 조기졸업 신청자, 계속수학 포기생, 졸업 희망 수료생"},
+    {"id": "proc:early-grad:2026-2", "template": "tmpl:early-grad", "term": "term:2026-2", "name": "2026-2 조기졸업 신청", "issued_by": "office:haksa", "joins": "proc:grad:2026-2"},
+    {"id": "proc:math-thesis:2026-2", "template": "tmpl:math-thesis", "term": "term:2026-2", "name": "수학과 졸업논문제 2026-2 (졸업시험·콜로키움)", "issued_by": "dept:math", "part_of_stage": "stg:grad:2026-2:06"},
+    {"id": "proc:grad:2026-1", "template": "tmpl:grad", "term": "term:2026-1", "name": "2026-1 학부 졸업(2026년 8월)", "issued_by": "office:haksa", "body_pending": true},
+    {"id": "proc:early-grad:2026-1", "template": "tmpl:early-grad", "term": "term:2026-1", "name": "2026-1 조기졸업 신청", "issued_by": "office:haksa", "body_pending": true},
+    {"id": "proc:grad:2025-2", "template": "tmpl:grad", "term": "term:2025-2", "name": "2025-2 학부 졸업(2026년 2월)", "issued_by": "office:haksa", "body_pending": true}
+  ],
+
+  "stages": [
+    {"id": "stg:grad:2026-2:01", "proc": "proc:grad:2026-2", "order": 1, "name": "졸업계획 제출(재학생 졸업신청)",
+     "date": {"lo": "2026-09-15", "hi": "2026-09-28", "precision": "day", "year_inferred": true},
+     "route": "route:portal", "target": "8학기 이상 재학생 전원(졸업하지 않을 학생도 제출)", "required": true,
+     "requires": ["폭력예방교육 재학 중 1회 이상 이수"],
+     "evidence": [{"src": "main:94972", "quote": "1. 신청기간: 9. 15.(화) ~ 9. 28.(월)"},
+                  {"src": "main:94972", "quote": "현재 8학기 이상의 재학생이라면 모두 졸업계획을 제출"}]},
+    {"id": "stg:grad:2026-2:02", "proc": "proc:grad:2026-2", "order": 2, "name": "전공선택(희망자)",
+     "date": {"lo": "2026-09-15", "hi": "2026-09-28", "precision": "day", "year_inferred": true},
+     "route": "route:portal", "target": "전공 추가·변경 희망자", "required": false,
+     "evidence": [{"src": "main:94972", "quote": "재학생 졸업예정자전공선택(*희망자만)"}]},
+    {"id": "stg:grad:2026-2:03", "proc": "proc:grad:2026-2", "order": 3, "name": "졸업학점 이수현황 확인·과목 정리",
+     "date": {"lo": "2026-09-21", "hi": "2026-10-02", "precision": "day"},
+     "route": "route:portal", "target": "3학년 이상 재학생 (졸업예정자는 필수)", "required": true,
+     "evidence": [{"src": "main:95086", "quote": "2026.09.21 (월) ~ 2026.10.02(금)"}]},
+    {"id": "stg:grad:2026-2:04", "proc": "proc:grad:2026-2", "order": 4, "name": "졸업논문제 신청",
+     "date": {"lo": "2026-10-06", "hi": "2026-10-19", "precision": "day"},
+     "route": "route:portal", "target": "졸업논문제 통과 희망자 전원(재학생 졸업예정자·수료생)", "required": true,
+     "evidence": [{"src": "main:95274", "quote": "2026.10.06(화) ~ 10.19(월)"}]},
+    {"id": "stg:grad:2026-2:05", "proc": "proc:grad:2026-2", "order": 5, "name": "수료생 졸업신청",
+     "date": {"lo": "2026-12-01", "hi": "2026-12-30", "precision": "day"},
+     "route": "route:portal", "target": "2027년 2월 졸업하려는 수료생", "required": true,
+     "evidence": [{"src": "main:96121", "quote": "2026. 12. 01.(화) ~ 12. 30.(수)"}]},
+    {"id": "stg:grad:2026-2:06", "proc": "proc:grad:2026-2", "order": 6, "name": "졸업논문제 결과물 제출",
+     "date": {"lo": "2026-12-01", "hi": "2026-12-30", "precision": "day"},
+     "route": "route:dept-office", "target": "3학년 수료학점 이상 재학생, 졸업논문제 미통과 수료생", "required": true,
+     "evidence": [{"src": "main:96120", "quote": "1. 제출기간 : 2026. 12. 1.(화) ~ 12. 30.(수)"}]},
+    {"id": "stg:grad:2026-2:07", "proc": "proc:grad:2026-2", "order": 7, "name": "정보인증제 등록",
+     "date": {"lo": "2026-12-01", "hi": "2026-12-30", "precision": "day"},
+     "route": "route:portal", "target": "2001~2019학번 졸업예정자·수료생", "required": true,
+     "evidence": [{"src": "main:96120", "quote": "1. 제출기간 : 2026. 12. 1.(화) ~ 12. 30.(수)"},
+                  {"src": "main:94972", "quote": "2020학번부터 정보인증제 의무 없음"}]},
+    {"id": "stg:grad:2026-2:08", "proc": "proc:grad:2026-2", "order": 8, "name": "졸업인증제 합격여부 확인",
+     "date": {"lo": "2027-01-07", "hi": "2027-01-08", "precision": "day"},
+     "route": "route:portal", "target": "졸업예정자", "required": true,
+     "evidence": [{"src": "main:96120", "quote": "2027. 1. 7.(목) ~ 1. 8.(금)"}]},
+    {"id": "stg:grad:2026-2:09", "proc": "proc:grad:2026-2", "order": 9, "name": "졸업예정자 영문성명 확인",
+     "date": {"lo": "2027-01-13", "hi": "2027-01-31", "precision": "day", "year_inferred": true, "tentative": true},
+     "route": "route:portal", "target": "졸업예정자", "required": true,
+     "evidence": [{"src": "main:94905", "quote": "1/13(수)~1/31(일)"}]},
+    {"id": "stg:grad:2026-2:10", "proc": "proc:grad:2026-2", "order": 10, "name": "계속수학 신청",
+     "date": {"lo": "2027-01-15", "hi": "2027-01-18", "precision": "day", "year_inferred": true, "tentative": true},
+     "route": "route:portal", "target": "졸업학점은 채웠지만 복수·부·연계전공 또는 교직 학점이 부족해 학기를 늘리려는 재학생", "required": false,
+     "evidence": [{"src": "main:94905", "quote": "1/15(금)~1/18(월)"}]},
+    {"id": "stg:grad:2026-2:11", "proc": "proc:grad:2026-2", "order": 11, "name": "최종 졸업심사결과 조회",
+     "date": {"lo": "2027-01-28", "hi": "2027-01-29", "precision": "day", "year_inferred": true, "tentative": true},
+     "route": "route:portal", "target": "졸업예정자", "required": true,
+     "evidence": [{"src": "main:94905", "quote": "1/28(목)~1/29(금)"}]},
+    {"id": "stg:grad:2026-2:12", "proc": "proc:grad:2026-2", "order": 12, "name": "학위수여식",
+     "date": {"lo": null, "hi": null, "precision": "tbd"},
+     "route": null, "target": "졸업 판정자", "required": false,
+     "announced_by_pattern": "직전 주기 공지 main:91912가 2026-01-28에 게시됨 → 2027년 1월 하순 공지 예상 (추정, 답변에 날짜로 쓰지 않음)",
+     "evidence": [{"src": "static:graduate01", "quote": "해당학기 학위수여식 이후 학생의 학적이 ‘졸업’으로 변경됨"}]},
+
+    {"id": "stg:early:2026-2:01", "proc": "proc:early-grad:2026-2", "order": 1, "name": "조기졸업 신청(방문 제출)",
+     "date": {"lo": "2026-09-02T10:00", "hi": "2026-09-08T17:30", "precision": "minute", "year_inferred": true},
+     "route": "route:haksa-visit", "target": "조기졸업 희망 학부 재학생", "required": true,
+     "documents": ["조기졸업신청서(붙임 서식)", "성적증명서"],
+     "evidence": [{"src": "main:94717", "quote": "1. 신청기간: 09.02(수) 10:00 ~ 09.08(화) 17:30"},
+                  {"src": "main:94717", "quote": "가. 제출서류: 조기졸업신청서(붙임파일) 1부, 성적증명서 1부"}]},
+
+    {"id": "stg:math:2026-2:01", "proc": "proc:math-thesis:2026-2", "order": 1, "name": "졸업시험(1차) 신청",
+     "date": {"lo": "2026-07-09", "hi": "2026-08-02", "precision": "day"},
+     "route": "route:dept-mail", "target": "수학전공·수학복수전공 7학기 이상 수료 학생(휴학생 포함)", "required": false,
+     "evidence": [{"src": "math:121057", "quote": "2026년 7월 9일(목) ~ 2026년 8월 2일(일)"}]},
+    {"id": "stg:math:2026-2:02", "proc": "proc:math-thesis:2026-2", "order": 2, "name": "졸업시험(1차) 응시",
+     "date": {"lo": "2026-08-14T11:00", "hi": "2026-08-14T14:00", "precision": "minute"},
+     "place": "사회교육관 417호", "route": null, "required": false,
+     "evidence": [{"src": "math:121057", "quote": "2026년 8월 14일(금)"}]},
+    {"id": "stg:math:2026-2:03", "proc": "proc:math-thesis:2026-2", "order": 3, "name": "졸업시험(2차) 신청",
+     "date": {"lo": "2026-10-12", "hi": "2026-11-13", "precision": "day"},
+     "route": "route:dept-mail", "target": "수학전공·수학복수전공 7학기 이상 수료 학생(휴학생 포함)", "required": true,
+     "evidence": [{"src": "math:146958", "quote": "2026년 10월 12일(월) ~ 2026년 11월 13일(금)"},
+                  {"src": "math:146958", "quote": "모든 과목이 면제되어 졸업시험을 응시하지 않는 경우에도 졸업시험 신청은 하셔야 합니다."}]},
+    {"id": "stg:math:2026-2:04", "proc": "proc:math-thesis:2026-2", "order": 4, "name": "졸업시험(2차) 응시",
+     "date": {"lo": "2026-11-27T11:00", "hi": "2026-11-27T14:00", "precision": "minute"},
+     "place": "사회교육관 417호", "route": null, "required": true,
+     "evidence": [{"src": "math:146958", "quote": "날짜: 2026년 11월 27일(금)"}]},
+    {"id": "stg:math:2026-2:05", "proc": "proc:math-thesis:2026-2", "order": 5, "name": "졸업시험 결과 발송",
+     "date": {"lo": null, "hi": "2026-12-13", "precision": "week", "tentative": true},
+     "route": "route:dept-mail", "required": false,
+     "evidence": [{"src": "math:146958", "quote": "졸업시험 결과는 12월 둘째 주 이내 발송될 예정입니다."}]},
+    {"id": "stg:math:2026-2:06", "proc": "proc:math-thesis:2026-2", "order": 6, "name": "콜로키움 참석(학기 중)",
+     "date": {"lo": null, "hi": null, "precision": "tbd", "note": "일정은 포스터 이미지에만 있음 → OCR 필요"},
+     "place": "사회교육관 417호", "route": "route:snoway", "target": "2014학번 이후 수학과", "required": true,
+     "evidence": [{"src": "math:122650", "quote": "2학기 콜로키움 참석 신청은 Snoway 비교과 프로그램에서 신청해주시길 바랍니다."},
+                  {"src": "static:graduate03", "quote": "2014학번 이후: 종합시험 및 콜로키움 참석"}]}
+  ],
+
+  "precedes": [
+    ["stg:grad:2026-2:01", "stg:grad:2026-2:04"],
+    ["stg:grad:2026-2:03", "stg:grad:2026-2:04"],
+    ["stg:grad:2026-2:04", "stg:grad:2026-2:06"],
+    ["stg:grad:2026-2:06", "stg:grad:2026-2:08"],
+    ["stg:grad:2026-2:07", "stg:grad:2026-2:08"],
+    ["stg:grad:2026-2:05", "stg:grad:2026-2:08"],
+    ["stg:grad:2026-2:08", "stg:grad:2026-2:09"],
+    ["stg:grad:2026-2:08", "stg:grad:2026-2:10"],
+    ["stg:grad:2026-2:10", "stg:grad:2026-2:11"],
+    ["stg:grad:2026-2:11", "stg:grad:2026-2:12"],
+    ["stg:early:2026-2:01", "stg:grad:2026-2:01"],
+    ["stg:math:2026-2:03", "stg:math:2026-2:04"],
+    ["stg:math:2026-2:04", "stg:math:2026-2:05"],
+    ["stg:math:2026-2:05", "stg:grad:2026-2:06"]
+  ],
+
+  "rules": [
+    {"id": "rule:grad:basic", "applies_to": "tmpl:grad", "src": "static:graduate01",
+     "tree": {"AND": [
+        {"attr": "semesters_registered", "op": ">=", "value": 8, "note": "약대는 12학기"},
+        {"attr": "enroll_status", "op": "in", "value": ["재학", "수료"], "evidence": "휴학생 불가"},
+        {"attr": "other", "text": "학번 및 전공별 졸업학점 이수 (졸업학점배정표 첨부)", "evidence": "학번 및 전공별 졸업학점"},
+        {"OR": [
+          {"AND": [{"attr": "admission_year", "op": ">=", "value": 2011}, {"attr": "gpa_total", "op": ">=", "value": 1.7}]},
+          {"AND": [{"attr": "admission_year", "op": "<=", "value": 2010}, {"attr": "gpa_total", "op": ">=", "value": 1.5}]}
+        ], "evidence": "총 평점평균 1.7/4.3 이상"},
+        {"OR": [
+          {"AND": [{"attr": "admission_year", "op": "between", "value": [2001, 2019]}, {"attr": "cert_thesis_passed", "op": "==", "value": true}, {"attr": "cert_info_passed", "op": "==", "value": true}]},
+          {"AND": [{"OR": [{"attr": "admission_year", "op": ">=", "value": 2020}, {"attr": "admission_year", "op": "<=", "value": 2000}]}, {"attr": "cert_thesis_passed", "op": "==", "value": true}]}
+        ], "evidence": "졸업논문제 + 정보인증제 통과"}
+     ]}},
+    {"id": "rule:thesis-apply", "applies_to": "stg:grad:2026-2:04", "src": "main:95274",
+     "tree": {"OR": [
+        {"AND": [{"attr": "enroll_status", "op": "==", "value": "재학"}, {"attr": "credits_completed", "op": ">=", "value": {"lookup": "third_year_credits", "by": ["admission_year", "field"]}}]},
+        {"AND": [{"attr": "enroll_status", "op": "==", "value": "수료"}, {"attr": "cert_thesis_passed", "op": "==", "value": false}]}
+     ]},
+     "lookup_tables": {"third_year_credits": [
+        {"admission_year": "<=2011", "field": "*", "value": 105},
+        {"admission_year": "2012-2014", "field": "*", "value": 101},
+        {"admission_year": ">=2015", "field": "인문사회", "value": 94},
+        {"admission_year": ">=2015", "field": "자연과학|공학|예체능", "value": 98}
+     ], "note": "약학대학·학사편입생 기준은 별도 (원문 표 참조)"},
+     "evidence": [{"src": "main:95274", "quote": "① 3학년(약학대학은 5학년) 수료학점 이상 이수 완료한 재학생"}]},
+    {"id": "rule:math-exam", "applies_to": "proc:math-thesis:2026-2", "src": "math:146958",
+     "tree": {"AND": [
+        {"OR": [{"attr": "dept", "op": "==", "value": "dept:math"}, {"attr": "second_major", "op": "==", "value": "dept:math"}]},
+        {"attr": "semesters_registered", "op": ">=", "value": 7, "note": "7학기 이상 수료, 휴학생·휴학예정자 포함"}
+     ]},
+     "subjects": ["복소수함수론", "추상대수학", "미분기하학"],
+     "exemption": {"status": "U", "reason": "면제 조건이 첨부 PDF '수학과 졸업요건 및 졸업시험 범위'에만 있음 → 첨부 추출 후 채움"},
+     "evidence": [{"src": "math:146958", "quote": "대상자: 수학전공, 수학복수전공 학생 중 7학기 이상 수료한 학생(휴학생, 휴학예정자 포함)"}]},
+    {"id": "rule:early:honors", "applies_to": "proc:early-grad:2026-2", "src": "main:94717",
+     "tree": {"AND": [
+        {"attr": "semesters_registered", "op": "in", "value": [6, 7]},
+        {"attr": "gpa_each_term", "op": ">=", "value": 3.9},
+        {"attr": "gpa_total", "op": ">=", "value": 3.9},
+        {"attr": "other", "text": "졸업기준학점 취득 완료 예정(2026-2 및 겨울계절 신청학점 포함)"},
+        {"attr": "other", "text": "졸업인증제 전체 합격 예정"},
+        {"attr": "transfer_type", "op": "==", "value": "없음"}
+     ]},
+     "evidence": [{"src": "main:94717", "quote": "가) 2026-2학기 기준 6~7학기 재학생"}]},
+    {"id": "rule:early:bsms", "applies_to": "proc:early-grad:2026-2", "src": "main:94717",
+     "tree": {"AND": [
+        {"attr": "semesters_registered", "op": "==", "value": 7},
+        {"attr": "bs_ms_track", "op": "==", "value": true},
+        {"attr": "gpa_total", "op": ">=", "value": 3.3},
+        {"attr": "other", "text": "대학원 교과목 6~9학점 이수(2026-2 신청학점 포함)"},
+        {"attr": "other", "text": "학부 졸업기준학점 취득 완료 예정"},
+        {"attr": "other", "text": "졸업인증제 전체 합격 예정 (대학원 지원전공 논문제는 면제)"}
+     ]},
+     "evidence": [{"src": "main:94717", "quote": "가) 2026-2학기 기준 7학기 재학생"}]}
+  ],
+
+  "cautions": [
+    {"id": "cau:math-exam-apply-even-exempt", "proc": "proc:math-thesis:2026-2", "text": "모든 과목이 면제돼도 졸업시험 신청을 안 하면 졸업논문제 합격 처리가 안 됨", "evidence": {"src": "math:146958", "quote": "졸업논문제 합격처리가 되지 않으니 반드시 신청"}},
+    {"id": "cau:no-graduation-on-leave", "proc": "tmpl:grad", "text": "휴학 상태에서는 졸업 불가 (휴학 중 계절학기만으로 졸업 불가)", "evidence": {"src": "static:graduate01", "quote": "휴학상태에서는 졸업이 불가능함"}},
+    {"id": "cau:cert-irreversible", "proc": "proc:grad:2026-2", "text": "졸업인증제는 한 번 합격하면 본인이 원해도 불합격으로 바꿀 수 없음", "evidence": {"src": "main:96120", "quote": "한번 제출하여 합격 된 이후에는 본인이 희망하여도 불합격으로 바꿀 수 없음"}},
+    {"id": "cau:check-result", "proc": "proc:grad:2026-2", "text": "졸업인증제 결과를 확인하지 않아 생긴 문제는 학생 책임", "evidence": {"src": "main:96120", "quote": "처리결과를 확인하지 않아 발생하는 문제는 학생 본인에게 책임이 있습니다."}},
+    {"id": "cau:completer-3years", "proc": "tmpl:grad", "text": "수료 후 3년이 지나면 기간만료수료 → 재입학해서 다시 졸업심사", "evidence": {"src": "main:96121", "quote": "수료생으로 만 3년의 기간이 경과하면 '기간만료수료생'이 되며"}}
+  ],
+
+  "outcomes": [
+    {"id": "out:graduate", "name": "졸업", "rule_text": "졸업기준학점 이수완료 + 졸업인증제 모두 통과", "src": "static:graduate01"},
+    {"id": "out:complete", "name": "수료", "rule_text": "졸업기준학점 이수완료 + 졸업인증제 1개 이상 불합격", "src": "static:graduate01"},
+    {"id": "out:fail", "name": "졸업불가", "rule_text": "졸업기준학점 이수 미완료 → 자동으로 다음 학기 연장", "src": "static:graduate01"},
+    {"id": "out:continue", "name": "계속수학", "rule_text": "졸업학점은 채웠지만 복수·부·연계전공/교직 학점 이수를 위해 신청해 연장", "src": "static:graduate01"}
+  ],
+
+  "entities": {
+    "offices": [
+      {"id": "office:haksa", "name": "교무처 학사팀", "aliases": ["학사팀", "교무처 학사팀"], "place": "행정관 201호"},
+      {"id": "office:comm", "name": "커뮤니케이션팀", "note": "대표 홈페이지 게시 부서 (주관 아님)"},
+      {"id": "office:teacher", "name": "교원양성센터"},
+      {"id": "office:hr-equality", "name": "인권·성평등센터"},
+      {"id": "office:sunhun", "name": "순헌칼리지 교학팀"}
+    ],
+    "depts": [
+      {"id": "dept:math", "name": "수학과", "aliases": ["수학전공", "이과대학 수학과"], "college": "college:science", "field": "자연과학"}
+    ],
+    "colleges": [
+      {"id": "college:science", "name": "이과대학"}
+    ],
+    "routes": [
+      {"id": "route:portal", "name": "숙명포털 > 학사 > 졸업"},
+      {"id": "route:dept-office", "name": "각 전공(학과) 사무실 제출"},
+      {"id": "route:haksa-visit", "name": "학사팀 방문 제출(행정관 201호)"},
+      {"id": "route:dept-mail", "name": "수학과 학과 메일로 신청"},
+      {"id": "route:snoway", "name": "Snoway 비교과 프로그램 신청"}
+    ]
+  },
+
+  "contacts": [
+    {"topic": "졸업심사", "college": "college:science", "office": "office:haksa", "phone": "02-710-9019",
+     "evidence": [{"src": "main:94905", "quote": "이과대학, 사회과학대학, 법과대학 | (02)710-9019"}]},
+    {"topic": "졸업논문제", "college": "*", "office": "각 전공 사무실(제1전공/복수전공)", "phone": null,
+     "evidence": [{"src": "main:96120", "quote": "※ 졸업논문제 관련 문의는 각 학과사무실로 요망"}]},
+    {"topic": "교직", "college": "*", "office": "office:teacher", "phone": "02-2077-7352",
+     "evidence": [{"src": "main:94905", "quote": "교직 이수중인 학생(교원양성센터) | (02)2077-7352"}]}
+  ],
+
+  "notices": [
+    {"id": "main:94905", "title": "[졸업] 2026-2 (2027년 2월) 주요 졸업 일정 안내(8학기 이상 재학생 필독)", "posted": "2026-09-03", "posted_by": "office:comm", "issued_by": "office:haksa", "hits": 16774, "role": "overview", "part_of": "proc:grad:2026-2", "pinned": true},
+    {"id": "main:94972", "title": "[졸업] 2026-2 재학생 졸업예정자 졸업 계획 제출(졸업 신청) 및 전공선택 실시 (9. 15.~9. 28.)", "posted": "2026-09-07", "posted_by": "관리자", "issued_by": "office:haksa", "hits": 5766, "role": "stage_detail", "part_of": "proc:grad:2026-2", "stages": ["stg:grad:2026-2:01", "stg:grad:2026-2:02"]},
+    {"id": "main:95086", "title": "[졸업] 2026-2 재학생 졸업학점 이수현황 확인 및 과목 정리 실시", "posted": "2026-09-16", "posted_by": "office:comm", "issued_by": "office:haksa", "hits": 3103, "role": "stage_detail", "part_of": "proc:grad:2026-2", "stages": ["stg:grad:2026-2:03"]},
+    {"id": "main:95274", "title": "[졸업] 2026학년도 전기(2027년 2월 졸업) 졸업 논문제 신청 안내", "posted": "2026-09-30", "posted_by": "관리자", "issued_by": "office:haksa", "hits": 2200, "role": "stage_detail", "part_of": "proc:grad:2026-2", "stages": ["stg:grad:2026-2:04"], "refers_to": ["static:graduate03"]},
+    {"id": "main:96120", "title": "[졸업] 2026-2 졸업 인증제(졸업논문제/정보인증제) 제출 안내 (12. 1.~12. 30.)", "posted": "2026-11-23", "posted_by": "office:comm", "issued_by": "office:haksa", "hits": null, "role": "stage_detail", "part_of": "proc:grad:2026-2", "stages": ["stg:grad:2026-2:06", "stg:grad:2026-2:07", "stg:grad:2026-2:08"], "refers_to": ["static:graduate03"]},
+    {"id": "main:96121", "title": "[졸업] 수료생 졸업신청(2027년 2월 졸업) 및 졸업 인증제 제출 안내", "posted": "2026-11-23", "posted_by": "office:comm", "issued_by": "office:haksa", "hits": 154, "role": "stage_detail", "part_of": "proc:grad:2026-2", "stages": ["stg:grad:2026-2:05"], "refers_to": ["main:96120"]},
+    {"id": "main:94717", "title": "[졸업] 2026-2학기 조기졸업 신청 실시", "posted": "2026-08-26", "posted_by": "office:comm", "issued_by": "office:haksa", "hits": 1671, "role": "stage_detail", "part_of": "proc:early-grad:2026-2", "stages": ["stg:early:2026-2:01"]},
+    {"id": "math:122826", "title": "[졸업] 2026-2 주요 졸업일정 안내 (졸업예정자 필독)", "posted": "2026-09-02", "posted_by": "dept:math", "issued_by": "office:haksa", "hits": 2841, "role": "repost", "part_of": "proc:grad:2026-2", "duplicate_of": "main:94905"},
+    {"id": "math:154016", "title": "[졸업] 수료생 졸업신청(2027년 2월 졸업) 및 졸업인증제 제출 안내", "posted": "2026-11-20", "posted_by": "dept:math", "issued_by": "office:haksa", "hits": 303, "role": "repost", "part_of": "proc:grad:2026-2", "duplicate_of": "main:96121"},
+    {"id": "math:121057", "title": "★[2026학년도 전기(2027년 2월) 졸업] 졸업시험(1차) 신청 공지", "posted": "2026-07-09", "posted_by": "dept:math", "issued_by": "dept:math", "hits": 3248, "role": "stage_detail", "part_of": "proc:math-thesis:2026-2", "stages": ["stg:math:2026-2:01", "stg:math:2026-2:02"], "attachments_pending": ["수학과 졸업요건 및 졸업 시험 범위.pdf"]},
+    {"id": "math:146958", "title": "★[2026학년도 전기(2027년 2월) 졸업] 졸업시험(2차) 신청 공지", "posted": "2026-10-12", "posted_by": "dept:math", "issued_by": "dept:math", "hits": 2576, "role": "stage_detail", "part_of": "proc:math-thesis:2026-2", "stages": ["stg:math:2026-2:03", "stg:math:2026-2:04", "stg:math:2026-2:05"], "attachments_pending": ["수학과 졸업요건 및 졸업 시험 범위.pdf"]},
+    {"id": "math:122650", "title": "★2026-2 콜로키움 일정 안내(수학과 졸업요건)★", "posted": "2026-08-26", "posted_by": "dept:math", "issued_by": "dept:math", "hits": 884, "role": "stage_detail", "part_of": "proc:math-thesis:2026-2", "stages": ["stg:math:2026-2:06"], "attachments_pending": ["2026-2 콜로키움 포스터.jpg (OCR)"]},
+    {"id": "static:graduate01", "title": "학사정보 > 졸업 > 졸업심사", "role": "rule_guide", "part_of": "tmpl:grad"},
+    {"id": "static:graduate03", "title": "학사정보 > 졸업 > 졸업인증제", "role": "rule_guide", "part_of": "tmpl:grad"},
+
+    {"id": "main:92298", "title": "[졸업] 2026-1 (2026년 8월) 주요 졸업 일정 안내(8학기 이상 재학생 필독)", "posted": "2026-03-09", "role": "overview", "part_of": "proc:grad:2026-1", "body_pending": true},
+    {"id": "main:92406", "title": "[졸업] 2026-1 재학생 졸업예정자 졸업 계획 제출(졸업신청) 및 전공선택 실시", "posted": "2026-03-16", "role": "stage_detail", "part_of": "proc:grad:2026-1", "body_pending": true},
+    {"id": "main:92458", "title": "재학생 졸업학점 이수현황 확인 및 과목 정리 실시 (정리 기간: 3. 20.~4. 6.)", "posted": "2026-03-20", "role": "stage_detail", "part_of": "proc:grad:2026-1", "body_pending": true},
+    {"id": "main:92912", "title": "2025학년도 후기(2026년 8월 졸업) 졸업 논문제 신청 안내", "posted": "2026-04-07", "role": "stage_detail", "part_of": "proc:grad:2026-1", "body_pending": true},
+    {"id": "main:93519", "title": "[학부 졸업] 2026-1 졸업인증제(졸업논문제/정보인증제) 제출 안내 (6. 1. ~ 6. 29.)", "posted": "2026-05-19", "role": "stage_detail", "part_of": "proc:grad:2026-1", "body_pending": true},
+    {"id": "main:93520", "title": "[학부 졸업] 수료생 졸업신청(2026년 8월 졸업) 및 졸업인증제 제출 안내", "posted": "2026-05-19", "role": "stage_detail", "part_of": "proc:grad:2026-1", "body_pending": true},
+    {"id": "main:94073", "title": "[졸업] 졸업 인증제(졸업논문제,정보인증제) 심사결과 조회 및 복수/부전공 전환(포기) 신청 안내", "posted": "2026-07-02", "role": "result", "part_of": "proc:grad:2026-1", "body_pending": true},
+    {"id": "main:94117", "title": "[졸업] 2026년 8월 학부 졸업 예정자의 영문성명 확인 및 수정 안내", "posted": "2026-07-06", "role": "stage_detail", "part_of": "proc:grad:2026-1", "body_pending": true},
+    {"id": "main:94182", "title": "[졸업] 학부 재학생 졸업예정자 계속수학 신청 안내", "posted": "2026-07-09", "role": "stage_detail", "part_of": "proc:grad:2026-1", "body_pending": true},
+    {"id": "main:94361", "title": "[졸업] 학부 최종 졸업 사정 결과 조회 안내(졸업/수료/계속수학/졸업불가)", "posted": "2026-07-27", "role": "result", "part_of": "proc:grad:2026-1", "body_pending": true},
+    {"id": "main:94370", "title": "2025학년도 후기 학위수여식 개최 안내 (8. 21.(금) 학부 11:00, 대학원 15:00)", "posted": "2026-07-27", "role": "stage_detail", "part_of": "proc:grad:2026-1", "body_pending": true},
+    {"id": "main:92185", "title": "[졸업] 2026-1학기 조기졸업 신청 실시", "posted": "2026-02-26", "role": "stage_detail", "part_of": "proc:early-grad:2026-1", "body_pending": true},
+    {"id": "main:91834", "title": "[졸업] 학부 최종 졸업 사정 결과 조회 안내 (졸업·수료·계속수학·졸업불가)", "posted": "2026-01-21", "role": "result", "part_of": "proc:grad:2025-2", "body_pending": true},
+    {"id": "main:91912", "title": "2025학년도 전기 학위수여식 개최 안내 (2. 20.)", "posted": "2026-01-28", "role": "stage_detail", "part_of": "proc:grad:2025-2", "body_pending": true}
+  ],
+
+  "conflicts": [
+    {"id": "conf:01", "kind": "고정 안내 vs 이번 학기 공지",
+     "a": {"src": "static:graduate01", "quote": "숙명포털 (4월(1학기) /10월 (2학기) 중순)"},
+     "b": {"src": "main:94972", "quote": "1. 신청기간: 9. 15.(화) ~ 9. 28.(월)"},
+     "resolution": "학기 공지가 우선. 고정 안내는 '대략적 시기'로만 쓴다. 답변은 9/15~9/28로 하고 고정 안내 문구는 인용하지 않는다."},
+    {"id": "conf:02", "kind": "같은 학기 공지끼리 문의 전화 불일치",
+     "a": {"src": "main:96120", "quote": "문과대학, 약학대학, 미디어학부, 영어영문학부(02)710-9994"},
+     "b": {"src": "main:95274", "quote": "문과대학, 약학대학, 영어영문학부, 미디어학부 | (02)710-9015"},
+     "resolution": "최신 공지(96120, 11/23) 번호를 쓰되 '확인 필요'로 표시. 이과대학(수학과) 번호 02-710-9019는 모든 공지에서 같음."}
+  ]
+}

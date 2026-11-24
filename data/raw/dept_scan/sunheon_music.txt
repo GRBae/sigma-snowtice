@@ -1,0 +1,7 @@
+#site sunheon.sookmyung.ac.kr|순헌칼리지(자유전공학부·기초교양학부·융합/연계전공)
+#board 공지사항|/sunheon/college/notice.do|sm_cms|25|2025-07-23
+#board 공지사항/자료실|/sunheon/notice/notice-data.do|sm_cms|40|2025-06-26
+#note 자체 졸업 공지 없음. 메인에 대표 홈페이지 졸업 공지(96121, 96120)를 링크로 보여 줌
+#site music.sookmyung.ac.kr|음악대학(피아노·관현악·성악·작곡)
+#board 주요공지|/45|자체 CMS|5|2024-04-11
+#note 2026년 졸업 관련 글 없음 (게시판 활동 거의 없음)

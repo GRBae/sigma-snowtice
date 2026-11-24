@@ -1,0 +1,81 @@
+{
+ "notice": {
+  "id": "notice:aie:147008",
+  "source": "aie",
+  "article_no": "147008",
+  "url": "https://aie.sookmyung.ac.kr/it/department/notice.do?mode=view&articleNo=147008",
+  "title": "[졸업] 복수전공생 TOPCIT 성적 제출일 & 졸업 시험 선택 신청서 제출일",
+  "posted": "2026-10-13",
+  "posted_by": "dept:aie",
+  "hits": 277
+ },
+ "skip": false,
+ "role": "stage_detail",
+ "topic": "졸업",
+ "procedure": {
+  "template": "tmpl:grad",
+  "term": "2026-2",
+  "scope": "aie"
+ },
+ "issued_by": "dept:aie",
+ "stages": [
+  {
+   "key": "TOPCIT성적제출",
+   "name": "복수전공생 TOPCIT 성적 제출(학과 사무실 방문)",
+   "scope": "aie",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": null,
+    "hi": "2026-12-18T17:00",
+    "precision": "minute"
+   },
+   "route": null,
+   "place": "명신관 513호",
+   "target": "복수전공생(2027년 2월 졸업)",
+   "required": true,
+   "documents": [],
+   "requires": [],
+   "evidence": [
+    "12/18 (금) 17:00까지 학과 사무실 방문 제출"
+   ]
+  },
+  {
+   "key": "졸업시험선택신청",
+   "name": "졸업 시험 선택 신청서 제출(2027년 8월 졸업)",
+   "scope": "aie",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": null,
+    "hi": "2026-10-30T17:00",
+    "precision": "minute"
+   },
+   "route": null,
+   "place": "명신관 513호",
+   "target": "2027년 8월 졸업예정자(복수전공생 필수)",
+   "required": true,
+   "documents": [],
+   "requires": [],
+   "evidence": [
+    "10/30일 (금) 17:00까지 학과 사무실 방문 제출"
+   ],
+   "term": "2027-1"
+  }
+ ],
+ "rules": [],
+ "cautions": [
+  {
+   "id": "caution:aie_147008:0",
+   "text": "졸업 시험 형태(졸업프로젝트/TOPCIT)는 한 번 선택하면 변경 불가",
+   "evidence": [
+    "졸업 시험 형태를 본인이 선택하고 이후는 변경이 불가능하도록 운영이 될 예정입니다."
+   ]
+  }
+ ],
+ "outcomes": [],
+ "contacts": [],
+ "refers_to": [],
+ "verification": {
+  "result": "근거 문장 전부 원문에 있음 (2026-11-24 브라우저 수집본과 대조)",
+  "extractor": "Claude 직접 추출 (LLM API 확정 전)"
+ }
+}

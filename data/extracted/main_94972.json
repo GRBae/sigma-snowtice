@@ -1,0 +1,97 @@
+{
+ "notice": {
+  "id": "notice:main:94972",
+  "source": "main",
+  "article_no": "94972",
+  "url": "https://www.sookmyung.ac.kr/kr/news/important-notice.do?mode=view&articleNo=94972",
+  "title": "[졸업] 2026-2 재학생 졸업예정자 졸업 계획 제출(졸업 신청) 및 전공선택 실시 (9. 15.~9. 28.)",
+  "posted": "2026-09-07",
+  "posted_by": "관리자",
+  "hits": 5766
+ },
+ "skip": false,
+ "role": "stage_detail",
+ "topic": "졸업",
+ "procedure": {
+  "template": "tmpl:grad",
+  "term": "2026-2",
+  "scope": "본부"
+ },
+ "issued_by": "office:haksa",
+ "stages": [
+  {
+   "key": "졸업계획제출",
+   "name": "졸업계획 제출(재학생 졸업신청)",
+   "scope": "본부",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": "2026-09-15",
+    "hi": "2026-09-28",
+    "precision": "day",
+    "year_inferred": true
+   },
+   "route": "route:portal",
+   "place": null,
+   "target": "8학기 이상 재학생 전원(졸업하지 않을 학생도 제출)",
+   "required": true,
+   "documents": [],
+   "requires": [
+    "폭력예방교육 재학 중 1회 이상 이수"
+   ],
+   "evidence": [
+    "1. 신청기간: 9. 15.(화) ~ 9. 28.(월)",
+    "현재 8학기 이상의 재학생이라면 모두 졸업계획을 제출"
+   ]
+  },
+  {
+   "key": "전공선택",
+   "name": "전공선택(희망자)",
+   "scope": "본부",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": "2026-09-15",
+    "hi": "2026-09-28",
+    "precision": "day",
+    "year_inferred": true
+   },
+   "route": "route:portal",
+   "place": null,
+   "target": "전공 추가·변경 희망자",
+   "required": false,
+   "documents": [],
+   "requires": [],
+   "evidence": [
+    "재학생 졸업예정자전공선택(*희망자만)"
+   ]
+  },
+  {
+   "key": "정보인증제등록",
+   "name": "정보인증제 등록",
+   "scope": "본부",
+   "procedure_template": "tmpl:grad",
+   "date": null,
+   "route": "route:portal",
+   "place": null,
+   "target": "2001~2019학번 졸업예정자·수료생",
+   "required": true,
+   "documents": [],
+   "requires": [],
+   "evidence": [
+    "2020학번부터 정보인증제 의무 없음"
+   ]
+  }
+ ],
+ "rules": [],
+ "cautions": [],
+ "outcomes": [],
+ "contacts": [],
+ "refers_to": [],
+ "duplicate_of": null,
+ "attachments_pending": [],
+ "verification": {
+  "method": "브라우저 원문 대조",
+  "date": "2026-11-24",
+  "result": "근거 문장 전부 원문에 있음"
+ },
+ "extracted_by": "gold(수작업)"
+}

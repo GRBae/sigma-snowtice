@@ -1,0 +1,60 @@
+{
+ "notice": {
+  "id": "notice:korean:147472",
+  "source": "korean",
+  "article_no": "147472",
+  "url": "https://korean.sookmyung.ac.kr/korean/community/notice.do?mode=view&articleNo=147472",
+  "title": "[졸업] 2026-2 권성우 교수님 졸업논문 지도 방식 안내 (합동지도)",
+  "posted": "2026-11-04",
+  "posted_by": "dept:korean",
+  "hits": 569
+ },
+ "skip": false,
+ "role": "stage_detail",
+ "topic": "졸업",
+ "procedure": {
+  "template": "tmpl:grad",
+  "term": "2026-2",
+  "scope": "korean"
+ },
+ "issued_by": "dept:korean",
+ "stages": [
+  {
+   "key": "졸업논문지도:권성우",
+   "name": "합동지도(논문계획서 A4 2장, 권성우 교수 배정 학생)",
+   "scope": "korean",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": "2026-11-26T17:00",
+    "hi": "2026-11-26T17:00",
+    "precision": "minute"
+   },
+   "route": null,
+   "place": "수련교수회관 200",
+   "target": "권성우 교수 지도 학생",
+   "required": true,
+   "documents": [],
+   "requires": [],
+   "evidence": [
+    "2. 일시 :11/26(목) 17:00"
+   ]
+  }
+ ],
+ "rules": [],
+ "cautions": [
+  {
+   "id": "caution:korean_147472:0",
+   "text": "지도교수 지도 없이 학부 사무실에 낸 논문은 인정하지 않음",
+   "evidence": [
+    "교수님과의 논문 지도과정 없이, 임의로 학부 사무실에 논문을 제출하는 것은 인정하지 않습니다."
+   ]
+  }
+ ],
+ "outcomes": [],
+ "contacts": [],
+ "refers_to": [],
+ "verification": {
+  "result": "근거 문장 전부 원문에 있음 (2026-11-24 브라우저 수집본과 대조)",
+  "extractor": "Claude 직접 추출 (LLM API 확정 전)"
+ }
+}

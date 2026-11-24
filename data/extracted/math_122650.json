@@ -1,0 +1,59 @@
+{
+ "notice": {
+  "id": "notice:math:122650",
+  "source": "math",
+  "article_no": "122650",
+  "url": "https://math.sookmyung.ac.kr/math/notice/notice.do?mode=view&articleNo=122650",
+  "title": "★2026-2 콜로키움 일정 안내(수학과 졸업요건)★",
+  "posted": "2026-08-26",
+  "posted_by": "dept:math",
+  "hits": 884
+ },
+ "skip": false,
+ "role": "stage_detail",
+ "topic": "졸업",
+ "procedure": {
+  "template": "tmpl:grad",
+  "term": "2026-2",
+  "scope": "math"
+ },
+ "issued_by": "dept:math",
+ "stages": [
+  {
+   "key": "콜로키움참석",
+   "name": "콜로키움 참석(학기 중)",
+   "scope": "math",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": null,
+    "hi": null,
+    "precision": "tbd",
+    "note": "일정은 포스터 이미지에만 있음 → OCR 필요"
+   },
+   "route": "route:snoway",
+   "place": "사회교육관 417호",
+   "target": "2014학번 이후 수학과",
+   "required": true,
+   "documents": [],
+   "requires": [],
+   "evidence": [
+    "2학기 콜로키움 참석 신청은 Snoway 비교과 프로그램에서 신청해주시길 바랍니다."
+   ]
+  }
+ ],
+ "rules": [],
+ "cautions": [],
+ "outcomes": [],
+ "contacts": [],
+ "refers_to": [],
+ "duplicate_of": null,
+ "attachments_pending": [
+  "2026-2 콜로키움 포스터.jpg (OCR)"
+ ],
+ "verification": {
+  "method": "브라우저 원문 대조",
+  "date": "2026-11-24",
+  "result": "근거 문장 전부 원문에 있음"
+ },
+ "extracted_by": "gold(수작업)"
+}

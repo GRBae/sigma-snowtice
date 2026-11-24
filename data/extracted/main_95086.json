@@ -1,0 +1,56 @@
+{
+ "notice": {
+  "id": "notice:main:95086",
+  "source": "main",
+  "article_no": "95086",
+  "url": "https://www.sookmyung.ac.kr/kr/news/important-notice.do?mode=view&articleNo=95086",
+  "title": "[졸업] 2026-2 재학생 졸업학점 이수현황 확인 및 과목 정리 실시",
+  "posted": "2026-09-16",
+  "posted_by": "office:comm",
+  "hits": 3103
+ },
+ "skip": false,
+ "role": "stage_detail",
+ "topic": "졸업",
+ "procedure": {
+  "template": "tmpl:grad",
+  "term": "2026-2",
+  "scope": "본부"
+ },
+ "issued_by": "office:haksa",
+ "stages": [
+  {
+   "key": "이수현황정리",
+   "name": "졸업학점 이수현황 확인·과목 정리",
+   "scope": "본부",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": "2026-09-21",
+    "hi": "2026-10-02",
+    "precision": "day"
+   },
+   "route": "route:portal",
+   "place": null,
+   "target": "3학년 이상 재학생 (졸업예정자는 필수)",
+   "required": true,
+   "documents": [],
+   "requires": [],
+   "evidence": [
+    "2026.09.21 (월) ~ 2026.10.02(금)"
+   ]
+  }
+ ],
+ "rules": [],
+ "cautions": [],
+ "outcomes": [],
+ "contacts": [],
+ "refers_to": [],
+ "duplicate_of": null,
+ "attachments_pending": [],
+ "verification": {
+  "method": "브라우저 원문 대조",
+  "date": "2026-11-24",
+  "result": "근거 문장 전부 원문에 있음"
+ },
+ "extracted_by": "gold(수작업)"
+}

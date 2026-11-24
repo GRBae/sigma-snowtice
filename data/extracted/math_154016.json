@@ -1,0 +1,35 @@
+{
+ "notice": {
+  "id": "notice:math:154016",
+  "source": "math",
+  "article_no": "154016",
+  "url": "https://math.sookmyung.ac.kr/math/notice/notice.do?mode=view&articleNo=154016",
+  "title": "[졸업] 수료생 졸업신청(2027년 2월 졸업) 및 졸업인증제 제출 안내",
+  "posted": "2026-11-20",
+  "posted_by": "dept:math",
+  "hits": 303
+ },
+ "skip": false,
+ "role": "repost",
+ "topic": "졸업",
+ "procedure": {
+  "template": "tmpl:grad",
+  "term": "2026-2",
+  "scope": "본부"
+ },
+ "issued_by": "office:haksa",
+ "stages": [],
+ "rules": [],
+ "cautions": [],
+ "outcomes": [],
+ "contacts": [],
+ "refers_to": [],
+ "duplicate_of": "notice:main:96121",
+ "attachments_pending": [],
+ "verification": {
+  "method": "브라우저 원문 대조",
+  "date": "2026-11-24",
+  "result": "근거 문장 전부 원문에 있음"
+ },
+ "extracted_by": "gold(수작업)"
+}

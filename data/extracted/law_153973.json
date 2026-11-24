@@ -1,0 +1,39 @@
+{
+ "notice": {
+  "id": "notice:law:153973",
+  "source": "law",
+  "article_no": "153973",
+  "url": "https://law.sookmyung.ac.kr/law/board/notice.do?mode=view&articleNo=153973",
+  "title": "[졸업] 졸업논문제 양식 (개정)",
+  "posted": "2026-11-01",
+  "posted_by": "dept:law",
+  "hits": 593
+ },
+ "skip": false,
+ "role": "rule_guide",
+ "topic": "졸업",
+ "procedure": {
+  "template": "tmpl:grad",
+  "term": "2026-2",
+  "scope": "law"
+ },
+ "issued_by": "dept:law",
+ "stages": [],
+ "rules": [],
+ "cautions": [
+  {
+   "id": "caution:law_153973:0",
+   "text": "졸업논문 앞표지에 지도교수 확인 서명, 카피킬러 결과확인서 함께 제출(학부생은 조교·지도교수에게 요청)",
+   "evidence": [
+    "원문 파일의 카피킬러 결과 확인서 함께 첨부"
+   ]
+  }
+ ],
+ "outcomes": [],
+ "contacts": [],
+ "refers_to": [],
+ "verification": {
+  "result": "근거 문장 전부 원문에 있음 (2026-11-24 브라우저 수집본과 대조)",
+  "extractor": "Claude 직접 추출 (LLM API 확정 전)"
+ }
+}

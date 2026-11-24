@@ -1,0 +1,134 @@
+{
+ "notice": {
+  "id": "notice:fn:145311",
+  "source": "fn",
+  "article_no": "145311",
+  "url": "https://fn.sookmyung.ac.kr/fn/community/notice.do?mode=view&articleNo=145311",
+  "title": "[졸업시험] 2026-2학기 식품영양학과 졸업시험 안내",
+  "posted": "2026-09-23",
+  "posted_by": "dept:fn",
+  "hits": 2066
+ },
+ "skip": false,
+ "role": "stage_detail",
+ "topic": "졸업",
+ "procedure": {
+  "template": "tmpl:grad",
+  "term": "2026-2",
+  "scope": "fn"
+ },
+ "issued_by": "dept:fn",
+ "stages": [
+  {
+   "key": "졸업시험신청",
+   "name": "졸업시험 신청(이메일)",
+   "scope": "fn",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": null,
+    "hi": "2026-10-16T17:00",
+    "precision": "minute"
+   },
+   "route": "route:dept-mail",
+   "place": null,
+   "target": "8학기 전공·복수전공 재학생, 3학년 수료학점 이상 7학기생(휴학생 불가)",
+   "required": true,
+   "documents": [],
+   "requires": [],
+   "evidence": [
+    "10월 16일(금) 17:00 까지 이메일"
+   ]
+  },
+  {
+   "key": "졸업시험본시험1차",
+   "name": "졸업시험 본시험 1차(2일)",
+   "scope": "fn",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": "2026-10-27T17:00",
+    "hi": "2026-10-29T20:30",
+    "precision": "minute"
+   },
+   "route": null,
+   "place": "명신관 308",
+   "target": null,
+   "required": true,
+   "documents": [],
+   "requires": [],
+   "evidence": [
+    "10월 27일(화) / 10월 29일(목) 17:00 ~ 20:30"
+   ]
+  },
+  {
+   "key": "졸업시험본시험2차",
+   "name": "졸업시험 본시험 2차(2일)",
+   "scope": "fn",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": "2026-11-03T17:00",
+    "hi": "2026-11-05T20:30",
+    "precision": "minute"
+   },
+   "route": null,
+   "place": "명신관 308",
+   "target": null,
+   "required": true,
+   "documents": [],
+   "requires": [],
+   "evidence": [
+    "11월 03일(화) / 11월 05일(목) 17:00 ~ 20:30"
+   ]
+  },
+  {
+   "key": "졸업시험2차재시험",
+   "name": "졸업시험 2차 재시험(해당자)",
+   "scope": "fn",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": "2026-12-04T13:00",
+    "hi": "2026-12-04T16:30",
+    "precision": "minute"
+   },
+   "route": null,
+   "place": "진리관 306",
+   "target": null,
+   "required": false,
+   "documents": [],
+   "requires": [],
+   "evidence": [
+    "12월 04일(금) 13:00 ~ 16:30"
+   ]
+  }
+ ],
+ "rules": [],
+ "cautions": [
+  {
+   "id": "caution:fn_145311:0",
+   "text": "졸업시험을 신청하면 졸업논문제도 반드시 함께 신청",
+   "evidence": [
+    "졸업시험을 신청하는 학생은 반드시 졸업논문제도 함께 신청하시기 바랍니다."
+   ]
+  },
+  {
+   "id": "caution:fn_145311:1",
+   "text": "본시험 4일 중 하루라도 빠지면 재시험 자격 박탈",
+   "evidence": [
+    "본시험(4일)에 모두 참여하지 않은 학생은 재시험에 응시할 수 있는 자격이 박탈되오니"
+   ]
+  },
+  {
+   "id": "caution:fn_145311:2",
+   "text": "합격: 전 과목 평균 60점 이상이고 과목별 40점 이상",
+   "evidence": [
+    "전 과목 총점 평균이 60점 이상이며, 과목별 점수가 40점 이상인 경우 합격으로 처리한다."
+   ]
+  }
+ ],
+ "outcomes": [],
+ "contacts": [],
+ "refers_to": [],
+ "verification": {
+  "result": "근거 문장 전부 원문에 있음 (2026-11-24 브라우저 수집본과 대조)",
+  "extractor": "Claude 직접 추출 (LLM API 확정 전)"
+ }
+}

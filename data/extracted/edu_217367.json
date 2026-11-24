@@ -1,0 +1,78 @@
+{
+ "notice": {
+  "id": "notice:edu:217367",
+  "source": "edu",
+  "article_no": "217367",
+  "url": "https://edu.sookmyung.ac.kr/bbs/edu/1668/217367/artclView.do",
+  "title": "[교육학부] 졸업논문제 지도 교수 배정 결과 안내",
+  "posted": "2026-10-29",
+  "posted_by": "dept:edu",
+  "hits": null
+ },
+ "skip": false,
+ "role": "stage_detail",
+ "topic": "졸업",
+ "procedure": {
+  "template": "tmpl:grad",
+  "term": "2026-2",
+  "scope": "edu"
+ },
+ "issued_by": "dept:edu",
+ "stages": [
+  {
+   "key": "지도교수배정",
+   "name": "졸업논문 지도교수 배정 결과 확인(첨부 명단)",
+   "scope": "edu",
+   "procedure_template": "tmpl:grad",
+   "date": null,
+   "route": null,
+   "place": null,
+   "target": null,
+   "required": true,
+   "documents": [],
+   "requires": [],
+   "evidence": [
+    "2026-2학기 졸업논문 지도교수 배정 결과를 안내드립니다."
+   ]
+  },
+  {
+   "key": "논문제결과물제출",
+   "name": "졸업논문 학과 사무실 최종 제출",
+   "scope": "edu",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": null,
+    "hi": "2026-12-24",
+    "precision": "day",
+    "year_inferred": true
+   },
+   "route": null,
+   "place": "교육학부 사무실",
+   "target": null,
+   "required": true,
+   "documents": [],
+   "requires": [],
+   "evidence": [
+    "12월 24일 학과 사무실 제출"
+   ],
+   "overrides": "본부"
+  }
+ ],
+ "rules": [],
+ "cautions": [
+  {
+   "id": "caution:edu_217367:0",
+   "text": "지도교수 배정 신청·변경은 원칙적으로 불가",
+   "evidence": [
+    "원칙적으로 지도교수 배정 신청 및 변경은 불가능합니다"
+   ]
+  }
+ ],
+ "outcomes": [],
+ "contacts": [],
+ "refers_to": [],
+ "verification": {
+  "result": "근거 문장 전부 원문에 있음 (2026-11-24 브라우저 수집본과 대조)",
+  "extractor": "Claude 직접 추출 (LLM API 확정 전)"
+ }
+}

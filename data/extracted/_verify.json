@@ -1,0 +1,430 @@
+{
+ "notice:aie:122343": {
+  "ok": true,
+  "stages": {},
+  "problems": [],
+  "basis": "이전 대조 기록(원문 폴더 없음)"
+ },
+ "notice:aie:122871": {
+  "ok": true,
+  "stages": {
+   "졸업심사": true,
+   "포스터제출": true,
+   "졸업전시회": true,
+   "논문제결과물제출": true
+  },
+  "problems": [],
+  "basis": "이전 대조 기록(원문 폴더 없음)"
+ },
+ "notice:aie:145577": {
+  "ok": true,
+  "stages": {},
+  "problems": [],
+  "basis": "이전 대조 기록(원문 폴더 없음)"
+ },
+ "notice:aie:147008": {
+  "ok": true,
+  "stages": {
+   "TOPCIT성적제출": true,
+   "졸업시험선택신청": true
+  },
+  "problems": [],
+  "basis": "이전 대조 기록(원문 폴더 없음)"
+ },
+ "notice:aie:147633": {
+  "ok": true,
+  "stages": {
+   "졸업논문제증빙제출": true
+  },
+  "problems": [],
+  "basis": "이전 대조 기록(원문 폴더 없음)"
+ },
+ "notice:chem:147432": {
+  "ok": true,
+  "stages": {
+   "졸업시험": true
+  },
+  "problems": [],
+  "basis": "이전 대조 기록(원문 폴더 없음)"
+ },
+ "notice:chembioe:154033": {
+  "ok": true,
+  "stages": {
+   "논문제결과물제출": true
+  },
+  "problems": [],
+  "basis": "이전 대조 기록(원문 폴더 없음)"
+ },
+ "notice:chinese:467": {
+  "ok": true,
+  "stages": {},
+  "problems": [],
+  "basis": "이전 대조 기록(원문 폴더 없음)"
+ },
+ "notice:csweb:130406": {
+  "ok": true,
+  "stages": {
+   "학생연구활동비신청": true,
+   "학생연구활동비증빙제출": true
+  },
+  "problems": [],
+  "basis": "이전 대조 기록(원문 폴더 없음)"
+ },
+ "notice:cultureandtourism:145454": {
+  "ok": true,
+  "stages": {},
+  "problems": [],
+  "basis": "이전 대조 기록(원문 폴더 없음)"
+ },
+ "notice:ds:137618": {
+  "ok": true,
+  "stages": {
+   "졸업작품제안서제출": true
+  },
+  "problems": [],
+  "basis": "이전 대조 기록(원문 폴더 없음)"
+ },
+ "notice:ds:145606": {
+  "ok": true,
+  "stages": {
+   "졸업작품발표": true,
+   "발표자료포스터제출": true,
+   "포스터전시회": true
+  },
+  "problems": [],
+  "basis": "이전 대조 기록(원문 폴더 없음)"
+ },
+ "notice:ds:147026": {
+  "ok": true,
+  "stages": {},
+  "problems": [],
+  "basis": "이전 대조 기록(원문 폴더 없음)"
+ },
+ "notice:ds:147376": {
+  "ok": true,
+  "stages": {
+   "산학협력졸업프로젝트계획서": true,
+   "산학협력졸업프로젝트결과보고서": true
+  },
+  "problems": [],
+  "basis": "이전 대조 기록(원문 폴더 없음)"
+ },
+ "notice:ds:147649": {
+  "ok": true,
+  "stages": {
+   "논문제결과물제출": true
+  },
+  "problems": [],
+  "basis": "이전 대조 기록(원문 폴더 없음)"
+ },
+ "notice:ds:147652": {
+  "ok": true,
+  "stages": {
+   "졸업작품제안서제출": true
+  },
+  "problems": [],
+  "basis": "이전 대조 기록(원문 폴더 없음)"
+ },
+ "notice:econ:145403": {
+  "ok": true,
+  "stages": {
+   "논문제결과물제출": true,
+   "영어성적제출": true
+  },
+  "problems": [],
+  "basis": "이전 대조 기록(원문 폴더 없음)"
+ },
+ "notice:econ:147535": {
+  "ok": true,
+  "stages": {
+   "교원자격검정": true,
+   "영양사합격확인서제출": true
+  },
+  "problems": [],
+  "basis": "이전 대조 기록(원문 폴더 없음)"
+ },
+ "notice:edu:217367": {
+  "ok": true,
+  "stages": {
+   "지도교수배정": true,
+   "논문제결과물제출": true
+  },
+  "problems": [],
+  "basis": "이전 대조 기록(원문 폴더 없음)"
+ },
+ "notice:electro:154041": {
+  "ok": true,
+  "stages": {
+   "논문제결과물제출": true
+  },
+  "problems": [],
+  "basis": "이전 대조 기록(원문 폴더 없음)"
+ },
+ "notice:english:147308": {
+  "ok": true,
+  "stages": {
+   "졸업논문제대체시험접수": true,
+   "졸업논문제대체시험1차": true,
+   "졸업논문제대체시험2차": true,
+   "졸업논문제대체시험3차": true
+  },
+  "problems": [],
+  "basis": "이전 대조 기록(원문 폴더 없음)"
+ },
+ "notice:english:153962": {
+  "ok": true,
+  "stages": {
+   "논문제결과물제출": true
+  },
+  "problems": [],
+  "basis": "이전 대조 기록(원문 폴더 없음)"
+ },
+ "notice:fn:145311": {
+  "ok": true,
+  "stages": {
+   "졸업시험신청": true,
+   "졸업시험본시험1차": true,
+   "졸업시험본시험2차": true,
+   "졸업시험2차재시험": true
+  },
+  "problems": [],
+  "basis": "이전 대조 기록(원문 폴더 없음)"
+ },
+ "notice:fn:147626": {
+  "ok": true,
+  "stages": {
+   "졸업시험1차재시험": true
+  },
+  "problems": [],
+  "basis": "이전 대조 기록(원문 폴더 없음)"
+ },
+ "notice:global:372": {
+  "ok": true,
+  "stages": {
+   "졸업시험": true
+  },
+  "problems": [],
+  "basis": "이전 대조 기록(원문 폴더 없음)"
+ },
+ "notice:history:147247": {
+  "ok": false,
+  "stages": {
+   "졸업논문지도": true,
+   "논문제결과물제출": true,
+   "졸업논문심사": false,
+   "졸업논문합격처리": true
+  },
+  "problems": [
+   "2026-12-27는 일요일인데 원문은 '금': 12/21(월)~12/27(금)"
+  ],
+  "basis": "이전 대조 기록(원문 폴더 없음)"
+ },
+ "notice:japan:147323": {
+  "ok": true,
+  "stages": {
+   "졸업논문지도": true,
+   "논문제결과물제출": true
+  },
+  "problems": [],
+  "basis": "이전 대조 기록(원문 폴더 없음)"
+ },
+ "notice:korean:146994": {
+  "ok": true,
+  "stages": {
+   "수료생논문신청": true
+  },
+  "problems": [],
+  "basis": "이전 대조 기록(원문 폴더 없음)"
+ },
+ "notice:korean:147313": {
+  "ok": true,
+  "stages": {
+   "지도교수배정": true,
+   "지도교수변경요청": true,
+   "논문제결과물제출": true
+  },
+  "problems": [],
+  "basis": "이전 대조 기록(원문 폴더 없음)"
+ },
+ "notice:korean:147431": {
+  "ok": true,
+  "stages": {
+   "졸업논문지도:이진아": true
+  },
+  "problems": [],
+  "basis": "이전 대조 기록(원문 폴더 없음)"
+ },
+ "notice:korean:147434": {
+  "ok": true,
+  "stages": {
+   "졸업논문지도:김한성": true
+  },
+  "problems": [],
+  "basis": "이전 대조 기록(원문 폴더 없음)"
+ },
+ "notice:korean:147441": {
+  "ok": true,
+  "stages": {
+   "졸업논문지도:문금현": true,
+   "졸업논문지도2차:문금현": true
+  },
+  "problems": [],
+  "basis": "이전 대조 기록(원문 폴더 없음)"
+ },
+ "notice:korean:147472": {
+  "ok": true,
+  "stages": {
+   "졸업논문지도:권성우": true
+  },
+  "problems": [],
+  "basis": "이전 대조 기록(원문 폴더 없음)"
+ },
+ "notice:korean:147589": {
+  "ok": true,
+  "stages": {
+   "졸업논문지도:김선현": true
+  },
+  "problems": [],
+  "basis": "이전 대조 기록(원문 폴더 없음)"
+ },
+ "notice:law:153973": {
+  "ok": true,
+  "stages": {},
+  "problems": [],
+  "basis": "이전 대조 기록(원문 폴더 없음)"
+ },
+ "notice:main:94717": {
+  "ok": true,
+  "stages": {
+   "조기졸업신청": true
+  },
+  "problems": [],
+  "basis": "이전 대조 기록(원문 폴더 없음)"
+ },
+ "notice:main:94905": {
+  "ok": true,
+  "stages": {
+   "영문성명확인": true,
+   "계속수학신청": true,
+   "최종사정결과조회": true
+  },
+  "problems": [],
+  "basis": "이전 대조 기록(원문 폴더 없음)"
+ },
+ "notice:main:94972": {
+  "ok": true,
+  "stages": {
+   "졸업계획제출": true,
+   "전공선택": true,
+   "정보인증제등록": true
+  },
+  "problems": [],
+  "basis": "이전 대조 기록(원문 폴더 없음)"
+ },
+ "notice:main:95086": {
+  "ok": true,
+  "stages": {
+   "이수현황정리": true
+  },
+  "problems": [],
+  "basis": "이전 대조 기록(원문 폴더 없음)"
+ },
+ "notice:main:95274": {
+  "ok": true,
+  "stages": {
+   "논문제신청": true
+  },
+  "problems": [],
+  "basis": "이전 대조 기록(원문 폴더 없음)"
+ },
+ "notice:main:96120": {
+  "ok": true,
+  "stages": {
+   "논문제결과물제출": true,
+   "정보인증제등록": true,
+   "인증제결과확인": true
+  },
+  "problems": [],
+  "basis": "이전 대조 기록(원문 폴더 없음)"
+ },
+ "notice:main:96121": {
+  "ok": true,
+  "stages": {
+   "수료생졸업신청": true
+  },
+  "problems": [],
+  "basis": "이전 대조 기록(원문 폴더 없음)"
+ },
+ "notice:math:121057": {
+  "ok": true,
+  "stages": {
+   "졸업시험1차신청": true,
+   "졸업시험1차응시": true
+  },
+  "problems": [],
+  "basis": "이전 대조 기록(원문 폴더 없음)"
+ },
+ "notice:math:122650": {
+  "ok": true,
+  "stages": {
+   "콜로키움참석": true
+  },
+  "problems": [],
+  "basis": "이전 대조 기록(원문 폴더 없음)"
+ },
+ "notice:math:122826": {
+  "ok": true,
+  "stages": {},
+  "problems": [],
+  "basis": "이전 대조 기록(원문 폴더 없음)"
+ },
+ "notice:math:146958": {
+  "ok": true,
+  "stages": {
+   "졸업시험2차신청": true,
+   "졸업시험2차응시": true,
+   "졸업시험결과": true
+  },
+  "problems": [],
+  "basis": "이전 대조 기록(원문 폴더 없음)"
+ },
+ "notice:math:154016": {
+  "ok": true,
+  "stages": {},
+  "problems": [],
+  "basis": "이전 대조 기록(원문 폴더 없음)"
+ },
+ "notice:physics:217463": {
+  "ok": true,
+  "stages": {
+   "논문제결과물제출": true
+  },
+  "problems": [],
+  "basis": "이전 대조 기록(원문 폴더 없음)"
+ },
+ "notice:stat:slug06": {
+  "ok": true,
+  "stages": {
+   "폭력예방교육": true
+  },
+  "problems": [],
+  "basis": "이전 대조 기록(원문 폴더 없음)"
+ },
+ "notice:static:graduate01": {
+  "ok": true,
+  "stages": {
+   "학위수여식": true,
+   "졸업계획제출": true
+  },
+  "problems": [],
+  "basis": "이전 대조 기록(원문 폴더 없음)"
+ },
+ "notice:static:graduate03": {
+  "ok": true,
+  "stages": {
+   "콜로키움참석": true
+  },
+  "problems": [],
+  "basis": "이전 대조 기록(원문 폴더 없음)"
+ }
+}

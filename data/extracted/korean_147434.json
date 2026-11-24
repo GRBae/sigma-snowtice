@@ -1,0 +1,52 @@
+{
+ "notice": {
+  "id": "notice:korean:147434",
+  "source": "korean",
+  "article_no": "147434",
+  "url": "https://korean.sookmyung.ac.kr/korean/community/notice.do?mode=view&articleNo=147434",
+  "title": "[졸업] 2026-2 김한성 교수님 졸업논문 지도 방식 안내",
+  "posted": "2026-11-02",
+  "posted_by": "dept:korean",
+  "hits": 603
+ },
+ "skip": false,
+ "role": "stage_detail",
+ "topic": "졸업",
+ "procedure": {
+  "template": "tmpl:grad",
+  "term": "2026-2",
+  "scope": "korean"
+ },
+ "issued_by": "dept:korean",
+ "stages": [
+  {
+   "key": "졸업논문지도:김한성",
+   "name": "논문 2/3 이상 작성본 이메일 제출(김한성 교수 배정 학생)",
+   "scope": "korean",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": null,
+    "hi": "2026-12-07",
+    "precision": "day"
+   },
+   "route": null,
+   "place": null,
+   "target": "김한성 교수 지도 학생",
+   "required": true,
+   "documents": [],
+   "requires": [],
+   "evidence": [
+    "12월 7일(월)까지"
+   ]
+  }
+ ],
+ "rules": [],
+ "cautions": [],
+ "outcomes": [],
+ "contacts": [],
+ "refers_to": [],
+ "verification": {
+  "result": "근거 문장 전부 원문에 있음 (2026-11-24 브라우저 수집본과 대조)",
+  "extractor": "Claude 직접 추출 (LLM API 확정 전)"
+ }
+}

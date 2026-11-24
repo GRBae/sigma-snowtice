@@ -1,0 +1,103 @@
+# 매일 새벽 3시(한국 시간) 공지 수집 → 그래프 → 위키 갱신
+# GitHub cron은 UTC 기준이고 몇 분~몇 시간 늦게 시작될 수 있다. 정시가 꼭 필요하면 서버 cron에서 repository_dispatch로 깨운다.
+name: daily-update
+
+on:
+  schedule:
+    - cron: "0 18 * * *"          # UTC 18:00 = KST 03:00
+  workflow_dispatch:               # Actions 탭에서 수동 실행 (처음 시험할 때)
+  repository_dispatch:
+    types: [daily-update]          # 외부(서버 cron 등)에서 깨우기
+
+concurrency:
+  group: daily-update              # 두 번 겹쳐 돌지 않게
+  cancel-in-progress: false
+
+permissions:
+  contents: write                  # 데이터 커밋, snowchat-wiki 브랜치 갱신
+  issues: write                    # 실패하면 이슈로 알림
+
+jobs:
+  update:
+    runs-on: ubuntu-latest         # 학교 사이트가 해외 IP를 막으면 self-hosted(팀 서버)로 바꾼다
+    timeout-minutes: 60
+    env:
+      TZ: Asia/Seoul
+      LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
+      LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+      LLM_MODEL: ${{ secrets.LLM_MODEL }}
+      MYSQL_DSN: ${{ secrets.MYSQL_DSN }}   # 비워 두면 DB 직접 적재 안 함 (아래 백엔드 알림 방식 권장)
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2                   # gate.py가 직전 커밋과 비교
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: 파이프라인 실행 (①~⑦)
+        run: ./run_all.sh
+
+      - name: 안전장치 — 이상하면 여기서 멈춤 (어제 데이터 유지)
+        run: python pipeline/gate.py
+
+      - name: API 계약 테스트 (웹·챗봇이 기대하는 모양이 깨졌는지)
+        run: |
+          pip install -r requirements-api.txt pytest httpx
+          pytest -q tests
+
+      - name: 데이터 커밋 (바뀐 게 있을 때만)
+        run: |
+          git config user.name  "sigma-bot"
+          git config user.email "sigma-bot@users.noreply.github.com"
+          git add data/raw data/extracted data/graph wiki
+          if git diff --cached --quiet; then
+            echo "바뀐 내용 없음"
+          else
+            git commit -m "daily: $(date +%F) 공지 갱신"
+            git push
+          fi
+
+      - name: SNOWCHAT용 위키 브랜치 갱신 (wiki/pages만, 끝난 학기 파일은 자동으로 빠짐)
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./wiki/pages
+          publish_branch: snowchat-wiki
+          keep_files: false
+          force_orphan: true               # 브랜치에 오늘 파일만 남김 (히스토리는 main에 있음)
+          commit_message: "wiki: ${{ github.run_id }}"
+
+      - name: SNOWCHAT 에이전트 B용 브랜치 갱신 (wiki/agent_b, B안일 때 사용)
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./wiki/agent_b
+          publish_branch: snowchat-agent-b
+          keep_files: false
+          force_orphan: true
+          commit_message: "agent-b: ${{ github.run_id }}"
+
+      - name: API 서버에 그래프 새로 읽으라고 알림 (POST /admin/reload)
+        if: env.BACKEND_RELOAD_URL != ''
+        env:
+          BACKEND_RELOAD_URL: ${{ secrets.BACKEND_RELOAD_URL }}
+          BACKEND_TOKEN: ${{ secrets.BACKEND_TOKEN }}
+        run: |
+          curl -fsS -X POST "$BACKEND_RELOAD_URL" \
+            -H "Authorization: Bearer $BACKEND_TOKEN" \
+            -H "Content-Type: application/json" \
+            -d "{\"commit\": \"$(git rev-parse HEAD)\"}"
+
+      - name: 실패하면 이슈 만들기
+        if: failure()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh issue create --title "⚠ 매일 갱신 실패 $(date +%F)" \
+            --body "실행 로그: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          SNOWCHAT 위키는 어제 버전 그대로예요. lint_report.md와 로그를 확인하세요."

@@ -1,0 +1,440 @@
+note: 엔티티 사전 (ID ↔ 이름·별칭). 추출 결과의 이름은 여기 ID로 바꿔서 그래프에 넣는다.
+colleges:
+  college:liberal-arts: 문과대학
+  college:science: 이과대학
+  college:engineering: 공과대학
+  college:life-sciences: 생활과학대학
+  college:social-sciences: 사회과학대학
+  college:law: 법과대학
+  college:gyeongsang: 경상대학
+  college:music: 음악대학
+  college:pharmacy: 약학대학
+  college:arts: 미술대학
+  college:sunheon: 순헌칼리지
+  college:hallyu: 한류국제대학
+  college:global-service: 글로벌서비스학부
+  college:english: 영어영문학부
+  college:media: 미디어학부
+depts:
+  dept:aie:
+    name: 인공지능공학부
+    host: aie.sookmyung.ac.kr
+    college: college:engineering
+    field: 공학
+    boards:
+    - 학과공지사항|/it/department/notice.do|sm_cms|100|2025-11-10
+    static_pages:
+    - 졸업요건 시행규칙|/it/projects/implementation.do
+    - 졸업작품 진행개요|/it/projects/progress.do
+    - 졸업작품 유의사항|/it/projects/notes.do
+  dept:smvd:
+    name: 시각·영상디자인과
+    host: smvd.sookmyung.ac.kr
+    college: college:arts
+    field: 예체능
+    boards: []
+    static_pages: []
+  dept:design:
+    name: 환경디자인과
+    host: design.sookmyung.ac.kr
+    college: college:arts
+    field: 예체능
+    boards:
+    - 공지사항|/smed/community/notice.do|sm_cms|7|2025-07-31
+    static_pages: []
+  dept:craft:
+    name: 공예과
+    host: craft.sookmyung.ac.kr
+    college: college:arts
+    field: 예체능
+    boards:
+    - 공지사항|/craft/community/notice.do|sm_cms|1|2026-10-16
+    static_pages: []
+  dept:fineart:
+    name: 회화과
+    host: fineart.sookmyung.ac.kr
+    college: college:arts
+    field: 예체능
+    boards: []
+    static_pages: []
+  dept:dance-smu:
+    name: 무용과
+    host: dance-smu.co.kr
+    college: college:science
+    field: 예체능
+    boards: []
+    static_pages: []
+  dept:smid:
+    name: 산업디자인과
+    host: smid.ac.kr
+    college: college:engineering
+    field: 공학
+    boards: []
+    static_pages: []
+  dept:bio:
+    name: 생명시스템학부
+    host: bio.sookmyung.ac.kr
+    college: college:science
+    field: 자연과학
+    boards:
+    - 공지사항|/bio/community/notice.do|sm_cms|50|2025-01-06
+    static_pages: []
+  dept:biz:
+    name: 경영학부
+    host: biz.sookmyung.ac.kr
+    college: college:gyeongsang
+    field: 인문사회
+    boards:
+    - 졸업|/swubusiness/community/graduate.do|sm_cms|50|2023-03-09
+    - 공지사항|/swubusiness/community/notice.do|sm_cms|50|2024-12-17
+    static_pages: []
+  dept:chem:
+    name: 화학과
+    host: chem.sookmyung.ac.kr
+    college: college:science
+    field: 자연과학
+    boards:
+    - 공지사항|/chem/community/notice.do|sm_cms|50|2025-02-20
+    static_pages: []
+  dept:chembioe:
+    name: 화공생명공학부
+    host: chembioe.sookmyung.ac.kr
+    college: college:engineering
+    field: 공학
+    boards:
+    - 졸업안내|/chembioe/board/Notice-on-Graduation.do|sm_cms|3|2026-04-29
+    - 공지사항|/chembioe/board/notice.do|sm_cms|58|2024-11-27
+    static_pages: []
+  dept:childwelfare:
+    name: 아동복지학부
+    host: childwelfare.sookmyung.ac.kr
+    college: college:life-sciences
+    field: 인문사회
+    boards:
+    - 학부 공지사항|/childwelfare/community/notice.do|sm_cms|104|2025-10-10
+    - '대학원 공지사항|/childwelfare/community/data-room.do|sm_cms|102|2025-11-17 (대학원: 수집
+      보류 범위)'
+    static_pages: []
+  dept:chinese:
+    name: 중어중문학부
+    host: chinese.sookmyung.ac.kr
+    college: college:liberal-arts
+    field: 인문사회
+    boards:
+    - 공지사항|/bbs/board.php?bo_table=notice|gnuboard|60|2025-03
+    static_pages:
+    - 수강및졸업요건|/bbs/content.php?co_id=requirement
+  dept:cloth:
+    name: 의류학과
+    host: cloth.sookmyung.ac.kr
+    college: college:life-sciences
+    field: 자연과학
+    boards:
+    - 공지사항|/cloth/community/notice.do|sm_cms|52|2025-06-04
+    static_pages: []
+  dept:conecon:
+    name: 소비자경제학과
+    host: conecon.sookmyung.ac.kr
+    college: college:social-sciences
+    field: 인문사회
+    boards:
+    - 졸업|/board/171|자체 CMS(JS 렌더링, 목록 fetch 불가 → 브라우저 렌더 필요)|1쪽|-
+    static_pages: []
+  dept:csweb:
+    name: 컴퓨터과학전공
+    host: csweb.sookmyung.ac.kr
+    college: college:engineering
+    field: 공학
+    boards:
+    - 학부공지|/cs/community/notice.do|sm_cms|100|2025-10-29
+    static_pages:
+    - 졸업요건|/cs/curriculum/requirements.do
+    - 졸업작품|/cs/activities/graduation-project.do
+  dept:cultureandtourism:
+    name: 문화관광학전공
+    host: cultureandtourism.sookmyung.ac.kr
+    college: college:liberal-arts
+    field: 인문사회
+    boards:
+    - 공지사항|/smct/community/notice.do|sm_cms|145|2020-10-12
+    static_pages: []
+  dept:ds:
+    name: 데이터사이언스전공
+    host: ds.sookmyung.ac.kr
+    college: college:engineering
+    field: 공학
+    boards:
+    - 학부공지|/ds/community/department-notice.do|sm_cms|100|2025-09-24
+    static_pages:
+    - 졸업요건|/ds/curriculum/graduation-requirements.do
+    - 졸업작품|/ds/activities/graduation-project.do
+  dept:econ:
+    name: 경제학부
+    host: econ.sookmyung.ac.kr
+    college: college:gyeongsang
+    field: 인문사회
+    boards:
+    - 공지사항|/econ/community/notice.do|sm_cms|44|2025-05-09
+    static_pages: []
+  dept:edu:
+    name: 교육학부
+    host: edu.sookmyung.ac.kr
+    college: college:liberal-arts
+    field: 인문사회
+    boards:
+    - 학사공지|/bbs/edu/1668/artclList.do|k2web-rss|63|2026-02-11
+    static_pages: []
+  dept:electro:
+    name: 지능형전자시스템학부
+    host: electro.sookmyung.ac.kr
+    college: college:engineering
+    field: 공학
+    boards:
+    - 공지사항|/ee/community/notice.do|sm_cms|50|2024-10-02
+    static_pages:
+    - 졸업요건|/ee/curriculum/graduation.do
+  dept:engine:
+    name: 첨단공학부
+    host: engine.sookmyung.ac.kr
+    college: college:engineering
+    field: 공학
+    boards:
+    - 공지사항|/bbs/engine/1986/artclList.do|k2web|12|2025-06-02
+    static_pages: []
+  dept:english:
+    name: 영어영문학부
+    host: english.sookmyung.ac.kr
+    college: college:english
+    field: 인문사회
+    boards:
+    - 공지사항|/smpr/board/notice.do|sm_cms|100|2025-06-04
+    static_pages:
+    - 졸업안내|/smpr/undergraduate/graduation-guide.do
+  dept:family:
+    name: 가족자원경영학과
+    host: family.sookmyung.ac.kr
+    college: college:life-sciences
+    field: 인문사회
+    boards:
+    - 교내소식|/family/community/notice.do|sm_cms|53|2025-10-22
+    static_pages:
+    - 졸업요건|/family/department/requirements.do
+  dept:fn:
+    name: 식품영양학과
+    host: fn.sookmyung.ac.kr
+    college: college:life-sciences
+    field: 자연과학
+    boards:
+    - 공지사항|/fn/community/notice.do|sm_cms|54|2025-08-19
+    static_pages: []
+  dept:french:
+    name: 프랑스언어·문화학과
+    host: french.sookmyung.ac.kr
+    college: college:liberal-arts
+    field: 인문사회
+    boards:
+    - 공지사항|/layout/pc/home.php?go=pds.list&pds_type=1&mid=30|php_pds|5(2026)|2026-06-05
+    static_pages: []
+  dept:german:
+    name: 독일언어·문화학과
+    host: german.sookmyung.ac.kr
+    college: college:liberal-arts
+    field: 인문사회
+    boards:
+    - 공지사항|/sub0301.php?code=notice|php_custom|75|2025-05-02
+    static_pages: []
+  dept:global:
+    name: 글로벌서비스학부
+    host: global.sookmyung.ac.kr
+    college: college:global-service
+    field: 인문사회
+    boards:
+    - 공지|/notice/|WordPress KBoard|6쪽|2025-11-25
+    static_pages: []
+  dept:hallyu:
+    name: 한류국제대학
+    host: hallyu.sookmyung.ac.kr
+    college: college:hallyu
+    field: 인문사회
+    boards:
+    - 공지사항|/hallyu/community/notice.do|sm_cms|26|2024-01-02
+    static_pages:
+    - 졸업학점(융합국제)|/hallyu/convergence-international/graduation-credits.do
+    - 졸업학점(한류국제)|/hallyu/korean-wave-international/graduation-credits.do
+  dept:history:
+    name: 역사문화학과
+    host: history.sookmyung.ac.kr
+    college: college:liberal-arts
+    field: 인문사회
+    boards:
+    - 공지사항|/history/community/notice.do|sm_cms|52|2023-04-03
+    static_pages: []
+  dept:japan:
+    name: 일본학과
+    host: japan.sookmyung.ac.kr
+    college: college:liberal-arts
+    field: 인문사회
+    boards:
+    - 공지사항|/japan/community/notice.do|sm_cms|59|2025-08-18
+    static_pages: []
+  dept:korean:
+    name: 한국어문학부
+    host: korean.sookmyung.ac.kr
+    college: college:liberal-arts
+    field: 인문사회
+    boards:
+    - 공지사항|/korean/community/notice.do|sm_cms|54|2025-12-17
+    static_pages: []
+  dept:law:
+    name: 법학부
+    host: law.sookmyung.ac.kr
+    college: college:law
+    field: 인문사회
+    boards:
+    - 공지사항|/law/board/notice.do|sm_cms|108|2025-11-07
+    static_pages: []
+  dept:lcb:
+    name: 르꼬르동블루외식경영전공
+    host: lcb.sookmyung.ac.kr
+    college: college:liberal-arts
+    field: 인문사회
+    boards:
+    - 학사규정|/bbs/lcb/1796/artclList.do|k2web-rss|167|2015-03-03
+    static_pages: []
+  dept:lis:
+    name: 문헌정보학과
+    host: lis.sookmyung.ac.kr
+    college: college:liberal-arts
+    field: 인문사회
+    boards:
+    - 학과공지사항|/bbs/lis/887/artclList.do|k2web-rss|122|2025-06-17
+    static_pages: []
+  dept:movement:
+    name: 체육교육과
+    host: movement.sookmyung.ac.kr
+    college: college:science
+    field: 예체능
+    boards:
+    - 공지사항|/movement/community/notice.do|sm_cms|50|2016-12-12
+    static_pages: []
+  dept:mse:
+    name: 기계시스템학부
+    host: mse.sookmyung.ac.kr
+    college: college:engineering
+    field: 공학
+    boards:
+    - 공지사항|/bbs/mse/727/artclList.do|k2web|30|2025-09-10
+    static_pages:
+    - 졸업요건|/mse/13234/subview.do
+  dept:pa:
+    name: 행정학과
+    host: pa.sookmyung.ac.kr
+    college: college:social-sciences
+    field: 인문사회
+    boards:
+    - 공지사항|/smpa/community/notice.do|sm_cms|50|2023-10-12
+    static_pages: []
+  dept:pharmacy:
+    name: 약학대학
+    host: pharmacy.sookmyung.ac.kr
+    college: college:pharmacy
+    field: 인문사회
+    boards:
+    - 공지사항|/pharmacy/information/notice.do|sm_cms|50|2025-09-15
+    static_pages: []
+  dept:physics:
+    name: 신소재물리학부
+    host: physics.sookmyung.ac.kr
+    college: college:engineering
+    field: 공학
+    boards:
+    - 학사공지|/bbs/physics/701/artclList.do|k2web(POST page)|6쪽|2026-03-20 (1~3월 일부 누락
+      가능)
+    static_pages:
+    - 졸업요건|/physics/5963/subview.do
+  dept:politics:
+    name: 정치외교학과
+    host: politics.sookmyung.ac.kr
+    college: college:social-sciences
+    field: 인문사회
+    boards:
+    - 학과공지|/politics/intro/department-notice.do|sm_cms|31|2024-05-30
+    static_pages:
+    - 졸업논문제|/politics/curriculum/graduation-thesis-question.do
+  dept:prad:
+    name: 홍보광고학과
+    host: prad.sookmyung.ac.kr
+    college: college:social-sciences
+    field: 인문사회
+    boards:
+    - 공지사항|/커뮤니티/공지사항/|WordPress KBoard|5쪽|2025-08-18
+    static_pages: []
+  dept:socpsy:
+    name: 사회심리학과
+    host: socpsy.sookmyung.ac.kr
+    college: college:social-sciences
+    field: 인문사회
+    boards:
+    - 공지사항|/blog|Wix 블로그(JS 렌더링)|72|-
+    static_pages: []
+  dept:stat:
+    name: 통계학과
+    host: stat.sookmyung.ac.kr
+    college: college:science
+    field: 자연과학
+    boards:
+    - 공지사항|/bbs/board.php?bo_table=notice|gnuboard(slug URL)|75|2025-12-29
+    static_pages: []
+  dept:sunheon:
+    name: 순헌칼리지
+    host: sunheon.sookmyung.ac.kr
+    college: college:sunheon
+    field: 인문사회
+    boards:
+    - 공지사항|/sunheon/college/notice.do|sm_cms|25|2025-07-23
+    - 공지사항/자료실|/sunheon/notice/notice-data.do|sm_cms|40|2025-06-26
+    static_pages: []
+  dept:music:
+    name: 음악대학
+    host: music.sookmyung.ac.kr
+    college: college:music
+    field: 예체능
+    boards:
+    - 주요공지|/45|자체 CMS|5|2024-04-11
+    static_pages: []
+  dept:math:
+    name: 수학과
+    host: math.sookmyung.ac.kr
+    college: college:science
+    field: 자연과학
+    boards:
+    - 공지사항|/math/notice/notice.do|sm_cms
+    static_pages: []
+offices:
+  office:haksa:
+    name: 교무처 학사팀
+    aliases:
+    - 학사팀
+    place: 행정관 201호
+  office:comm:
+    name: 커뮤니케이션팀
+    note: 대표 홈페이지 게시 부서(주관 아님)
+  office:teacher:
+    name: 교원양성센터
+  office:swcu:
+    name: SW중심대학사업단
+  office:hr-equality:
+    name: 인권·성평등센터
+  office:sunhun:
+    name: 순헌칼리지 교학팀
+routes:
+  route:portal: 숙명포털 > 학사 > 졸업
+  route:dept-office: 각 전공(학과) 사무실 제출
+  route:haksa-visit: 학사팀 방문 제출(행정관 201호)
+  route:dept-mail: 학과 메일로 제출·신청
+  route:snoway: Snoway 비교과 프로그램 신청
+interests:
+  interest:grad-req: 졸업 요건·심사
+templates:
+  tmpl:grad: 학부 정기졸업
+  tmpl:early-grad: 학부 조기졸업

@@ -1,0 +1,78 @@
+{
+ "notice": {
+  "id": "notice:math:121057",
+  "source": "math",
+  "article_no": "121057",
+  "url": "https://math.sookmyung.ac.kr/math/notice/notice.do?mode=view&articleNo=121057",
+  "title": "★[2026학년도 전기(2027년 2월) 졸업] 졸업시험(1차) 신청 공지",
+  "posted": "2026-07-09",
+  "posted_by": "dept:math",
+  "hits": 3248
+ },
+ "skip": false,
+ "role": "stage_detail",
+ "topic": "졸업",
+ "procedure": {
+  "template": "tmpl:grad",
+  "term": "2026-2",
+  "scope": "math"
+ },
+ "issued_by": "dept:math",
+ "stages": [
+  {
+   "key": "졸업시험1차신청",
+   "name": "졸업시험(1차) 신청",
+   "scope": "math",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": "2026-07-09",
+    "hi": "2026-08-02",
+    "precision": "day"
+   },
+   "route": "route:dept-mail",
+   "place": null,
+   "target": "수학전공·수학복수전공 7학기 이상 수료 학생(휴학생 포함)",
+   "required": false,
+   "documents": [],
+   "requires": [],
+   "evidence": [
+    "2026년 7월 9일(목) ~ 2026년 8월 2일(일)"
+   ]
+  },
+  {
+   "key": "졸업시험1차응시",
+   "name": "졸업시험(1차) 응시",
+   "scope": "math",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": "2026-08-14T11:00",
+    "hi": "2026-08-14T14:00",
+    "precision": "minute"
+   },
+   "route": null,
+   "place": "사회교육관 417호",
+   "target": null,
+   "required": false,
+   "documents": [],
+   "requires": [],
+   "evidence": [
+    "2026년 8월 14일(금)"
+   ]
+  }
+ ],
+ "rules": [],
+ "cautions": [],
+ "outcomes": [],
+ "contacts": [],
+ "refers_to": [],
+ "duplicate_of": null,
+ "attachments_pending": [
+  "수학과 졸업요건 및 졸업 시험 범위.pdf"
+ ],
+ "verification": {
+  "method": "브라우저 원문 대조",
+  "date": "2026-11-24",
+  "result": "근거 문장 전부 원문에 있음"
+ },
+ "extracted_by": "gold(수작업)"
+}

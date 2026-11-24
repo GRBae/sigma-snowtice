@@ -1,0 +1,82 @@
+{
+ "notice": {
+  "id": "notice:electro:154041",
+  "source": "electro",
+  "article_no": "154041",
+  "url": "https://electro.sookmyung.ac.kr/ee/community/notice.do?mode=view&articleNo=154041",
+  "title": "[졸업] 2026-2 지능형전자시스템전공 및 전자공학전공 졸업논문 제출 안내(12/1~12/30 09:00)",
+  "posted": "2026-11-23",
+  "posted_by": "dept:electro",
+  "hits": 47
+ },
+ "skip": false,
+ "role": "stage_detail",
+ "topic": "졸업",
+ "procedure": {
+  "template": "tmpl:grad",
+  "term": "2026-2",
+  "scope": "electro"
+ },
+ "issued_by": "dept:electro",
+ "stages": [
+  {
+   "key": "논문제결과물제출",
+   "name": "졸업논문 제출(직접 또는 학과 메일, 지도교수 허가 증빙 첨부)",
+   "scope": "electro",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": "2026-12-01",
+    "hi": "2026-12-30T09:00",
+    "precision": "minute"
+   },
+   "route": null,
+   "place": null,
+   "target": "재학생·수료생 동일",
+   "required": true,
+   "documents": [
+    "졸업논문(자유양식)",
+    "지도교수 제출 허가 증빙(문자·메일 캡처)"
+   ],
+   "requires": [],
+   "evidence": [
+    "졸업논문 제출기간(12/1~12/30 09:00)",
+    "2026년 12월 30일 오전 9시까지"
+   ],
+   "overrides": "본부"
+  }
+ ],
+ "rules": [],
+ "cautions": [
+  {
+   "id": "caution:electro_154041:0",
+   "text": "본부 마감은 12/30이지만 학과는 12/30 오전 9시까지 — 이후 제출분은 입력 불가",
+   "evidence": [
+    "이후에 제출되는 건에 대해서는 입력이 불가하며"
+   ]
+  },
+  {
+   "id": "caution:electro_154041:1",
+   "text": "수료생은 먼저 포털에서 수료생 졸업신청 후 논문 제출",
+   "evidence": [
+    "수료생은 해당기간에 포털을 통해 졸업신청을 하신 후"
+   ]
+  }
+ ],
+ "outcomes": [],
+ "contacts": [
+  {
+   "topic": "졸업논문",
+   "college": "dept:electro",
+   "office": "지능형전자시스템학부 사무실",
+   "phone": "02-2077-7860",
+   "evidence": [
+    "02-2077-7860번으로 연락바랍니다."
+   ]
+  }
+ ],
+ "refers_to": [],
+ "verification": {
+  "result": "근거 문장 전부 원문에 있음 (2026-11-24 브라우저 수집본과 대조)",
+  "extractor": "Claude 직접 추출 (LLM API 확정 전)"
+ }
+}

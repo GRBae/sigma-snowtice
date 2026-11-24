@@ -1,0 +1,1710 @@
+{"src": "dept:aie", "dst": "college:engineering", "type": "IN_COLLEGE"}
+{"src": "dept:smvd", "dst": "college:arts", "type": "IN_COLLEGE"}
+{"src": "dept:design", "dst": "college:arts", "type": "IN_COLLEGE"}
+{"src": "dept:craft", "dst": "college:arts", "type": "IN_COLLEGE"}
+{"src": "dept:fineart", "dst": "college:arts", "type": "IN_COLLEGE"}
+{"src": "dept:dance-smu", "dst": "college:science", "type": "IN_COLLEGE"}
+{"src": "dept:smid", "dst": "college:engineering", "type": "IN_COLLEGE"}
+{"src": "dept:bio", "dst": "college:science", "type": "IN_COLLEGE"}
+{"src": "dept:biz", "dst": "college:gyeongsang", "type": "IN_COLLEGE"}
+{"src": "dept:chem", "dst": "college:science", "type": "IN_COLLEGE"}
+{"src": "dept:chembioe", "dst": "college:engineering", "type": "IN_COLLEGE"}
+{"src": "dept:childwelfare", "dst": "college:life-sciences", "type": "IN_COLLEGE"}
+{"src": "dept:chinese", "dst": "college:liberal-arts", "type": "IN_COLLEGE"}
+{"src": "dept:cloth", "dst": "college:life-sciences", "type": "IN_COLLEGE"}
+{"src": "dept:conecon", "dst": "college:social-sciences", "type": "IN_COLLEGE"}
+{"src": "dept:csweb", "dst": "college:engineering", "type": "IN_COLLEGE"}
+{"src": "dept:cultureandtourism", "dst": "college:liberal-arts", "type": "IN_COLLEGE"}
+{"src": "dept:ds", "dst": "college:engineering", "type": "IN_COLLEGE"}
+{"src": "dept:econ", "dst": "college:gyeongsang", "type": "IN_COLLEGE"}
+{"src": "dept:edu", "dst": "college:liberal-arts", "type": "IN_COLLEGE"}
+{"src": "dept:electro", "dst": "college:engineering", "type": "IN_COLLEGE"}
+{"src": "dept:engine", "dst": "college:engineering", "type": "IN_COLLEGE"}
+{"src": "dept:english", "dst": "college:english", "type": "IN_COLLEGE"}
+{"src": "dept:family", "dst": "college:life-sciences", "type": "IN_COLLEGE"}
+{"src": "dept:fn", "dst": "college:life-sciences", "type": "IN_COLLEGE"}
+{"src": "dept:french", "dst": "college:liberal-arts", "type": "IN_COLLEGE"}
+{"src": "dept:german", "dst": "college:liberal-arts", "type": "IN_COLLEGE"}
+{"src": "dept:global", "dst": "college:global-service", "type": "IN_COLLEGE"}
+{"src": "dept:hallyu", "dst": "college:hallyu", "type": "IN_COLLEGE"}
+{"src": "dept:history", "dst": "college:liberal-arts", "type": "IN_COLLEGE"}
+{"src": "dept:japan", "dst": "college:liberal-arts", "type": "IN_COLLEGE"}
+{"src": "dept:korean", "dst": "college:liberal-arts", "type": "IN_COLLEGE"}
+{"src": "dept:law", "dst": "college:law", "type": "IN_COLLEGE"}
+{"src": "dept:lcb", "dst": "college:liberal-arts", "type": "IN_COLLEGE"}
+{"src": "dept:lis", "dst": "college:liberal-arts", "type": "IN_COLLEGE"}
+{"src": "dept:movement", "dst": "college:science", "type": "IN_COLLEGE"}
+{"src": "dept:mse", "dst": "college:engineering", "type": "IN_COLLEGE"}
+{"src": "dept:pa", "dst": "college:social-sciences", "type": "IN_COLLEGE"}
+{"src": "dept:pharmacy", "dst": "college:pharmacy", "type": "IN_COLLEGE"}
+{"src": "dept:physics", "dst": "college:engineering", "type": "IN_COLLEGE"}
+{"src": "dept:politics", "dst": "college:social-sciences", "type": "IN_COLLEGE"}
+{"src": "dept:prad", "dst": "college:social-sciences", "type": "IN_COLLEGE"}
+{"src": "dept:socpsy", "dst": "college:social-sciences", "type": "IN_COLLEGE"}
+{"src": "dept:stat", "dst": "college:science", "type": "IN_COLLEGE"}
+{"src": "dept:sunheon", "dst": "college:sunheon", "type": "IN_COLLEGE"}
+{"src": "dept:music", "dst": "college:music", "type": "IN_COLLEGE"}
+{"src": "dept:math", "dst": "college:science", "type": "IN_COLLEGE"}
+{"src": "tmpl:grad", "dst": "interest:grad-req", "type": "IN_INTEREST"}
+{"src": "tmpl:grad", "dst": "tmplstage:학위수여식", "type": "HAS_STAGE_RULE"}
+{"src": "tmpl:grad", "dst": "tmplstage:졸업계획제출", "type": "HAS_STAGE_RULE"}
+{"src": "tmpl:grad", "dst": "rule:grad:basic", "type": "ELIGIBLE_IF"}
+{"src": "tmpl:grad", "dst": "cau:no-graduation-on-leave", "type": "HAS_CAUTION"}
+{"src": "tmpl:grad", "dst": "out:graduate", "type": "HAS_OUTCOME"}
+{"src": "tmpl:grad", "dst": "out:complete", "type": "HAS_OUTCOME"}
+{"src": "tmpl:grad", "dst": "out:fail", "type": "HAS_OUTCOME"}
+{"src": "tmpl:grad", "dst": "out:continue", "type": "HAS_OUTCOME"}
+{"src": "tmpl:grad", "dst": "tmplstage:콜로키움참석", "type": "HAS_STAGE_RULE"}
+{"src": "tmpl:early-grad", "dst": "interest:grad-req", "type": "IN_INTEREST"}
+{"src": "notice:main:91834", "dst": "office:comm", "type": "POSTED_BY"}
+{"src": "notice:main:91834", "dst": "stage:2025-2:최종사정결과조회", "type": "DESCRIBES", "pending": true}
+{"src": "notice:law:114432", "dst": "dept:law", "type": "POSTED_BY"}
+{"src": "notice:law:114432", "dst": "notice:main:91834", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:aie:114231", "dst": "dept:aie", "type": "POSTED_BY"}
+{"src": "notice:aie:114231", "dst": "notice:main:91834", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:family:114436", "dst": "dept:family", "type": "POSTED_BY"}
+{"src": "notice:family:114436", "dst": "notice:main:91834", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:ds:137586", "dst": "dept:ds", "type": "POSTED_BY"}
+{"src": "notice:ds:137586", "dst": "notice:main:91834", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:csweb:130362", "dst": "dept:csweb", "type": "POSTED_BY"}
+{"src": "notice:csweb:130362", "dst": "notice:main:91834", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:chem:114437", "dst": "dept:chem", "type": "POSTED_BY"}
+{"src": "notice:chem:114437", "dst": "notice:main:91834", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:german:5546", "dst": "dept:german", "type": "POSTED_BY"}
+{"src": "notice:german:5546", "dst": "notice:main:91834", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:stat:slug20", "dst": "dept:stat", "type": "POSTED_BY"}
+{"src": "notice:stat:slug20", "dst": "notice:main:91834", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:main:91912", "dst": "office:comm", "type": "POSTED_BY"}
+{"src": "notice:main:91912", "dst": "stage:2025-2:학위수여식", "type": "DESCRIBES", "pending": true}
+{"src": "notice:main:92185", "dst": "office:comm", "type": "POSTED_BY"}
+{"src": "notice:main:92185", "dst": "stage:2026-1:조기졸업신청", "type": "DESCRIBES", "pending": true}
+{"src": "notice:family:115974", "dst": "dept:family", "type": "POSTED_BY"}
+{"src": "notice:family:115974", "dst": "notice:main:92185", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:ds:137594", "dst": "dept:ds", "type": "POSTED_BY"}
+{"src": "notice:ds:137594", "dst": "notice:main:92185", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:childwelfare:115973", "dst": "dept:childwelfare", "type": "POSTED_BY"}
+{"src": "notice:childwelfare:115973", "dst": "notice:main:92185", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:japan:115977", "dst": "dept:japan", "type": "POSTED_BY"}
+{"src": "notice:japan:115977", "dst": "notice:main:92185", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:csweb:130370", "dst": "dept:csweb", "type": "POSTED_BY"}
+{"src": "notice:csweb:130370", "dst": "notice:main:92185", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:stat:slug18", "dst": "dept:stat", "type": "POSTED_BY"}
+{"src": "notice:stat:slug18", "dst": "notice:main:92185", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:biz:116015", "dst": "dept:biz", "type": "POSTED_BY"}
+{"src": "notice:biz:116015", "dst": "notice:main:92185", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:edu:211673", "dst": "dept:edu", "type": "POSTED_BY"}
+{"src": "notice:edu:211673", "dst": "notice:main:92185", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:bio:116018", "dst": "dept:bio", "type": "POSTED_BY"}
+{"src": "notice:bio:116018", "dst": "notice:main:92185", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:aie:116017", "dst": "dept:aie", "type": "POSTED_BY"}
+{"src": "notice:aie:116017", "dst": "notice:main:92185", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:politics:116021", "dst": "dept:politics", "type": "POSTED_BY"}
+{"src": "notice:politics:116021", "dst": "notice:main:92185", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:german:5552", "dst": "dept:german", "type": "POSTED_BY"}
+{"src": "notice:german:5552", "dst": "notice:main:92185", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:law:116044", "dst": "dept:law", "type": "POSTED_BY"}
+{"src": "notice:law:116044", "dst": "notice:main:92185", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:lcb:211740", "dst": "dept:lcb", "type": "POSTED_BY"}
+{"src": "notice:lcb:211740", "dst": "notice:main:92185", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:cultureandtourism:118230", "dst": "dept:cultureandtourism", "type": "POSTED_BY"}
+{"src": "notice:cultureandtourism:118230", "dst": "notice:main:92185", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:chinese:487", "dst": "dept:chinese", "type": "POSTED_BY"}
+{"src": "notice:chinese:487", "dst": "notice:main:92185", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:main:92298", "dst": "office:comm", "type": "POSTED_BY"}
+{"src": "notice:main:92298", "dst": "proc:grad:2026-1", "type": "DESCRIBES", "pending": true}
+{"src": "notice:german:5556", "dst": "dept:german", "type": "POSTED_BY"}
+{"src": "notice:german:5556", "dst": "notice:main:92298", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:fn:118223", "dst": "dept:fn", "type": "POSTED_BY"}
+{"src": "notice:fn:118223", "dst": "notice:main:92298", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:korean:118226", "dst": "dept:korean", "type": "POSTED_BY"}
+{"src": "notice:korean:118226", "dst": "notice:main:92298", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:family:118232", "dst": "dept:family", "type": "POSTED_BY"}
+{"src": "notice:family:118232", "dst": "notice:main:92298", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:edu:215623", "dst": "dept:edu", "type": "POSTED_BY"}
+{"src": "notice:edu:215623", "dst": "notice:main:92298", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:ds:137598", "dst": "dept:ds", "type": "POSTED_BY"}
+{"src": "notice:ds:137598", "dst": "notice:main:92298", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:math:118248", "dst": "dept:math", "type": "POSTED_BY"}
+{"src": "notice:math:118248", "dst": "notice:main:92298", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:childwelfare:118239", "dst": "dept:childwelfare", "type": "POSTED_BY"}
+{"src": "notice:childwelfare:118239", "dst": "notice:main:92298", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:english:118258", "dst": "dept:english", "type": "POSTED_BY"}
+{"src": "notice:english:118258", "dst": "notice:main:92298", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:csweb:130374", "dst": "dept:csweb", "type": "POSTED_BY"}
+{"src": "notice:csweb:130374", "dst": "notice:main:92298", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:stat:slug17", "dst": "dept:stat", "type": "POSTED_BY"}
+{"src": "notice:stat:slug17", "dst": "notice:main:92298", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:mse:215626", "dst": "dept:mse", "type": "POSTED_BY"}
+{"src": "notice:mse:215626", "dst": "notice:main:92298", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:chinese:488", "dst": "dept:chinese", "type": "POSTED_BY"}
+{"src": "notice:chinese:488", "dst": "notice:main:92298", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:history:118306", "dst": "dept:history", "type": "POSTED_BY"}
+{"src": "notice:history:118306", "dst": "notice:main:92298", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:lcb:215665", "dst": "dept:lcb", "type": "POSTED_BY"}
+{"src": "notice:lcb:215665", "dst": "notice:main:92298", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:cultureandtourism:118346", "dst": "dept:cultureandtourism", "type": "POSTED_BY"}
+{"src": "notice:cultureandtourism:118346", "dst": "notice:main:92298", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:law:118337", "dst": "dept:law", "type": "POSTED_BY"}
+{"src": "notice:law:118337", "dst": "notice:main:92298", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:japan:118471", "dst": "dept:japan", "type": "POSTED_BY"}
+{"src": "notice:japan:118471", "dst": "notice:main:92298", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:physics:215788", "dst": "dept:physics", "type": "POSTED_BY"}
+{"src": "notice:physics:215788", "dst": "notice:main:92298", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:biz:118793", "dst": "dept:biz", "type": "POSTED_BY"}
+{"src": "notice:biz:118793", "dst": "notice:main:92298", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:main:92406", "dst": "office:comm", "type": "POSTED_BY"}
+{"src": "notice:main:92406", "dst": "stage:2026-1:졸업계획제출", "type": "DESCRIBES", "pending": true}
+{"src": "notice:main:92406", "dst": "stage:2026-1:전공선택", "type": "DESCRIBES", "pending": true}
+{"src": "notice:edu:215711", "dst": "dept:edu", "type": "POSTED_BY"}
+{"src": "notice:edu:215711", "dst": "notice:main:92406", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:ds:137599", "dst": "dept:ds", "type": "POSTED_BY"}
+{"src": "notice:ds:137599", "dst": "notice:main:92406", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:math:118492", "dst": "dept:math", "type": "POSTED_BY"}
+{"src": "notice:math:118492", "dst": "notice:main:92406", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:fn:118485", "dst": "dept:fn", "type": "POSTED_BY"}
+{"src": "notice:fn:118485", "dst": "notice:main:92406", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:childwelfare:118490", "dst": "dept:childwelfare", "type": "POSTED_BY"}
+{"src": "notice:childwelfare:118490", "dst": "notice:main:92406", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:history:118482", "dst": "dept:history", "type": "POSTED_BY"}
+{"src": "notice:history:118482", "dst": "notice:main:92406", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:aie:118466", "dst": "dept:aie", "type": "POSTED_BY"}
+{"src": "notice:aie:118466", "dst": "notice:main:92406", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:japan:118470", "dst": "dept:japan", "type": "POSTED_BY"}
+{"src": "notice:japan:118470", "dst": "notice:main:92406", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:chinese:489", "dst": "dept:chinese", "type": "POSTED_BY"}
+{"src": "notice:chinese:489", "dst": "notice:main:92406", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:csweb:130375", "dst": "dept:csweb", "type": "POSTED_BY"}
+{"src": "notice:csweb:130375", "dst": "notice:main:92406", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:korean:118467", "dst": "dept:korean", "type": "POSTED_BY"}
+{"src": "notice:korean:118467", "dst": "notice:main:92406", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:chem:118473", "dst": "dept:chem", "type": "POSTED_BY"}
+{"src": "notice:chem:118473", "dst": "notice:main:92406", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:lis:215712", "dst": "dept:lis", "type": "POSTED_BY"}
+{"src": "notice:lis:215712", "dst": "notice:main:92406", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:econ:118510", "dst": "dept:econ", "type": "POSTED_BY"}
+{"src": "notice:econ:118510", "dst": "notice:main:92406", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:german:5559", "dst": "dept:german", "type": "POSTED_BY"}
+{"src": "notice:german:5559", "dst": "notice:main:92406", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:english:118508", "dst": "dept:english", "type": "POSTED_BY"}
+{"src": "notice:english:118508", "dst": "notice:main:92406", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:politics:118498", "dst": "dept:politics", "type": "POSTED_BY"}
+{"src": "notice:politics:118498", "dst": "notice:main:92406", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:lcb:215740", "dst": "dept:lcb", "type": "POSTED_BY"}
+{"src": "notice:lcb:215740", "dst": "notice:main:92406", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:cultureandtourism:118553", "dst": "dept:cultureandtourism", "type": "POSTED_BY"}
+{"src": "notice:cultureandtourism:118553", "dst": "notice:main:92406", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:law:118554", "dst": "dept:law", "type": "POSTED_BY"}
+{"src": "notice:law:118554", "dst": "notice:main:92406", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:stat:slug16", "dst": "dept:stat", "type": "POSTED_BY"}
+{"src": "notice:stat:slug16", "dst": "notice:main:92406", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:cloth:118634", "dst": "dept:cloth", "type": "POSTED_BY"}
+{"src": "notice:cloth:118634", "dst": "notice:main:92406", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:main:92458", "dst": "office:comm", "type": "POSTED_BY"}
+{"src": "notice:main:92458", "dst": "stage:2026-1:이수현황정리", "type": "DESCRIBES", "pending": true}
+{"src": "notice:ds:137602", "dst": "dept:ds", "type": "POSTED_BY"}
+{"src": "notice:ds:137602", "dst": "notice:main:92458", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:ds:137601", "dst": "dept:ds", "type": "POSTED_BY"}
+{"src": "notice:ds:137601", "dst": "notice:main:92458", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:csweb:130378", "dst": "dept:csweb", "type": "POSTED_BY"}
+{"src": "notice:csweb:130378", "dst": "notice:main:92458", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:csweb:130377", "dst": "dept:csweb", "type": "POSTED_BY"}
+{"src": "notice:csweb:130377", "dst": "notice:main:92458", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:electro:118840", "dst": "dept:electro", "type": "POSTED_BY"}
+{"src": "notice:electro:118840", "dst": "notice:main:92458", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:main:92912", "dst": "office:comm", "type": "POSTED_BY"}
+{"src": "notice:main:92912", "dst": "stage:2026-1:논문제신청", "type": "DESCRIBES", "pending": true}
+{"src": "notice:german:5567", "dst": "dept:german", "type": "POSTED_BY"}
+{"src": "notice:german:5567", "dst": "notice:main:92912", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:lcb:215849", "dst": "dept:lcb", "type": "POSTED_BY"}
+{"src": "notice:lcb:215849", "dst": "notice:main:92912", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:cultureandtourism:118779", "dst": "dept:cultureandtourism", "type": "POSTED_BY"}
+{"src": "notice:cultureandtourism:118779", "dst": "notice:main:92912", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:bio:118770", "dst": "dept:bio", "type": "POSTED_BY"}
+{"src": "notice:bio:118770", "dst": "notice:main:92912", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:bio:118767", "dst": "dept:bio", "type": "POSTED_BY"}
+{"src": "notice:bio:118767", "dst": "notice:main:92912", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:physics:215843", "dst": "dept:physics", "type": "POSTED_BY"}
+{"src": "notice:physics:215843", "dst": "notice:main:92912", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:childwelfare:118763", "dst": "dept:childwelfare", "type": "POSTED_BY"}
+{"src": "notice:childwelfare:118763", "dst": "notice:main:92912", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:history:118772", "dst": "dept:history", "type": "POSTED_BY"}
+{"src": "notice:history:118772", "dst": "notice:main:92912", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:aie:118769", "dst": "dept:aie", "type": "POSTED_BY"}
+{"src": "notice:aie:118769", "dst": "notice:main:92912", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:chinese:491", "dst": "dept:chinese", "type": "POSTED_BY"}
+{"src": "notice:chinese:491", "dst": "notice:main:92912", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:chem:118776", "dst": "dept:chem", "type": "POSTED_BY"}
+{"src": "notice:chem:118776", "dst": "notice:main:92912", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:mse:215851", "dst": "dept:mse", "type": "POSTED_BY"}
+{"src": "notice:mse:215851", "dst": "notice:main:92912", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:ds:137605", "dst": "dept:ds", "type": "POSTED_BY"}
+{"src": "notice:ds:137605", "dst": "notice:main:92912", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:fn:118783", "dst": "dept:fn", "type": "POSTED_BY"}
+{"src": "notice:fn:118783", "dst": "notice:main:92912", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:english:118801", "dst": "dept:english", "type": "POSTED_BY"}
+{"src": "notice:english:118801", "dst": "notice:main:92912", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:csweb:130380", "dst": "dept:csweb", "type": "POSTED_BY"}
+{"src": "notice:csweb:130380", "dst": "notice:main:92912", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:stat:slug14", "dst": "dept:stat", "type": "POSTED_BY"}
+{"src": "notice:stat:slug14", "dst": "notice:main:92912", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:law:118819", "dst": "dept:law", "type": "POSTED_BY"}
+{"src": "notice:law:118819", "dst": "notice:main:92912", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:edu:215905", "dst": "dept:edu", "type": "POSTED_BY"}
+{"src": "notice:edu:215905", "dst": "notice:main:92912", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:politics:118907", "dst": "dept:politics", "type": "POSTED_BY"}
+{"src": "notice:politics:118907", "dst": "notice:main:92912", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:math:118935", "dst": "dept:math", "type": "POSTED_BY"}
+{"src": "notice:math:118935", "dst": "notice:main:92912", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:cloth:118771", "dst": "dept:cloth", "type": "POSTED_BY"}
+{"src": "notice:cloth:118771", "dst": "notice:main:92912", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:econ:118944", "dst": "dept:econ", "type": "POSTED_BY"}
+{"src": "notice:econ:118944", "dst": "notice:main:92912", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:ds:137611", "dst": "dept:ds", "type": "POSTED_BY"}
+{"src": "notice:ds:137611", "dst": "notice:main:92912", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:csweb:130388", "dst": "dept:csweb", "type": "POSTED_BY"}
+{"src": "notice:csweb:130388", "dst": "notice:main:92912", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:chembioe:118959", "dst": "dept:chembioe", "type": "POSTED_BY"}
+{"src": "notice:chembioe:118959", "dst": "notice:main:92912", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:prad:2144", "dst": "dept:prad", "type": "POSTED_BY"}
+{"src": "notice:prad:2144", "dst": "notice:main:92912", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:biz:119242", "dst": "dept:biz", "type": "POSTED_BY"}
+{"src": "notice:biz:119242", "dst": "notice:main:92912", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:conecon:p2", "dst": "dept:conecon", "type": "POSTED_BY"}
+{"src": "notice:conecon:p2", "dst": "notice:main:92912", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:biz:119995", "dst": "dept:biz", "type": "POSTED_BY"}
+{"src": "notice:biz:119995", "dst": "notice:main:92912", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:edu:216360", "dst": "dept:edu", "type": "POSTED_BY"}
+{"src": "notice:edu:216360", "dst": "notice:main:92912", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:pa:120137", "dst": "dept:pa", "type": "POSTED_BY"}
+{"src": "notice:pa:120137", "dst": "notice:main:92912", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:econ:120280", "dst": "dept:econ", "type": "POSTED_BY"}
+{"src": "notice:econ:120280", "dst": "notice:main:92912", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:main:93520", "dst": "office:comm", "type": "POSTED_BY"}
+{"src": "notice:main:93520", "dst": "stage:2026-1:수료생졸업신청", "type": "DESCRIBES", "pending": true}
+{"src": "notice:econ:119934", "dst": "dept:econ", "type": "POSTED_BY"}
+{"src": "notice:econ:119934", "dst": "notice:main:93520", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:ds:137616", "dst": "dept:ds", "type": "POSTED_BY"}
+{"src": "notice:ds:137616", "dst": "notice:main:93520", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:german:5584", "dst": "dept:german", "type": "POSTED_BY"}
+{"src": "notice:german:5584", "dst": "notice:main:93520", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:lis:216329", "dst": "dept:lis", "type": "POSTED_BY"}
+{"src": "notice:lis:216329", "dst": "notice:main:93520", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:math:119938", "dst": "dept:math", "type": "POSTED_BY"}
+{"src": "notice:math:119938", "dst": "notice:main:93520", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:physics:216319", "dst": "dept:physics", "type": "POSTED_BY"}
+{"src": "notice:physics:216319", "dst": "notice:main:93520", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:childwelfare:119931", "dst": "dept:childwelfare", "type": "POSTED_BY"}
+{"src": "notice:childwelfare:119931", "dst": "notice:main:93520", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:history:119941", "dst": "dept:history", "type": "POSTED_BY"}
+{"src": "notice:history:119941", "dst": "notice:main:93520", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:cloth:119939", "dst": "dept:cloth", "type": "POSTED_BY"}
+{"src": "notice:cloth:119939", "dst": "notice:main:93520", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:aie:119936", "dst": "dept:aie", "type": "POSTED_BY"}
+{"src": "notice:aie:119936", "dst": "notice:main:93520", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:csweb:130394", "dst": "dept:csweb", "type": "POSTED_BY"}
+{"src": "notice:csweb:130394", "dst": "notice:main:93520", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:korean:119935", "dst": "dept:korean", "type": "POSTED_BY"}
+{"src": "notice:korean:119935", "dst": "notice:main:93520", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:chem:119933", "dst": "dept:chem", "type": "POSTED_BY"}
+{"src": "notice:chem:119933", "dst": "notice:main:93520", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:mse:216352", "dst": "dept:mse", "type": "POSTED_BY"}
+{"src": "notice:mse:216352", "dst": "notice:main:93520", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:lcb:216347", "dst": "dept:lcb", "type": "POSTED_BY"}
+{"src": "notice:lcb:216347", "dst": "notice:main:93520", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:cultureandtourism:119953", "dst": "dept:cultureandtourism", "type": "POSTED_BY"}
+{"src": "notice:cultureandtourism:119953", "dst": "notice:main:93520", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:fn:119977", "dst": "dept:fn", "type": "POSTED_BY"}
+{"src": "notice:fn:119977", "dst": "notice:main:93520", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:chinese:496", "dst": "dept:chinese", "type": "POSTED_BY"}
+{"src": "notice:chinese:496", "dst": "notice:main:93520", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:law:120000", "dst": "dept:law", "type": "POSTED_BY"}
+{"src": "notice:law:120000", "dst": "notice:main:93520", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:english:120021", "dst": "dept:english", "type": "POSTED_BY"}
+{"src": "notice:english:120021", "dst": "notice:main:93520", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:edu:216430", "dst": "dept:edu", "type": "POSTED_BY"}
+{"src": "notice:edu:216430", "dst": "notice:main:93520", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:stat:slug12", "dst": "dept:stat", "type": "POSTED_BY"}
+{"src": "notice:stat:slug12", "dst": "notice:main:93520", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:main:93519", "dst": "office:comm", "type": "POSTED_BY"}
+{"src": "notice:main:93519", "dst": "stage:2026-1:논문제결과물제출", "type": "DESCRIBES", "pending": true}
+{"src": "notice:main:93519", "dst": "stage:2026-1:정보인증제등록", "type": "DESCRIBES", "pending": true}
+{"src": "notice:lis:215976", "dst": "dept:lis", "type": "POSTED_BY"}
+{"src": "notice:lis:215976", "dst": "notice:main:93519", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:family:119944", "dst": "dept:family", "type": "POSTED_BY"}
+{"src": "notice:family:119944", "dst": "notice:main:93519", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:ds:137619", "dst": "dept:ds", "type": "POSTED_BY"}
+{"src": "notice:ds:137619", "dst": "notice:main:93519", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:german:5585", "dst": "dept:german", "type": "POSTED_BY"}
+{"src": "notice:german:5585", "dst": "notice:main:93519", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:lcb:216349", "dst": "dept:lcb", "type": "POSTED_BY"}
+{"src": "notice:lcb:216349", "dst": "notice:main:93519", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:lis:216344", "dst": "dept:lis", "type": "POSTED_BY"}
+{"src": "notice:lis:216344", "dst": "notice:main:93519", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:cultureandtourism:119955", "dst": "dept:cultureandtourism", "type": "POSTED_BY"}
+{"src": "notice:cultureandtourism:119955", "dst": "notice:main:93519", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:conecon:p1", "dst": "dept:conecon", "type": "POSTED_BY"}
+{"src": "notice:conecon:p1", "dst": "notice:main:93519", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:childwelfare:119949", "dst": "dept:childwelfare", "type": "POSTED_BY"}
+{"src": "notice:childwelfare:119949", "dst": "notice:main:93519", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:politics:119951", "dst": "dept:politics", "type": "POSTED_BY"}
+{"src": "notice:politics:119951", "dst": "notice:main:93519", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:csweb:130397", "dst": "dept:csweb", "type": "POSTED_BY"}
+{"src": "notice:csweb:130397", "dst": "notice:main:93519", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:math:119969", "dst": "dept:math", "type": "POSTED_BY"}
+{"src": "notice:math:119969", "dst": "notice:main:93519", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:history:119970", "dst": "dept:history", "type": "POSTED_BY"}
+{"src": "notice:history:119970", "dst": "notice:main:93519", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:chinese:495", "dst": "dept:chinese", "type": "POSTED_BY"}
+{"src": "notice:chinese:495", "dst": "notice:main:93519", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:law:120001", "dst": "dept:law", "type": "POSTED_BY"}
+{"src": "notice:law:120001", "dst": "notice:main:93519", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:english:120020", "dst": "dept:english", "type": "POSTED_BY"}
+{"src": "notice:english:120020", "dst": "notice:main:93519", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:stat:slug13", "dst": "dept:stat", "type": "POSTED_BY"}
+{"src": "notice:stat:slug13", "dst": "notice:main:93519", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:chem:120219", "dst": "dept:chem", "type": "POSTED_BY"}
+{"src": "notice:chem:120219", "dst": "notice:main:93519", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:main:94073", "dst": "office:comm", "type": "POSTED_BY"}
+{"src": "notice:main:94073", "dst": "stage:2026-1:인증제결과확인", "type": "DESCRIBES", "pending": true}
+{"src": "notice:chembioe:120300", "dst": "dept:chembioe", "type": "POSTED_BY"}
+{"src": "notice:chembioe:120300", "dst": "notice:main:94073", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:edu:216633", "dst": "dept:edu", "type": "POSTED_BY"}
+{"src": "notice:edu:216633", "dst": "notice:main:94073", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:mse:216638", "dst": "dept:mse", "type": "POSTED_BY"}
+{"src": "notice:mse:216638", "dst": "notice:main:94073", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:ds:137628", "dst": "dept:ds", "type": "POSTED_BY"}
+{"src": "notice:ds:137628", "dst": "notice:main:94073", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:lcb:216642", "dst": "dept:lcb", "type": "POSTED_BY"}
+{"src": "notice:lcb:216642", "dst": "notice:main:94073", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:lis:216639", "dst": "dept:lis", "type": "POSTED_BY"}
+{"src": "notice:lis:216639", "dst": "notice:main:94073", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:cultureandtourism:120924", "dst": "dept:cultureandtourism", "type": "POSTED_BY"}
+{"src": "notice:cultureandtourism:120924", "dst": "notice:main:94073", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:law:120921", "dst": "dept:law", "type": "POSTED_BY"}
+{"src": "notice:law:120921", "dst": "notice:main:94073", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:physics:216632", "dst": "dept:physics", "type": "POSTED_BY"}
+{"src": "notice:physics:216632", "dst": "notice:main:94073", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:childwelfare:120901", "dst": "dept:childwelfare", "type": "POSTED_BY"}
+{"src": "notice:childwelfare:120901", "dst": "notice:main:94073", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:english:120911", "dst": "dept:english", "type": "POSTED_BY"}
+{"src": "notice:english:120911", "dst": "notice:main:94073", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:aie:120902", "dst": "dept:aie", "type": "POSTED_BY"}
+{"src": "notice:aie:120902", "dst": "notice:main:94073", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:csweb:130411", "dst": "dept:csweb", "type": "POSTED_BY"}
+{"src": "notice:csweb:130411", "dst": "notice:main:94073", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:stat:slug11", "dst": "dept:stat", "type": "POSTED_BY"}
+{"src": "notice:stat:slug11", "dst": "notice:main:94073", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:german:5592", "dst": "dept:german", "type": "POSTED_BY"}
+{"src": "notice:german:5592", "dst": "notice:main:94073", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:math:120935", "dst": "dept:math", "type": "POSTED_BY"}
+{"src": "notice:math:120935", "dst": "notice:main:94073", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:main:94117", "dst": "office:comm", "type": "POSTED_BY"}
+{"src": "notice:main:94117", "dst": "stage:2026-1:영문성명확인", "type": "DESCRIBES", "pending": true}
+{"src": "notice:german:5598", "dst": "dept:german", "type": "POSTED_BY"}
+{"src": "notice:german:5598", "dst": "notice:main:94117", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:main:94182", "dst": "office:comm", "type": "POSTED_BY"}
+{"src": "notice:main:94182", "dst": "stage:2026-1:계속수학신청", "type": "DESCRIBES", "pending": true}
+{"src": "notice:german:5596", "dst": "dept:german", "type": "POSTED_BY"}
+{"src": "notice:german:5596", "dst": "notice:main:94182", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:main:94370", "dst": "office:comm", "type": "POSTED_BY"}
+{"src": "notice:main:94370", "dst": "stage:2026-1:학위수여식", "type": "DESCRIBES", "pending": true}
+{"src": "notice:main:94361", "dst": "office:comm", "type": "POSTED_BY"}
+{"src": "notice:main:94361", "dst": "stage:2026-1:최종사정결과조회", "type": "DESCRIBES", "pending": true}
+{"src": "notice:physics:216770", "dst": "dept:physics", "type": "POSTED_BY"}
+{"src": "notice:physics:216770", "dst": "notice:main:94361", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:family:121852", "dst": "dept:family", "type": "POSTED_BY"}
+{"src": "notice:family:121852", "dst": "notice:main:94361", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:ds:137629", "dst": "dept:ds", "type": "POSTED_BY"}
+{"src": "notice:ds:137629", "dst": "notice:main:94361", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:german:5599", "dst": "dept:german", "type": "POSTED_BY"}
+{"src": "notice:german:5599", "dst": "notice:main:94361", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:lis:216782", "dst": "dept:lis", "type": "POSTED_BY"}
+{"src": "notice:lis:216782", "dst": "notice:main:94361", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:math:121853", "dst": "dept:math", "type": "POSTED_BY"}
+{"src": "notice:math:121853", "dst": "notice:main:94361", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:english:121855", "dst": "dept:english", "type": "POSTED_BY"}
+{"src": "notice:english:121855", "dst": "notice:main:94361", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:csweb:130412", "dst": "dept:csweb", "type": "POSTED_BY"}
+{"src": "notice:csweb:130412", "dst": "notice:main:94361", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:childwelfare:121870", "dst": "dept:childwelfare", "type": "POSTED_BY"}
+{"src": "notice:childwelfare:121870", "dst": "notice:main:94361", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:chinese:502", "dst": "dept:chinese", "type": "POSTED_BY"}
+{"src": "notice:chinese:502", "dst": "notice:main:94361", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:chinese:500", "dst": "dept:chinese", "type": "POSTED_BY"}
+{"src": "notice:chinese:500", "dst": "notice:main:94361", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:lcb:216789", "dst": "dept:lcb", "type": "POSTED_BY"}
+{"src": "notice:lcb:216789", "dst": "notice:main:94361", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:cultureandtourism:122211", "dst": "dept:cultureandtourism", "type": "POSTED_BY"}
+{"src": "notice:cultureandtourism:122211", "dst": "notice:main:94361", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:law:122218", "dst": "dept:law", "type": "POSTED_BY"}
+{"src": "notice:law:122218", "dst": "notice:main:94361", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:stat:slug10", "dst": "dept:stat", "type": "POSTED_BY"}
+{"src": "notice:stat:slug10", "dst": "notice:main:94361", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:edu:216816", "dst": "dept:edu", "type": "POSTED_BY"}
+{"src": "notice:edu:216816", "dst": "notice:main:94361", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:mse:216822", "dst": "dept:mse", "type": "POSTED_BY"}
+{"src": "notice:mse:216822", "dst": "notice:main:94361", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:electro:122245", "dst": "dept:electro", "type": "POSTED_BY"}
+{"src": "notice:electro:122245", "dst": "notice:main:94361", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:main:94717", "dst": "office:comm", "type": "POSTED_BY"}
+{"src": "notice:main:94717", "dst": "office:haksa", "type": "ISSUED_BY"}
+{"src": "notice:main:94717", "dst": "stage:2026-2:조기졸업신청", "type": "DESCRIBES", "evidence": ["1. 신청기간: 09.02(수) 10:00 ~ 09.08(화) 17:30", "가. 제출서류: 조기졸업신청서(붙임파일) 1부, 성적증명서 1부"], "verified": true, "date": {"lo": "2026-09-02T10:00", "hi": "2026-09-08T17:30", "precision": "minute", "year_inferred": true}}
+{"src": "notice:main:94717", "dst": "rule:early:honors", "type": "DEFINES"}
+{"src": "notice:main:94717", "dst": "rule:early:bsms", "type": "DEFINES"}
+{"src": "notice:family:122618", "dst": "dept:family", "type": "POSTED_BY"}
+{"src": "notice:family:122618", "dst": "notice:main:94717", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:mse:216963", "dst": "dept:mse", "type": "POSTED_BY"}
+{"src": "notice:mse:216963", "dst": "notice:main:94717", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:german:5602", "dst": "dept:german", "type": "POSTED_BY"}
+{"src": "notice:german:5602", "dst": "notice:main:94717", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:fn:122610", "dst": "dept:fn", "type": "POSTED_BY"}
+{"src": "notice:fn:122610", "dst": "notice:main:94717", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:physics:216961", "dst": "dept:physics", "type": "POSTED_BY"}
+{"src": "notice:physics:216961", "dst": "notice:main:94717", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:childwelfare:122613", "dst": "dept:childwelfare", "type": "POSTED_BY"}
+{"src": "notice:childwelfare:122613", "dst": "notice:main:94717", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:cloth:122624", "dst": "dept:cloth", "type": "POSTED_BY"}
+{"src": "notice:cloth:122624", "dst": "notice:main:94717", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:aie:122611", "dst": "dept:aie", "type": "POSTED_BY"}
+{"src": "notice:aie:122611", "dst": "notice:main:94717", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:japan:122614", "dst": "dept:japan", "type": "POSTED_BY"}
+{"src": "notice:japan:122614", "dst": "notice:main:94717", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:econ:122641", "dst": "dept:econ", "type": "POSTED_BY"}
+{"src": "notice:econ:122641", "dst": "notice:main:94717", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:edu:216974", "dst": "dept:edu", "type": "POSTED_BY"}
+{"src": "notice:edu:216974", "dst": "notice:main:94717", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:lcb:216976", "dst": "dept:lcb", "type": "POSTED_BY"}
+{"src": "notice:lcb:216976", "dst": "notice:main:94717", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:lis:216970", "dst": "dept:lis", "type": "POSTED_BY"}
+{"src": "notice:lis:216970", "dst": "notice:main:94717", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:math:122636", "dst": "dept:math", "type": "POSTED_BY"}
+{"src": "notice:math:122636", "dst": "notice:main:94717", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:cultureandtourism:122674", "dst": "dept:cultureandtourism", "type": "POSTED_BY"}
+{"src": "notice:cultureandtourism:122674", "dst": "notice:main:94717", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:law:122657", "dst": "dept:law", "type": "POSTED_BY"}
+{"src": "notice:law:122657", "dst": "notice:main:94717", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:bio:122661", "dst": "dept:bio", "type": "POSTED_BY"}
+{"src": "notice:bio:122661", "dst": "notice:main:94717", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:stat:slug08", "dst": "dept:stat", "type": "POSTED_BY"}
+{"src": "notice:stat:slug08", "dst": "notice:main:94717", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:biz:122690", "dst": "dept:biz", "type": "POSTED_BY"}
+{"src": "notice:biz:122690", "dst": "notice:main:94717", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:main:94905", "dst": "office:comm", "type": "POSTED_BY"}
+{"src": "notice:main:94905", "dst": "office:haksa", "type": "ISSUED_BY"}
+{"src": "notice:main:94905", "dst": "stage:2026-2:영문성명확인", "type": "DESCRIBES", "evidence": ["1/13(수)~1/31(일)"], "verified": true, "date": {"lo": "2027-01-13", "hi": "2027-01-31", "precision": "day", "year_inferred": true, "tentative": true}}
+{"src": "notice:main:94905", "dst": "stage:2026-2:계속수학신청", "type": "DESCRIBES", "evidence": ["1/15(금)~1/18(월)"], "verified": true, "date": {"lo": "2027-01-15", "hi": "2027-01-18", "precision": "day", "year_inferred": true, "tentative": true}}
+{"src": "notice:main:94905", "dst": "stage:2026-2:최종사정결과조회", "type": "DESCRIBES", "evidence": ["1/28(목)~1/29(금)"], "verified": true, "date": {"lo": "2027-01-28", "hi": "2027-01-29", "precision": "day", "year_inferred": true, "tentative": true}}
+{"src": "notice:main:94905", "dst": "contact:졸업심사:college:science:02-710-9019", "type": "DEFINES", "evidence": ["이과대학, 사회과학대학, 법과대학 | (02)710-9019"]}
+{"src": "notice:main:94905", "dst": "contact:교직:*:02-2077-7352", "type": "DEFINES", "evidence": ["교직 이수중인 학생(교원양성센터) | (02)2077-7352"]}
+{"src": "notice:conecon:p6", "dst": "dept:conecon", "type": "POSTED_BY"}
+{"src": "notice:conecon:p6", "dst": "notice:main:94905", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:ds:137631", "dst": "dept:ds", "type": "POSTED_BY"}
+{"src": "notice:ds:137631", "dst": "notice:main:94905", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:csweb:130414", "dst": "dept:csweb", "type": "POSTED_BY"}
+{"src": "notice:csweb:130414", "dst": "notice:main:94905", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:edu:217023", "dst": "dept:edu", "type": "POSTED_BY"}
+{"src": "notice:edu:217023", "dst": "notice:main:94905", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:math:122826", "dst": "dept:math", "type": "POSTED_BY"}
+{"src": "notice:math:122826", "dst": "notice:main:94905", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:math:122826", "dst": "office:haksa", "type": "ISSUED_BY"}
+{"src": "notice:fn:122821", "dst": "dept:fn", "type": "POSTED_BY"}
+{"src": "notice:fn:122821", "dst": "notice:main:94905", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:childwelfare:122839", "dst": "dept:childwelfare", "type": "POSTED_BY"}
+{"src": "notice:childwelfare:122839", "dst": "notice:main:94905", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:history:122830", "dst": "dept:history", "type": "POSTED_BY"}
+{"src": "notice:history:122830", "dst": "notice:main:94905", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:aie:122828", "dst": "dept:aie", "type": "POSTED_BY"}
+{"src": "notice:aie:122828", "dst": "notice:main:94905", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:chinese:503", "dst": "dept:chinese", "type": "POSTED_BY"}
+{"src": "notice:chinese:503", "dst": "notice:main:94905", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:korean:122827", "dst": "dept:korean", "type": "POSTED_BY"}
+{"src": "notice:korean:122827", "dst": "notice:main:94905", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:german:5605", "dst": "dept:german", "type": "POSTED_BY"}
+{"src": "notice:german:5605", "dst": "notice:main:94905", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:japan:122910", "dst": "dept:japan", "type": "POSTED_BY"}
+{"src": "notice:japan:122910", "dst": "notice:main:94905", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:stat:slug07", "dst": "dept:stat", "type": "POSTED_BY"}
+{"src": "notice:stat:slug07", "dst": "notice:main:94905", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:physics:217101", "dst": "dept:physics", "type": "POSTED_BY"}
+{"src": "notice:physics:217101", "dst": "notice:main:94905", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:biz:140052", "dst": "dept:biz", "type": "POSTED_BY"}
+{"src": "notice:biz:140052", "dst": "notice:main:94905", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:main:94972", "dst": "office:comm", "type": "POSTED_BY"}
+{"src": "notice:main:94972", "dst": "office:haksa", "type": "ISSUED_BY"}
+{"src": "notice:main:94972", "dst": "stage:2026-2:졸업계획제출", "type": "DESCRIBES", "evidence": ["1. 신청기간: 9. 15.(화) ~ 9. 28.(월)", "현재 8학기 이상의 재학생이라면 모두 졸업계획을 제출"], "verified": true, "date": {"lo": "2026-09-15", "hi": "2026-09-28", "precision": "day", "year_inferred": true}}
+{"src": "notice:main:94972", "dst": "stage:2026-2:전공선택", "type": "DESCRIBES", "evidence": ["재학생 졸업예정자전공선택(*희망자만)"], "verified": true, "date": {"lo": "2026-09-15", "hi": "2026-09-28", "precision": "day", "year_inferred": true}}
+{"src": "notice:main:94972", "dst": "stage:2026-2:정보인증제등록", "type": "MENTIONS", "evidence": ["2020학번부터 정보인증제 의무 없음"], "verified": true, "date": null}
+{"src": "notice:conecon:p5", "dst": "dept:conecon", "type": "POSTED_BY"}
+{"src": "notice:conecon:p5", "dst": "notice:main:94972", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:ds:137634", "dst": "dept:ds", "type": "POSTED_BY"}
+{"src": "notice:ds:137634", "dst": "notice:main:94972", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:german:5606", "dst": "dept:german", "type": "POSTED_BY"}
+{"src": "notice:german:5606", "dst": "notice:main:94972", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:lcb:217044", "dst": "dept:lcb", "type": "POSTED_BY"}
+{"src": "notice:lcb:217044", "dst": "notice:main:94972", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:lis:217043", "dst": "dept:lis", "type": "POSTED_BY"}
+{"src": "notice:lis:217043", "dst": "notice:main:94972", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:cultureandtourism:122921", "dst": "dept:cultureandtourism", "type": "POSTED_BY"}
+{"src": "notice:cultureandtourism:122921", "dst": "notice:main:94972", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:law:122911", "dst": "dept:law", "type": "POSTED_BY"}
+{"src": "notice:law:122911", "dst": "notice:main:94972", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:bio:122914", "dst": "dept:bio", "type": "POSTED_BY"}
+{"src": "notice:bio:122914", "dst": "notice:main:94972", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:math:122908", "dst": "dept:math", "type": "POSTED_BY"}
+{"src": "notice:math:122908", "dst": "notice:main:94972", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:fn:122905", "dst": "dept:fn", "type": "POSTED_BY"}
+{"src": "notice:fn:122905", "dst": "notice:main:94972", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:physics:217037", "dst": "dept:physics", "type": "POSTED_BY"}
+{"src": "notice:physics:217037", "dst": "notice:main:94972", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:childwelfare:122912", "dst": "dept:childwelfare", "type": "POSTED_BY"}
+{"src": "notice:childwelfare:122912", "dst": "notice:main:94972", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:history:122907", "dst": "dept:history", "type": "POSTED_BY"}
+{"src": "notice:history:122907", "dst": "notice:main:94972", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:english:122919", "dst": "dept:english", "type": "POSTED_BY"}
+{"src": "notice:english:122919", "dst": "notice:main:94972", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:cloth:122923", "dst": "dept:cloth", "type": "POSTED_BY"}
+{"src": "notice:cloth:122923", "dst": "notice:main:94972", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:aie:122904", "dst": "dept:aie", "type": "POSTED_BY"}
+{"src": "notice:aie:122904", "dst": "notice:main:94972", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:csweb:130416", "dst": "dept:csweb", "type": "POSTED_BY"}
+{"src": "notice:csweb:130416", "dst": "notice:main:94972", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:korean:122909", "dst": "dept:korean", "type": "POSTED_BY"}
+{"src": "notice:korean:122909", "dst": "notice:main:94972", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:chem:122915", "dst": "dept:chem", "type": "POSTED_BY"}
+{"src": "notice:chem:122915", "dst": "notice:main:94972", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:econ:122942", "dst": "dept:econ", "type": "POSTED_BY"}
+{"src": "notice:econ:122942", "dst": "notice:main:94972", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:stat:slug05", "dst": "dept:stat", "type": "POSTED_BY"}
+{"src": "notice:stat:slug05", "dst": "notice:main:94972", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:edu:217056", "dst": "dept:edu", "type": "POSTED_BY"}
+{"src": "notice:edu:217056", "dst": "notice:main:94972", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:prad:2283", "dst": "dept:prad", "type": "POSTED_BY"}
+{"src": "notice:prad:2283", "dst": "notice:main:94972", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:japan:123089", "dst": "dept:japan", "type": "POSTED_BY"}
+{"src": "notice:japan:123089", "dst": "notice:main:94972", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:chinese:504", "dst": "dept:chinese", "type": "POSTED_BY"}
+{"src": "notice:chinese:504", "dst": "notice:main:94972", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:mse:217126", "dst": "dept:mse", "type": "POSTED_BY"}
+{"src": "notice:mse:217126", "dst": "notice:main:94972", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:politics:140064", "dst": "dept:politics", "type": "POSTED_BY"}
+{"src": "notice:politics:140064", "dst": "notice:main:94972", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:main:95086", "dst": "office:comm", "type": "POSTED_BY"}
+{"src": "notice:main:95086", "dst": "office:haksa", "type": "ISSUED_BY"}
+{"src": "notice:main:95086", "dst": "stage:2026-2:이수현황정리", "type": "DESCRIBES", "evidence": ["2026.09.21 (월) ~ 2026.10.02(금)"], "verified": true, "date": {"lo": "2026-09-21", "hi": "2026-10-02", "precision": "day"}}
+{"src": "notice:ds:145603", "dst": "dept:ds", "type": "POSTED_BY"}
+{"src": "notice:ds:145603", "dst": "notice:main:95086", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:csweb:145582", "dst": "dept:csweb", "type": "POSTED_BY"}
+{"src": "notice:csweb:145582", "dst": "notice:main:95086", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:conecon:65", "dst": "dept:conecon", "type": "POSTED_BY"}
+{"src": "notice:conecon:65", "dst": "notice:main:95086", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:electro:145335", "dst": "dept:electro", "type": "POSTED_BY"}
+{"src": "notice:electro:145335", "dst": "notice:main:95086", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:main:95274", "dst": "office:comm", "type": "POSTED_BY"}
+{"src": "notice:main:95274", "dst": "office:haksa", "type": "ISSUED_BY"}
+{"src": "notice:main:95274", "dst": "stage:2026-2:논문제신청", "type": "DESCRIBES", "evidence": ["2026.10.06(화) ~ 10.19(월)"], "verified": true, "date": {"lo": "2026-10-06", "hi": "2026-10-19", "precision": "day"}}
+{"src": "notice:main:95274", "dst": "rule:thesis-apply", "type": "DEFINES"}
+{"src": "notice:main:95274", "dst": "contact:졸업심사:college:liberal-arts:02-710-9015", "type": "DEFINES", "evidence": ["문과대학, 약학대학, 영어영문학부, 미디어학부 | (02)710-9015"]}
+{"src": "notice:conecon:p3", "dst": "dept:conecon", "type": "POSTED_BY"}
+{"src": "notice:conecon:p3", "dst": "notice:main:95274", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:econ:144924", "dst": "dept:econ", "type": "POSTED_BY"}
+{"src": "notice:econ:144924", "dst": "notice:main:95274", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:mse:217170", "dst": "dept:mse", "type": "POSTED_BY"}
+{"src": "notice:mse:217170", "dst": "notice:main:95274", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:ds:145608", "dst": "dept:ds", "type": "POSTED_BY"}
+{"src": "notice:ds:145608", "dst": "notice:main:95274", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:lis:217166", "dst": "dept:lis", "type": "POSTED_BY"}
+{"src": "notice:lis:217166", "dst": "notice:main:95274", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:fn:144935", "dst": "dept:fn", "type": "POSTED_BY"}
+{"src": "notice:fn:144935", "dst": "notice:main:95274", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:physics:217167", "dst": "dept:physics", "type": "POSTED_BY"}
+{"src": "notice:physics:217167", "dst": "notice:main:95274", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:childwelfare:145310", "dst": "dept:childwelfare", "type": "POSTED_BY"}
+{"src": "notice:childwelfare:145310", "dst": "notice:main:95274", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:english:144923", "dst": "dept:english", "type": "POSTED_BY"}
+{"src": "notice:english:144923", "dst": "notice:main:95274", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:aie:144931", "dst": "dept:aie", "type": "POSTED_BY"}
+{"src": "notice:aie:144931", "dst": "notice:main:95274", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:chinese:506", "dst": "dept:chinese", "type": "POSTED_BY"}
+{"src": "notice:chinese:506", "dst": "notice:main:95274", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:csweb:145586", "dst": "dept:csweb", "type": "POSTED_BY"}
+{"src": "notice:csweb:145586", "dst": "notice:main:95274", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:stat:slug04", "dst": "dept:stat", "type": "POSTED_BY"}
+{"src": "notice:stat:slug04", "dst": "notice:main:95274", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:korean:144934", "dst": "dept:korean", "type": "POSTED_BY"}
+{"src": "notice:korean:144934", "dst": "notice:main:95274", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:prad:2340", "dst": "dept:prad", "type": "POSTED_BY"}
+{"src": "notice:prad:2340", "dst": "notice:main:95274", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:prad:2339", "dst": "dept:prad", "type": "POSTED_BY"}
+{"src": "notice:prad:2339", "dst": "notice:main:95274", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:edu:217174", "dst": "dept:edu", "type": "POSTED_BY"}
+{"src": "notice:edu:217174", "dst": "notice:main:95274", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:law:145317", "dst": "dept:law", "type": "POSTED_BY"}
+{"src": "notice:law:145317", "dst": "notice:main:95274", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:math:145315", "dst": "dept:math", "type": "POSTED_BY"}
+{"src": "notice:math:145315", "dst": "notice:main:95274", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:history:145336", "dst": "dept:history", "type": "POSTED_BY"}
+{"src": "notice:history:145336", "dst": "notice:main:95274", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:chem:145331", "dst": "dept:chem", "type": "POSTED_BY"}
+{"src": "notice:chem:145331", "dst": "notice:main:95274", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:lcb:217188", "dst": "dept:lcb", "type": "POSTED_BY"}
+{"src": "notice:lcb:217188", "dst": "notice:main:95274", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:cultureandtourism:145344", "dst": "dept:cultureandtourism", "type": "POSTED_BY"}
+{"src": "notice:cultureandtourism:145344", "dst": "notice:main:95274", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:cloth:145345", "dst": "dept:cloth", "type": "POSTED_BY"}
+{"src": "notice:cloth:145345", "dst": "notice:main:95274", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:german:5608", "dst": "dept:german", "type": "POSTED_BY"}
+{"src": "notice:german:5608", "dst": "notice:main:95274", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:bio:145528", "dst": "dept:bio", "type": "POSTED_BY"}
+{"src": "notice:bio:145528", "dst": "notice:main:95274", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:bio:145527", "dst": "dept:bio", "type": "POSTED_BY"}
+{"src": "notice:bio:145527", "dst": "notice:main:95274", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:japan:145515", "dst": "dept:japan", "type": "POSTED_BY"}
+{"src": "notice:japan:145515", "dst": "notice:main:95274", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:chembioe:145522", "dst": "dept:chembioe", "type": "POSTED_BY"}
+{"src": "notice:chembioe:145522", "dst": "notice:main:95274", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:ds:145610", "dst": "dept:ds", "type": "POSTED_BY"}
+{"src": "notice:ds:145610", "dst": "notice:main:95274", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:csweb:145588", "dst": "dept:csweb", "type": "POSTED_BY"}
+{"src": "notice:csweb:145588", "dst": "notice:main:95274", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:edu:217275", "dst": "dept:edu", "type": "POSTED_BY"}
+{"src": "notice:edu:217275", "dst": "notice:main:95274", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:politics:147050", "dst": "dept:politics", "type": "POSTED_BY"}
+{"src": "notice:politics:147050", "dst": "notice:main:95274", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:biz:154038", "dst": "dept:biz", "type": "POSTED_BY"}
+{"src": "notice:biz:154038", "dst": "notice:main:95274", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:main:96121", "dst": "office:comm", "type": "POSTED_BY"}
+{"src": "notice:main:96121", "dst": "office:haksa", "type": "ISSUED_BY"}
+{"src": "notice:main:96121", "dst": "notice:main:96120", "type": "REFERS_TO"}
+{"src": "notice:main:96121", "dst": "stage:2026-2:수료생졸업신청", "type": "DESCRIBES", "evidence": ["2026. 12. 01.(화) ~ 12. 30.(수)"], "verified": true, "date": {"lo": "2026-12-01", "hi": "2026-12-30", "precision": "day"}}
+{"src": "notice:main:96121", "dst": "cau:completer-3years", "type": "DEFINES"}
+{"src": "notice:fn:153953", "dst": "dept:fn", "type": "POSTED_BY"}
+{"src": "notice:fn:153953", "dst": "notice:main:96121", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:edu:217447", "dst": "dept:edu", "type": "POSTED_BY"}
+{"src": "notice:edu:217447", "dst": "notice:main:96121", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:mse:217454", "dst": "dept:mse", "type": "POSTED_BY"}
+{"src": "notice:mse:217454", "dst": "notice:main:96121", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:ds:153964", "dst": "dept:ds", "type": "POSTED_BY"}
+{"src": "notice:ds:153964", "dst": "notice:main:96121", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:german:5616", "dst": "dept:german", "type": "POSTED_BY"}
+{"src": "notice:german:5616", "dst": "notice:main:96121", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:lcb:217453", "dst": "dept:lcb", "type": "POSTED_BY"}
+{"src": "notice:lcb:217453", "dst": "notice:main:96121", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:lis:217450", "dst": "dept:lis", "type": "POSTED_BY"}
+{"src": "notice:lis:217450", "dst": "notice:main:96121", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:cultureandtourism:153975", "dst": "dept:cultureandtourism", "type": "POSTED_BY"}
+{"src": "notice:cultureandtourism:153975", "dst": "notice:main:96121", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:law:153978", "dst": "dept:law", "type": "POSTED_BY"}
+{"src": "notice:law:153978", "dst": "notice:main:96121", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:physics:217443", "dst": "dept:physics", "type": "POSTED_BY"}
+{"src": "notice:physics:217443", "dst": "notice:main:96121", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:history:153999", "dst": "dept:history", "type": "POSTED_BY"}
+{"src": "notice:history:153999", "dst": "notice:main:96121", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:cloth:153996", "dst": "dept:cloth", "type": "POSTED_BY"}
+{"src": "notice:cloth:153996", "dst": "notice:main:96121", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:aie:153957", "dst": "dept:aie", "type": "POSTED_BY"}
+{"src": "notice:aie:153957", "dst": "notice:main:96121", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:politics:154009", "dst": "dept:politics", "type": "POSTED_BY"}
+{"src": "notice:politics:154009", "dst": "notice:main:96121", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:chinese:513", "dst": "dept:chinese", "type": "POSTED_BY"}
+{"src": "notice:chinese:513", "dst": "notice:main:96121", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:csweb:153963", "dst": "dept:csweb", "type": "POSTED_BY"}
+{"src": "notice:csweb:153963", "dst": "notice:main:96121", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:korean:153956", "dst": "dept:korean", "type": "POSTED_BY"}
+{"src": "notice:korean:153956", "dst": "notice:main:96121", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:chem:153967", "dst": "dept:chem", "type": "POSTED_BY"}
+{"src": "notice:chem:153967", "dst": "notice:main:96121", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:math:154016", "dst": "dept:math", "type": "POSTED_BY"}
+{"src": "notice:math:154016", "dst": "notice:main:96121", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:math:154016", "dst": "office:haksa", "type": "ISSUED_BY"}
+{"src": "notice:stat:slug01", "dst": "dept:stat", "type": "POSTED_BY"}
+{"src": "notice:stat:slug01", "dst": "notice:main:96121", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:childwelfare:154044", "dst": "dept:childwelfare", "type": "POSTED_BY"}
+{"src": "notice:childwelfare:154044", "dst": "notice:main:96121", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:prad:14725", "dst": "dept:prad", "type": "POSTED_BY"}
+{"src": "notice:prad:14725", "dst": "notice:main:96121", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:main:96120", "dst": "office:comm", "type": "POSTED_BY"}
+{"src": "notice:main:96120", "dst": "office:haksa", "type": "ISSUED_BY"}
+{"src": "notice:main:96120", "dst": "stage:2026-2:논문제결과물제출", "type": "DESCRIBES", "evidence": ["1. 제출기간 : 2026. 12. 1.(화) ~ 12. 30.(수)"], "verified": true, "date": {"lo": "2026-12-01", "hi": "2026-12-30", "precision": "day"}}
+{"src": "notice:main:96120", "dst": "stage:2026-2:정보인증제등록", "type": "DESCRIBES", "evidence": ["1. 제출기간 : 2026. 12. 1.(화) ~ 12. 30.(수)"], "verified": true, "date": {"lo": "2026-12-01", "hi": "2026-12-30", "precision": "day"}}
+{"src": "notice:main:96120", "dst": "stage:2026-2:인증제결과확인", "type": "DESCRIBES", "evidence": ["2027. 1. 7.(목) ~ 1. 8.(금)"], "verified": true, "date": {"lo": "2027-01-07", "hi": "2027-01-08", "precision": "day"}}
+{"src": "notice:main:96120", "dst": "cau:cert-irreversible", "type": "DEFINES"}
+{"src": "notice:main:96120", "dst": "cau:check-result", "type": "DEFINES"}
+{"src": "notice:main:96120", "dst": "contact:졸업논문제:*:각 전공 사무실(제1전공/복수전공)", "type": "DEFINES", "evidence": ["※ 졸업논문제 관련 문의는 각 학과사무실로 요망"]}
+{"src": "notice:main:96120", "dst": "contact:졸업심사:college:liberal-arts:02-710-9994", "type": "DEFINES", "evidence": ["문과대학, 약학대학, 미디어학부, 영어영문학부(02)710-9994"]}
+{"src": "notice:cloth:153951", "dst": "dept:cloth", "type": "POSTED_BY"}
+{"src": "notice:cloth:153951", "dst": "notice:main:96120", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:german:5615", "dst": "dept:german", "type": "POSTED_BY"}
+{"src": "notice:german:5615", "dst": "notice:main:96120", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:lcb:217452", "dst": "dept:lcb", "type": "POSTED_BY"}
+{"src": "notice:lcb:217452", "dst": "notice:main:96120", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:cultureandtourism:153974", "dst": "dept:cultureandtourism", "type": "POSTED_BY"}
+{"src": "notice:cultureandtourism:153974", "dst": "notice:main:96120", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:law:153971", "dst": "dept:law", "type": "POSTED_BY"}
+{"src": "notice:law:153971", "dst": "notice:main:96120", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:history:153992", "dst": "dept:history", "type": "POSTED_BY"}
+{"src": "notice:history:153992", "dst": "notice:main:96120", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:english:153958", "dst": "dept:english", "type": "POSTED_BY"}
+{"src": "notice:english:153958", "dst": "notice:main:96120", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:politics:154008", "dst": "dept:politics", "type": "POSTED_BY"}
+{"src": "notice:politics:154008", "dst": "notice:main:96120", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:chinese:512", "dst": "dept:chinese", "type": "POSTED_BY"}
+{"src": "notice:chinese:512", "dst": "notice:main:96120", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:chem:153968", "dst": "dept:chem", "type": "POSTED_BY"}
+{"src": "notice:chem:153968", "dst": "notice:main:96120", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:math:154014", "dst": "dept:math", "type": "POSTED_BY"}
+{"src": "notice:math:154014", "dst": "notice:main:96120", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:stat:slug02", "dst": "dept:stat", "type": "POSTED_BY"}
+{"src": "notice:stat:slug02", "dst": "notice:main:96120", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:stat:slug03", "dst": "dept:stat", "type": "POSTED_BY"}
+{"src": "notice:stat:slug03", "dst": "notice:main:96120", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:childwelfare:154043", "dst": "dept:childwelfare", "type": "POSTED_BY"}
+{"src": "notice:childwelfare:154043", "dst": "notice:main:96120", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:biz:118427", "dst": "dept:biz", "type": "POSTED_BY"}
+{"src": "notice:biz:118427", "dst": "stage:2025-2:논문제제출:biz", "type": "DESCRIBES", "pending": true}
+{"src": "notice:biz:118673", "dst": "dept:biz", "type": "POSTED_BY"}
+{"src": "notice:biz:118673", "dst": "stage:2026-1:폭력예방교육", "type": "DESCRIBES", "pending": true}
+{"src": "notice:conecon:p4", "dst": "dept:conecon", "type": "POSTED_BY"}
+{"src": "notice:conecon:p4", "dst": "notice:biz:118673", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:japan:118658", "dst": "dept:japan", "type": "POSTED_BY"}
+{"src": "notice:japan:118658", "dst": "notice:biz:118673", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:law:118707", "dst": "dept:law", "type": "POSTED_BY"}
+{"src": "notice:law:118707", "dst": "notice:biz:118673", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:stat:slug15", "dst": "dept:stat", "type": "POSTED_BY"}
+{"src": "notice:stat:slug15", "dst": "notice:biz:118673", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:econ:119870", "dst": "dept:econ", "type": "POSTED_BY"}
+{"src": "notice:econ:119870", "dst": "stage:2026-1:교원자격검정", "type": "DESCRIBES", "pending": true}
+{"src": "notice:physics:216302", "dst": "dept:physics", "type": "POSTED_BY"}
+{"src": "notice:physics:216302", "dst": "notice:econ:119870", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:childwelfare:119853", "dst": "dept:childwelfare", "type": "POSTED_BY"}
+{"src": "notice:childwelfare:119853", "dst": "notice:econ:119870", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:history:119863", "dst": "dept:history", "type": "POSTED_BY"}
+{"src": "notice:history:119863", "dst": "notice:econ:119870", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:japan:119868", "dst": "dept:japan", "type": "POSTED_BY"}
+{"src": "notice:japan:119868", "dst": "notice:econ:119870", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:politics:119865", "dst": "dept:politics", "type": "POSTED_BY"}
+{"src": "notice:politics:119865", "dst": "notice:econ:119870", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:csweb:130392", "dst": "dept:csweb", "type": "POSTED_BY"}
+{"src": "notice:csweb:130392", "dst": "notice:econ:119870", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:korean:119864", "dst": "dept:korean", "type": "POSTED_BY"}
+{"src": "notice:korean:119864", "dst": "notice:econ:119870", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:english:119903", "dst": "dept:english", "type": "POSTED_BY"}
+{"src": "notice:english:119903", "dst": "notice:econ:119870", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:german:5583", "dst": "dept:german", "type": "POSTED_BY"}
+{"src": "notice:german:5583", "dst": "notice:econ:119870", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:bio:119928", "dst": "dept:bio", "type": "POSTED_BY"}
+{"src": "notice:bio:119928", "dst": "notice:econ:119870", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:edu:216353", "dst": "dept:edu", "type": "POSTED_BY"}
+{"src": "notice:edu:216353", "dst": "notice:econ:119870", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:chinese:497", "dst": "dept:chinese", "type": "POSTED_BY"}
+{"src": "notice:chinese:497", "dst": "notice:econ:119870", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:econ:119852", "dst": "dept:econ", "type": "POSTED_BY"}
+{"src": "notice:econ:119852", "dst": "stage:2026-1:논문제제출:econ", "type": "DESCRIBES", "pending": true}
+{"src": "notice:econ:145403", "dst": "dept:econ", "type": "POSTED_BY"}
+{"src": "notice:econ:145403", "dst": "dept:econ", "type": "ISSUED_BY"}
+{"src": "notice:econ:145403", "dst": "stage:2026-2:논문제결과물제출:econ", "type": "DESCRIBES", "evidence": ["논문: 2026.12.01(화) ~ 12.17(목) 14:00까지"], "verified": true, "date": {"lo": "2026-12-01", "hi": "2026-12-17T14:00", "precision": "minute"}}
+{"src": "notice:econ:145403", "dst": "stage:2026-2:영어성적제출:econ", "type": "DESCRIBES", "evidence": ["영어성적: 2026.12.01.(화) ~ 12.24(목) 14:00까지"], "verified": true, "date": {"lo": "2026-12-01", "hi": "2026-12-24T14:00", "precision": "minute"}}
+{"src": "notice:econ:145403", "dst": "caution:econ_145403:0", "type": "DEFINES"}
+{"src": "notice:econ:145403", "dst": "caution:econ_145403:1", "type": "DEFINES"}
+{"src": "notice:econ:147535", "dst": "dept:econ", "type": "POSTED_BY"}
+{"src": "notice:econ:147535", "dst": "office:teacher", "type": "ISSUED_BY"}
+{"src": "notice:econ:147535", "dst": "stage:2026-2:교원자격검정", "type": "DESCRIBES", "evidence": ["2026년 12월 1일(화) ~ 2026년 12월 30일(수)"], "verified": true, "date": {"lo": "2026-12-01", "hi": "2026-12-30", "precision": "day"}}
+{"src": "notice:econ:147535", "dst": "stage:2026-2:영양사합격확인서제출:fn", "type": "DESCRIBES", "evidence": ["2027년 1월 15일(금)까지"], "verified": true, "date": {"lo": null, "hi": "2027-01-15", "precision": "day"}}
+{"src": "notice:econ:147535", "dst": "caution:econ_147535:0", "type": "DEFINES"}
+{"src": "notice:econ:147535", "dst": "contact:교원자격검정:dept:econ:02-2077-7352", "type": "DEFINES", "evidence": ["교원양성센터 02-2077-7352"]}
+{"src": "notice:edu:217407", "dst": "dept:edu", "type": "POSTED_BY"}
+{"src": "notice:edu:217407", "dst": "notice:econ:147535", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:childwelfare:147537", "dst": "dept:childwelfare", "type": "POSTED_BY"}
+{"src": "notice:childwelfare:147537", "dst": "notice:econ:147535", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:english:147534", "dst": "dept:english", "type": "POSTED_BY"}
+{"src": "notice:english:147534", "dst": "notice:econ:147535", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:korean:147533", "dst": "dept:korean", "type": "POSTED_BY"}
+{"src": "notice:korean:147533", "dst": "notice:econ:147535", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:math:147543", "dst": "dept:math", "type": "POSTED_BY"}
+{"src": "notice:math:147543", "dst": "notice:econ:147535", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:fn:147541", "dst": "dept:fn", "type": "POSTED_BY"}
+{"src": "notice:fn:147541", "dst": "notice:econ:147535", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:cloth:147546", "dst": "dept:cloth", "type": "POSTED_BY"}
+{"src": "notice:cloth:147546", "dst": "notice:econ:147535", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:japan:147538", "dst": "dept:japan", "type": "POSTED_BY"}
+{"src": "notice:japan:147538", "dst": "notice:econ:147535", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:csweb:147544", "dst": "dept:csweb", "type": "POSTED_BY"}
+{"src": "notice:csweb:147544", "dst": "notice:econ:147535", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:chem:147558", "dst": "dept:chem", "type": "POSTED_BY"}
+{"src": "notice:chem:147558", "dst": "notice:econ:147535", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:lis:217415", "dst": "dept:lis", "type": "POSTED_BY"}
+{"src": "notice:lis:217415", "dst": "notice:econ:147535", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:history:147577", "dst": "dept:history", "type": "POSTED_BY"}
+{"src": "notice:history:147577", "dst": "notice:econ:147535", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:edu:211602", "dst": "dept:edu", "type": "POSTED_BY"}
+{"src": "notice:edu:211602", "dst": "stage:2025-2:학위증배부:edu", "type": "DESCRIBES", "pending": true}
+{"src": "notice:edu:215710", "dst": "dept:edu", "type": "POSTED_BY"}
+{"src": "notice:edu:215710", "dst": "stage:2026-1:기타:edu", "type": "DESCRIBES", "pending": true}
+{"src": "notice:edu:216178", "dst": "dept:edu", "type": "POSTED_BY"}
+{"src": "notice:edu:216178", "dst": "stage:2026-1:지도교수:edu", "type": "DESCRIBES", "pending": true}
+{"src": "notice:edu:217367", "dst": "dept:edu", "type": "POSTED_BY"}
+{"src": "notice:edu:217367", "dst": "dept:edu", "type": "ISSUED_BY"}
+{"src": "notice:edu:217367", "dst": "stage:2026-2:지도교수배정:edu", "type": "MENTIONS", "evidence": ["2026-2학기 졸업논문 지도교수 배정 결과를 안내드립니다."], "verified": true, "date": null}
+{"src": "notice:edu:217367", "dst": "stage:2026-2:논문제결과물제출:edu", "type": "DESCRIBES", "evidence": ["12월 24일 학과 사무실 제출"], "verified": true, "date": {"lo": null, "hi": "2026-12-24", "precision": "day", "year_inferred": true}}
+{"src": "notice:edu:217367", "dst": "caution:edu_217367:0", "type": "DEFINES"}
+{"src": "notice:global:332", "dst": "dept:global", "type": "POSTED_BY"}
+{"src": "notice:global:332", "dst": "stage:2026-1:졸업시험:global", "type": "DESCRIBES", "pending": true}
+{"src": "notice:global:372", "dst": "dept:global", "type": "POSTED_BY"}
+{"src": "notice:global:372", "dst": "dept:global", "type": "ISSUED_BY"}
+{"src": "notice:global:372", "dst": "stage:2026-2:졸업시험:global", "type": "DESCRIBES", "evidence": ["[전기 졸업(2월)] 12월 말"], "verified": true, "date": {"lo": "2026-12-21", "hi": "2026-12-31", "precision": "month", "tentative": true, "year_inferred": true}}
+{"src": "notice:global:372", "dst": "caution:global_372:0", "type": "DEFINES"}
+{"src": "notice:global:372", "dst": "caution:global_372:1", "type": "DEFINES"}
+{"src": "notice:global:372", "dst": "caution:global_372:2", "type": "DEFINES"}
+{"src": "notice:global:372", "dst": "caution:global_372:3", "type": "DEFINES"}
+{"src": "notice:global:372", "dst": "contact:졸업논문제(글로벌협력전공):dept:global:02-2077-7496", "type": "DEFINES", "evidence": ["글로벌협력전공: 02-2077-7496"]}
+{"src": "notice:global:372", "dst": "contact:졸업논문제(앙트러프러너십전공):dept:global:02-2077-7578", "type": "DEFINES", "evidence": ["앙트러프러너십전공: 02-2077-7578"]}
+{"src": "notice:mse:215877", "dst": "dept:mse", "type": "POSTED_BY"}
+{"src": "notice:mse:217230", "dst": "dept:mse", "type": "POSTED_BY"}
+{"src": "notice:ds:137590", "dst": "dept:ds", "type": "POSTED_BY"}
+{"src": "notice:ds:137590", "dst": "stage:2025-2:학위증배부:ds", "type": "DESCRIBES", "pending": true}
+{"src": "notice:csweb:130366", "dst": "dept:csweb", "type": "POSTED_BY"}
+{"src": "notice:csweb:130366", "dst": "notice:ds:137590", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:ds:137604", "dst": "dept:ds", "type": "POSTED_BY"}
+{"src": "notice:ds:137604", "dst": "stage:2026-1:졸업작품·프로젝트:ds", "type": "DESCRIBES", "pending": true}
+{"src": "notice:csweb:130381", "dst": "dept:csweb", "type": "POSTED_BY"}
+{"src": "notice:csweb:130381", "dst": "notice:ds:137604", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:ds:137618", "dst": "dept:ds", "type": "POSTED_BY"}
+{"src": "notice:ds:137618", "dst": "dept:ds", "type": "ISSUED_BY"}
+{"src": "notice:ds:137618", "dst": "stage:2026-2:졸업작품제안서제출:ds", "type": "DESCRIBES", "evidence": ["6월 9일(화) 오후 4시까지", "6월 12일(금) 오후 5시로 연장합니다."], "verified": true, "date": {"lo": "2026-05-19", "hi": "2026-06-12T17:00", "precision": "minute"}}
+{"src": "notice:ds:137618", "dst": "caution:ds_137618:0", "type": "DEFINES"}
+{"src": "notice:ds:137618", "dst": "caution:ds_137618:1", "type": "DEFINES"}
+{"src": "notice:ds:137618", "dst": "contact:졸업작품:dept:ds:02-710-9295", "type": "DEFINES", "evidence": ["공동기기실 02-710-9295"]}
+{"src": "notice:csweb:130396", "dst": "dept:csweb", "type": "POSTED_BY"}
+{"src": "notice:csweb:130396", "dst": "notice:ds:137618", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:ds:137617", "dst": "dept:ds", "type": "POSTED_BY"}
+{"src": "notice:ds:137617", "dst": "stage:2026-1:졸업작품·프로젝트:ds", "type": "DESCRIBES", "pending": true}
+{"src": "notice:csweb:130395", "dst": "dept:csweb", "type": "POSTED_BY"}
+{"src": "notice:csweb:130395", "dst": "notice:ds:137617", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:ds:137627", "dst": "dept:ds", "type": "POSTED_BY"}
+{"src": "notice:ds:137627", "dst": "stage:2026-1:졸업작품·프로젝트:ds", "type": "DESCRIBES", "pending": true}
+{"src": "notice:csweb:130410", "dst": "dept:csweb", "type": "POSTED_BY"}
+{"src": "notice:csweb:130410", "dst": "notice:ds:137627", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:ds:145606", "dst": "dept:ds", "type": "POSTED_BY"}
+{"src": "notice:ds:145606", "dst": "dept:ds", "type": "ISSUED_BY"}
+{"src": "notice:ds:145606", "dst": "stage:2026-2:졸업작품발표:ds", "type": "DESCRIBES", "evidence": ["2026년 10월 2일 금요일 10:30~12:00"], "verified": true, "date": {"lo": "2026-10-02T10:30", "hi": "2026-10-02T12:00", "precision": "minute"}}
+{"src": "notice:ds:145606", "dst": "stage:2026-2:발표자료포스터제출:ds", "type": "DESCRIBES", "evidence": ["2026년 10월 16일 금요일 17:00까지"], "verified": true, "date": {"lo": null, "hi": "2026-10-16T17:00", "precision": "minute"}}
+{"src": "notice:ds:145606", "dst": "stage:2026-2:포스터전시회:ds", "type": "DESCRIBES", "evidence": ["2026년 11월 5일 목요일 14:00-17:00"], "verified": true, "date": {"lo": "2026-11-05T14:00", "hi": "2026-11-05T17:00", "precision": "minute"}}
+{"src": "notice:csweb:145585", "dst": "dept:csweb", "type": "POSTED_BY"}
+{"src": "notice:csweb:145585", "dst": "notice:ds:145606", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:ds:147026", "dst": "dept:ds", "type": "POSTED_BY"}
+{"src": "notice:ds:147026", "dst": "dept:ds", "type": "ISSUED_BY"}
+{"src": "notice:ds:147026", "dst": "caution:ds_147026:0", "type": "DEFINES"}
+{"src": "notice:csweb:147022", "dst": "dept:csweb", "type": "POSTED_BY"}
+{"src": "notice:csweb:147022", "dst": "notice:ds:147026", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:ds:147376", "dst": "dept:ds", "type": "POSTED_BY"}
+{"src": "notice:ds:147376", "dst": "office:swcu", "type": "ISSUED_BY"}
+{"src": "notice:ds:147376", "dst": "stage:2026-2:산학협력졸업프로젝트계획서:ds", "type": "DESCRIBES", "evidence": ["2026. 10. 30.(금)까지"], "verified": true, "date": {"lo": null, "hi": "2026-10-30", "precision": "day"}}
+{"src": "notice:ds:147376", "dst": "stage:2026-2:산학협력졸업프로젝트결과보고서:ds", "type": "DESCRIBES", "evidence": ["2026. 12. 31.(목)까지"], "verified": true, "date": {"lo": null, "hi": "2026-12-31", "precision": "day"}}
+{"src": "notice:csweb:147375", "dst": "dept:csweb", "type": "POSTED_BY"}
+{"src": "notice:csweb:147375", "dst": "notice:ds:147376", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:ds:147652", "dst": "dept:ds", "type": "POSTED_BY"}
+{"src": "notice:ds:147652", "dst": "dept:ds", "type": "ISSUED_BY"}
+{"src": "notice:ds:147652", "dst": "stage:2027-1:졸업작품제안서제출:ds", "type": "DESCRIBES", "evidence": ["12월 11일(금) 오후 4시까지"], "verified": true, "date": {"lo": "2026-11-11", "hi": "2026-12-11T16:00", "precision": "minute"}}
+{"src": "notice:ds:147652", "dst": "caution:ds_147652:0", "type": "DEFINES"}
+{"src": "notice:ds:147652", "dst": "contact:졸업작품:dept:ds:02-710-9295", "type": "DEFINES", "evidence": ["공동기기실 02-710-9295"]}
+{"src": "notice:csweb:147651", "dst": "dept:csweb", "type": "POSTED_BY"}
+{"src": "notice:csweb:147651", "dst": "notice:ds:147652", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:ds:147649", "dst": "dept:ds", "type": "POSTED_BY"}
+{"src": "notice:ds:147649", "dst": "dept:ds", "type": "ISSUED_BY"}
+{"src": "notice:ds:147649", "dst": "stage:2026-2:논문제결과물제출:ds", "type": "DESCRIBES", "evidence": ["12/7(월) ~ 12/23(수) 기한 엄수!"], "verified": true, "date": {"lo": "2026-12-07", "hi": "2026-12-23", "precision": "day"}}
+{"src": "notice:ds:147649", "dst": "caution:ds_147649:0", "type": "DEFINES"}
+{"src": "notice:ds:147649", "dst": "caution:ds_147649:1", "type": "DEFINES"}
+{"src": "notice:ds:147649", "dst": "contact:졸업작품 결과보고서:dept:ds:02-710-9431", "type": "DEFINES", "evidence": ["컴퓨터과학전공 ( 02-710-9431"]}
+{"src": "notice:csweb:147648", "dst": "dept:csweb", "type": "POSTED_BY"}
+{"src": "notice:csweb:147648", "dst": "notice:ds:147649", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:german:5468", "dst": "dept:german", "type": "POSTED_BY"}
+{"src": "notice:german:5468", "dst": "stage:2026-1:양식·규정:german", "type": "DESCRIBES", "pending": true}
+{"src": "notice:german:5467", "dst": "dept:german", "type": "POSTED_BY"}
+{"src": "notice:german:5467", "dst": "stage:2026-1:양식·규정:german", "type": "DESCRIBES", "pending": true}
+{"src": "notice:german:5560", "dst": "dept:german", "type": "POSTED_BY"}
+{"src": "notice:german:5560", "dst": "stage:2026-1:양식·규정:german", "type": "DESCRIBES", "pending": true}
+{"src": "notice:lcb:216908", "dst": "dept:lcb", "type": "POSTED_BY"}
+{"src": "notice:lcb:216908", "dst": "stage:2026-1:학위증배부:lcb", "type": "DESCRIBES", "pending": true}
+{"src": "notice:cultureandtourism:122347", "dst": "dept:cultureandtourism", "type": "POSTED_BY"}
+{"src": "notice:cultureandtourism:122347", "dst": "stage:2026-1:학위증배부:cultureandtourism", "type": "DESCRIBES", "pending": true}
+{"src": "notice:cultureandtourism:145454", "dst": "dept:cultureandtourism", "type": "POSTED_BY"}
+{"src": "notice:cultureandtourism:145454", "dst": "dept:cultureandtourism", "type": "ISSUED_BY"}
+{"src": "notice:cultureandtourism:145454", "dst": "caution:cultureandtourism_145454:0", "type": "DEFINES"}
+{"src": "notice:law:109725", "dst": "dept:law", "type": "POSTED_BY"}
+{"src": "notice:law:109725", "dst": "stage:2025-2:인증제결과확인", "type": "DESCRIBES", "pending": true}
+{"src": "notice:stat:slug21", "dst": "dept:stat", "type": "POSTED_BY"}
+{"src": "notice:stat:slug21", "dst": "notice:law:109725", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:law:153973", "dst": "dept:law", "type": "POSTED_BY"}
+{"src": "notice:law:153973", "dst": "dept:law", "type": "ISSUED_BY"}
+{"src": "notice:law:153973", "dst": "caution:law_153973:0", "type": "DEFINES"}
+{"src": "notice:math:109880", "dst": "dept:math", "type": "POSTED_BY"}
+{"src": "notice:math:109880", "dst": "stage:2026-1:졸업시험:math", "type": "DESCRIBES", "pending": true}
+{"src": "notice:math:119157", "dst": "dept:math", "type": "POSTED_BY"}
+{"src": "notice:math:119157", "dst": "stage:2026-1:졸업시험:math", "type": "DESCRIBES", "pending": true}
+{"src": "notice:math:121057", "dst": "dept:math", "type": "POSTED_BY"}
+{"src": "notice:math:121057", "dst": "dept:math", "type": "ISSUED_BY"}
+{"src": "notice:math:121057", "dst": "stage:2026-2:졸업시험1차신청:math", "type": "DESCRIBES", "evidence": ["2026년 7월 9일(목) ~ 2026년 8월 2일(일)"], "verified": true, "date": {"lo": "2026-07-09", "hi": "2026-08-02", "precision": "day"}}
+{"src": "notice:math:121057", "dst": "stage:2026-2:졸업시험1차응시:math", "type": "DESCRIBES", "evidence": ["2026년 8월 14일(금)"], "verified": true, "date": {"lo": "2026-08-14T11:00", "hi": "2026-08-14T14:00", "precision": "minute"}}
+{"src": "notice:math:122650", "dst": "dept:math", "type": "POSTED_BY"}
+{"src": "notice:math:122650", "dst": "dept:math", "type": "ISSUED_BY"}
+{"src": "notice:math:122650", "dst": "stage:2026-2:콜로키움참석:math", "type": "DESCRIBES", "evidence": ["2학기 콜로키움 참석 신청은 Snoway 비교과 프로그램에서 신청해주시길 바랍니다."], "verified": true, "date": {"lo": null, "hi": null, "precision": "tbd", "note": "일정은 포스터 이미지에만 있음 → OCR 필요"}}
+{"src": "notice:math:146958", "dst": "dept:math", "type": "POSTED_BY"}
+{"src": "notice:math:146958", "dst": "dept:math", "type": "ISSUED_BY"}
+{"src": "notice:math:146958", "dst": "stage:2026-2:졸업시험2차신청:math", "type": "DESCRIBES", "evidence": ["2026년 10월 12일(월) ~ 2026년 11월 13일(금)", "모든 과목이 면제되어 졸업시험을 응시하지 않는 경우에도 졸업시험 신청은 하셔야 합니다."], "verified": true, "date": {"lo": "2026-10-12", "hi": "2026-11-13", "precision": "day"}}
+{"src": "notice:math:146958", "dst": "stage:2026-2:졸업시험2차응시:math", "type": "DESCRIBES", "evidence": ["날짜: 2026년 11월 27일(금)"], "verified": true, "date": {"lo": "2026-11-27T11:00", "hi": "2026-11-27T14:00", "precision": "minute"}}
+{"src": "notice:math:146958", "dst": "stage:2026-2:졸업시험결과:math", "type": "DESCRIBES", "evidence": ["졸업시험 결과는 12월 둘째 주 이내 발송될 예정입니다."], "verified": true, "date": {"lo": null, "hi": "2026-12-13", "precision": "week", "tentative": true}}
+{"src": "notice:math:146958", "dst": "rule:math-exam", "type": "DEFINES"}
+{"src": "notice:math:146958", "dst": "cau:math-exam-apply-even-exempt", "type": "DEFINES"}
+{"src": "notice:fn:118827", "dst": "dept:fn", "type": "POSTED_BY"}
+{"src": "notice:fn:118827", "dst": "stage:2026-1:졸업시험:fn", "type": "DESCRIBES", "pending": true}
+{"src": "notice:fn:120007", "dst": "dept:fn", "type": "POSTED_BY"}
+{"src": "notice:fn:120007", "dst": "stage:2026-1:졸업시험:fn", "type": "DESCRIBES", "pending": true}
+{"src": "notice:fn:122249", "dst": "dept:fn", "type": "POSTED_BY"}
+{"src": "notice:fn:122249", "dst": "stage:2026-1:기타:fn", "type": "DESCRIBES", "pending": true}
+{"src": "notice:fn:145311", "dst": "dept:fn", "type": "POSTED_BY"}
+{"src": "notice:fn:145311", "dst": "dept:fn", "type": "ISSUED_BY"}
+{"src": "notice:fn:145311", "dst": "stage:2026-2:졸업시험신청:fn", "type": "DESCRIBES", "evidence": ["10월 16일(금) 17:00 까지 이메일"], "verified": true, "date": {"lo": null, "hi": "2026-10-16T17:00", "precision": "minute"}}
+{"src": "notice:fn:145311", "dst": "stage:2026-2:졸업시험본시험1차:fn", "type": "DESCRIBES", "evidence": ["10월 27일(화) / 10월 29일(목) 17:00 ~ 20:30"], "verified": true, "date": {"lo": "2026-10-27T17:00", "hi": "2026-10-29T20:30", "precision": "minute"}}
+{"src": "notice:fn:145311", "dst": "stage:2026-2:졸업시험본시험2차:fn", "type": "DESCRIBES", "evidence": ["11월 03일(화) / 11월 05일(목) 17:00 ~ 20:30"], "verified": true, "date": {"lo": "2026-11-03T17:00", "hi": "2026-11-05T20:30", "precision": "minute"}}
+{"src": "notice:fn:145311", "dst": "stage:2026-2:졸업시험2차재시험:fn", "type": "DESCRIBES", "evidence": ["12월 04일(금) 13:00 ~ 16:30"], "verified": true, "date": {"lo": "2026-12-04T13:00", "hi": "2026-12-04T16:30", "precision": "minute"}}
+{"src": "notice:fn:145311", "dst": "caution:fn_145311:0", "type": "DEFINES"}
+{"src": "notice:fn:145311", "dst": "caution:fn_145311:1", "type": "DEFINES"}
+{"src": "notice:fn:145311", "dst": "caution:fn_145311:2", "type": "DEFINES"}
+{"src": "notice:fn:147626", "dst": "dept:fn", "type": "POSTED_BY"}
+{"src": "notice:fn:147626", "dst": "dept:fn", "type": "ISSUED_BY"}
+{"src": "notice:fn:147626", "dst": "stage:2026-2:졸업시험1차재시험:fn", "type": "DESCRIBES", "evidence": ["2026. 11. 27(금)", "12:00 ~ 18:50"], "verified": true, "date": {"lo": "2026-11-27T12:00", "hi": "2026-11-27T18:50", "precision": "minute"}}
+{"src": "notice:fn:147626", "dst": "caution:fn_147626:0", "type": "DEFINES"}
+{"src": "notice:physics:216435", "dst": "dept:physics", "type": "POSTED_BY"}
+{"src": "notice:physics:216435", "dst": "stage:2026-1:논문제제출:physics", "type": "DESCRIBES", "pending": true}
+{"src": "notice:physics:217463", "dst": "dept:physics", "type": "POSTED_BY"}
+{"src": "notice:physics:217463", "dst": "dept:physics", "type": "ISSUED_BY"}
+{"src": "notice:physics:217463", "dst": "stage:2026-2:논문제결과물제출:physics", "type": "DESCRIBES", "evidence": ["1. 제출기한: 2026.12.01.(화)~2026.12.20.(일) 자정까지"], "verified": true, "date": {"lo": "2026-12-01", "hi": "2026-12-20T23:59", "precision": "minute"}}
+{"src": "notice:childwelfare:118847", "dst": "dept:childwelfare", "type": "POSTED_BY"}
+{"src": "notice:childwelfare:119725", "dst": "dept:childwelfare", "type": "POSTED_BY"}
+{"src": "notice:childwelfare:119968", "dst": "dept:childwelfare", "type": "POSTED_BY"}
+{"src": "notice:childwelfare:120104", "dst": "dept:childwelfare", "type": "POSTED_BY"}
+{"src": "notice:childwelfare:122324", "dst": "dept:childwelfare", "type": "POSTED_BY"}
+{"src": "notice:childwelfare:122324", "dst": "stage:2026-1:학위증배부:childwelfare", "type": "DESCRIBES", "pending": true}
+{"src": "notice:childwelfare:145378", "dst": "dept:childwelfare", "type": "POSTED_BY"}
+{"src": "notice:childwelfare:147360", "dst": "dept:childwelfare", "type": "POSTED_BY"}
+{"src": "notice:childwelfare:147566", "dst": "dept:childwelfare", "type": "POSTED_BY"}
+{"src": "notice:childwelfare:147734", "dst": "dept:childwelfare", "type": "POSTED_BY"}
+{"src": "notice:history:119280", "dst": "dept:history", "type": "POSTED_BY"}
+{"src": "notice:history:119280", "dst": "stage:2026-1:지도교수:history", "type": "DESCRIBES", "pending": true}
+{"src": "notice:history:147247", "dst": "dept:history", "type": "POSTED_BY"}
+{"src": "notice:history:147247", "dst": "dept:history", "type": "ISSUED_BY"}
+{"src": "notice:history:147247", "dst": "stage:2026-2:졸업논문지도:history", "type": "DESCRIBES", "evidence": ["10/23(금)~12/11(금)"], "verified": true, "date": {"lo": "2026-10-23", "hi": "2026-12-11", "precision": "day"}}
+{"src": "notice:history:147247", "dst": "stage:2026-2:논문제결과물제출:history", "type": "DESCRIBES", "evidence": ["12/14(월)~12/18(금)"], "verified": true, "date": {"lo": "2026-12-14", "hi": "2026-12-18", "precision": "day"}}
+{"src": "notice:history:147247", "dst": "stage:2026-2:졸업논문심사:history", "type": "DESCRIBES", "evidence": ["12/21(월)~12/27(금)"], "verified": false, "date": {"lo": "2026-12-21", "hi": "2026-12-27", "precision": "day"}}
+{"src": "notice:history:147247", "dst": "stage:2026-2:졸업논문합격처리:history", "type": "DESCRIBES", "evidence": ["12/28(월)~12/31(목)"], "verified": true, "date": {"lo": "2026-12-28", "hi": "2026-12-31", "precision": "day"}}
+{"src": "notice:history:147247", "dst": "caution:history_147247:0", "type": "DEFINES"}
+{"src": "notice:history:147247", "dst": "contact:졸업논문:dept:history:02-710-9367", "type": "DEFINES", "evidence": ["(02-710-9367"]}
+{"src": "notice:english:115806", "dst": "dept:english", "type": "POSTED_BY"}
+{"src": "notice:english:115806", "dst": "stage:2025-2:학위증배부:english", "type": "DESCRIBES", "pending": true}
+{"src": "notice:english:118549", "dst": "dept:english", "type": "POSTED_BY"}
+{"src": "notice:english:118549", "dst": "stage:2026-1:대체시험·어학:english", "type": "DESCRIBES", "pending": true}
+{"src": "notice:english:119716", "dst": "dept:english", "type": "POSTED_BY"}
+{"src": "notice:english:119716", "dst": "stage:2026-1:대체시험·어학:english", "type": "DESCRIBES", "pending": true}
+{"src": "notice:english:120022", "dst": "dept:english", "type": "POSTED_BY"}
+{"src": "notice:english:120022", "dst": "stage:2026-1:논문제제출:english", "type": "DESCRIBES", "pending": true}
+{"src": "notice:english:122336", "dst": "dept:english", "type": "POSTED_BY"}
+{"src": "notice:english:122336", "dst": "stage:2026-1:학위증배부:english", "type": "DESCRIBES", "pending": true}
+{"src": "notice:english:147308", "dst": "dept:english", "type": "POSTED_BY"}
+{"src": "notice:english:147308", "dst": "dept:english", "type": "ISSUED_BY"}
+{"src": "notice:english:147308", "dst": "stage:2026-2:졸업논문제대체시험접수:english", "type": "DESCRIBES", "evidence": ["2026년 11월 30일(월) ~ 12월 7일(월) 17:00까지"], "verified": true, "date": {"lo": "2026-11-30", "hi": "2026-12-07T17:00", "precision": "minute"}}
+{"src": "notice:english:147308", "dst": "stage:2026-2:졸업논문제대체시험1차:english", "type": "DESCRIBES", "evidence": ["1차 : 12월 10일(목) 10:30"], "verified": true, "date": {"lo": "2026-12-10T10:30", "hi": "2026-12-10T10:30", "precision": "minute", "tentative": true}}
+{"src": "notice:english:147308", "dst": "stage:2026-2:졸업논문제대체시험2차:english", "type": "DESCRIBES", "evidence": ["2차 : 12월 15일(화) 10:30"], "verified": true, "date": {"lo": "2026-12-15T10:30", "hi": "2026-12-15T10:30", "precision": "minute", "tentative": true}}
+{"src": "notice:english:147308", "dst": "stage:2026-2:졸업논문제대체시험3차:english", "type": "DESCRIBES", "evidence": ["3차 : 12월 17일(목) 10:30"], "verified": true, "date": {"lo": "2026-12-17T10:30", "hi": "2026-12-17T10:30", "precision": "minute", "tentative": true}}
+{"src": "notice:english:147308", "dst": "caution:english_147308:0", "type": "DEFINES"}
+{"src": "notice:english:147308", "dst": "contact:졸업논문제:dept:english:02-710-9321", "type": "DEFINES", "evidence": ["영어영문학과 사무실(02-710-9321)"]}
+{"src": "notice:english:153962", "dst": "dept:english", "type": "POSTED_BY"}
+{"src": "notice:english:153962", "dst": "dept:english", "type": "ISSUED_BY"}
+{"src": "notice:english:153962", "dst": "stage:2026-2:논문제결과물제출:english", "type": "DESCRIBES", "evidence": ["2026년 12월 1일(화) - 12월 31일(목) 오후 12:00"], "verified": true, "date": {"lo": "2026-12-01", "hi": "2026-12-31T12:00", "precision": "minute"}}
+{"src": "notice:english:153962", "dst": "caution:english_153962:0", "type": "DEFINES"}
+{"src": "notice:english:153962", "dst": "contact:졸업논문제:dept:english:02-710-9321", "type": "DEFINES", "evidence": ["유선 전화: 02-710-9321"]}
+{"src": "notice:cloth:115785", "dst": "dept:cloth", "type": "POSTED_BY"}
+{"src": "notice:cloth:115785", "dst": "stage:2026-1:졸업작품·프로젝트:cloth", "type": "DESCRIBES", "pending": true}
+{"src": "notice:cloth:118970", "dst": "dept:cloth", "type": "POSTED_BY"}
+{"src": "notice:cloth:118970", "dst": "stage:2026-1:졸업시험:cloth", "type": "DESCRIBES", "pending": true}
+{"src": "notice:cloth:118969", "dst": "dept:cloth", "type": "POSTED_BY"}
+{"src": "notice:cloth:118969", "dst": "stage:2026-1:졸업시험:cloth", "type": "DESCRIBES", "pending": true}
+{"src": "notice:cloth:119900", "dst": "dept:cloth", "type": "POSTED_BY"}
+{"src": "notice:cloth:119900", "dst": "stage:2026-1:졸업시험:cloth", "type": "DESCRIBES", "pending": true}
+{"src": "notice:cloth:119930", "dst": "dept:cloth", "type": "POSTED_BY"}
+{"src": "notice:cloth:119930", "dst": "stage:2026-1:졸업시험:cloth", "type": "DESCRIBES", "pending": true}
+{"src": "notice:cloth:120948", "dst": "dept:cloth", "type": "POSTED_BY"}
+{"src": "notice:cloth:120948", "dst": "stage:2026-1:졸업작품·프로젝트:cloth", "type": "DESCRIBES", "pending": true}
+{"src": "notice:aie:118344", "dst": "dept:aie", "type": "POSTED_BY"}
+{"src": "notice:aie:118344", "dst": "stage:2026-1:졸업작품·프로젝트:aie", "type": "DESCRIBES", "pending": true}
+{"src": "notice:aie:118486", "dst": "dept:aie", "type": "POSTED_BY"}
+{"src": "notice:aie:118486", "dst": "stage:2026-1:졸업시험:aie", "type": "DESCRIBES", "pending": true}
+{"src": "notice:aie:118218", "dst": "dept:aie", "type": "POSTED_BY"}
+{"src": "notice:aie:118218", "dst": "stage:2026-1:졸업작품·프로젝트:aie", "type": "DESCRIBES", "pending": true}
+{"src": "notice:aie:119774", "dst": "dept:aie", "type": "POSTED_BY"}
+{"src": "notice:aie:119774", "dst": "stage:2026-1:논문제제출:aie", "type": "DESCRIBES", "pending": true}
+{"src": "notice:aie:122332", "dst": "dept:aie", "type": "POSTED_BY"}
+{"src": "notice:aie:122332", "dst": "stage:2026-1:학위증배부:aie", "type": "DESCRIBES", "pending": true}
+{"src": "notice:aie:122343", "dst": "dept:aie", "type": "POSTED_BY"}
+{"src": "notice:aie:122343", "dst": "dept:aie", "type": "ISSUED_BY"}
+{"src": "notice:aie:122871", "dst": "dept:aie", "type": "POSTED_BY"}
+{"src": "notice:aie:122871", "dst": "dept:aie", "type": "ISSUED_BY"}
+{"src": "notice:aie:122871", "dst": "stage:2026-2:졸업심사:aie", "type": "DESCRIBES", "evidence": ["2026년 9월 29일 (화) 16:30~18:00"], "verified": true, "date": {"lo": "2026-09-29T16:30", "hi": "2026-09-29T18:00", "precision": "minute"}}
+{"src": "notice:aie:122871", "dst": "stage:2026-2:포스터제출:aie", "type": "DESCRIBES", "evidence": ["2026년 10월 8일 (목) 16시까지"], "verified": true, "date": {"lo": null, "hi": "2026-10-08T16:00", "precision": "minute"}}
+{"src": "notice:aie:122871", "dst": "stage:2026-2:졸업전시회:aie", "type": "DESCRIBES", "evidence": ["2026년 10월 15일 (목) 10:00"], "verified": true, "date": {"lo": "2026-10-15T10:00", "hi": "2026-10-15T10:00", "precision": "minute"}}
+{"src": "notice:aie:122871", "dst": "stage:2026-2:논문제결과물제출:aie", "type": "DESCRIBES", "evidence": ["2026년 10월 29일 (목) 17:00"], "verified": true, "date": {"lo": null, "hi": "2026-10-29T17:00", "precision": "minute"}}
+{"src": "notice:aie:122871", "dst": "caution:aie_122871:0", "type": "DEFINES"}
+{"src": "notice:aie:122871", "dst": "contact:졸업프로젝트:dept:aie:02-710-9193", "type": "DEFINES", "evidence": ["전화 : 02-710-9193"]}
+{"src": "notice:aie:145577", "dst": "dept:aie", "type": "POSTED_BY"}
+{"src": "notice:aie:145577", "dst": "dept:aie", "type": "ISSUED_BY"}
+{"src": "notice:aie:147008", "dst": "dept:aie", "type": "POSTED_BY"}
+{"src": "notice:aie:147008", "dst": "dept:aie", "type": "ISSUED_BY"}
+{"src": "notice:aie:147008", "dst": "stage:2026-2:TOPCIT성적제출:aie", "type": "DESCRIBES", "evidence": ["12/18 (금) 17:00까지 학과 사무실 방문 제출"], "verified": true, "date": {"lo": null, "hi": "2026-12-18T17:00", "precision": "minute"}}
+{"src": "notice:aie:147008", "dst": "stage:2027-1:졸업시험선택신청:aie", "type": "DESCRIBES", "evidence": ["10/30일 (금) 17:00까지 학과 사무실 방문 제출"], "verified": true, "date": {"lo": null, "hi": "2026-10-30T17:00", "precision": "minute"}}
+{"src": "notice:aie:147008", "dst": "caution:aie_147008:0", "type": "DEFINES"}
+{"src": "notice:aie:147633", "dst": "dept:aie", "type": "POSTED_BY"}
+{"src": "notice:aie:147633", "dst": "dept:aie", "type": "ISSUED_BY"}
+{"src": "notice:aie:147633", "dst": "stage:2026-2:졸업논문제증빙제출:aie", "type": "DESCRIBES", "evidence": ["12/18(금) 17:00까지 학과 메일 제출 바랍니다."], "verified": true, "date": {"lo": null, "hi": "2026-12-18T17:00", "precision": "minute"}}
+{"src": "notice:japan:118812", "dst": "dept:japan", "type": "POSTED_BY"}
+{"src": "notice:japan:118812", "dst": "stage:2026-1:대체시험·어학:japan", "type": "DESCRIBES", "pending": true}
+{"src": "notice:japan:119676", "dst": "dept:japan", "type": "POSTED_BY"}
+{"src": "notice:japan:119676", "dst": "stage:2026-1:대체시험·어학:japan", "type": "DESCRIBES", "pending": true}
+{"src": "notice:japan:147323", "dst": "dept:japan", "type": "POSTED_BY"}
+{"src": "notice:japan:147323", "dst": "dept:japan", "type": "ISSUED_BY"}
+{"src": "notice:japan:147323", "dst": "stage:2026-2:졸업논문지도:japan", "type": "MENTIONS", "evidence": ["총 2회 이상 지도 필수 이수"], "verified": true, "date": null}
+{"src": "notice:japan:147323", "dst": "stage:2026-2:논문제결과물제출:japan", "type": "DESCRIBES", "evidence": ["2026년 12월 1일(화)~ 28(월) 17:00까지"], "verified": true, "date": {"lo": "2026-12-01", "hi": "2026-12-28T17:00", "precision": "minute"}}
+{"src": "notice:japan:147323", "dst": "caution:japan_147323:0", "type": "DEFINES"}
+{"src": "notice:japan:147323", "dst": "caution:japan_147323:1", "type": "DEFINES"}
+{"src": "notice:japan:147323", "dst": "contact:졸업논문제:dept:japan:02-710-9885", "type": "DEFINES", "evidence": ["☎ 02-710-9885"]}
+{"src": "notice:chinese:448", "dst": "dept:chinese", "type": "POSTED_BY"}
+{"src": "notice:chinese:448", "dst": "stage:2026-1:양식·규정:chinese", "type": "DESCRIBES", "pending": true}
+{"src": "notice:chinese:467", "dst": "dept:chinese", "type": "POSTED_BY"}
+{"src": "notice:chinese:467", "dst": "dept:chinese", "type": "ISSUED_BY"}
+{"src": "notice:chinese:467", "dst": "caution:chinese_467:0", "type": "DEFINES"}
+{"src": "notice:chinese:467", "dst": "caution:chinese_467:1", "type": "DEFINES"}
+{"src": "notice:chinese:501", "dst": "dept:chinese", "type": "POSTED_BY"}
+{"src": "notice:chinese:501", "dst": "stage:2026-1:양식·규정:chinese", "type": "DESCRIBES", "pending": true}
+{"src": "notice:electro:118815", "dst": "dept:electro", "type": "POSTED_BY"}
+{"src": "notice:electro:120115", "dst": "dept:electro", "type": "POSTED_BY"}
+{"src": "notice:electro:120115", "dst": "stage:2026-1:논문제제출:electro", "type": "DESCRIBES", "pending": true}
+{"src": "notice:electro:145467", "dst": "dept:electro", "type": "POSTED_BY"}
+{"src": "notice:electro:154041", "dst": "dept:electro", "type": "POSTED_BY"}
+{"src": "notice:electro:154041", "dst": "dept:electro", "type": "ISSUED_BY"}
+{"src": "notice:electro:154041", "dst": "stage:2026-2:논문제결과물제출:electro", "type": "DESCRIBES", "evidence": ["졸업논문 제출기간(12/1~12/30 09:00)", "2026년 12월 30일 오전 9시까지"], "verified": true, "date": {"lo": "2026-12-01", "hi": "2026-12-30T09:00", "precision": "minute"}}
+{"src": "notice:electro:154041", "dst": "caution:electro_154041:0", "type": "DEFINES"}
+{"src": "notice:electro:154041", "dst": "caution:electro_154041:1", "type": "DEFINES"}
+{"src": "notice:electro:154041", "dst": "contact:졸업논문:dept:electro:02-2077-7860", "type": "DEFINES", "evidence": ["02-2077-7860번으로 연락바랍니다."]}
+{"src": "notice:csweb:130406", "dst": "dept:csweb", "type": "POSTED_BY"}
+{"src": "notice:csweb:130406", "dst": "dept:csweb", "type": "ISSUED_BY"}
+{"src": "notice:csweb:130406", "dst": "stage:2026-2:학생연구활동비신청:csweb", "type": "DESCRIBES", "evidence": ["2026. 6.12.(금) 17:00 까지"], "verified": true, "date": {"lo": null, "hi": "2026-06-12T17:00", "precision": "minute"}}
+{"src": "notice:csweb:130406", "dst": "stage:2026-2:학생연구활동비증빙제출:csweb", "type": "DESCRIBES", "evidence": ["26. 10. 2.(금) 16:00까지"], "verified": true, "date": {"lo": null, "hi": "2026-10-02T16:00", "precision": "minute"}}
+{"src": "notice:csweb:130406", "dst": "caution:csweb_130406:0", "type": "DEFINES"}
+{"src": "notice:csweb:130406", "dst": "contact:졸업작품 지원금:dept:csweb:02-2077-7729", "type": "DEFINES", "evidence": ["소프트웨어학부 사무실 (02-2077-7729)"]}
+{"src": "notice:stat:slug19", "dst": "dept:stat", "type": "POSTED_BY"}
+{"src": "notice:stat:slug19", "dst": "stage:2025-2:학위증배부:stat", "type": "DESCRIBES", "pending": true}
+{"src": "notice:stat:slug09", "dst": "dept:stat", "type": "POSTED_BY"}
+{"src": "notice:stat:slug09", "dst": "stage:2026-1:학위증배부:stat", "type": "DESCRIBES", "pending": true}
+{"src": "notice:stat:slug06", "dst": "dept:stat", "type": "POSTED_BY"}
+{"src": "notice:stat:slug06", "dst": "office:hr-equality", "type": "ISSUED_BY"}
+{"src": "notice:stat:slug06", "dst": "stage:2026-2:폭력예방교육", "type": "MENTIONS", "evidence": ["'졸업계획 제출 및 전공선택'이 제한됩니다."], "verified": true, "date": null}
+{"src": "notice:stat:slug06", "dst": "caution:stat_slug06:0", "type": "DEFINES"}
+{"src": "notice:stat:slug06", "dst": "caution:stat_slug06:1", "type": "DEFINES"}
+{"src": "notice:french:222", "dst": "dept:french", "type": "POSTED_BY"}
+{"src": "notice:french:222", "dst": "stage:2026-1:논문제제출:french", "type": "DESCRIBES", "pending": true}
+{"src": "notice:korean:119211", "dst": "dept:korean", "type": "POSTED_BY"}
+{"src": "notice:korean:119211", "dst": "stage:2026-1:지도교수:korean", "type": "DESCRIBES", "pending": true}
+{"src": "notice:korean:119278", "dst": "dept:korean", "type": "POSTED_BY"}
+{"src": "notice:korean:119278", "dst": "stage:2026-1:지도교수:korean", "type": "DESCRIBES", "pending": true}
+{"src": "notice:korean:119277", "dst": "dept:korean", "type": "POSTED_BY"}
+{"src": "notice:korean:119277", "dst": "stage:2026-1:지도교수:korean", "type": "DESCRIBES", "pending": true}
+{"src": "notice:korean:119276", "dst": "dept:korean", "type": "POSTED_BY"}
+{"src": "notice:korean:119276", "dst": "stage:2026-1:지도교수:korean", "type": "DESCRIBES", "pending": true}
+{"src": "notice:korean:119275", "dst": "dept:korean", "type": "POSTED_BY"}
+{"src": "notice:korean:119275", "dst": "stage:2026-1:지도교수:korean", "type": "DESCRIBES", "pending": true}
+{"src": "notice:korean:119617", "dst": "dept:korean", "type": "POSTED_BY"}
+{"src": "notice:korean:119617", "dst": "stage:2026-1:지도교수:korean", "type": "DESCRIBES", "pending": true}
+{"src": "notice:korean:119616", "dst": "dept:korean", "type": "POSTED_BY"}
+{"src": "notice:korean:119616", "dst": "stage:2026-1:지도교수:korean", "type": "DESCRIBES", "pending": true}
+{"src": "notice:korean:119679", "dst": "dept:korean", "type": "POSTED_BY"}
+{"src": "notice:korean:119679", "dst": "stage:2026-1:지도교수:korean", "type": "DESCRIBES", "pending": true}
+{"src": "notice:korean:146994", "dst": "dept:korean", "type": "POSTED_BY"}
+{"src": "notice:korean:146994", "dst": "dept:korean", "type": "ISSUED_BY"}
+{"src": "notice:korean:146994", "dst": "stage:2026-2:수료생논문신청:korean", "type": "DESCRIBES", "evidence": ["10월 19일(월)까지 논문 신청 메일"], "verified": true, "date": {"lo": null, "hi": "2026-10-19", "precision": "day"}}
+{"src": "notice:korean:146994", "dst": "caution:korean_146994:0", "type": "DEFINES"}
+{"src": "notice:korean:146994", "dst": "contact:졸업논문:dept:korean:02-710-9310", "type": "DEFINES", "evidence": ["02-710-9310으로 연락 바랍니다."]}
+{"src": "notice:korean:147313", "dst": "dept:korean", "type": "POSTED_BY"}
+{"src": "notice:korean:147313", "dst": "dept:korean", "type": "ISSUED_BY"}
+{"src": "notice:korean:147313", "dst": "stage:2026-2:지도교수배정:korean", "type": "MENTIONS", "evidence": ["지도 교수님 배정이 완료되었습니다."], "verified": true, "date": null}
+{"src": "notice:korean:147313", "dst": "stage:2026-2:지도교수변경요청:korean", "type": "DESCRIBES", "evidence": ["10. 30(금) 17:00까지 학과 메일로"], "verified": true, "date": {"lo": null, "hi": "2026-10-30T17:00", "precision": "minute"}}
+{"src": "notice:korean:147313", "dst": "stage:2026-2:논문제결과물제출:korean", "type": "DESCRIBES", "evidence": ["2026.12.23.(수) 17:00 까지"], "verified": true, "date": {"lo": null, "hi": "2026-12-23T17:00", "precision": "minute"}}
+{"src": "notice:korean:147313", "dst": "caution:korean_147313:0", "type": "DEFINES"}
+{"src": "notice:korean:147441", "dst": "dept:korean", "type": "POSTED_BY"}
+{"src": "notice:korean:147441", "dst": "dept:korean", "type": "ISSUED_BY"}
+{"src": "notice:korean:147441", "dst": "stage:2026-2:졸업논문지도:문금현:korean", "type": "DESCRIBES", "evidence": ["11월 10일(화) 오후 4:30-5:30분"], "verified": true, "date": {"lo": "2026-11-10T16:30", "hi": "2026-11-10T17:30", "precision": "minute"}}
+{"src": "notice:korean:147441", "dst": "stage:2026-2:졸업논문지도2차:문금현:korean", "type": "DESCRIBES", "evidence": ["12월 11일(금) 오후 3시-4시"], "verified": true, "date": {"lo": "2026-12-11T15:00", "hi": "2026-12-11T16:00", "precision": "minute"}}
+{"src": "notice:korean:147434", "dst": "dept:korean", "type": "POSTED_BY"}
+{"src": "notice:korean:147434", "dst": "dept:korean", "type": "ISSUED_BY"}
+{"src": "notice:korean:147434", "dst": "stage:2026-2:졸업논문지도:김한성:korean", "type": "DESCRIBES", "evidence": ["12월 7일(월)까지"], "verified": true, "date": {"lo": null, "hi": "2026-12-07", "precision": "day"}}
+{"src": "notice:korean:147431", "dst": "dept:korean", "type": "POSTED_BY"}
+{"src": "notice:korean:147431", "dst": "dept:korean", "type": "ISSUED_BY"}
+{"src": "notice:korean:147431", "dst": "stage:2026-2:졸업논문지도:이진아:korean", "type": "DESCRIBES", "evidence": ["응답 마감 : 11월 3일 오후 3시"], "verified": true, "date": {"lo": null, "hi": "2026-11-03T15:00", "precision": "minute"}}
+{"src": "notice:korean:147472", "dst": "dept:korean", "type": "POSTED_BY"}
+{"src": "notice:korean:147472", "dst": "dept:korean", "type": "ISSUED_BY"}
+{"src": "notice:korean:147472", "dst": "stage:2026-2:졸업논문지도:권성우:korean", "type": "DESCRIBES", "evidence": ["2. 일시 :11/26(목) 17:00"], "verified": true, "date": {"lo": "2026-11-26T17:00", "hi": "2026-11-26T17:00", "precision": "minute"}}
+{"src": "notice:korean:147472", "dst": "caution:korean_147472:0", "type": "DEFINES"}
+{"src": "notice:korean:147589", "dst": "dept:korean", "type": "POSTED_BY"}
+{"src": "notice:korean:147589", "dst": "dept:korean", "type": "ISSUED_BY"}
+{"src": "notice:korean:147589", "dst": "stage:2026-2:졸업논문지도:김선현:korean", "type": "DESCRIBES", "evidence": ["[1차] 11월 12일(목) 14:00~15:00", "[2차] 11월 13일(금) 13:00~14:00"], "verified": true, "date": {"lo": "2026-11-12T14:00", "hi": "2026-11-13T14:00", "precision": "minute"}}
+{"src": "notice:pa:115799", "dst": "dept:pa", "type": "POSTED_BY"}
+{"src": "notice:pa:115799", "dst": "stage:2025-2:학위증배부:pa", "type": "DESCRIBES", "pending": true}
+{"src": "notice:prad:2058", "dst": "dept:prad", "type": "POSTED_BY"}
+{"src": "notice:prad:2058", "dst": "stage:2026-1:양식·규정:prad", "type": "DESCRIBES", "pending": true}
+{"src": "notice:chembioe:118915", "dst": "dept:chembioe", "type": "POSTED_BY"}
+{"src": "notice:chembioe:119670", "dst": "dept:chembioe", "type": "POSTED_BY"}
+{"src": "notice:chembioe:119666", "dst": "dept:chembioe", "type": "POSTED_BY"}
+{"src": "notice:chembioe:119666", "dst": "stage:2026-1:양식·규정:chembioe", "type": "DESCRIBES", "pending": true}
+{"src": "notice:chembioe:119719", "dst": "dept:chembioe", "type": "POSTED_BY"}
+{"src": "notice:chembioe:154033", "dst": "dept:chembioe", "type": "POSTED_BY"}
+{"src": "notice:chembioe:154033", "dst": "dept:chembioe", "type": "ISSUED_BY"}
+{"src": "notice:chembioe:154033", "dst": "stage:2026-2:논문제결과물제출:chembioe", "type": "DESCRIBES", "evidence": ["2026년 12월 01일(화)", "학부에서는 12월 28일(월)까지로 제출기한을"], "verified": true, "date": {"lo": "2026-12-01", "hi": "2026-12-28", "precision": "day"}}
+{"src": "notice:chembioe:154033", "dst": "caution:chembioe_154033:0", "type": "DEFINES"}
+{"src": "notice:chembioe:154033", "dst": "caution:chembioe_154033:1", "type": "DEFINES"}
+{"src": "notice:chembioe:154033", "dst": "caution:chembioe_154033:2", "type": "DEFINES"}
+{"src": "notice:chem:119724", "dst": "dept:chem", "type": "POSTED_BY"}
+{"src": "notice:chem:119724", "dst": "stage:2026-1:졸업시험:chem", "type": "DESCRIBES", "pending": true}
+{"src": "notice:chem:147432", "dst": "dept:chem", "type": "POSTED_BY"}
+{"src": "notice:chem:147432", "dst": "dept:chem", "type": "ISSUED_BY"}
+{"src": "notice:chem:147432", "dst": "stage:2026-2:졸업시험:chem", "type": "DESCRIBES", "evidence": ["2026.11.13 (금) 오후 4시-6시"], "verified": true, "date": {"lo": "2026-11-13T16:00", "hi": "2026-11-13T18:00", "precision": "minute"}}
+{"src": "notice:chem:147432", "dst": "caution:chem_147432:0", "type": "DEFINES"}
+{"src": "notice:static:graduate01", "dst": "tmplstage:학위수여식", "type": "DESCRIBES"}
+{"src": "notice:static:graduate01", "dst": "tmplstage:졸업계획제출", "type": "DESCRIBES"}
+{"src": "notice:static:graduate01", "dst": "rule:grad:basic", "type": "DEFINES"}
+{"src": "notice:static:graduate01", "dst": "cau:no-graduation-on-leave", "type": "DEFINES"}
+{"src": "notice:static:graduate03", "dst": "tmplstage:콜로키움참석", "type": "DESCRIBES"}
+{"src": "proc:grad:2025-2", "dst": "tmpl:grad", "type": "INSTANCE_OF"}
+{"src": "proc:grad:2025-2", "dst": "term:2025-2", "type": "IN_TERM"}
+{"src": "proc:grad:2025-2", "dst": "office:haksa", "type": "ISSUED_BY"}
+{"src": "proc:grad:2025-2", "dst": "stage:2025-2:최종사정결과조회", "type": "HAS_STAGE", "order": 12}
+{"src": "proc:grad:2025-2", "dst": "stage:2025-2:학위수여식", "type": "HAS_STAGE", "order": 13}
+{"src": "proc:grad:2025-2", "dst": "stage:2025-2:인증제결과확인", "type": "HAS_STAGE", "order": 9}
+{"src": "proc:early-grad:2025-2", "dst": "tmpl:early-grad", "type": "INSTANCE_OF"}
+{"src": "proc:early-grad:2025-2", "dst": "term:2025-2", "type": "IN_TERM"}
+{"src": "proc:early-grad:2025-2", "dst": "office:haksa", "type": "ISSUED_BY"}
+{"src": "proc:grad:2026-1", "dst": "tmpl:grad", "type": "INSTANCE_OF"}
+{"src": "proc:grad:2026-1", "dst": "term:2026-1", "type": "IN_TERM"}
+{"src": "proc:grad:2026-1", "dst": "office:haksa", "type": "ISSUED_BY"}
+{"src": "proc:grad:2026-1", "dst": "stage:2026-1:졸업계획제출", "type": "HAS_STAGE", "order": 1}
+{"src": "proc:grad:2026-1", "dst": "stage:2026-1:전공선택", "type": "HAS_STAGE", "order": 2}
+{"src": "proc:grad:2026-1", "dst": "stage:2026-1:이수현황정리", "type": "HAS_STAGE", "order": 3}
+{"src": "proc:grad:2026-1", "dst": "stage:2026-1:논문제신청", "type": "HAS_STAGE", "order": 4}
+{"src": "proc:grad:2026-1", "dst": "stage:2026-1:수료생졸업신청", "type": "HAS_STAGE", "order": 5}
+{"src": "proc:grad:2026-1", "dst": "stage:2026-1:논문제결과물제출", "type": "HAS_STAGE", "order": 6}
+{"src": "proc:grad:2026-1", "dst": "stage:2026-1:정보인증제등록", "type": "HAS_STAGE", "order": 7}
+{"src": "proc:grad:2026-1", "dst": "stage:2026-1:인증제결과확인", "type": "HAS_STAGE", "order": 9}
+{"src": "proc:grad:2026-1", "dst": "stage:2026-1:영문성명확인", "type": "HAS_STAGE", "order": 10}
+{"src": "proc:grad:2026-1", "dst": "stage:2026-1:계속수학신청", "type": "HAS_STAGE", "order": 11}
+{"src": "proc:grad:2026-1", "dst": "stage:2026-1:학위수여식", "type": "HAS_STAGE", "order": 13}
+{"src": "proc:grad:2026-1", "dst": "stage:2026-1:최종사정결과조회", "type": "HAS_STAGE", "order": 12}
+{"src": "proc:grad:2026-1", "dst": "stage:2026-1:폭력예방교육", "type": "HAS_STAGE", "order": 0}
+{"src": "proc:grad:2026-1", "dst": "stage:2026-1:교원자격검정", "type": "HAS_STAGE", "order": 8}
+{"src": "proc:early-grad:2026-1", "dst": "tmpl:early-grad", "type": "INSTANCE_OF"}
+{"src": "proc:early-grad:2026-1", "dst": "term:2026-1", "type": "IN_TERM"}
+{"src": "proc:early-grad:2026-1", "dst": "office:haksa", "type": "ISSUED_BY"}
+{"src": "proc:early-grad:2026-1", "dst": "stage:2026-1:조기졸업신청", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2026-2", "dst": "tmpl:grad", "type": "INSTANCE_OF"}
+{"src": "proc:grad:2026-2", "dst": "term:2026-2", "type": "IN_TERM"}
+{"src": "proc:grad:2026-2", "dst": "office:haksa", "type": "ISSUED_BY"}
+{"src": "proc:grad:2026-2", "dst": "stage:2026-2:논문제결과물제출", "type": "HAS_STAGE", "order": 6}
+{"src": "proc:grad:2026-2", "dst": "contact:졸업프로젝트:dept:aie:02-710-9193", "type": "CONTACT_FOR"}
+{"src": "proc:grad:2026-2", "dst": "contact:졸업작품 지원금:dept:csweb:02-2077-7729", "type": "CONTACT_FOR"}
+{"src": "proc:grad:2026-2", "dst": "contact:졸업작품:dept:ds:02-710-9295", "type": "CONTACT_FOR"}
+{"src": "proc:grad:2026-2", "dst": "contact:졸업작품 결과보고서:dept:ds:02-710-9431", "type": "CONTACT_FOR"}
+{"src": "proc:grad:2026-2", "dst": "stage:2026-2:교원자격검정", "type": "HAS_STAGE", "order": 8}
+{"src": "proc:grad:2026-2", "dst": "contact:교원자격검정:dept:econ:02-2077-7352", "type": "CONTACT_FOR"}
+{"src": "proc:grad:2026-2", "dst": "contact:졸업논문:dept:electro:02-2077-7860", "type": "CONTACT_FOR"}
+{"src": "proc:grad:2026-2", "dst": "contact:졸업논문제:dept:english:02-710-9321", "type": "CONTACT_FOR"}
+{"src": "proc:grad:2026-2", "dst": "contact:졸업논문제(글로벌협력전공):dept:global:02-2077-7496", "type": "CONTACT_FOR"}
+{"src": "proc:grad:2026-2", "dst": "contact:졸업논문제(앙트러프러너십전공):dept:global:02-2077-7578", "type": "CONTACT_FOR"}
+{"src": "proc:grad:2026-2", "dst": "contact:졸업논문:dept:history:02-710-9367", "type": "CONTACT_FOR"}
+{"src": "proc:grad:2026-2", "dst": "contact:졸업논문제:dept:japan:02-710-9885", "type": "CONTACT_FOR"}
+{"src": "proc:grad:2026-2", "dst": "contact:졸업논문:dept:korean:02-710-9310", "type": "CONTACT_FOR"}
+{"src": "proc:grad:2026-2", "dst": "stage:2026-2:논문제신청", "type": "HAS_STAGE", "order": 4}
+{"src": "proc:grad:2026-2", "dst": "stage:2026-2:영문성명확인", "type": "HAS_STAGE", "order": 10}
+{"src": "proc:grad:2026-2", "dst": "stage:2026-2:계속수학신청", "type": "HAS_STAGE", "order": 11}
+{"src": "proc:grad:2026-2", "dst": "stage:2026-2:최종사정결과조회", "type": "HAS_STAGE", "order": 12}
+{"src": "proc:grad:2026-2", "dst": "contact:졸업심사:college:science:02-710-9019", "type": "CONTACT_FOR"}
+{"src": "proc:grad:2026-2", "dst": "contact:교직:*:02-2077-7352", "type": "CONTACT_FOR"}
+{"src": "proc:grad:2026-2", "dst": "stage:2026-2:졸업계획제출", "type": "HAS_STAGE", "order": 1}
+{"src": "proc:grad:2026-2", "dst": "stage:2026-2:전공선택", "type": "HAS_STAGE", "order": 2}
+{"src": "proc:grad:2026-2", "dst": "stage:2026-2:정보인증제등록", "type": "HAS_STAGE", "order": 7}
+{"src": "proc:grad:2026-2", "dst": "stage:2026-2:이수현황정리", "type": "HAS_STAGE", "order": 3}
+{"src": "proc:grad:2026-2", "dst": "contact:졸업심사:college:liberal-arts:02-710-9015", "type": "CONTACT_FOR"}
+{"src": "proc:grad:2026-2", "dst": "stage:2026-2:인증제결과확인", "type": "HAS_STAGE", "order": 9}
+{"src": "proc:grad:2026-2", "dst": "cau:cert-irreversible", "type": "HAS_CAUTION"}
+{"src": "proc:grad:2026-2", "dst": "cau:check-result", "type": "HAS_CAUTION"}
+{"src": "proc:grad:2026-2", "dst": "contact:졸업논문제:*:각 전공 사무실(제1전공/복수전공)", "type": "CONTACT_FOR"}
+{"src": "proc:grad:2026-2", "dst": "contact:졸업심사:college:liberal-arts:02-710-9994", "type": "CONTACT_FOR"}
+{"src": "proc:grad:2026-2", "dst": "stage:2026-2:수료생졸업신청", "type": "HAS_STAGE", "order": 5}
+{"src": "proc:grad:2026-2", "dst": "cau:completer-3years", "type": "HAS_CAUTION"}
+{"src": "proc:grad:2026-2", "dst": "stage:2026-2:폭력예방교육", "type": "HAS_STAGE", "order": 0}
+{"src": "proc:early-grad:2026-2", "dst": "tmpl:early-grad", "type": "INSTANCE_OF"}
+{"src": "proc:early-grad:2026-2", "dst": "term:2026-2", "type": "IN_TERM"}
+{"src": "proc:early-grad:2026-2", "dst": "office:haksa", "type": "ISSUED_BY"}
+{"src": "proc:early-grad:2026-2", "dst": "stage:2026-2:조기졸업신청", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:early-grad:2026-2", "dst": "rule:early:honors", "type": "ELIGIBLE_IF"}
+{"src": "proc:early-grad:2026-2", "dst": "rule:early:bsms", "type": "ELIGIBLE_IF"}
+{"src": "proc:grad:2027-1", "dst": "tmpl:grad", "type": "INSTANCE_OF"}
+{"src": "proc:grad:2027-1", "dst": "term:2027-1", "type": "IN_TERM"}
+{"src": "proc:grad:2027-1", "dst": "office:haksa", "type": "ISSUED_BY"}
+{"src": "proc:grad:2027-1", "dst": "contact:졸업작품:dept:ds:02-710-9295", "type": "CONTACT_FOR"}
+{"src": "proc:early-grad:2027-1", "dst": "tmpl:early-grad", "type": "INSTANCE_OF"}
+{"src": "proc:early-grad:2027-1", "dst": "term:2027-1", "type": "IN_TERM"}
+{"src": "proc:early-grad:2027-1", "dst": "office:haksa", "type": "ISSUED_BY"}
+{"src": "stage:2026-2:졸업심사:aie", "dst": "stage:2026-2:포스터제출:aie", "type": "PRECEDES"}
+{"src": "proc:grad:2026-2:aie", "dst": "proc:grad:2026-2", "type": "PART_OF"}
+{"src": "proc:grad:2026-2:aie", "dst": "dept:aie", "type": "ISSUED_BY"}
+{"src": "proc:grad:2026-2:aie", "dst": "term:2026-2", "type": "IN_TERM"}
+{"src": "proc:grad:2026-2:aie", "dst": "stage:2026-2:졸업심사:aie", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2026-2:aie", "dst": "stage:2026-2:포스터제출:aie", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2026-2:aie", "dst": "stage:2026-2:졸업전시회:aie", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2026-2:aie", "dst": "stage:2026-2:논문제결과물제출:aie", "type": "HAS_STAGE", "order": 6}
+{"src": "proc:grad:2026-2:aie", "dst": "caution:aie_122871:0", "type": "HAS_CAUTION"}
+{"src": "proc:grad:2026-2:aie", "dst": "stage:2026-2:TOPCIT성적제출:aie", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2026-2:aie", "dst": "stage:2026-2:졸업논문제증빙제출:aie", "type": "HAS_STAGE", "order": 50}
+{"src": "stage:2026-2:포스터제출:aie", "dst": "route:dept-mail", "type": "VIA"}
+{"src": "stage:2026-2:포스터제출:aie", "dst": "stage:2026-2:졸업전시회:aie", "type": "PRECEDES"}
+{"src": "stage:2026-2:졸업전시회:aie", "dst": "stage:2026-2:논문제결과물제출:aie", "type": "PRECEDES"}
+{"src": "stage:2026-2:논문제결과물제출:aie", "dst": "stage:2026-2:논문제결과물제출", "type": "OVERRIDES"}
+{"src": "stage:2026-2:논문제결과물제출:aie", "dst": "stage:2026-2:TOPCIT성적제출:aie", "type": "PRECEDES"}
+{"src": "stage:2026-2:논문제결과물제출", "dst": "route:dept-office", "type": "VIA"}
+{"src": "stage:2026-2:논문제결과물제출", "dst": "stage:2026-2:정보인증제등록", "type": "PRECEDES"}
+{"src": "stage:2026-2:TOPCIT성적제출:aie", "dst": "stage:2026-2:졸업논문제증빙제출:aie", "type": "PRECEDES"}
+{"src": "proc:grad:2027-1:aie", "dst": "proc:grad:2027-1", "type": "PART_OF"}
+{"src": "proc:grad:2027-1:aie", "dst": "dept:aie", "type": "ISSUED_BY"}
+{"src": "proc:grad:2027-1:aie", "dst": "term:2027-1", "type": "IN_TERM"}
+{"src": "proc:grad:2027-1:aie", "dst": "stage:2027-1:졸업시험선택신청:aie", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2027-1:aie", "dst": "caution:aie_147008:0", "type": "HAS_CAUTION"}
+{"src": "stage:2026-2:졸업논문제증빙제출:aie", "dst": "route:dept-mail", "type": "VIA"}
+{"src": "stage:2026-2:졸업논문제증빙제출:aie", "dst": "stage:2026-2:논문제결과물제출", "type": "PRECEDES"}
+{"src": "stage:2026-2:졸업시험:chem", "dst": "stage:2026-2:논문제결과물제출", "type": "PRECEDES"}
+{"src": "proc:grad:2026-2:chem", "dst": "proc:grad:2026-2", "type": "PART_OF"}
+{"src": "proc:grad:2026-2:chem", "dst": "dept:chem", "type": "ISSUED_BY"}
+{"src": "proc:grad:2026-2:chem", "dst": "term:2026-2", "type": "IN_TERM"}
+{"src": "proc:grad:2026-2:chem", "dst": "stage:2026-2:졸업시험:chem", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2026-2:chem", "dst": "caution:chem_147432:0", "type": "HAS_CAUTION"}
+{"src": "stage:2026-2:논문제결과물제출:chembioe", "dst": "stage:2026-2:논문제결과물제출", "type": "OVERRIDES"}
+{"src": "proc:grad:2026-2:chembioe", "dst": "proc:grad:2026-2", "type": "PART_OF"}
+{"src": "proc:grad:2026-2:chembioe", "dst": "dept:chembioe", "type": "ISSUED_BY"}
+{"src": "proc:grad:2026-2:chembioe", "dst": "term:2026-2", "type": "IN_TERM"}
+{"src": "proc:grad:2026-2:chembioe", "dst": "stage:2026-2:논문제결과물제출:chembioe", "type": "HAS_STAGE", "order": 6}
+{"src": "proc:grad:2026-2:chembioe", "dst": "caution:chembioe_154033:0", "type": "HAS_CAUTION"}
+{"src": "proc:grad:2026-2:chembioe", "dst": "caution:chembioe_154033:1", "type": "HAS_CAUTION"}
+{"src": "proc:grad:2026-2:chembioe", "dst": "caution:chembioe_154033:2", "type": "HAS_CAUTION"}
+{"src": "proc:grad:2026-2:chinese", "dst": "proc:grad:2026-2", "type": "PART_OF"}
+{"src": "proc:grad:2026-2:chinese", "dst": "dept:chinese", "type": "ISSUED_BY"}
+{"src": "proc:grad:2026-2:chinese", "dst": "term:2026-2", "type": "IN_TERM"}
+{"src": "proc:grad:2026-2:chinese", "dst": "caution:chinese_467:0", "type": "HAS_CAUTION"}
+{"src": "proc:grad:2026-2:chinese", "dst": "caution:chinese_467:1", "type": "HAS_CAUTION"}
+{"src": "stage:2026-2:학생연구활동비신청:csweb", "dst": "stage:2026-2:학생연구활동비증빙제출:csweb", "type": "PRECEDES"}
+{"src": "proc:grad:2026-2:csweb", "dst": "proc:grad:2026-2", "type": "PART_OF"}
+{"src": "proc:grad:2026-2:csweb", "dst": "dept:csweb", "type": "ISSUED_BY"}
+{"src": "proc:grad:2026-2:csweb", "dst": "term:2026-2", "type": "IN_TERM"}
+{"src": "proc:grad:2026-2:csweb", "dst": "stage:2026-2:학생연구활동비신청:csweb", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2026-2:csweb", "dst": "stage:2026-2:학생연구활동비증빙제출:csweb", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2026-2:csweb", "dst": "caution:csweb_130406:0", "type": "HAS_CAUTION"}
+{"src": "stage:2026-2:학생연구활동비증빙제출:csweb", "dst": "stage:2026-2:논문제결과물제출", "type": "PRECEDES"}
+{"src": "proc:grad:2026-2:cultureandtourism", "dst": "proc:grad:2026-2", "type": "PART_OF"}
+{"src": "proc:grad:2026-2:cultureandtourism", "dst": "dept:cultureandtourism", "type": "ISSUED_BY"}
+{"src": "proc:grad:2026-2:cultureandtourism", "dst": "term:2026-2", "type": "IN_TERM"}
+{"src": "proc:grad:2026-2:cultureandtourism", "dst": "caution:cultureandtourism_145454:0", "type": "HAS_CAUTION"}
+{"src": "stage:2026-2:졸업작품제안서제출:ds", "dst": "route:dept-mail", "type": "VIA"}
+{"src": "stage:2026-2:졸업작품제안서제출:ds", "dst": "stage:2026-2:졸업작품발표:ds", "type": "PRECEDES"}
+{"src": "proc:grad:2026-2:ds", "dst": "proc:grad:2026-2", "type": "PART_OF"}
+{"src": "proc:grad:2026-2:ds", "dst": "dept:ds", "type": "ISSUED_BY"}
+{"src": "proc:grad:2026-2:ds", "dst": "term:2026-2", "type": "IN_TERM"}
+{"src": "proc:grad:2026-2:ds", "dst": "stage:2026-2:졸업작품제안서제출:ds", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2026-2:ds", "dst": "caution:ds_137618:0", "type": "HAS_CAUTION"}
+{"src": "proc:grad:2026-2:ds", "dst": "caution:ds_137618:1", "type": "HAS_CAUTION"}
+{"src": "proc:grad:2026-2:ds", "dst": "stage:2026-2:졸업작품발표:ds", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2026-2:ds", "dst": "stage:2026-2:발표자료포스터제출:ds", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2026-2:ds", "dst": "stage:2026-2:포스터전시회:ds", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2026-2:ds", "dst": "caution:ds_147026:0", "type": "HAS_CAUTION"}
+{"src": "proc:grad:2026-2:ds", "dst": "stage:2026-2:산학협력졸업프로젝트계획서:ds", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2026-2:ds", "dst": "stage:2026-2:산학협력졸업프로젝트결과보고서:ds", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2026-2:ds", "dst": "stage:2026-2:논문제결과물제출:ds", "type": "HAS_STAGE", "order": 6}
+{"src": "proc:grad:2026-2:ds", "dst": "caution:ds_147649:0", "type": "HAS_CAUTION"}
+{"src": "proc:grad:2026-2:ds", "dst": "caution:ds_147649:1", "type": "HAS_CAUTION"}
+{"src": "stage:2026-2:졸업작품발표:ds", "dst": "stage:2026-2:발표자료포스터제출:ds", "type": "PRECEDES"}
+{"src": "stage:2026-2:발표자료포스터제출:ds", "dst": "stage:2026-2:산학협력졸업프로젝트계획서:ds", "type": "PRECEDES"}
+{"src": "stage:2026-2:포스터전시회:ds", "dst": "stage:2026-2:논문제결과물제출:ds", "type": "PRECEDES"}
+{"src": "stage:2026-2:산학협력졸업프로젝트계획서:ds", "dst": "route:dept-mail", "type": "VIA"}
+{"src": "stage:2026-2:산학협력졸업프로젝트계획서:ds", "dst": "stage:2026-2:포스터전시회:ds", "type": "PRECEDES"}
+{"src": "stage:2026-2:산학협력졸업프로젝트결과보고서:ds", "dst": "route:dept-mail", "type": "VIA"}
+{"src": "stage:2026-2:산학협력졸업프로젝트결과보고서:ds", "dst": "stage:2026-2:논문제결과물제출", "type": "PRECEDES"}
+{"src": "stage:2026-2:논문제결과물제출:ds", "dst": "stage:2026-2:논문제결과물제출", "type": "OVERRIDES"}
+{"src": "stage:2026-2:논문제결과물제출:ds", "dst": "stage:2026-2:산학협력졸업프로젝트결과보고서:ds", "type": "PRECEDES"}
+{"src": "stage:2027-1:졸업작품제안서제출:ds", "dst": "route:dept-mail", "type": "VIA"}
+{"src": "proc:grad:2027-1:ds", "dst": "proc:grad:2027-1", "type": "PART_OF"}
+{"src": "proc:grad:2027-1:ds", "dst": "dept:ds", "type": "ISSUED_BY"}
+{"src": "proc:grad:2027-1:ds", "dst": "term:2027-1", "type": "IN_TERM"}
+{"src": "proc:grad:2027-1:ds", "dst": "stage:2027-1:졸업작품제안서제출:ds", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2027-1:ds", "dst": "caution:ds_147652:0", "type": "HAS_CAUTION"}
+{"src": "stage:2026-2:논문제결과물제출:econ", "dst": "stage:2026-2:논문제결과물제출", "type": "OVERRIDES"}
+{"src": "stage:2026-2:논문제결과물제출:econ", "dst": "stage:2026-2:영어성적제출:econ", "type": "PRECEDES"}
+{"src": "proc:grad:2026-2:econ", "dst": "proc:grad:2026-2", "type": "PART_OF"}
+{"src": "proc:grad:2026-2:econ", "dst": "dept:econ", "type": "ISSUED_BY"}
+{"src": "proc:grad:2026-2:econ", "dst": "term:2026-2", "type": "IN_TERM"}
+{"src": "proc:grad:2026-2:econ", "dst": "stage:2026-2:논문제결과물제출:econ", "type": "HAS_STAGE", "order": 6}
+{"src": "proc:grad:2026-2:econ", "dst": "stage:2026-2:영어성적제출:econ", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2026-2:econ", "dst": "caution:econ_145403:0", "type": "HAS_CAUTION"}
+{"src": "proc:grad:2026-2:econ", "dst": "caution:econ_145403:1", "type": "HAS_CAUTION"}
+{"src": "proc:grad:2026-2:econ", "dst": "caution:econ_147535:0", "type": "HAS_CAUTION"}
+{"src": "stage:2026-2:영어성적제출:econ", "dst": "stage:2026-2:논문제결과물제출", "type": "PRECEDES"}
+{"src": "stage:2026-2:교원자격검정", "dst": "stage:2026-2:인증제결과확인", "type": "PRECEDES"}
+{"src": "stage:2026-2:영양사합격확인서제출:fn", "dst": "stage:2026-2:논문제결과물제출", "type": "PRECEDES"}
+{"src": "proc:grad:2026-2:fn", "dst": "proc:grad:2026-2", "type": "PART_OF"}
+{"src": "proc:grad:2026-2:fn", "dst": "dept:fn", "type": "ISSUED_BY"}
+{"src": "proc:grad:2026-2:fn", "dst": "term:2026-2", "type": "IN_TERM"}
+{"src": "proc:grad:2026-2:fn", "dst": "stage:2026-2:영양사합격확인서제출:fn", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2026-2:fn", "dst": "stage:2026-2:졸업시험신청:fn", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2026-2:fn", "dst": "stage:2026-2:졸업시험본시험1차:fn", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2026-2:fn", "dst": "stage:2026-2:졸업시험본시험2차:fn", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2026-2:fn", "dst": "stage:2026-2:졸업시험2차재시험:fn", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2026-2:fn", "dst": "caution:fn_145311:0", "type": "HAS_CAUTION"}
+{"src": "proc:grad:2026-2:fn", "dst": "caution:fn_145311:1", "type": "HAS_CAUTION"}
+{"src": "proc:grad:2026-2:fn", "dst": "caution:fn_145311:2", "type": "HAS_CAUTION"}
+{"src": "proc:grad:2026-2:fn", "dst": "stage:2026-2:졸업시험1차재시험:fn", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2026-2:fn", "dst": "caution:fn_147626:0", "type": "HAS_CAUTION"}
+{"src": "stage:2026-2:지도교수배정:edu", "dst": "stage:2026-2:논문제결과물제출", "type": "PRECEDES"}
+{"src": "proc:grad:2026-2:edu", "dst": "proc:grad:2026-2", "type": "PART_OF"}
+{"src": "proc:grad:2026-2:edu", "dst": "dept:edu", "type": "ISSUED_BY"}
+{"src": "proc:grad:2026-2:edu", "dst": "term:2026-2", "type": "IN_TERM"}
+{"src": "proc:grad:2026-2:edu", "dst": "stage:2026-2:지도교수배정:edu", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2026-2:edu", "dst": "stage:2026-2:논문제결과물제출:edu", "type": "HAS_STAGE", "order": 6}
+{"src": "proc:grad:2026-2:edu", "dst": "caution:edu_217367:0", "type": "HAS_CAUTION"}
+{"src": "stage:2026-2:논문제결과물제출:edu", "dst": "stage:2026-2:논문제결과물제출", "type": "OVERRIDES"}
+{"src": "stage:2026-2:논문제결과물제출:edu", "dst": "stage:2026-2:지도교수배정:edu", "type": "PRECEDES"}
+{"src": "stage:2026-2:논문제결과물제출:electro", "dst": "stage:2026-2:논문제결과물제출", "type": "OVERRIDES"}
+{"src": "proc:grad:2026-2:electro", "dst": "proc:grad:2026-2", "type": "PART_OF"}
+{"src": "proc:grad:2026-2:electro", "dst": "dept:electro", "type": "ISSUED_BY"}
+{"src": "proc:grad:2026-2:electro", "dst": "term:2026-2", "type": "IN_TERM"}
+{"src": "proc:grad:2026-2:electro", "dst": "stage:2026-2:논문제결과물제출:electro", "type": "HAS_STAGE", "order": 6}
+{"src": "proc:grad:2026-2:electro", "dst": "caution:electro_154041:0", "type": "HAS_CAUTION"}
+{"src": "proc:grad:2026-2:electro", "dst": "caution:electro_154041:1", "type": "HAS_CAUTION"}
+{"src": "stage:2026-2:졸업논문제대체시험접수:english", "dst": "route:dept-mail", "type": "VIA"}
+{"src": "stage:2026-2:졸업논문제대체시험접수:english", "dst": "stage:2026-2:졸업논문제대체시험1차:english", "type": "PRECEDES"}
+{"src": "proc:grad:2026-2:english", "dst": "proc:grad:2026-2", "type": "PART_OF"}
+{"src": "proc:grad:2026-2:english", "dst": "dept:english", "type": "ISSUED_BY"}
+{"src": "proc:grad:2026-2:english", "dst": "term:2026-2", "type": "IN_TERM"}
+{"src": "proc:grad:2026-2:english", "dst": "stage:2026-2:졸업논문제대체시험접수:english", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2026-2:english", "dst": "stage:2026-2:졸업논문제대체시험1차:english", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2026-2:english", "dst": "stage:2026-2:졸업논문제대체시험2차:english", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2026-2:english", "dst": "stage:2026-2:졸업논문제대체시험3차:english", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2026-2:english", "dst": "caution:english_147308:0", "type": "HAS_CAUTION"}
+{"src": "proc:grad:2026-2:english", "dst": "stage:2026-2:논문제결과물제출:english", "type": "HAS_STAGE", "order": 6}
+{"src": "proc:grad:2026-2:english", "dst": "caution:english_153962:0", "type": "HAS_CAUTION"}
+{"src": "stage:2026-2:졸업논문제대체시험1차:english", "dst": "stage:2026-2:졸업논문제대체시험2차:english", "type": "PRECEDES"}
+{"src": "stage:2026-2:졸업논문제대체시험2차:english", "dst": "stage:2026-2:졸업논문제대체시험3차:english", "type": "PRECEDES"}
+{"src": "stage:2026-2:졸업논문제대체시험3차:english", "dst": "stage:2026-2:논문제결과물제출:english", "type": "PRECEDES"}
+{"src": "stage:2026-2:논문제결과물제출:english", "dst": "stage:2026-2:논문제결과물제출", "type": "OVERRIDES"}
+{"src": "stage:2026-2:졸업시험신청:fn", "dst": "route:dept-mail", "type": "VIA"}
+{"src": "stage:2026-2:졸업시험신청:fn", "dst": "stage:2026-2:졸업시험본시험1차:fn", "type": "PRECEDES"}
+{"src": "stage:2026-2:졸업시험본시험1차:fn", "dst": "stage:2026-2:졸업시험본시험2차:fn", "type": "PRECEDES"}
+{"src": "stage:2026-2:졸업시험본시험2차:fn", "dst": "stage:2026-2:졸업시험1차재시험:fn", "type": "PRECEDES"}
+{"src": "stage:2026-2:졸업시험2차재시험:fn", "dst": "stage:2026-2:영양사합격확인서제출:fn", "type": "PRECEDES"}
+{"src": "stage:2026-2:졸업시험1차재시험:fn", "dst": "stage:2026-2:졸업시험2차재시험:fn", "type": "PRECEDES"}
+{"src": "stage:2026-2:졸업시험:global", "dst": "stage:2026-2:논문제결과물제출", "type": "PRECEDES"}
+{"src": "proc:grad:2026-2:global", "dst": "proc:grad:2026-2", "type": "PART_OF"}
+{"src": "proc:grad:2026-2:global", "dst": "dept:global", "type": "ISSUED_BY"}
+{"src": "proc:grad:2026-2:global", "dst": "term:2026-2", "type": "IN_TERM"}
+{"src": "proc:grad:2026-2:global", "dst": "stage:2026-2:졸업시험:global", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2026-2:global", "dst": "caution:global_372:0", "type": "HAS_CAUTION"}
+{"src": "proc:grad:2026-2:global", "dst": "caution:global_372:1", "type": "HAS_CAUTION"}
+{"src": "proc:grad:2026-2:global", "dst": "caution:global_372:2", "type": "HAS_CAUTION"}
+{"src": "proc:grad:2026-2:global", "dst": "caution:global_372:3", "type": "HAS_CAUTION"}
+{"src": "stage:2026-2:졸업논문지도:history", "dst": "stage:2026-2:논문제결과물제출:history", "type": "PRECEDES"}
+{"src": "proc:grad:2026-2:history", "dst": "proc:grad:2026-2", "type": "PART_OF"}
+{"src": "proc:grad:2026-2:history", "dst": "dept:history", "type": "ISSUED_BY"}
+{"src": "proc:grad:2026-2:history", "dst": "term:2026-2", "type": "IN_TERM"}
+{"src": "proc:grad:2026-2:history", "dst": "stage:2026-2:졸업논문지도:history", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2026-2:history", "dst": "stage:2026-2:논문제결과물제출:history", "type": "HAS_STAGE", "order": 6}
+{"src": "proc:grad:2026-2:history", "dst": "stage:2026-2:졸업논문심사:history", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2026-2:history", "dst": "stage:2026-2:졸업논문합격처리:history", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2026-2:history", "dst": "caution:history_147247:0", "type": "HAS_CAUTION"}
+{"src": "stage:2026-2:논문제결과물제출:history", "dst": "stage:2026-2:논문제결과물제출", "type": "OVERRIDES"}
+{"src": "stage:2026-2:논문제결과물제출:history", "dst": "stage:2026-2:졸업논문심사:history", "type": "PRECEDES"}
+{"src": "stage:2026-2:졸업논문심사:history", "dst": "stage:2026-2:졸업논문합격처리:history", "type": "PRECEDES"}
+{"src": "stage:2026-2:졸업논문합격처리:history", "dst": "stage:2026-2:논문제결과물제출", "type": "PRECEDES"}
+{"src": "stage:2026-2:졸업논문지도:japan", "dst": "stage:2026-2:논문제결과물제출", "type": "PRECEDES"}
+{"src": "proc:grad:2026-2:japan", "dst": "proc:grad:2026-2", "type": "PART_OF"}
+{"src": "proc:grad:2026-2:japan", "dst": "dept:japan", "type": "ISSUED_BY"}
+{"src": "proc:grad:2026-2:japan", "dst": "term:2026-2", "type": "IN_TERM"}
+{"src": "proc:grad:2026-2:japan", "dst": "stage:2026-2:졸업논문지도:japan", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2026-2:japan", "dst": "stage:2026-2:논문제결과물제출:japan", "type": "HAS_STAGE", "order": 6}
+{"src": "proc:grad:2026-2:japan", "dst": "caution:japan_147323:0", "type": "HAS_CAUTION"}
+{"src": "proc:grad:2026-2:japan", "dst": "caution:japan_147323:1", "type": "HAS_CAUTION"}
+{"src": "stage:2026-2:논문제결과물제출:japan", "dst": "stage:2026-2:논문제결과물제출", "type": "OVERRIDES"}
+{"src": "stage:2026-2:논문제결과물제출:japan", "dst": "stage:2026-2:졸업논문지도:japan", "type": "PRECEDES"}
+{"src": "stage:2026-2:수료생논문신청:korean", "dst": "route:dept-mail", "type": "VIA"}
+{"src": "stage:2026-2:수료생논문신청:korean", "dst": "stage:2026-2:지도교수변경요청:korean", "type": "PRECEDES"}
+{"src": "proc:grad:2026-2:korean", "dst": "proc:grad:2026-2", "type": "PART_OF"}
+{"src": "proc:grad:2026-2:korean", "dst": "dept:korean", "type": "ISSUED_BY"}
+{"src": "proc:grad:2026-2:korean", "dst": "term:2026-2", "type": "IN_TERM"}
+{"src": "proc:grad:2026-2:korean", "dst": "stage:2026-2:수료생논문신청:korean", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2026-2:korean", "dst": "caution:korean_146994:0", "type": "HAS_CAUTION"}
+{"src": "proc:grad:2026-2:korean", "dst": "stage:2026-2:지도교수배정:korean", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2026-2:korean", "dst": "stage:2026-2:지도교수변경요청:korean", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2026-2:korean", "dst": "stage:2026-2:논문제결과물제출:korean", "type": "HAS_STAGE", "order": 6}
+{"src": "proc:grad:2026-2:korean", "dst": "caution:korean_147313:0", "type": "HAS_CAUTION"}
+{"src": "proc:grad:2026-2:korean", "dst": "stage:2026-2:졸업논문지도:이진아:korean", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2026-2:korean", "dst": "stage:2026-2:졸업논문지도:김한성:korean", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2026-2:korean", "dst": "stage:2026-2:졸업논문지도:문금현:korean", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2026-2:korean", "dst": "stage:2026-2:졸업논문지도2차:문금현:korean", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2026-2:korean", "dst": "stage:2026-2:졸업논문지도:권성우:korean", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2026-2:korean", "dst": "caution:korean_147472:0", "type": "HAS_CAUTION"}
+{"src": "proc:grad:2026-2:korean", "dst": "stage:2026-2:졸업논문지도:김선현:korean", "type": "HAS_STAGE", "order": 50}
+{"src": "stage:2026-2:지도교수배정:korean", "dst": "stage:2026-2:논문제결과물제출", "type": "PRECEDES"}
+{"src": "stage:2026-2:지도교수변경요청:korean", "dst": "route:dept-mail", "type": "VIA"}
+{"src": "stage:2026-2:지도교수변경요청:korean", "dst": "stage:2026-2:졸업논문지도:이진아:korean", "type": "PRECEDES"}
+{"src": "stage:2026-2:논문제결과물제출:korean", "dst": "route:dept-mail", "type": "VIA"}
+{"src": "stage:2026-2:논문제결과물제출:korean", "dst": "stage:2026-2:논문제결과물제출", "type": "OVERRIDES"}
+{"src": "stage:2026-2:논문제결과물제출:korean", "dst": "stage:2026-2:지도교수배정:korean", "type": "PRECEDES"}
+{"src": "stage:2026-2:졸업논문지도:이진아:korean", "dst": "stage:2026-2:졸업논문지도:문금현:korean", "type": "PRECEDES"}
+{"src": "stage:2026-2:졸업논문지도:김한성:korean", "dst": "stage:2026-2:졸업논문지도2차:문금현:korean", "type": "PRECEDES"}
+{"src": "stage:2026-2:졸업논문지도:문금현:korean", "dst": "stage:2026-2:졸업논문지도:김선현:korean", "type": "PRECEDES"}
+{"src": "stage:2026-2:졸업논문지도2차:문금현:korean", "dst": "stage:2026-2:논문제결과물제출:korean", "type": "PRECEDES"}
+{"src": "stage:2026-2:졸업논문지도:권성우:korean", "dst": "stage:2026-2:졸업논문지도:김한성:korean", "type": "PRECEDES"}
+{"src": "stage:2026-2:졸업논문지도:김선현:korean", "dst": "stage:2026-2:졸업논문지도:권성우:korean", "type": "PRECEDES"}
+{"src": "proc:grad:2026-2:law", "dst": "proc:grad:2026-2", "type": "PART_OF"}
+{"src": "proc:grad:2026-2:law", "dst": "dept:law", "type": "ISSUED_BY"}
+{"src": "proc:grad:2026-2:law", "dst": "term:2026-2", "type": "IN_TERM"}
+{"src": "proc:grad:2026-2:law", "dst": "caution:law_153973:0", "type": "HAS_CAUTION"}
+{"src": "stage:2026-2:조기졸업신청", "dst": "route:haksa-visit", "type": "VIA"}
+{"src": "stage:2026-2:조기졸업신청", "dst": "stage:2026-2:졸업계획제출", "type": "PRECEDES"}
+{"src": "proc:grad:2026-2:math", "dst": "proc:grad:2026-2", "type": "PART_OF"}
+{"src": "proc:grad:2026-2:math", "dst": "dept:math", "type": "ISSUED_BY"}
+{"src": "proc:grad:2026-2:math", "dst": "term:2026-2", "type": "IN_TERM"}
+{"src": "proc:grad:2026-2:math", "dst": "stage:2026-2:졸업시험1차신청:math", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2026-2:math", "dst": "stage:2026-2:졸업시험1차응시:math", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2026-2:math", "dst": "stage:2026-2:콜로키움참석:math", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2026-2:math", "dst": "stage:2026-2:졸업시험2차신청:math", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2026-2:math", "dst": "stage:2026-2:졸업시험2차응시:math", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2026-2:math", "dst": "stage:2026-2:졸업시험결과:math", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2026-2:math", "dst": "rule:math-exam", "type": "ELIGIBLE_IF"}
+{"src": "proc:grad:2026-2:math", "dst": "cau:math-exam-apply-even-exempt", "type": "HAS_CAUTION"}
+{"src": "stage:2026-2:논문제신청", "dst": "route:portal", "type": "VIA"}
+{"src": "stage:2026-2:논문제신청", "dst": "rule:thesis-apply", "type": "ELIGIBLE_IF"}
+{"src": "stage:2026-2:논문제신청", "dst": "stage:2026-2:수료생졸업신청", "type": "PRECEDES"}
+{"src": "stage:2026-2:영문성명확인", "dst": "route:portal", "type": "VIA"}
+{"src": "stage:2026-2:영문성명확인", "dst": "stage:2026-2:계속수학신청", "type": "PRECEDES"}
+{"src": "stage:2026-2:계속수학신청", "dst": "route:portal", "type": "VIA"}
+{"src": "stage:2026-2:계속수학신청", "dst": "stage:2026-2:최종사정결과조회", "type": "PRECEDES"}
+{"src": "stage:2026-2:최종사정결과조회", "dst": "route:portal", "type": "VIA"}
+{"src": "stage:2026-2:졸업계획제출", "dst": "route:portal", "type": "VIA"}
+{"src": "stage:2026-2:졸업계획제출", "dst": "stage:2026-2:전공선택", "type": "PRECEDES"}
+{"src": "stage:2026-2:전공선택", "dst": "route:portal", "type": "VIA"}
+{"src": "stage:2026-2:전공선택", "dst": "stage:2026-2:이수현황정리", "type": "PRECEDES"}
+{"src": "stage:2026-2:정보인증제등록", "dst": "route:portal", "type": "VIA"}
+{"src": "stage:2026-2:정보인증제등록", "dst": "stage:2026-2:교원자격검정", "type": "PRECEDES"}
+{"src": "stage:2026-2:이수현황정리", "dst": "route:portal", "type": "VIA"}
+{"src": "stage:2026-2:이수현황정리", "dst": "stage:2026-2:논문제신청", "type": "PRECEDES"}
+{"src": "stage:2026-2:인증제결과확인", "dst": "route:portal", "type": "VIA"}
+{"src": "stage:2026-2:인증제결과확인", "dst": "stage:2026-2:영문성명확인", "type": "PRECEDES"}
+{"src": "stage:2026-2:수료생졸업신청", "dst": "route:portal", "type": "VIA"}
+{"src": "stage:2026-2:수료생졸업신청", "dst": "stage:2026-2:논문제결과물제출", "type": "PRECEDES"}
+{"src": "stage:2026-2:졸업시험1차신청:math", "dst": "route:dept-mail", "type": "VIA"}
+{"src": "stage:2026-2:졸업시험1차신청:math", "dst": "stage:2026-2:졸업시험1차응시:math", "type": "PRECEDES"}
+{"src": "stage:2026-2:졸업시험1차응시:math", "dst": "stage:2026-2:졸업시험2차신청:math", "type": "PRECEDES"}
+{"src": "stage:2026-2:콜로키움참석:math", "dst": "route:snoway", "type": "VIA"}
+{"src": "stage:2026-2:콜로키움참석:math", "dst": "stage:2026-2:논문제결과물제출", "type": "PRECEDES"}
+{"src": "stage:2026-2:졸업시험2차신청:math", "dst": "route:dept-mail", "type": "VIA"}
+{"src": "stage:2026-2:졸업시험2차신청:math", "dst": "stage:2026-2:졸업시험2차응시:math", "type": "PRECEDES"}
+{"src": "stage:2026-2:졸업시험2차응시:math", "dst": "stage:2026-2:졸업시험결과:math", "type": "PRECEDES"}
+{"src": "stage:2026-2:졸업시험결과:math", "dst": "route:dept-mail", "type": "VIA"}
+{"src": "stage:2026-2:졸업시험결과:math", "dst": "stage:2026-2:콜로키움참석:math", "type": "PRECEDES"}
+{"src": "stage:2026-2:논문제결과물제출:physics", "dst": "route:dept-mail", "type": "VIA"}
+{"src": "stage:2026-2:논문제결과물제출:physics", "dst": "stage:2026-2:논문제결과물제출", "type": "OVERRIDES"}
+{"src": "proc:grad:2026-2:physics", "dst": "proc:grad:2026-2", "type": "PART_OF"}
+{"src": "proc:grad:2026-2:physics", "dst": "dept:physics", "type": "ISSUED_BY"}
+{"src": "proc:grad:2026-2:physics", "dst": "term:2026-2", "type": "IN_TERM"}
+{"src": "proc:grad:2026-2:physics", "dst": "stage:2026-2:논문제결과물제출:physics", "type": "HAS_STAGE", "order": 6}
+{"src": "stage:2026-2:폭력예방교육", "dst": "stage:2026-2:졸업계획제출", "type": "PRECEDES"}
+{"src": "proc:grad:2026-2:stat", "dst": "proc:grad:2026-2", "type": "PART_OF"}
+{"src": "proc:grad:2026-2:stat", "dst": "dept:stat", "type": "ISSUED_BY"}
+{"src": "proc:grad:2026-2:stat", "dst": "term:2026-2", "type": "IN_TERM"}
+{"src": "proc:grad:2026-2:stat", "dst": "caution:stat_slug06:0", "type": "HAS_CAUTION"}
+{"src": "proc:grad:2026-2:stat", "dst": "caution:stat_slug06:1", "type": "HAS_CAUTION"}
+{"src": "stage:2025-2:최종사정결과조회", "dst": "stage:2025-2:학위수여식", "type": "PRECEDES"}
+{"src": "stage:2026-1:조기졸업신청", "dst": "stage:2026-1:졸업계획제출", "type": "PRECEDES"}
+{"src": "stage:2026-1:졸업계획제출", "dst": "stage:2026-1:전공선택", "type": "PRECEDES"}
+{"src": "stage:2026-1:전공선택", "dst": "stage:2026-1:이수현황정리", "type": "PRECEDES"}
+{"src": "stage:2026-1:이수현황정리", "dst": "stage:2026-1:논문제신청", "type": "PRECEDES"}
+{"src": "stage:2026-1:논문제신청", "dst": "stage:2026-1:수료생졸업신청", "type": "PRECEDES"}
+{"src": "stage:2026-1:수료생졸업신청", "dst": "stage:2026-1:논문제결과물제출", "type": "PRECEDES"}
+{"src": "stage:2026-1:논문제결과물제출", "dst": "stage:2026-1:정보인증제등록", "type": "PRECEDES"}
+{"src": "stage:2026-1:정보인증제등록", "dst": "stage:2026-1:교원자격검정", "type": "PRECEDES"}
+{"src": "stage:2026-1:인증제결과확인", "dst": "stage:2026-1:영문성명확인", "type": "PRECEDES"}
+{"src": "stage:2026-1:영문성명확인", "dst": "stage:2026-1:계속수학신청", "type": "PRECEDES"}
+{"src": "stage:2026-1:계속수학신청", "dst": "stage:2026-1:최종사정결과조회", "type": "PRECEDES"}
+{"src": "stage:2026-1:최종사정결과조회", "dst": "stage:2026-1:학위수여식", "type": "PRECEDES"}
+{"src": "proc:grad:2025-2:biz", "dst": "proc:grad:2025-2", "type": "PART_OF"}
+{"src": "proc:grad:2025-2:biz", "dst": "dept:biz", "type": "ISSUED_BY"}
+{"src": "proc:grad:2025-2:biz", "dst": "term:2025-2", "type": "IN_TERM"}
+{"src": "proc:grad:2025-2:biz", "dst": "stage:2025-2:논문제제출:biz", "type": "HAS_STAGE", "order": 50}
+{"src": "stage:2026-1:폭력예방교육", "dst": "stage:2026-1:졸업계획제출", "type": "PRECEDES"}
+{"src": "stage:2026-1:교원자격검정", "dst": "stage:2026-1:인증제결과확인", "type": "PRECEDES"}
+{"src": "stage:2026-1:논문제제출:econ", "dst": "stage:2026-1:논문제결과물제출", "type": "PRECEDES"}
+{"src": "proc:grad:2026-1:econ", "dst": "proc:grad:2026-1", "type": "PART_OF"}
+{"src": "proc:grad:2026-1:econ", "dst": "dept:econ", "type": "ISSUED_BY"}
+{"src": "proc:grad:2026-1:econ", "dst": "term:2026-1", "type": "IN_TERM"}
+{"src": "proc:grad:2026-1:econ", "dst": "stage:2026-1:논문제제출:econ", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2025-2:edu", "dst": "proc:grad:2025-2", "type": "PART_OF"}
+{"src": "proc:grad:2025-2:edu", "dst": "dept:edu", "type": "ISSUED_BY"}
+{"src": "proc:grad:2025-2:edu", "dst": "term:2025-2", "type": "IN_TERM"}
+{"src": "proc:grad:2025-2:edu", "dst": "stage:2025-2:학위증배부:edu", "type": "HAS_STAGE", "order": 50}
+{"src": "stage:2026-1:기타:edu", "dst": "stage:2026-1:지도교수:edu", "type": "PRECEDES"}
+{"src": "proc:grad:2026-1:edu", "dst": "proc:grad:2026-1", "type": "PART_OF"}
+{"src": "proc:grad:2026-1:edu", "dst": "dept:edu", "type": "ISSUED_BY"}
+{"src": "proc:grad:2026-1:edu", "dst": "term:2026-1", "type": "IN_TERM"}
+{"src": "proc:grad:2026-1:edu", "dst": "stage:2026-1:기타:edu", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2026-1:edu", "dst": "stage:2026-1:지도교수:edu", "type": "HAS_STAGE", "order": 50}
+{"src": "stage:2026-1:지도교수:edu", "dst": "stage:2026-1:논문제결과물제출", "type": "PRECEDES"}
+{"src": "stage:2026-1:졸업시험:global", "dst": "stage:2026-1:논문제결과물제출", "type": "PRECEDES"}
+{"src": "proc:grad:2026-1:global", "dst": "proc:grad:2026-1", "type": "PART_OF"}
+{"src": "proc:grad:2026-1:global", "dst": "dept:global", "type": "ISSUED_BY"}
+{"src": "proc:grad:2026-1:global", "dst": "term:2026-1", "type": "IN_TERM"}
+{"src": "proc:grad:2026-1:global", "dst": "stage:2026-1:졸업시험:global", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2025-2:ds", "dst": "proc:grad:2025-2", "type": "PART_OF"}
+{"src": "proc:grad:2025-2:ds", "dst": "dept:ds", "type": "ISSUED_BY"}
+{"src": "proc:grad:2025-2:ds", "dst": "term:2025-2", "type": "IN_TERM"}
+{"src": "proc:grad:2025-2:ds", "dst": "stage:2025-2:학위증배부:ds", "type": "HAS_STAGE", "order": 50}
+{"src": "stage:2026-1:졸업작품·프로젝트:ds", "dst": "stage:2026-1:논문제결과물제출", "type": "PRECEDES"}
+{"src": "proc:grad:2026-1:ds", "dst": "proc:grad:2026-1", "type": "PART_OF"}
+{"src": "proc:grad:2026-1:ds", "dst": "dept:ds", "type": "ISSUED_BY"}
+{"src": "proc:grad:2026-1:ds", "dst": "term:2026-1", "type": "IN_TERM"}
+{"src": "proc:grad:2026-1:ds", "dst": "stage:2026-1:졸업작품·프로젝트:ds", "type": "HAS_STAGE", "order": 50}
+{"src": "stage:2026-1:양식·규정:german", "dst": "stage:2026-1:논문제결과물제출", "type": "PRECEDES"}
+{"src": "proc:grad:2026-1:german", "dst": "proc:grad:2026-1", "type": "PART_OF"}
+{"src": "proc:grad:2026-1:german", "dst": "dept:german", "type": "ISSUED_BY"}
+{"src": "proc:grad:2026-1:german", "dst": "term:2026-1", "type": "IN_TERM"}
+{"src": "proc:grad:2026-1:german", "dst": "stage:2026-1:양식·규정:german", "type": "HAS_STAGE", "order": 50}
+{"src": "stage:2026-1:학위증배부:lcb", "dst": "stage:2026-1:논문제결과물제출", "type": "PRECEDES"}
+{"src": "proc:grad:2026-1:lcb", "dst": "proc:grad:2026-1", "type": "PART_OF"}
+{"src": "proc:grad:2026-1:lcb", "dst": "dept:lcb", "type": "ISSUED_BY"}
+{"src": "proc:grad:2026-1:lcb", "dst": "term:2026-1", "type": "IN_TERM"}
+{"src": "proc:grad:2026-1:lcb", "dst": "stage:2026-1:학위증배부:lcb", "type": "HAS_STAGE", "order": 50}
+{"src": "stage:2026-1:학위증배부:cultureandtourism", "dst": "stage:2026-1:논문제결과물제출", "type": "PRECEDES"}
+{"src": "proc:grad:2026-1:cultureandtourism", "dst": "proc:grad:2026-1", "type": "PART_OF"}
+{"src": "proc:grad:2026-1:cultureandtourism", "dst": "dept:cultureandtourism", "type": "ISSUED_BY"}
+{"src": "proc:grad:2026-1:cultureandtourism", "dst": "term:2026-1", "type": "IN_TERM"}
+{"src": "proc:grad:2026-1:cultureandtourism", "dst": "stage:2026-1:학위증배부:cultureandtourism", "type": "HAS_STAGE", "order": 50}
+{"src": "stage:2025-2:인증제결과확인", "dst": "stage:2025-2:최종사정결과조회", "type": "PRECEDES"}
+{"src": "stage:2026-1:졸업시험:math", "dst": "stage:2026-1:논문제결과물제출", "type": "PRECEDES"}
+{"src": "proc:grad:2026-1:math", "dst": "proc:grad:2026-1", "type": "PART_OF"}
+{"src": "proc:grad:2026-1:math", "dst": "dept:math", "type": "ISSUED_BY"}
+{"src": "proc:grad:2026-1:math", "dst": "term:2026-1", "type": "IN_TERM"}
+{"src": "proc:grad:2026-1:math", "dst": "stage:2026-1:졸업시험:math", "type": "HAS_STAGE", "order": 50}
+{"src": "stage:2026-1:졸업시험:fn", "dst": "stage:2026-1:논문제결과물제출", "type": "PRECEDES"}
+{"src": "proc:grad:2026-1:fn", "dst": "proc:grad:2026-1", "type": "PART_OF"}
+{"src": "proc:grad:2026-1:fn", "dst": "dept:fn", "type": "ISSUED_BY"}
+{"src": "proc:grad:2026-1:fn", "dst": "term:2026-1", "type": "IN_TERM"}
+{"src": "proc:grad:2026-1:fn", "dst": "stage:2026-1:졸업시험:fn", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2026-1:fn", "dst": "stage:2026-1:기타:fn", "type": "HAS_STAGE", "order": 50}
+{"src": "stage:2026-1:기타:fn", "dst": "stage:2026-1:졸업시험:fn", "type": "PRECEDES"}
+{"src": "stage:2026-1:논문제제출:physics", "dst": "stage:2026-1:논문제결과물제출", "type": "PRECEDES"}
+{"src": "proc:grad:2026-1:physics", "dst": "proc:grad:2026-1", "type": "PART_OF"}
+{"src": "proc:grad:2026-1:physics", "dst": "dept:physics", "type": "ISSUED_BY"}
+{"src": "proc:grad:2026-1:physics", "dst": "term:2026-1", "type": "IN_TERM"}
+{"src": "proc:grad:2026-1:physics", "dst": "stage:2026-1:논문제제출:physics", "type": "HAS_STAGE", "order": 50}
+{"src": "stage:2026-1:학위증배부:childwelfare", "dst": "stage:2026-1:논문제결과물제출", "type": "PRECEDES"}
+{"src": "proc:grad:2026-1:childwelfare", "dst": "proc:grad:2026-1", "type": "PART_OF"}
+{"src": "proc:grad:2026-1:childwelfare", "dst": "dept:childwelfare", "type": "ISSUED_BY"}
+{"src": "proc:grad:2026-1:childwelfare", "dst": "term:2026-1", "type": "IN_TERM"}
+{"src": "proc:grad:2026-1:childwelfare", "dst": "stage:2026-1:학위증배부:childwelfare", "type": "HAS_STAGE", "order": 50}
+{"src": "stage:2026-1:지도교수:history", "dst": "stage:2026-1:논문제결과물제출", "type": "PRECEDES"}
+{"src": "proc:grad:2026-1:history", "dst": "proc:grad:2026-1", "type": "PART_OF"}
+{"src": "proc:grad:2026-1:history", "dst": "dept:history", "type": "ISSUED_BY"}
+{"src": "proc:grad:2026-1:history", "dst": "term:2026-1", "type": "IN_TERM"}
+{"src": "proc:grad:2026-1:history", "dst": "stage:2026-1:지도교수:history", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2025-2:english", "dst": "proc:grad:2025-2", "type": "PART_OF"}
+{"src": "proc:grad:2025-2:english", "dst": "dept:english", "type": "ISSUED_BY"}
+{"src": "proc:grad:2025-2:english", "dst": "term:2025-2", "type": "IN_TERM"}
+{"src": "proc:grad:2025-2:english", "dst": "stage:2025-2:학위증배부:english", "type": "HAS_STAGE", "order": 50}
+{"src": "stage:2026-1:대체시험·어학:english", "dst": "stage:2026-1:학위증배부:english", "type": "PRECEDES"}
+{"src": "proc:grad:2026-1:english", "dst": "proc:grad:2026-1", "type": "PART_OF"}
+{"src": "proc:grad:2026-1:english", "dst": "dept:english", "type": "ISSUED_BY"}
+{"src": "proc:grad:2026-1:english", "dst": "term:2026-1", "type": "IN_TERM"}
+{"src": "proc:grad:2026-1:english", "dst": "stage:2026-1:대체시험·어학:english", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2026-1:english", "dst": "stage:2026-1:논문제제출:english", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2026-1:english", "dst": "stage:2026-1:학위증배부:english", "type": "HAS_STAGE", "order": 50}
+{"src": "stage:2026-1:논문제제출:english", "dst": "stage:2026-1:대체시험·어학:english", "type": "PRECEDES"}
+{"src": "stage:2026-1:학위증배부:english", "dst": "stage:2026-1:논문제결과물제출", "type": "PRECEDES"}
+{"src": "stage:2026-1:졸업작품·프로젝트:cloth", "dst": "stage:2026-1:논문제결과물제출", "type": "PRECEDES"}
+{"src": "proc:grad:2026-1:cloth", "dst": "proc:grad:2026-1", "type": "PART_OF"}
+{"src": "proc:grad:2026-1:cloth", "dst": "dept:cloth", "type": "ISSUED_BY"}
+{"src": "proc:grad:2026-1:cloth", "dst": "term:2026-1", "type": "IN_TERM"}
+{"src": "proc:grad:2026-1:cloth", "dst": "stage:2026-1:졸업작품·프로젝트:cloth", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2026-1:cloth", "dst": "stage:2026-1:졸업시험:cloth", "type": "HAS_STAGE", "order": 50}
+{"src": "stage:2026-1:졸업시험:cloth", "dst": "stage:2026-1:졸업작품·프로젝트:cloth", "type": "PRECEDES"}
+{"src": "stage:2026-1:졸업작품·프로젝트:aie", "dst": "stage:2026-1:학위증배부:aie", "type": "PRECEDES"}
+{"src": "proc:grad:2026-1:aie", "dst": "proc:grad:2026-1", "type": "PART_OF"}
+{"src": "proc:grad:2026-1:aie", "dst": "dept:aie", "type": "ISSUED_BY"}
+{"src": "proc:grad:2026-1:aie", "dst": "term:2026-1", "type": "IN_TERM"}
+{"src": "proc:grad:2026-1:aie", "dst": "stage:2026-1:졸업작품·프로젝트:aie", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2026-1:aie", "dst": "stage:2026-1:졸업시험:aie", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2026-1:aie", "dst": "stage:2026-1:논문제제출:aie", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2026-1:aie", "dst": "stage:2026-1:학위증배부:aie", "type": "HAS_STAGE", "order": 50}
+{"src": "stage:2026-1:졸업시험:aie", "dst": "stage:2026-1:졸업작품·프로젝트:aie", "type": "PRECEDES"}
+{"src": "stage:2026-1:논문제제출:aie", "dst": "stage:2026-1:졸업시험:aie", "type": "PRECEDES"}
+{"src": "stage:2026-1:학위증배부:aie", "dst": "stage:2026-1:논문제결과물제출", "type": "PRECEDES"}
+{"src": "stage:2026-1:대체시험·어학:japan", "dst": "stage:2026-1:논문제결과물제출", "type": "PRECEDES"}
+{"src": "proc:grad:2026-1:japan", "dst": "proc:grad:2026-1", "type": "PART_OF"}
+{"src": "proc:grad:2026-1:japan", "dst": "dept:japan", "type": "ISSUED_BY"}
+{"src": "proc:grad:2026-1:japan", "dst": "term:2026-1", "type": "IN_TERM"}
+{"src": "proc:grad:2026-1:japan", "dst": "stage:2026-1:대체시험·어학:japan", "type": "HAS_STAGE", "order": 50}
+{"src": "stage:2026-1:양식·규정:chinese", "dst": "stage:2026-1:논문제결과물제출", "type": "PRECEDES"}
+{"src": "proc:grad:2026-1:chinese", "dst": "proc:grad:2026-1", "type": "PART_OF"}
+{"src": "proc:grad:2026-1:chinese", "dst": "dept:chinese", "type": "ISSUED_BY"}
+{"src": "proc:grad:2026-1:chinese", "dst": "term:2026-1", "type": "IN_TERM"}
+{"src": "proc:grad:2026-1:chinese", "dst": "stage:2026-1:양식·규정:chinese", "type": "HAS_STAGE", "order": 50}
+{"src": "stage:2026-1:논문제제출:electro", "dst": "stage:2026-1:논문제결과물제출", "type": "PRECEDES"}
+{"src": "proc:grad:2026-1:electro", "dst": "proc:grad:2026-1", "type": "PART_OF"}
+{"src": "proc:grad:2026-1:electro", "dst": "dept:electro", "type": "ISSUED_BY"}
+{"src": "proc:grad:2026-1:electro", "dst": "term:2026-1", "type": "IN_TERM"}
+{"src": "proc:grad:2026-1:electro", "dst": "stage:2026-1:논문제제출:electro", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2025-2:stat", "dst": "proc:grad:2025-2", "type": "PART_OF"}
+{"src": "proc:grad:2025-2:stat", "dst": "dept:stat", "type": "ISSUED_BY"}
+{"src": "proc:grad:2025-2:stat", "dst": "term:2025-2", "type": "IN_TERM"}
+{"src": "proc:grad:2025-2:stat", "dst": "stage:2025-2:학위증배부:stat", "type": "HAS_STAGE", "order": 50}
+{"src": "stage:2026-1:학위증배부:stat", "dst": "stage:2026-1:논문제결과물제출", "type": "PRECEDES"}
+{"src": "proc:grad:2026-1:stat", "dst": "proc:grad:2026-1", "type": "PART_OF"}
+{"src": "proc:grad:2026-1:stat", "dst": "dept:stat", "type": "ISSUED_BY"}
+{"src": "proc:grad:2026-1:stat", "dst": "term:2026-1", "type": "IN_TERM"}
+{"src": "proc:grad:2026-1:stat", "dst": "stage:2026-1:학위증배부:stat", "type": "HAS_STAGE", "order": 50}
+{"src": "stage:2026-1:논문제제출:french", "dst": "stage:2026-1:논문제결과물제출", "type": "PRECEDES"}
+{"src": "proc:grad:2026-1:french", "dst": "proc:grad:2026-1", "type": "PART_OF"}
+{"src": "proc:grad:2026-1:french", "dst": "dept:french", "type": "ISSUED_BY"}
+{"src": "proc:grad:2026-1:french", "dst": "term:2026-1", "type": "IN_TERM"}
+{"src": "proc:grad:2026-1:french", "dst": "stage:2026-1:논문제제출:french", "type": "HAS_STAGE", "order": 50}
+{"src": "stage:2026-1:지도교수:korean", "dst": "stage:2026-1:논문제결과물제출", "type": "PRECEDES"}
+{"src": "proc:grad:2026-1:korean", "dst": "proc:grad:2026-1", "type": "PART_OF"}
+{"src": "proc:grad:2026-1:korean", "dst": "dept:korean", "type": "ISSUED_BY"}
+{"src": "proc:grad:2026-1:korean", "dst": "term:2026-1", "type": "IN_TERM"}
+{"src": "proc:grad:2026-1:korean", "dst": "stage:2026-1:지도교수:korean", "type": "HAS_STAGE", "order": 50}
+{"src": "proc:grad:2025-2:pa", "dst": "proc:grad:2025-2", "type": "PART_OF"}
+{"src": "proc:grad:2025-2:pa", "dst": "dept:pa", "type": "ISSUED_BY"}
+{"src": "proc:grad:2025-2:pa", "dst": "term:2025-2", "type": "IN_TERM"}
+{"src": "proc:grad:2025-2:pa", "dst": "stage:2025-2:학위증배부:pa", "type": "HAS_STAGE", "order": 50}
+{"src": "stage:2026-1:양식·규정:prad", "dst": "stage:2026-1:논문제결과물제출", "type": "PRECEDES"}
+{"src": "proc:grad:2026-1:prad", "dst": "proc:grad:2026-1", "type": "PART_OF"}
+{"src": "proc:grad:2026-1:prad", "dst": "dept:prad", "type": "ISSUED_BY"}
+{"src": "proc:grad:2026-1:prad", "dst": "term:2026-1", "type": "IN_TERM"}
+{"src": "proc:grad:2026-1:prad", "dst": "stage:2026-1:양식·규정:prad", "type": "HAS_STAGE", "order": 50}
+{"src": "stage:2026-1:양식·규정:chembioe", "dst": "stage:2026-1:논문제결과물제출", "type": "PRECEDES"}
+{"src": "proc:grad:2026-1:chembioe", "dst": "proc:grad:2026-1", "type": "PART_OF"}
+{"src": "proc:grad:2026-1:chembioe", "dst": "dept:chembioe", "type": "ISSUED_BY"}
+{"src": "proc:grad:2026-1:chembioe", "dst": "term:2026-1", "type": "IN_TERM"}
+{"src": "proc:grad:2026-1:chembioe", "dst": "stage:2026-1:양식·규정:chembioe", "type": "HAS_STAGE", "order": 50}
+{"src": "stage:2026-1:졸업시험:chem", "dst": "stage:2026-1:논문제결과물제출", "type": "PRECEDES"}
+{"src": "proc:grad:2026-1:chem", "dst": "proc:grad:2026-1", "type": "PART_OF"}
+{"src": "proc:grad:2026-1:chem", "dst": "dept:chem", "type": "ISSUED_BY"}
+{"src": "proc:grad:2026-1:chem", "dst": "term:2026-1", "type": "IN_TERM"}
+{"src": "proc:grad:2026-1:chem", "dst": "stage:2026-1:졸업시험:chem", "type": "HAS_STAGE", "order": 50}

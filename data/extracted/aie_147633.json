@@ -1,0 +1,52 @@
+{
+ "notice": {
+  "id": "notice:aie:147633",
+  "source": "aie",
+  "article_no": "147633",
+  "url": "https://aie.sookmyung.ac.kr/it/department/notice.do?mode=view&articleNo=147633",
+  "title": "[학과사무실] 졸업예정자 졸업논문제 증빙 제출",
+  "posted": "2026-11-10",
+  "posted_by": "dept:aie",
+  "hits": 149
+ },
+ "skip": false,
+ "role": "stage_detail",
+ "topic": "졸업",
+ "procedure": {
+  "template": "tmpl:grad",
+  "term": "2026-2",
+  "scope": "aie"
+ },
+ "issued_by": "dept:aie",
+ "stages": [
+  {
+   "key": "졸업논문제증빙제출",
+   "name": "졸업논문제 증빙 제출(실습실 '제출 완료' 메시지 캡처, 학과 메일)",
+   "scope": "aie",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": null,
+    "hi": "2026-12-18T17:00",
+    "precision": "minute"
+   },
+   "route": "route:dept-mail",
+   "place": null,
+   "target": "이번 학기 졸업예정자",
+   "required": true,
+   "documents": [],
+   "requires": [],
+   "evidence": [
+    "12/18(금) 17:00까지 학과 메일 제출 바랍니다."
+   ]
+  }
+ ],
+ "rules": [],
+ "cautions": [],
+ "outcomes": [],
+ "contacts": [],
+ "refers_to": [],
+ "verification": {
+  "result": "근거 문장 전부 원문에 있음 (2026-11-24 브라우저 수집본과 대조)",
+  "extractor": "Claude 직접 추출 (LLM API 확정 전)"
+ }
+}

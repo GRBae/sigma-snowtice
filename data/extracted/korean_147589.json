@@ -1,0 +1,53 @@
+{
+ "notice": {
+  "id": "notice:korean:147589",
+  "source": "korean",
+  "article_no": "147589",
+  "url": "https://korean.sookmyung.ac.kr/korean/community/notice.do?mode=view&articleNo=147589",
+  "title": "[졸업] 2026-2 김선현 교수님 졸업논문 지도 방식 안내(합동지도)",
+  "posted": "2026-11-09",
+  "posted_by": "dept:korean",
+  "hits": 547
+ },
+ "skip": false,
+ "role": "stage_detail",
+ "topic": "졸업",
+ "procedure": {
+  "template": "tmpl:grad",
+  "term": "2026-2",
+  "scope": "korean"
+ },
+ "issued_by": "dept:korean",
+ "stages": [
+  {
+   "key": "졸업논문지도:김선현",
+   "name": "합동 논문 지도(김선현 교수 배정 학생, 1·2차 중 택1)",
+   "scope": "korean",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": "2026-11-12T14:00",
+    "hi": "2026-11-13T14:00",
+    "precision": "minute"
+   },
+   "route": null,
+   "place": "수련교수회관 400호",
+   "target": "김선현 교수 지도 학생",
+   "required": true,
+   "documents": [],
+   "requires": [],
+   "evidence": [
+    "[1차] 11월 12일(목) 14:00~15:00",
+    "[2차] 11월 13일(금) 13:00~14:00"
+   ]
+  }
+ ],
+ "rules": [],
+ "cautions": [],
+ "outcomes": [],
+ "contacts": [],
+ "refers_to": [],
+ "verification": {
+  "result": "근거 문장 전부 원문에 있음 (2026-11-24 브라우저 수집본과 대조)",
+  "extractor": "Claude 직접 추출 (LLM API 확정 전)"
+ }
+}

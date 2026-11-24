@@ -1,0 +1,135 @@
+{
+ "notice": {
+  "id": "notice:english:147308",
+  "source": "english",
+  "article_no": "147308",
+  "url": "https://english.sookmyung.ac.kr/smpr/board/notice.do?mode=view&articleNo=147308",
+  "title": "[졸업] 2026학년도 2학기 영어영문학부 졸업논문제 대체시험 안내",
+  "posted": "2026-10-27",
+  "posted_by": "dept:english",
+  "hits": 345
+ },
+ "skip": false,
+ "role": "stage_detail",
+ "topic": "졸업",
+ "procedure": {
+  "template": "tmpl:grad",
+  "term": "2026-2",
+  "scope": "english"
+ },
+ "issued_by": "dept:english",
+ "stages": [
+  {
+   "key": "졸업논문제대체시험접수",
+   "name": "졸업논문제 영어 대체시험 접수(이메일)",
+   "scope": "english",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": "2026-11-30",
+    "hi": "2026-12-07T17:00",
+    "precision": "minute"
+   },
+   "route": "route:dept-mail",
+   "place": null,
+   "target": "영어성적 기준 미달자",
+   "required": false,
+   "documents": [
+    "기준 미달 성적표 스캔본 3부(같은 종류면 다른 회차)"
+   ],
+   "requires": [],
+   "evidence": [
+    "2026년 11월 30일(월) ~ 12월 7일(월) 17:00까지"
+   ]
+  },
+  {
+   "key": "졸업논문제대체시험1차",
+   "name": "영어 대체시험 1차",
+   "scope": "english",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": "2026-12-10T10:30",
+    "hi": "2026-12-10T10:30",
+    "precision": "minute",
+    "tentative": true
+   },
+   "route": null,
+   "place": null,
+   "target": null,
+   "required": false,
+   "documents": [],
+   "requires": [],
+   "evidence": [
+    "1차 : 12월 10일(목) 10:30"
+   ]
+  },
+  {
+   "key": "졸업논문제대체시험2차",
+   "name": "영어 대체시험 2차(1차 불합격자)",
+   "scope": "english",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": "2026-12-15T10:30",
+    "hi": "2026-12-15T10:30",
+    "precision": "minute",
+    "tentative": true
+   },
+   "route": null,
+   "place": null,
+   "target": null,
+   "required": false,
+   "documents": [],
+   "requires": [],
+   "evidence": [
+    "2차 : 12월 15일(화) 10:30"
+   ]
+  },
+  {
+   "key": "졸업논문제대체시험3차",
+   "name": "영어 대체시험 3차(2차 불합격자)",
+   "scope": "english",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": "2026-12-17T10:30",
+    "hi": "2026-12-17T10:30",
+    "precision": "minute",
+    "tentative": true
+   },
+   "route": null,
+   "place": null,
+   "target": null,
+   "required": false,
+   "documents": [],
+   "requires": [],
+   "evidence": [
+    "3차 : 12월 17일(목) 10:30"
+   ]
+  }
+ ],
+ "rules": [],
+ "cautions": [
+  {
+   "id": "caution:english_147308:0",
+   "text": "대체시험은 최대 3회, 70점 이상 합격 — 3회 모두 떨어지면 최종 불합격",
+   "evidence": [
+    "3회 모두 통과되지 못하면 최종 불합격 처리됨"
+   ]
+  }
+ ],
+ "outcomes": [],
+ "contacts": [
+  {
+   "topic": "졸업논문제",
+   "college": "dept:english",
+   "office": "영어영문학부 사무실",
+   "phone": "02-710-9321",
+   "evidence": [
+    "영어영문학과 사무실(02-710-9321)"
+   ]
+  }
+ ],
+ "refers_to": [],
+ "verification": {
+  "result": "근거 문장 전부 원문에 있음 (2026-11-24 브라우저 수집본과 대조)",
+  "extractor": "Claude 직접 추출 (LLM API 확정 전)"
+ }
+}

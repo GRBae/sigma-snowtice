@@ -1,0 +1,41 @@
+# [규정] {{ r.title }}
+
+분야: {{ r.topic }} | 학기와 관계없이 적용 | 갱신: {{ today }}
+
+## 졸업 자격 ({{ r.context }})
+
+{% for rule in r.rules -%}
+### {{ rule.title }}
+{{ rule.text }}
+{% if rule.extra %}{{ rule.extra }}
+{% endif %}
+출처: {{ rule.source }}
+
+{% endfor %}
+## 졸업심사 결과 ({{ r.context }})
+
+| 결과 | 기준 |
+|---|---|
+{% for o in r.outcomes -%}
+| {{ o.name }} | {{ o.rule }} |
+{% endfor %}
+
+## 대략적 시기 — 참고용, 날짜는 그 학기 공지가 우선 ({{ r.context }})
+
+{% for s in r.stage_rules -%}
+- {{ s.name }}: {{ s.rule }} (출처: {{ s.source }})
+{% endfor %}
+
+## 꼭 확인할 것 ({{ r.context }})
+
+{% for w in r.warnings -%}
+- ⚠ {{ w }}
+{% endfor %}
+
+## 근거 ({{ r.context }})
+
+{% for n in r.notices -%}
+- {{ n.title }}: {{ n.url }}
+{% endfor %}
+
+※ 이 페이지는 공개 게시판 공지를 정리한 참고 자료예요. 신청 전에 반드시 원문 공지를 확인하세요.

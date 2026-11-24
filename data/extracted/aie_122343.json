@@ -1,0 +1,31 @@
+{
+ "notice": {
+  "id": "notice:aie:122343",
+  "source": "aie",
+  "article_no": "122343",
+  "url": "https://aie.sookmyung.ac.kr/it/department/notice.do?mode=view&articleNo=122343",
+  "title": "[졸업프로젝트] 2026 졸업 작품 신청서 양식",
+  "posted": "2026-08-12",
+  "posted_by": "dept:aie",
+  "hits": 365
+ },
+ "skip": false,
+ "role": "form",
+ "topic": "졸업",
+ "procedure": {
+  "template": "tmpl:grad",
+  "term": "2026-2",
+  "scope": "aie"
+ },
+ "issued_by": "dept:aie",
+ "stages": [],
+ "rules": [],
+ "cautions": [],
+ "outcomes": [],
+ "contacts": [],
+ "refers_to": [],
+ "verification": {
+  "result": "근거 문장 전부 원문에 있음 (2026-11-24 브라우저 수집본과 대조)",
+  "extractor": "Claude 직접 추출 (LLM API 확정 전)"
+ }
+}

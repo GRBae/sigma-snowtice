@@ -1,0 +1,73 @@
+{
+ "notice": {
+  "id": "notice:english:153962",
+  "source": "english",
+  "article_no": "153962",
+  "url": "https://english.sookmyung.ac.kr/smpr/board/notice.do?mode=view&articleNo=153962",
+  "title": "2026학년도 2학기 영어영문학부 졸업논문제 제출 안내",
+  "posted": "2026-11-19",
+  "posted_by": "dept:english",
+  "hits": 168
+ },
+ "skip": false,
+ "role": "stage_detail",
+ "topic": "졸업",
+ "procedure": {
+  "template": "tmpl:grad",
+  "term": "2026-2",
+  "scope": "english"
+ },
+ "issued_by": "dept:english",
+ "stages": [
+  {
+   "key": "논문제결과물제출",
+   "name": "졸업논문제(어학성적표) 직접 제출",
+   "scope": "english",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": "2026-12-01",
+    "hi": "2026-12-31T12:00",
+    "precision": "minute"
+   },
+   "route": null,
+   "place": "영어영문학부 사무실(평일 9:00~17:30)",
+   "target": null,
+   "required": true,
+   "documents": [
+    "어학성적표(윗면에 전공/학번/이름/연락처 기재)"
+   ],
+   "requires": [],
+   "evidence": [
+    "2026년 12월 1일(화) - 12월 31일(목) 오후 12:00"
+   ],
+   "overrides": "본부"
+  }
+ ],
+ "rules": [],
+ "cautions": [
+  {
+   "id": "caution:english_153962:0",
+   "text": "졸업논문제는 원칙적으로 직접 제출 — 못 가면 사무실에 먼저 연락",
+   "evidence": [
+    "원칙적으로 졸업논문제 제출은 직접제출입니다."
+   ]
+  }
+ ],
+ "outcomes": [],
+ "contacts": [
+  {
+   "topic": "졸업논문제",
+   "college": "dept:english",
+   "office": "영어영문학부 사무실",
+   "phone": "02-710-9321",
+   "evidence": [
+    "유선 전화: 02-710-9321"
+   ]
+  }
+ ],
+ "refers_to": [],
+ "verification": {
+  "result": "근거 문장 전부 원문에 있음 (2026-11-24 브라우저 수집본과 대조)",
+  "extractor": "Claude 직접 추출 (LLM API 확정 전)"
+ }
+}

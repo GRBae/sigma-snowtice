@@ -1,0 +1,54 @@
+# 사이트 레지스트리 (졸업 시범) — 2026-11-24 확인
+# 숙명 홈페이지와 학과 사이트는 같은 CMS 게시판 엔진(board engine: "sm_cms")을 써서 파서 하나로 처리한다.
+# robots.txt (www, math 동일):
+#   Disallow: /_attach/ /_custom/ /_res/ /*srSearchVal= /*.xls /*.xlsx /*.hwp /*.doc /*.docx
+#   GPTBot, ClaudeBot, CCBot 등 AI 크롤러 UA는 전체 Disallow
+#   → 게시판 '검색'(srSearchVal)을 쓰지 말고 목록을 넘기며 제목으로 걸러낸다.
+#   → 첨부는 주최 측/학교 허락을 받은 뒤 PDF부터 처리한다.
+
+defaults:
+  engine: sm_cms
+  delay_sec: 1.5
+  user_agent: "snowtice-collector/0.1 (SNOWCHAT 경진대회 팀 시그마; 문의: 팀 대표 메일)"
+  since: "2026-01-01"          # 졸업은 학기마다 반복되므로 직전 학기(2026-1)까지 함께 수집
+
+boards:
+  - site_id: main_notice
+    name: 대표 홈페이지 주요공지
+    base: https://www.sookmyung.ac.kr
+    path: /kr/news/important-notice.do
+    owner: 대표 홈페이지
+    tier: A
+
+  - site_id: math_notice
+    name: 수학과 공지사항
+    base: https://math.sookmyung.ac.kr
+    path: /math/notice/notice.do
+    owner: 수학과
+    tier: B
+
+# 게시판이 아니라 고정 안내 페이지 (LLM 위키의 '기본 문서'가 된다)
+static_pages:
+  - page_id: graduate01
+    name: 학사정보 > 졸업 > 졸업심사
+    url: https://www.sookmyung.ac.kr/kr/university-life/graduate01.do
+  - page_id: graduate03
+    name: 학사정보 > 졸업 > 졸업인증제
+    url: https://www.sookmyung.ac.kr/kr/university-life/graduate03.do
+  # 아래는 게시판형 고정 페이지 (본문이 대부분 첨부)
+  - page_id: graduate02
+    name: 학사정보 > 졸업 > 졸업학점배정표
+    url: https://www.sookmyung.ac.kr/kr/university-life/graduate02.do
+    board: true
+  - page_id: graduate04
+    name: 학사정보 > 졸업 > 전공별 경과조치
+    url: https://www.sookmyung.ac.kr/kr/university-life/graduate04.do
+    board: true
+
+# 분야 필터 (1차는 규칙, 2차는 LLM 분류)
+topic_filters:
+  graduation:
+    title_tags: ["[졸업]", "[학부 졸업]"]
+    title_keywords: ["졸업", "학위수여", "학위복", "학위증", "수료생", "졸업논문", "졸업시험", "졸업인증", "조기졸업", "계속수학", "콜로키움", "졸업작품", "졸업프로젝트", "졸업보고서", "대체시험", "종합시험"]
+    noise_keywords: ["졸업생 특강", "졸업생만을 위한", "졸업 후 진로", "졸업생 인터뷰"]
+    exclude_keywords: ["대학원 학위청구", "교원 채용"]

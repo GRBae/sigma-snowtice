@@ -1,0 +1,66 @@
+{
+ "notice": {
+  "id": "notice:main:96121",
+  "source": "main",
+  "article_no": "96121",
+  "url": "https://www.sookmyung.ac.kr/kr/news/important-notice.do?mode=view&articleNo=96121",
+  "title": "[졸업] 수료생 졸업신청(2027년 2월 졸업) 및 졸업 인증제 제출 안내",
+  "posted": "2026-11-23",
+  "posted_by": "office:comm",
+  "hits": 154
+ },
+ "skip": false,
+ "role": "stage_detail",
+ "topic": "졸업",
+ "procedure": {
+  "template": "tmpl:grad",
+  "term": "2026-2",
+  "scope": "본부"
+ },
+ "issued_by": "office:haksa",
+ "stages": [
+  {
+   "key": "수료생졸업신청",
+   "name": "수료생 졸업신청",
+   "scope": "본부",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": "2026-12-01",
+    "hi": "2026-12-30",
+    "precision": "day"
+   },
+   "route": "route:portal",
+   "place": null,
+   "target": "2027년 2월 졸업하려는 수료생",
+   "required": true,
+   "documents": [],
+   "requires": [],
+   "evidence": [
+    "2026. 12. 01.(화) ~ 12. 30.(수)"
+   ]
+  }
+ ],
+ "rules": [],
+ "cautions": [
+  {
+   "id": "cau:completer-3years",
+   "text": "수료 후 3년이 지나면 기간만료수료 → 재입학해서 다시 졸업심사",
+   "evidence": [
+    "수료생으로 만 3년의 기간이 경과하면 '기간만료수료생'이 되며"
+   ]
+  }
+ ],
+ "outcomes": [],
+ "contacts": [],
+ "refers_to": [
+  "notice:main:96120"
+ ],
+ "duplicate_of": null,
+ "attachments_pending": [],
+ "verification": {
+  "method": "브라우저 원문 대조",
+  "date": "2026-11-24",
+  "result": "근거 문장 전부 원문에 있음"
+ },
+ "extracted_by": "gold(수작업)"
+}

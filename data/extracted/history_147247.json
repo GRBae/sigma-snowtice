@@ -1,0 +1,133 @@
+{
+ "notice": {
+  "id": "notice:history:147247",
+  "source": "history",
+  "article_no": "147247",
+  "url": "https://history.sookmyung.ac.kr/history/community/notice.do?mode=view&articleNo=147247",
+  "title": "[졸업] 2026-2학기 졸업논문 지도교수 배정 및 일정 공지",
+  "posted": "2026-10-22",
+  "posted_by": "dept:history",
+  "hits": 200
+ },
+ "skip": false,
+ "role": "stage_detail",
+ "topic": "졸업",
+ "procedure": {
+  "template": "tmpl:grad",
+  "term": "2026-2",
+  "scope": "history"
+ },
+ "issued_by": "dept:history",
+ "stages": [
+  {
+   "key": "졸업논문지도",
+   "name": "졸업논문 지도(지도교수 상담 필수)",
+   "scope": "history",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": "2026-10-23",
+    "hi": "2026-12-11",
+    "precision": "day"
+   },
+   "route": null,
+   "place": null,
+   "target": null,
+   "required": true,
+   "documents": [],
+   "requires": [],
+   "evidence": [
+    "10/23(금)~12/11(금)"
+   ]
+  },
+  {
+   "key": "논문제결과물제출",
+   "name": "졸업논문 제출(대면)",
+   "scope": "history",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": "2026-12-14",
+    "hi": "2026-12-18",
+    "precision": "day"
+   },
+   "route": null,
+   "place": "학과 사무실(순헌관 412호)",
+   "target": null,
+   "required": true,
+   "documents": [
+    "졸업논문(A4 20장 이상, 학과 표지, 스테이플러)"
+   ],
+   "requires": [],
+   "evidence": [
+    "12/14(월)~12/18(금)"
+   ],
+   "overrides": "본부"
+  },
+  {
+   "key": "졸업논문심사",
+   "name": "졸업논문 심사",
+   "scope": "history",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": "2026-12-21",
+    "hi": "2026-12-27",
+    "precision": "day"
+   },
+   "route": null,
+   "place": null,
+   "target": null,
+   "required": true,
+   "documents": [],
+   "requires": [],
+   "evidence": [
+    "12/21(월)~12/27(금)"
+   ]
+  },
+  {
+   "key": "졸업논문합격처리",
+   "name": "졸업논문 합격 처리",
+   "scope": "history",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": "2026-12-28",
+    "hi": "2026-12-31",
+    "precision": "day"
+   },
+   "route": null,
+   "place": null,
+   "target": null,
+   "required": true,
+   "documents": [],
+   "requires": [],
+   "evidence": [
+    "12/28(월)~12/31(목)"
+   ]
+  }
+ ],
+ "rules": [],
+ "cautions": [
+  {
+   "id": "caution:history_147247:0",
+   "text": "지도교수 상담 없이 제출하면 불합격될 수 있음",
+   "evidence": [
+    "지도교수님과 상담을 진행하지 않고 졸업논문을 작성하여 제출할 경우 불합격으로 처리될 수 있습니다."
+   ]
+  }
+ ],
+ "outcomes": [],
+ "contacts": [
+  {
+   "topic": "졸업논문",
+   "college": "dept:history",
+   "office": "역사문화학과 사무실",
+   "phone": "02-710-9367",
+   "evidence": [
+    "(02-710-9367"
+   ]
+  }
+ ],
+ "refers_to": [],
+ "verification": {
+  "result": "근거 문장 전부 원문에 있음 (2026-11-24 브라우저 수집본과 대조)",
+  "extractor": "Claude 직접 추출 (LLM API 확정 전)"
+ }
+}

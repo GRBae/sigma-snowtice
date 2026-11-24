@@ -1,0 +1,42 @@
+# [절차] {{ p.title }}
+
+분야: {{ p.topic }} | 대상: {{ p.target }} | 상태: {{ p.status }} | 유효: ~{{ p.valid_until }} | 갱신: {{ today }}
+
+## 한눈에 보기 ({{ p.context }})
+
+{{ p.summary }}
+
+## 단계별 일정 ({{ p.context }})
+
+{% for s in p.stages -%}
+- {{ s.name }}{% if s.required %} (필수){% elif s.required is sameas false %} (해당자){% endif %}: {{ s.period }}{% if s.place %} · {{ s.place }}{% endif %}{% if s.channel %} · {{ s.channel }}{% endif %} · {{ s.status }}{% if s.note %} · {{ s.note }}{% endif %} · 출처: {{ s.sources | join(", ") }}
+{% endfor %}
+{% if p.pending %}
+## 학과 공지 중 아직 일정을 읽지 못한 것 ({{ p.context }})
+
+아래 공지는 본문 수집 전이라 날짜가 비어 있어요. 원문을 직접 확인하세요.
+
+{% for n in p.pending -%}
+- {{ n.stage }}: {{ n.title }} ({{ n.posted }} 게시) {{ n.url }}
+{% endfor %}
+{% endif %}
+{% if p.warnings %}
+## 꼭 확인할 것 ({{ p.context }})
+
+{% for w in p.warnings -%}
+- ⚠ {{ w }}
+{% endfor %}
+{% endif %}
+## 근거 공지 ({{ p.context }})
+
+{% for n in p.notices -%}
+- [{{ n.source_label }}] {{ n.title }}, {{ n.posted }} 게시: {{ n.url }}
+{% endfor %}
+
+## 문의 ({{ p.context }})
+
+{% for c in p.contacts -%}
+- {{ c }}
+{% endfor %}
+
+※ 이 페이지는 공개 게시판 공지를 정리한 참고 자료예요. 신청 전에 반드시 원문 공지를 확인하세요.

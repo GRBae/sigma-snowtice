@@ -1,0 +1,14 @@
+#site smvd.sookmyung.ac.kr|시각·영상디자인과
+#note 공지 게시판 없음(작품 포트폴리오 사이트). 졸업전시는 외부 도메인 smvdgradshow.com → 수집 제외
+#site design.sookmyung.ac.kr|환경디자인과
+#board 공지사항|/smed/community/notice.do|sm_cms|7|2025-07-31
+#note 2026년 졸업 관련 글 없음
+#site craft.sookmyung.ac.kr|공예과
+#board 공지사항|/craft/community/notice.do|sm_cms|1|2026-10-16
+#note 2026년 졸업 관련 글 없음
+#site fineart.sookmyung.ac.kr|회화과
+#note 공지 게시판 못 찾음(자체 구조). 6개월 공지 0건이었던 학과
+#site dance-smu.co.kr|무용과
+#note 숙명 도메인 밖 → 수집 범위 제외
+#site smid.ac.kr|산업디자인과
+#note 숙명 도메인 밖 → 수집 범위 제외

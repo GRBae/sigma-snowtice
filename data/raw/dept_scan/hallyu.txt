@@ -1,0 +1,5 @@
+#site hallyu.sookmyung.ac.kr|한류국제대학(융합국제학부·한류국제학부)
+#board 공지사항|/hallyu/community/notice.do|sm_cms|26|2024-01-02
+#static 졸업학점(융합국제)|/hallyu/convergence-international/graduation-credits.do
+#static 졸업학점(한류국제)|/hallyu/korean-wave-international/graduation-credits.do
+#note 2026년 졸업 관련 글 없음 (신설 대학이라 졸업생이 아직 없을 수 있음)

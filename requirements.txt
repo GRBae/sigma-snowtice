@@ -1,0 +1,10 @@
+requests>=2.31
+beautifulsoup4>=4.12
+pyyaml>=6.0
+networkx>=3.2
+numpy>=1.26
+scipy>=1.11
+scikit-learn>=1.4
+jinja2>=3.1
+# 추출 LLM이 OpenAI 호환 API면: openai>=1.40
+# MySQL 바로 적재 시: pymysql>=1.1

@@ -1,0 +1,97 @@
+{
+ "notice": {
+  "id": "notice:korean:147313",
+  "source": "korean",
+  "article_no": "147313",
+  "url": "https://korean.sookmyung.ac.kr/korean/community/notice.do?mode=view&articleNo=147313",
+  "title": "[졸업] 2026-2 학부 졸업논문 지도교수 배정 안내",
+  "posted": "2026-10-27",
+  "posted_by": "dept:korean",
+  "hits": 1589
+ },
+ "skip": false,
+ "role": "stage_detail",
+ "topic": "졸업",
+ "procedure": {
+  "template": "tmpl:grad",
+  "term": "2026-2",
+  "scope": "korean"
+ },
+ "issued_by": "dept:korean",
+ "stages": [
+  {
+   "key": "지도교수배정",
+   "name": "졸업논문 지도교수 배정 확인(첨부)",
+   "scope": "korean",
+   "procedure_template": "tmpl:grad",
+   "date": null,
+   "route": null,
+   "place": null,
+   "target": null,
+   "required": true,
+   "documents": [],
+   "requires": [],
+   "evidence": [
+    "지도 교수님 배정이 완료되었습니다."
+   ]
+  },
+  {
+   "key": "지도교수변경요청",
+   "name": "지도교수 변경 요청(학과 메일)",
+   "scope": "korean",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": null,
+    "hi": "2026-10-30T17:00",
+    "precision": "minute"
+   },
+   "route": "route:dept-mail",
+   "place": null,
+   "target": null,
+   "required": false,
+   "documents": [],
+   "requires": [],
+   "evidence": [
+    "10. 30(금) 17:00까지 학과 메일로"
+   ]
+  },
+  {
+   "key": "논문제결과물제출",
+   "name": "졸업논문 최종본 제출(학과 메일, 본부보다 1주 빠름)",
+   "scope": "korean",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": null,
+    "hi": "2026-12-23T17:00",
+    "precision": "minute"
+   },
+   "route": "route:dept-mail",
+   "place": null,
+   "target": null,
+   "required": true,
+   "documents": [],
+   "requires": [],
+   "evidence": [
+    "2026.12.23.(수) 17:00 까지"
+   ],
+   "overrides": "본부"
+  }
+ ],
+ "rules": [],
+ "cautions": [
+  {
+   "id": "caution:korean_147313:0",
+   "text": "지도방식·1차 제출일은 지도교수별로 다름 — 교수별 공지 확인",
+   "evidence": [
+    "지도방식 및 1차 제출일자는 교수님별로 다릅니다."
+   ]
+  }
+ ],
+ "outcomes": [],
+ "contacts": [],
+ "refers_to": [],
+ "verification": {
+  "result": "근거 문장 전부 원문에 있음 (2026-11-24 브라우저 수집본과 대조)",
+  "extractor": "Claude 직접 추출 (LLM API 확정 전)"
+ }
+}

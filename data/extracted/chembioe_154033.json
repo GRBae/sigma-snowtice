@@ -1,0 +1,78 @@
+{
+ "notice": {
+  "id": "notice:chembioe:154033",
+  "source": "chembioe",
+  "article_no": "154033",
+  "url": "https://chembioe.sookmyung.ac.kr/chembioe/board/notice.do?mode=view&articleNo=154033",
+  "title": "2026-2학기 졸업논문제 증빙자료 제출 안내",
+  "posted": "2026-11-20",
+  "posted_by": "dept:chembioe",
+  "hits": 282
+ },
+ "skip": false,
+ "role": "stage_detail",
+ "topic": "졸업",
+ "procedure": {
+  "template": "tmpl:grad",
+  "term": "2026-2",
+  "scope": "chembioe"
+ },
+ "issued_by": "dept:chembioe",
+ "stages": [
+  {
+   "key": "논문제결과물제출",
+   "name": "졸업논문제 증빙자료 제출(본부 12/30보다 이름)",
+   "scope": "chembioe",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": "2026-12-01",
+    "hi": "2026-12-28",
+    "precision": "day"
+   },
+   "route": null,
+   "place": null,
+   "target": null,
+   "required": true,
+   "documents": [
+    "요건별 증빙(졸업논문+지도교수 확인서 / 창의설계 결과물 / 화공기사 자격 확인서 / 캡스톤 / 외부 공모전 수상)"
+   ],
+   "requires": [],
+   "evidence": [
+    "2026년 12월 01일(화)",
+    "학부에서는 12월 28일(월)까지로 제출기한을"
+   ],
+   "overrides": "본부"
+  }
+ ],
+ "rules": [],
+ "cautions": [
+  {
+   "id": "caution:chembioe_154033:0",
+   "text": "외부 공모전 수상으로 졸업논문제 대체는 2027년 2월 졸업까지만 인정, 8월 졸업부터 폐지",
+   "evidence": [
+    "2027년 08월 졸업예정자부터는 폐지 예정"
+   ]
+  },
+  {
+   "id": "caution:chembioe_154033:1",
+   "text": "화공기사는 한국산업인력공단 자격증만 인정, 타학과 캡스톤은 불인정",
+   "evidence": [
+    "타학과 주관 캡스톤 교과목은 인정하지 않음"
+   ]
+  },
+  {
+   "id": "caution:chembioe_154033:2",
+   "text": "원문에 마감 요일이 '12월 28일(수)'와 '(월)'로 섞여 있음 — 12/28은 월요일",
+   "evidence": [
+    "2026년 12월 28일(수)"
+   ]
+  }
+ ],
+ "outcomes": [],
+ "contacts": [],
+ "refers_to": [],
+ "verification": {
+  "result": "근거 문장 전부 원문에 있음 (2026-11-24 브라우저 수집본과 대조)",
+  "extractor": "Claude 직접 추출 (LLM API 확정 전)"
+ }
+}

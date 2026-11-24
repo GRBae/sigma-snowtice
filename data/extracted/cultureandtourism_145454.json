@@ -1,0 +1,39 @@
+{
+ "notice": {
+  "id": "notice:cultureandtourism:145454",
+  "source": "cultureandtourism",
+  "article_no": "145454",
+  "url": "https://cultureandtourism.sookmyung.ac.kr/smct/community/notice.do?mode=view&articleNo=145454",
+  "title": "[공지] HSK 3.0 개편에 따른 졸업합격기준 안내",
+  "posted": "2026-10-01",
+  "posted_by": "dept:cultureandtourism",
+  "hits": 899
+ },
+ "skip": false,
+ "role": "rule_guide",
+ "topic": "졸업",
+ "procedure": {
+  "template": "tmpl:grad",
+  "term": "2026-2",
+  "scope": "cultureandtourism"
+ },
+ "issued_by": "dept:cultureandtourism",
+ "stages": [],
+ "rules": [],
+ "cautions": [
+  {
+   "id": "caution:cultureandtourism_145454:0",
+   "text": "HSK 3.0 응시자도 기존 HSK 2.0 졸업합격기준 유지(제2외국어 4급 이상 등), 가급적 HSK 2.0 응시 권장",
+   "evidence": [
+    "기존의 HSK 2.0(신HSK) 졸업합격기준을 그대로 유지합니다."
+   ]
+  }
+ ],
+ "outcomes": [],
+ "contacts": [],
+ "refers_to": [],
+ "verification": {
+  "result": "근거 문장 전부 원문에 있음 (2026-11-24 브라우저 수집본과 대조)",
+  "extractor": "Claude 직접 추출 (LLM API 확정 전)"
+ }
+}

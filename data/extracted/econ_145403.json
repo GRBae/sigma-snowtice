@@ -1,0 +1,92 @@
+{
+ "notice": {
+  "id": "notice:econ:145403",
+  "source": "econ",
+  "article_no": "145403",
+  "url": "https://econ.sookmyung.ac.kr/econ/community/notice.do?mode=view&articleNo=145403",
+  "title": "[졸업] 2026학년도 2학기 졸업논문제 제출 안내",
+  "posted": "2026-09-30",
+  "posted_by": "dept:econ",
+  "hits": 376
+ },
+ "skip": false,
+ "role": "stage_detail",
+ "topic": "졸업",
+ "procedure": {
+  "template": "tmpl:grad",
+  "term": "2026-2",
+  "scope": "econ"
+ },
+ "issued_by": "dept:econ",
+ "stages": [
+  {
+   "key": "논문제결과물제출",
+   "name": "졸업논문 제출(방문+메일 모두)",
+   "scope": "econ",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": "2026-12-01",
+    "hi": "2026-12-17T14:00",
+    "precision": "minute"
+   },
+   "route": null,
+   "place": "경제학부 사무실(순헌관 315호) + 메일",
+   "target": "경제학부 졸업예정자·수료생(1전공·복수전공)",
+   "required": true,
+   "documents": [
+    "졸업논문(본문 20매 이상, 지정 표지, 스테이플러)"
+   ],
+   "requires": [],
+   "evidence": [
+    "논문: 2026.12.01(화) ~ 12.17(목) 14:00까지"
+   ],
+   "overrides": "본부"
+  },
+  {
+   "key": "영어성적제출",
+   "name": "졸업논문제 대체 영어성적 제출(방문+메일)",
+   "scope": "econ",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": "2026-12-01",
+    "hi": "2026-12-24T14:00",
+    "precision": "minute"
+   },
+   "route": null,
+   "place": "경제학부 사무실(순헌관 315호) + 메일",
+   "target": null,
+   "required": false,
+   "documents": [
+    "영어성적표(군토익 불인정)"
+   ],
+   "requires": [],
+   "evidence": [
+    "영어성적: 2026.12.01.(화) ~ 12.24(목) 14:00까지"
+   ]
+  }
+ ],
+ "rules": [],
+ "cautions": [
+  {
+   "id": "caution:econ_145403:0",
+   "text": "2027년 2월 졸업생부터 졸업논문제 영어 기준 토플 80점 / 토익 800점",
+   "evidence": [
+    "토플 80점 / 토익 800점 으로 변경되었으니"
+   ]
+  },
+  {
+   "id": "caution:econ_145403:1",
+   "text": "졸업논문제 신청과 논문(또는 영어성적) 제출을 모두 해야 통과",
+   "evidence": [
+    "졸업논문제 신청과 졸업논문제 서류(논문 or 영어성적표)까지 모두 제출하셔야 통과입니다."
+   ]
+  }
+ ],
+ "outcomes": [],
+ "contacts": [],
+ "refers_to": [],
+ "verification": {
+  "result": "근거 문장 전부 원문에 있음 (2026-11-24 브라우저 수집본과 대조)",
+  "extractor": "Claude 직접 추출 (LLM API 확정 전)"
+ }
+}

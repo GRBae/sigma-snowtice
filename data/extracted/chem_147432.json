@@ -1,0 +1,60 @@
+{
+ "notice": {
+  "id": "notice:chem:147432",
+  "source": "chem",
+  "article_no": "147432",
+  "url": "https://chem.sookmyung.ac.kr/chem/community/notice.do?mode=view&articleNo=147432",
+  "title": "2026-2 졸업시험 일정 안내드립니다.",
+  "posted": "2026-11-02",
+  "posted_by": "dept:chem",
+  "hits": null
+ },
+ "skip": false,
+ "role": "stage_detail",
+ "topic": "졸업",
+ "procedure": {
+  "template": "tmpl:grad",
+  "term": "2026-2",
+  "scope": "chem"
+ },
+ "issued_by": "dept:chem",
+ "stages": [
+  {
+   "key": "졸업시험",
+   "name": "졸업시험(16:00까지 입실, 볼펜 지참)",
+   "scope": "chem",
+   "procedure_template": "tmpl:grad",
+   "date": {
+    "lo": "2026-11-13T16:00",
+    "hi": "2026-11-13T18:00",
+    "precision": "minute"
+   },
+   "route": null,
+   "place": "과학관 109호",
+   "target": null,
+   "required": true,
+   "documents": [],
+   "requires": [],
+   "evidence": [
+    "2026.11.13 (금) 오후 4시-6시"
+   ]
+  }
+ ],
+ "rules": [],
+ "cautions": [
+  {
+   "id": "caution:chem_147432:0",
+   "text": "졸업계획 제출과 졸업논문제 신청은 별개 — 논문제 신청을 놓쳤으면 학과 메일로",
+   "evidence": [
+    "졸업계획제출과 졸업논문제 신청은 별개의 건임."
+   ]
+  }
+ ],
+ "outcomes": [],
+ "contacts": [],
+ "refers_to": [],
+ "verification": {
+  "result": "근거 문장 전부 원문에 있음 (2026-11-24 브라우저 수집본과 대조)",
+  "extractor": "Claude 직접 추출 (LLM API 확정 전)"
+ }
+}
