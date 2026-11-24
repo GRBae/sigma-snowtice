@@ -67,4 +67,4 @@ def test_feed_cards():
 
 
 def test_web_page():
-    assert c.get("/").status_code == 200 and "시그마" in c.get("/").text
+    assert c.get("/").status_code == 200 and "snowtice" in c.get("/").text
