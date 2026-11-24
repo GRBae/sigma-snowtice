@@ -2,4 +2,6 @@
 fastapi>=0.110
 uvicorn[standard]>=0.29
 networkx>=3.2
+numpy>=1.26           # networkx pagerank 계산에 필요
+scipy>=1.11
 pyyaml>=6.0
