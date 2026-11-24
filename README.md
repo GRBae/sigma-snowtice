@@ -115,8 +115,10 @@ sigma/
                                                                                    └▶ SNOWCHAT 에이전트 B (A안: 도구 호출)
 ```
 
+- `web/index.html` — 웹 화면 (내 졸업 할 일 · 마감 임박 · 관심사 그래프 · 공지함). API 서버가 `/`에서 같이 띄움 → **https://sigma-graph-api.onrender.com/**
 - `api/main.py` — FastAPI. `/todo`, `/todo/card`, `/deadlines`, `/graph`, `/notices`, `/popular`, `/stage/{id}`, `/depts`, `/admin/reload`
 - `api/README.md` — 웹 화면별로 어떤 주소를 부르는지
+- `snowchat/workflow.md` — SNOWCHAT 스튜디오 워크플로우 노드별 설정, `snowchat/test_questions.md` — 답변 시험지(정답 포함)
 - `snowchat/README.md` — 에이전트 A·B 지시문, A안/B안, `openapi_tools.json`(도구 등록용 명세)
 - `pipeline/agent_cards.py` — B안용 학과별 할 일·마감 md
 - `tests/test_api.py` — API 계약 테스트 (Actions에서 매일 돌림)

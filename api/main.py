@@ -20,7 +20,8 @@ from typing import Literal, Optional
 import urllib.request
 from fastapi import Depends, FastAPI, Header, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import PlainTextResponse
+from fastapi.responses import FileResponse, PlainTextResponse
+from fastapi.staticfiles import StaticFiles
 
 from api import service as S
 
@@ -36,6 +37,17 @@ app = FastAPI(
 )
 app.add_middleware(CORSMiddleware, allow_origins=os.getenv("CORS_ORIGINS", "*").split(","),
                    allow_methods=["GET", "POST"], allow_headers=["*"])
+
+
+WEB = ROOT / "web"
+if WEB.exists():
+    app.mount("/web", StaticFiles(directory=WEB), name="web")
+
+
+@app.get("/", include_in_schema=False)
+def home():
+    """웹 화면 (web/index.html). 같은 서버의 API를 부른다."""
+    return FileResponse(WEB / "index.html")
 
 
 def today_param(today: Optional[date] = Query(None, description="기준일(테스트용). 비우면 서버 오늘 날짜(Asia/Seoul)")) -> date:

@@ -4,6 +4,7 @@ WORKDIR /app
 COPY requirements-api.txt .
 RUN pip install --no-cache-dir -r requirements-api.txt
 COPY api ./api
+COPY web ./web
 COPY pipeline/graphio.py pipeline/query.py ./pipeline/
 COPY data/graph/graph_nodes.jsonl data/graph/graph_edges.jsonl ./data/graph/
 ENV TZ=Asia/Seoul PORT=8000

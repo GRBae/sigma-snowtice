@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>눈송 공지비서 · 졸업 일정 그래프</title>
+<style>
+  :root{--ink:#1b2433;--sub:#5b6577;--line:#e4e7ee;--bg:#f6f7fb;--card:#fff;--brand:#1f3f8f;--brand2:#e8eefc;
+        --ok:#1f8a5b;--warn:#c26a00;--mute:#8a93a3;--bad:#b42318;--ovr:#6b3fd1}
+  *{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Noto Sans KR",sans-serif;color:var(--ink);background:var(--bg)}
+  header{background:var(--card);border-bottom:1px solid var(--line);padding:14px 24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;position:sticky;top:0;z-index:5}
+  header h1{font-size:18px;margin:0 12px 0 0;color:var(--brand)} header h1 small{color:var(--sub);font-weight:500;font-size:12px;margin-left:6px}
+  .ctl{display:flex;gap:8px;align-items:center;flex-wrap:wrap} label{font-size:12px;color:var(--sub)}
+  select,input{font:inherit;font-size:14px;padding:6px 8px;border:1px solid var(--line);border-radius:8px;background:#fff}
+  input[type=number]{width:86px}
+  nav{display:flex;gap:4px;padding:0 24px;background:var(--card);border-bottom:1px solid var(--line)}
+  nav button{font:inherit;font-size:14px;border:0;background:none;padding:12px 14px;color:var(--sub);cursor:pointer;border-bottom:2px solid transparent}
+  nav button.on{color:var(--brand);border-color:var(--brand);font-weight:600}
+  main{max-width:1180px;margin:20px auto;padding:0 20px}
+  .panel{display:none}.panel.on{display:block}
+  .meta{font-size:13px;color:var(--sub);margin:0 0 12px}
+  .grid{display:grid;grid-template-columns:2fr 1fr;gap:16px} @media(max-width:880px){.grid{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+  .card h3{margin:0 0 10px;font-size:15px}
+  .item{display:grid;grid-template-columns:96px 1fr;gap:12px;padding:12px 0;border-top:1px solid var(--line)}
+  .item:first-of-type{border-top:0}
+  .badge{display:inline-block;font-size:12px;font-weight:600;padding:3px 8px;border-radius:999px;background:#eef0f4;color:var(--mute);text-align:center}
+  .b-soon{background:#fff1e0;color:var(--warn)} .b-now{background:#e3f5ec;color:var(--ok)} .b-later{background:var(--brand2);color:var(--brand)}
+  .lbl{font-weight:600;font-size:15px} .per{font-size:14px;margin-top:2px} .per .chk{color:var(--bad);font-weight:600}
+  .tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px} .tag{font-size:12px;padding:2px 7px;border-radius:6px;background:#f1f3f7;color:var(--sub)}
+  .tag.ovr{background:#efe9fd;color:var(--ovr)}
+  .src{font-size:12px;margin-top:6px} .src a{color:var(--brand);text-decoration:none} .src a:hover{text-decoration:underline}
+  ul.plain{margin:0;padding-left:18px;font-size:14px;line-height:1.6}
+  .hint{background:#fff8e6;border:1px solid #f3dca5;border-radius:10px;padding:10px 12px;font-size:13px;margin-bottom:12px}
+  table{width:100%;border-collapse:collapse;font-size:14px} td,th{text-align:left;padding:8px 6px;border-top:1px solid var(--line)} th{color:var(--sub);font-weight:500;font-size:12px}
+  #cy{height:620px;background:#fbfcff;border:1px solid var(--line);border-radius:12px}
+  .gwrap{display:grid;grid-template-columns:1fr 300px;gap:16px} @media(max-width:880px){.gwrap{grid-template-columns:1fr}}
+  .legend{display:flex;gap:12px;flex-wrap:wrap;font-size:12px;color:var(--sub);margin:8px 0}
+  .dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:4px;vertical-align:-1px}
+  .empty{color:var(--mute);font-size:14px;padding:12px 0}
+  .loading{color:var(--sub);font-size:13px}
+  footer{max-width:1180px;margin:24px auto 40px;padding:0 20px;font-size:12px;color:var(--mute)}
+</style>
+</head>
+<body>
+<header>
+  <h1>눈송 공지비서 <small>졸업 · 2026-2 (2027년 2월)</small></h1>
+  <div class="ctl">
+    <label>학과</label><select id="dept"></select>
+    <label>학적</label><select id="st"><option value="">선택 안 함</option><option>재학</option><option>휴학</option><option>수료</option></select>
+    <label>입학 연도</label><input id="yr" type="number" min="2000" max="2030" placeholder="예: 2022">
+    <span id="advWrap" style="display:none"><label>지도교수</label> <select id="adv"><option value="">선택</option></select></span>
+  </div>
+</header>
+<nav>
+  <button data-t="todo" class="on">내 졸업 할 일</button>
+  <button data-t="dl">마감 임박</button>
+  <button data-t="graph">관심사 그래프</button>
+  <button data-t="notice">공지함 · 인기</button>
+</nav>
+<main>
+  <section id="p-todo" class="panel on">
+    <p class="meta" id="todoMeta"></p>
+    <div class="grid">
+      <div class="card"><h3>남은 단계</h3><div id="todoList" class="loading">불러오는 중… (서버가 잠들어 있으면 최대 50초)</div></div>
+      <div>
+        <div class="card" id="advCard" style="display:none;margin-bottom:16px"></div>
+        <div class="card" style="margin-bottom:16px"><h3>꼭 확인할 것</h3><ul class="plain" id="cautions"></ul></div>
+        <div class="card" style="margin-bottom:16px"><h3>문의처</h3><ul class="plain" id="contacts"></ul></div>
+        <div class="card" id="hiddenCard" style="display:none"><h3>내 학적엔 해당 없음</h3><ul class="plain" id="hidden"></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="p-dl" class="panel">
+    <div class="ctl" style="margin-bottom:12px"><label>기간</label>
+      <select id="days"><option value="7">7일</option><option value="14" selected>14일</option><option value="30">30일</option></select>
+      <label><input type="checkbox" id="dlAll"> 전체 학과</label></div>
+    <div class="card"><div id="dlList" class="loading">불러오는 중…</div></div>
+  </section>
+
+  <section id="p-graph" class="panel">
+    <div class="ctl" style="margin-bottom:8px"><label>시작점</label>
+      <select id="seed"></select><label>노드 수</label>
+      <select id="k"><option>20</option><option selected>35</option><option>60</option></select></div>
+    <div class="legend">
+      <span><span class="dot" style="background:#1f3f8f"></span>절차</span>
+      <span><span class="dot" style="background:#1f8a5b"></span>단계(진행·예정)</span>
+      <span><span class="dot" style="background:#b9c0cc"></span>단계(마감)</span>
+      <span><span class="dot" style="background:#e08a1e"></span>공지</span>
+      <span><span class="dot" style="background:#b42318"></span>유의사항</span>
+      <span>보라 선 = 학과 마감이 본부를 덮어씀</span>
+    </div>
+    <div class="gwrap">
+      <div id="cy"></div>
+      <div class="card"><h3>노드 정보</h3><div id="nodeInfo" class="empty">노드를 누르면 연관도와 '왜 연결됐는지' 경로가 나와요.</div></div>
+    </div>
+  </section>
+
+  <section id="p-notice" class="panel">
+    <div class="grid">
+      <div class="card"><h3>공지함 (재게시는 하나로 묶음)</h3>
+        <div class="ctl" style="margin-bottom:8px"><input id="q" placeholder="제목 검색" style="flex:1"></div>
+        <table><thead><tr><th>게시일</th><th>게시판</th><th>제목</th><th>묶음</th></tr></thead><tbody id="noticeRows"></tbody></table></div>
+      <div class="card"><h3>인기 공지 (누적 조회수)</h3><table><tbody id="popRows"></tbody></table></div>
+    </div>
+  </section>
+</main>
+<footer>데이터: 숙명여대 대표 홈페이지·학과 게시판 공개 공지(매일 03:00 갱신) · 날짜 계산과 대상 판정은 서버 코드가 함 · 학번·이름은 받지 않음 · <a href="/docs">API 문서</a></footer>
+
+<script src="/web/vendor/cytoscape.min.js"></script>
+<script>
+const $ = s => document.querySelector(s);
+const esc = s => (s ?? "").toString().replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const api = (p, q={}) => fetch(p + "?" + new URLSearchParams(Object.entries(q).filter(([,v]) => v !== "" && v != null))).then(r => r.ok ? r.json() : Promise.reject(r.status));
+const store = {get:k=>{try{return localStorage.getItem(k)}catch{return null}}, set:(k,v)=>{try{localStorage.setItem(k,v)}catch{}}};
+let tab = "todo", cy = null;
+
+function badge(c){
+  const s = c.status || "";
+  let cls = "";
+  if (s.startsWith("진행")) cls = "b-now"; else if (s.startsWith("예정")) cls = (c.d_day != null && c.d_day <= 7) ? "b-soon" : "b-later";
+  return `<span class="badge ${cls}">${esc(s.replace("일정 미정","미정"))}</span>`;
+}
+function itemHTML(c, showDept){
+  const per = esc(c.period).replace("[확인 필요]", '<span class="chk">[확인 필요]</span>');
+  const tags = [];
+  if (showDept) tags.push(`<span class="tag">${esc(c.dept_name)}</span>`);
+  if (c.overrides_central) tags.push(`<span class="tag ovr">학과 마감 우선 · 본부 ${esc(c.overrides_central.period)}</span>`);
+  if (c.required === false) tags.push(`<span class="tag">해당자만</span>`);
+  if (c.place) tags.push(`<span class="tag">📍 ${esc(c.place)}</span>`);
+  if (c.route) tags.push(`<span class="tag">${esc(c.route.label)}</span>`);
+  if (c.target) tags.push(`<span class="tag">대상: ${esc(c.target)}</span>`);
+  const src = c.sources && c.sources[0];
+  return `<div class="item"><div>${badge(c)}</div><div><div class="lbl">${esc(c.label)}</div><div class="per">${per}</div>
+    ${tags.length ? `<div class="tags">${tags.join("")}</div>` : ""}
+    ${src ? `<div class="src">근거: <a href="${esc(src.url)}" target="_blank" rel="noopener">${esc(src.title)}</a>${src.evidence && src.evidence[0] ? ` — “${esc(src.evidence[0])}”` : ""}</div>` : ""}</div></div>`;
+}
+function params(){ return {dept:$("#dept").value, enroll_status:$("#st").value, admission_year:$("#yr").value, advisor:$("#adv").value}; }
+
+async function loadTodo(){
+  $("#todoList").innerHTML = '<span class="loading">불러오는 중…</span>';
+  const r = await api("/todo", params());
+  $("#todoMeta").textContent = `${r.dept.name} · 기준일 ${r.today} · 남은 단계 ${r.items.length}개` + (r.note ? ` · ${r.note}` : "");
+  $("#todoList").innerHTML = r.items.length ? r.items.map(c => itemHTML(c)).join("") : '<div class="empty">남은 단계가 없어요.</div>';
+  $("#cautions").innerHTML = r.cautions.map(c => `<li>${esc(c.text)}</li>`).join("") || '<li class="empty">없음</li>';
+  $("#contacts").innerHTML = r.contacts.map(c => `<li>${esc(c.topic)} — ${esc(c.office)} ${esc(c.phone)}</li>`).join("") || '<li class="empty">없음</li>';
+  $("#hiddenCard").style.display = r.hidden_for_profile.length ? "" : "none";
+  $("#hidden").innerHTML = r.hidden_for_profile.map(h => `<li>${esc(h.label)} <span style="color:var(--mute)">(${esc(h.why)})</span></li>`).join("");
+  const a = r.advisor_specific;
+  if (a) {
+    $("#advWrap").style.display = "";
+    const cur = $("#adv").value;
+    $("#adv").innerHTML = '<option value="">선택</option>' + a.advisors_in_notices.map(n => `<option ${n===cur?"selected":""}>${esc(n)}</option>`).join("");
+    $("#advCard").style.display = "";
+    $("#advCard").innerHTML = `<h3>지도교수별 일정 ${a.count}건</h3><div style="font-size:14px">위에서 지도교수를 고르면 그 교수님 일정만 목록에 넣어 드려요.</div>`;
+  } else {
+    $("#advCard").style.display = "none";
+    if (!$("#adv").value) $("#advWrap").style.display = "none";
+  }
+}
+
+async function loadDl(){
+  $("#dlList").innerHTML = '<span class="loading">불러오는 중…</span>';
+  const r = await api("/deadlines", {days:$("#days").value, dept: $("#dlAll").checked ? "" : $("#dept").value});
+  $("#dlList").innerHTML = r.items.length ? r.items.map(c => itemHTML(c, true)).join("") : `<div class="empty">${r.days}일 안에 끝나는 일정이 없어요.</div>`;
+}
+
+const COLORS = {Procedure:"#1f3f8f", Notice:"#e08a1e", Caution:"#b42318", Interest:"#6b3fd1"};
+async function loadGraph(){
+  const r = await api("/graph", {seed:$("#seed").value, k:$("#k").value});
+  const els = r.nodes.map(n => ({data:{id:n.id, label:(n.label||"").slice(0,22), full:n.label, type:n.type, score:n.score, why:n.why, url:n.url, status:n.status,
+      color: n.type==="Stage" ? ((n.status||"").startsWith("마감") ? "#b9c0cc" : "#1f8a5b") : (COLORS[n.type]||"#8a93a3"),
+      size: n.id===r.seed.id ? 46 : 14 + Math.min(30, Math.sqrt(n.score)*120)}}));
+  r.edges.forEach((e,i) => els.push({data:{id:"e"+i, source:e.src, target:e.dst, type:e.type}}));
+  if (cy) cy.destroy();
+  cy = cytoscape({container:$("#cy"), elements:els, wheelSensitivity:0.2,
+    style:[
+      {selector:"node", style:{"background-color":"data(color)", width:"data(size)", height:"data(size)", label:"data(label)", "font-size":10, color:"#2a3342",
+        "text-valign":"bottom", "text-margin-y":4, "text-wrap":"ellipsis", "text-max-width":120}},
+      {selector:"edge", style:{width:1.2, "line-color":"#cfd5e1", "curve-style":"bezier", "target-arrow-shape":"triangle", "target-arrow-color":"#cfd5e1", "arrow-scale":0.7}},
+      {selector:'edge[type="OVERRIDES"]', style:{"line-color":"#6b3fd1", "target-arrow-color":"#6b3fd1", width:2.4}},
+      {selector:'edge[type="PRECEDES"]', style:{"line-style":"dashed"}},
+      {selector:":selected", style:{"border-width":3, "border-color":"#111"}}],
+    layout:{name:"cose", animate:false, nodeRepulsion:9000, idealEdgeLength:90, padding:24}});
+  cy.on("tap", "node", ev => {
+    const d = ev.target.data();
+    $("#nodeInfo").innerHTML = `<div class="lbl">${esc(d.full)}</div><div style="font-size:12px;color:var(--sub);margin:4px 0 8px">${esc(d.type)}${d.status ? " · " + esc(d.status) : ""} · 연관도 ${d.score}</div>
+      <div style="font-size:13px"><b>왜 연결됐나</b><br>${esc(d.why).replaceAll(" → ", "<br>→ ")}</div>
+      ${d.url ? `<div class="src" style="margin-top:8px"><a href="${esc(d.url)}" target="_blank" rel="noopener">원문 공지 열기</a></div>` : ""}`;
+  });
+}
+
+async function loadNotice(){
+  const [ns, pop] = await Promise.all([api("/notices", {dept:$("#dept").value, q:$("#q").value, limit:80}), api("/popular", {limit:10})]);
+  $("#noticeRows").innerHTML = ns.map(n => `<tr><td>${esc(n.posted)}</td><td>${esc(n.board)}</td><td><a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.title)}</a></td><td>${n.reposts ? "+" + n.reposts : ""}</td></tr>`).join("") || '<tr><td colspan="4" class="empty">없음</td></tr>';
+  $("#popRows").innerHTML = pop.map(n => `<tr><td style="white-space:nowrap">${n.hits.toLocaleString()}</td><td><a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.title)}</a><div style="font-size:12px;color:var(--mute)">${esc(n.board)}</div></td></tr>`).join("");
+}
+
+function seedOptions(){
+  const d = $("#dept"), name = d.options[d.selectedIndex]?.text || "";
+  const hasDept = d.options[d.selectedIndex]?.dataset.has === "1";
+  const opts = [["interest:grad-req","관심사: 졸업 요건·심사"], ["proc:grad:2026-2","2026-2 본부 졸업 절차"]];
+  if (hasDept) opts.unshift([`proc:grad:2026-2:${d.value}`, `${name} 졸업 절차`]);
+  $("#seed").innerHTML = opts.map(([v,t]) => `<option value="${v}">${t}</option>`).join("");
+}
+
+function refresh(){
+  const f = {todo:loadTodo, dl:loadDl, graph:loadGraph, notice:loadNotice}[tab];
+  f().catch(e => { const box = {todo:"#todoList", dl:"#dlList", graph:"#nodeInfo", notice:"#noticeRows"}[tab];
+    $(box).innerHTML = `<div class="empty">불러오지 못했어요 (${esc(e)}). 잠시 후 새로고침해 주세요.</div>`; });
+}
+
+document.querySelectorAll("nav button").forEach(b => b.onclick = () => {
+  document.querySelectorAll("nav button").forEach(x => x.classList.toggle("on", x === b));
+  tab = b.dataset.t; document.querySelectorAll(".panel").forEach(p => p.classList.toggle("on", p.id === "p-" + tab)); refresh();
+});
+$("#dept").onchange = () => { store.set("dept", $("#dept").value); $("#adv").value = ""; seedOptions(); refresh(); };
+["#st", "#yr", "#adv", "#days", "#dlAll", "#seed", "#k"].forEach(s => $(s).onchange = refresh);
+let qt; $("#q").oninput = () => { clearTimeout(qt); qt = setTimeout(refresh, 300); };
+
+(async () => {
+  const ds = await api("/depts");
+  ds.sort((a, b) => (b.has_dept_schedule - a.has_dept_schedule) || a.name.localeCompare(b.name, "ko"));
+  $("#dept").innerHTML = ds.map(d => `<option value="${d.code}" data-has="${d.has_dept_schedule ? 1 : 0}">${esc(d.name)}${d.has_dept_schedule ? "" : " (본부 일정만)"}</option>`).join("");
+  $("#dept").value = new URLSearchParams(location.search).get("dept") || store.get("dept") || "math";
+  seedOptions(); refresh();
+})().catch(e => { $("#todoList").innerHTML = `<div class="empty">서버에 연결하지 못했어요 (${esc(e)}).</div>`; });
+</script>
+</body>
+</html>
