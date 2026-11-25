@@ -883,6 +883,8 @@
 {"src": "notice:stat:slug03", "dst": "notice:main:96120", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
 {"src": "notice:childwelfare:154043", "dst": "dept:childwelfare", "type": "POSTED_BY"}
 {"src": "notice:childwelfare:154043", "dst": "notice:main:96120", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
+{"src": "notice:pa:154077", "dst": "dept:pa", "type": "POSTED_BY"}
+{"src": "notice:pa:154077", "dst": "notice:main:96120", "type": "DUPLICATE_OF", "basis": "제목+게시일+학기 유사도, H0 임계값"}
 {"src": "notice:ds:137590", "dst": "dept:ds", "type": "POSTED_BY"}
 {"src": "notice:ds:137590", "dst": "stage:2025-2:학위증배부:ds", "type": "DESCRIBES", "pending": true}
 {"src": "notice:csweb:130366", "dst": "dept:csweb", "type": "POSTED_BY"}
@@ -1112,10 +1114,8 @@
 {"src": "notice:chinese:467", "dst": "caution:chinese_467:1", "type": "DEFINES"}
 {"src": "notice:chinese:501", "dst": "dept:chinese", "type": "POSTED_BY"}
 {"src": "notice:chinese:501", "dst": "stage:2026-1:양식·규정:chinese", "type": "DESCRIBES", "pending": true}
-{"src": "notice:electro:118815", "dst": "dept:electro", "type": "POSTED_BY"}
 {"src": "notice:electro:120115", "dst": "dept:electro", "type": "POSTED_BY"}
 {"src": "notice:electro:120115", "dst": "stage:2026-1:논문제제출:electro", "type": "DESCRIBES", "pending": true}
-{"src": "notice:electro:145467", "dst": "dept:electro", "type": "POSTED_BY"}
 {"src": "notice:electro:154041", "dst": "dept:electro", "type": "POSTED_BY"}
 {"src": "notice:electro:154041", "dst": "dept:electro", "type": "ISSUED_BY"}
 {"src": "notice:electro:154041", "dst": "stage:2026-2:논문제결과물제출:electro", "type": "DESCRIBES", "evidence": ["졸업논문 제출기간(12/1~12/30 09:00)", "2026년 12월 30일 오전 9시까지"], "verified": true, "date": {"lo": "2026-12-01", "hi": "2026-12-30T09:00", "precision": "minute"}}
