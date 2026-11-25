@@ -230,9 +230,30 @@ def main():
         if old.get(name) != hashlib.sha256(txt.encode()).hexdigest():
             changed.append(name)
 
-    idx = ["# 졸업 위키 목차", "", f"갱신: {today}", "", "## SNOWCHAT에 켜 둘 파일", ""]
-    idx += [f"- {n}" for n in sorted(pages)]
-    idx += ["", "## SNOWCHAT에서 끌 파일 (유효기간이 지난 학기)", ""] + [f"- 절차_{t}_*.md" for t in off] + [""]
+    # 목차: 챗봇(에이전트 A)이 질문에 맞는 페이지를 고르는 표. 경로는 저장소 기준 전체 경로.
+    def meta(name):
+        if name.startswith("규정_"):
+            return "규정", "전체 학부생", "졸업 자격, 졸업학점, 졸업인증제(졸업논문제·정보인증제), 졸업심사 결과(졸업/수료/계속수학), 수학과 졸업시험 대상"
+        if "조기졸업" in name:
+            t = name.split("_")[1]
+            keys = [g.nodes[x]["label"] for x in G.out(g, f"proc:early-grad:{t}", "HAS_STAGE")]
+            return "절차", "조기졸업 신청자", "조기졸업, " + ", ".join(dict.fromkeys(keys))
+        t = name.split("_")[1]
+        dept_name = name.rsplit("_", 1)[-1].removesuffix(".md")
+        if dept_name == "공통":
+            keys = [g.nodes[x]["label"] for x in G.out(g, f"proc:grad:{t}", "HAS_STAGE")]
+            return "절차", f"{t} 졸업예정자 전체(본부·학사팀 일정)", ", ".join(dict.fromkeys(keys))
+        code = next((d.split(":")[1] for d, a in g.nodes(data=True) if a.get("type") == "Dept"
+                     and a.get("label", "").replace("·", "").replace(" ", "") == dept_name), None)
+        keys = [g.nodes[x]["label"] for x in G.out(g, f"proc:grad:{t}:{code}", "HAS_STAGE")] if code else []
+        return "절차", f"{dept_name} {t} 졸업예정자 (본부 일정 + 학과 일정, 학과 마감 우선)", ", ".join(dict.fromkeys(keys)) or "본부 일정과 같음"
+    idx = ["# 졸업 위키 목차", "", f"갱신: {today} (매일 새벽 자동 갱신)", "",
+           "질문에 맞는 페이지를 '대상'과 '키워드'로 고른 뒤 '경로'의 파일을 읽는다. 학과가 정해진 질문은 그 학과 페이지를 먼저 읽는다.", "",
+           "| 경로 | 종류 | 대상 | 키워드 |", "|---|---|---|---|"]
+    for n in sorted(pages, key=lambda x: (not x.startswith("규정"), "공통" not in x, x)):
+        k, who, kw = meta(n)
+        idx.append(f"| wiki/pages/{n} | {k} | {who} | {kw.replace('|', '/')} |")
+    idx += ["", "## 지난 학기 (페이지 없음 — 질문하면 '지난 학기 공지'라고 안내)", ""] + [f"- {t} 졸업" for t in off] + [""]
     (ROOT / "wiki/index.md").write_text("\n".join(idx), encoding="utf-8")
     log = ROOT / "wiki/log.md"
     prev = log.read_text(encoding="utf-8") if log.exists() else "# 위키 변경 기록\n"
