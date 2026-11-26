@@ -122,3 +122,4 @@
 {"site_id": "english", "article_no": "119716", "sha256": "27c1a6346968829e955fdb2ec3943280802e980cffd8f9430947a60b7d9aaf96", "dir": "english_119716", "fetched_at": "2026-11-24T16:01:12+00:00"}
 {"site_id": "english", "article_no": "118549", "sha256": "5efbad061165dc7dab8ceb78fd092bba8774108657945e2b17893317e5026b62", "dir": "english_118549", "fetched_at": "2026-11-24T16:01:14+00:00"}
 {"site_id": "english", "article_no": "115806", "sha256": "ed3b85ad2a324ad69c3b4003ed7d85c51b14938c7bb631ec3c555f839fab19b0", "dir": "english_115806", "fetched_at": "2026-11-24T16:01:16+00:00"}
+{"site_id": "pharmacy", "article_no": "154111", "sha256": "00cd4d5f357eb9206cda67129224851a028bbb22397c5156167428b7eb95ad9e", "dir": "pharmacy_154111", "fetched_at": "2026-11-26T18:51:51+00:00"}

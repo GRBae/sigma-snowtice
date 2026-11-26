@@ -1012,6 +1012,8 @@
 {"src": "notice:physics:217463", "dst": "stage:2026-2:논문제결과물제출:physics", "type": "DESCRIBES", "evidence": ["1. 제출기한: 2026.12.01.(화)~2026.12.20.(일) 자정까지"], "verified": true, "date": {"lo": "2026-12-01", "hi": "2026-12-20T23:59", "precision": "minute"}}
 {"src": "notice:childwelfare:122324", "dst": "dept:childwelfare", "type": "POSTED_BY"}
 {"src": "notice:childwelfare:122324", "dst": "stage:2026-1:학위증배부:childwelfare", "type": "DESCRIBES", "pending": true}
+{"src": "notice:pharmacy:154111", "dst": "dept:pharmacy", "type": "POSTED_BY"}
+{"src": "notice:pharmacy:154111", "dst": "stage:2026-2:졸업시험:pharmacy", "type": "DESCRIBES", "pending": true}
 {"src": "notice:history:119280", "dst": "dept:history", "type": "POSTED_BY"}
 {"src": "notice:history:119280", "dst": "stage:2026-1:지도교수:history", "type": "DESCRIBES", "pending": true}
 {"src": "notice:history:147247", "dst": "dept:history", "type": "POSTED_BY"}
@@ -1667,6 +1669,11 @@
 {"src": "proc:grad:2026-1:childwelfare", "dst": "dept:childwelfare", "type": "ISSUED_BY"}
 {"src": "proc:grad:2026-1:childwelfare", "dst": "term:2026-1", "type": "IN_TERM"}
 {"src": "proc:grad:2026-1:childwelfare", "dst": "stage:2026-1:학위증배부:childwelfare", "type": "HAS_STAGE", "order": 50}
+{"src": "stage:2026-2:졸업시험:pharmacy", "dst": "stage:2026-2:논문제결과물제출", "type": "PRECEDES"}
+{"src": "proc:grad:2026-2:pharmacy", "dst": "proc:grad:2026-2", "type": "PART_OF"}
+{"src": "proc:grad:2026-2:pharmacy", "dst": "dept:pharmacy", "type": "ISSUED_BY"}
+{"src": "proc:grad:2026-2:pharmacy", "dst": "term:2026-2", "type": "IN_TERM"}
+{"src": "proc:grad:2026-2:pharmacy", "dst": "stage:2026-2:졸업시험:pharmacy", "type": "HAS_STAGE", "order": 50}
 {"src": "stage:2026-1:지도교수:history", "dst": "stage:2026-1:논문제결과물제출", "type": "PRECEDES"}
 {"src": "proc:grad:2026-1:history", "dst": "proc:grad:2026-1", "type": "PART_OF"}
 {"src": "proc:grad:2026-1:history", "dst": "dept:history", "type": "ISSUED_BY"}

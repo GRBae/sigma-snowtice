@@ -1,0 +1,28 @@
+{
+ "site_id": "pharmacy",
+ "article_no": "154111",
+ "url": "https://pharmacy.sookmyung.ac.kr/pharmacy/information/notice.do?mode=view&articleNo=154111",
+ "title": "2026 약학대학 1차 졸업시험 안내",
+ "category": "학부",
+ "writer": "약학부",
+ "posted": "2026-11-26",
+ "hits": 22,
+ "attachments": [
+  {
+   "name": "2026 졸업시험 대상자.xlsx",
+   "attach_no": "119285"
+  },
+  {
+   "name": "2026 졸업시험 자리배치도.pdf",
+   "attach_no": "119286"
+  },
+  {
+   "name": "2026 졸업시험 응시학생 안내사항.pdf",
+   "attach_no": "119287"
+  }
+ ],
+ "sha256": "00cd4d5f357eb9206cda67129224851a028bbb22397c5156167428b7eb95ad9e",
+ "fetched_at": "2026-11-26T18:51:51+00:00",
+ "kind": "notice",
+ "source": "pharmacy"
+}
